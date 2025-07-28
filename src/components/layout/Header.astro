@@ -1,0 +1,242 @@
+---
+import ThemeToggle from "../shared/ThemeToggle.tsx";
+import AnimatedButton from "../magic-ui/AnimatedButton.tsx";
+import { siteConfig } from "../../config/site";
+---
+
+<header
+  class="header-modern bg-surface/95 backdrop-blur-md border-b border-border/30 sticky top-0 z-50 shadow-lg transition-all duration-300"
+  id="main-header"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 sm:h-20">
+      <!-- Logo Section -->
+      <div class="flex items-center header-logo-section">
+        <a href="/" class="flex items-center space-x-3 group">
+          <div
+            class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary via-primary-hover to-primary-dark rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 header-logo-glow"
+          >
+            <span class="text-white font-bold text-lg sm:text-xl">🏥</span>
+          </div>
+          <div class="hidden sm:block">
+            <h1
+              class="text-xl sm:text-2xl font-bold text-primary group-hover:text-primary-hover transition-colors duration-300"
+            >
+              {siteConfig.name}
+            </h1>
+            <p
+              class="text-xs text-muted group-hover:text-secondary transition-colors duration-300"
+            >
+              {siteConfig.tagline}
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-1">
+        {
+          [
+            { href: "/", label: "Acasă", icon: "🏠" },
+            { href: "/servicii", label: "Servicii", icon: "🏥" },
+            { href: "/medici", label: "Medici", icon: "👨‍⚕️" },
+            { href: "/articole", label: "Articole", icon: "📰" },
+            { href: "/contact", label: "Contact", icon: "📞" },
+          ].map((item) => (
+            <a
+              href={item.href}
+              class="nav-link px-3 py-2 rounded-lg text hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium relative group flex items-center gap-2"
+            >
+              <span class="text-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                {item.icon}
+              </span>
+              <span>{item.label}</span>
+              <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-3/4 rounded-full" />
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- Right Section -->
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <!-- Emergency Contact (Hidden on mobile) -->
+        <div class="hidden xl:flex items-center space-x-2 text-sm">
+          <div class="flex items-center gap-1 text-accent">
+            <span class="animate-pulse">🚨</span>
+            <span class="font-medium">Urgențe:</span>
+          </div>
+          <a
+            href="tel:+40123456789"
+            class="font-bold text-primary hover:text-primary-hover transition-colors duration-300"
+          >
+            0123 456 789
+          </a>
+        </div>
+
+        <!-- Theme Toggle -->
+        <div class="header-theme-toggle">
+          <ThemeToggle client:load />
+        </div>
+
+        <!-- CTA Button -->
+        <div class="hidden sm:block">
+          <AnimatedButton
+            href="/programare"
+            variant="primary"
+            size="sm"
+            className="header-cta-btn shadow-lg hover:shadow-xl"
+            client:load
+          >
+            <span class="flex items-center gap-2">
+              <span class="text-sm">📅</span>
+              <span class="hidden md:inline">Programează-te</span>
+              <span class="md:hidden">Program</span>
+            </span>
+          </AnimatedButton>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="lg:hidden p-2 rounded-lg text hover:text-primary hover:bg-primary/10 transition-all duration-300"
+          id="mobile-menu-button"
+          aria-label="Toggle mobile menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      class="lg:hidden mobile-menu border-t border-border/30 bg-surface/98 backdrop-blur-md"
+      id="mobile-menu"
+      style="display: none;"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {
+          [
+            { href: "/", label: "Acasă", icon: "🏠" },
+            { href: "/servicii", label: "Servicii", icon: "🏥" },
+            { href: "/medici", label: "Medici", icon: "👨‍⚕️" },
+            { href: "/articole", label: "Articole", icon: "📰" },
+            { href: "/contact", label: "Contact", icon: "📞" },
+          ].map((item) => (
+            <a
+              href={item.href}
+              class="mobile-nav-link flex items-center gap-3 px-3 py-3 rounded-lg text hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium"
+            >
+              <span class="text-lg">{item.icon}</span>
+              <span>{item.label}</span>
+            </a>
+          ))
+        }
+
+        <!-- Mobile CTA -->
+        <div class="pt-4 border-t border-border/30 mt-4">
+          <AnimatedButton
+            href="/programare"
+            variant="primary"
+            size="lg"
+            className="w-full justify-center"
+            client:load
+          >
+            <span class="flex items-center gap-2">
+              <span>📅</span>
+              <span>Programează Consultație</span>
+            </span>
+          </AnimatedButton>
+        </div>
+
+        <!-- Mobile Emergency Contact -->
+        <div class="pt-3 text-center">
+          <div class="text-sm text-muted mb-1">Urgențe 24/7</div>
+          <a
+            href="tel:+40123456789"
+            class="text-lg font-bold text-accent hover:text-accent-hover transition-colors duration-300 flex items-center justify-center gap-2"
+          >
+            <span class="animate-pulse">🚨</span>
+            <span>0123 456 789</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const header = document.getElementById("main-header");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", function () {
+        const isHidden = mobileMenu.style.display === "none";
+        mobileMenu.style.display = isHidden ? "block" : "none";
+
+        // Animate menu appearance
+        if (isHidden) {
+          mobileMenu.style.opacity = "0";
+          mobileMenu.style.transform = "translateY(-10px)";
+          setTimeout(() => {
+            mobileMenu.style.transition = "all 0.3s ease";
+            mobileMenu.style.opacity = "1";
+            mobileMenu.style.transform = "translateY(0)";
+          }, 10);
+        }
+      });
+    }
+
+    // Header scroll effect
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", function () {
+      const currentScrollY = window.scrollY;
+
+      if (header) {
+        if (currentScrollY > 100) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+
+        // Hide/show header on scroll
+        if (currentScrollY > lastScrollY && currentScrollY > 200) {
+          header.style.transform = "translateY(-100%)";
+        } else {
+          header.style.transform = "translateY(0)";
+        }
+      }
+
+      lastScrollY = currentScrollY;
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (mobileMenu && mobileMenuButton && event.target instanceof Node) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileMenuButton.contains(event.target);
+
+        if (
+          !isClickInsideMenu &&
+          !isClickOnButton &&
+          mobileMenu.style.display === "block"
+        ) {
+          mobileMenu.style.display = "none";
+        }
+      }
+    });
+  });
+</script>

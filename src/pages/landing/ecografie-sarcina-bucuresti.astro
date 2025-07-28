@@ -1,0 +1,207 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.tsx";
+import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
+import BookingWidget from "../../components/services/BookingWidget.tsx";
+
+// SEO optimization for "ecografie sarcină București" - high-value obstetric service
+const seoTitle =
+  "Ecografie Sarcină București - Monitorizare Fetală | ANN Clinic";
+const seoDescription =
+  "Ecografie sarcină București cu ginecologi obstetricieni experimentați. Ecografie 4D, monitorizare fetală completă. Programări rapide. Consultație specializată!";
+
+const keywords = [
+  "ecografie sarcină București",
+  "ecografie 4D București",
+  "ginecolog obstetrician București",
+  "ecografie sarcină Bragadiru",
+  "monitorizare fetală București",
+  "ecografie morfologică București",
+  "control sarcină București",
+  "ecografie trimestru 1 București",
+  "ecografie trimestru 2 București",
+  "ecografie trimestru 3 București",
+];
+
+// Landing page specific content optimized for pregnancy monitoring
+const landingPageData = {
+  name: "Ecografie Sarcină București",
+  description:
+    "Servicii complete de ecografie în sarcină cu ginecologi obstetricieni experimentați",
+  longDescription:
+    "Clinica ANN oferă servicii complete de ecografie în sarcină în București cu ginecologi obstetricieni specializați. Monitorizare fetală de înaltă calitate cu echipament modern 4D pentru siguranța mamei și copilului.",
+  icon: "pregnancy-ultrasound",
+  featured: true,
+  treatments: [
+    {
+      name: "Ecografie sarcină trimestrul I",
+      description: "Ecografie de confirmare și datare sarcină (6-12 săptămâni)",
+      duration: 30,
+      price: 180,
+      highlight: true,
+    },
+    {
+      name: "Ecografie morfologică (trimestrul II)",
+      description:
+        "Ecografie detaliată pentru evaluarea dezvoltării fetale (18-22 săptămâni)",
+      duration: 45,
+      price: 250,
+    },
+    {
+      name: "Ecografie 4D în sarcină",
+      description: "Ecografie 4D pentru vizualizarea detaliată a bebelușului",
+      duration: 30,
+      price: 300,
+    },
+    {
+      name: "Ecografie Doppler fetală",
+      description: "Evaluarea circulației sanguine feto-placentare",
+      duration: 30,
+      price: 220,
+    },
+    {
+      name: "Ecografie de creștere fetală",
+      description:
+        "Monitorizarea creșterii și dezvoltării fetale (trimestrul III)",
+      duration: 30,
+      price: 200,
+    },
+    {
+      name: "Consultație obstetricală completă",
+      description: "Consultație cu ginecolog obstetrician + ecografie",
+      duration: 60,
+      price: 280,
+    },
+  ],
+  doctors: [
+    {
+      name: "Dr. Ana Popescu",
+      specialization:
+        "Ginecolog obstetrician senior, specialist în medicina materno-fetală",
+      experience: 20,
+      qualifications: [
+        "Doctor în Medicină - UMF Carol Davila București",
+        "Specialist în Obstetrica-Ginecologie - Spitalul Clinic Filantropia",
+        "Subspecializare în Medicina Materno-Fetală - Germania",
+        "Certificare în Ecografie Obstetricală - ISUOG",
+        "Membru al Societății Române de Obstetrica-Ginecologie",
+      ],
+      languages: ["Română", "Engleză", "Germană"],
+      availability: "Luni-Vineri: 08:00-16:00",
+      highlight: true,
+    },
+    {
+      name: "Dr. Mihai Georgescu",
+      specialization:
+        "Ginecolog obstetrician, specialist în ecografie 4D și monitorizare fetală",
+      experience: 15,
+      qualifications: [
+        "Doctor în Medicină - UMF Iuliu Hațieganu Cluj",
+        "Specialist în Obstetrica-Ginecologie",
+        "Certificare în Ecografie 4D - Voluson",
+        "Curs de perfecționare în Medicina Fetală - Austria",
+      ],
+      languages: ["Română", "Engleză", "Germană"],
+      availability: "Marți-Sâmbătă: 09:00-17:00",
+    },
+  ],
+  trustSignals: [
+    "Peste 5000 de ecografii în sarcină realizate",
+    "Echipament ecograf 4D de ultimă generație",
+    "Ginecologi obstetricieni cu experiență de peste 15 ani",
+    "Monitorizare completă pe toată durata sarcinii",
+    "Rezultate imediate și interpretare specializată",
+    "Mediu prietenos pentru viitoarele mămici",
+  ],
+  emergencyContact: {
+    phone: "+40123456789",
+    whatsapp: "+40123456789",
+    email: "obstetrica@annclinic.ro",
+  },
+  specialFeatures: [
+    "Ecografie 4D cu imagini de înaltă calitate",
+    "Posibilitatea de a veni cu partenerul",
+    "Fotografii și video cu bebelușul",
+    "Consultații de urgență obstetricală",
+    "Monitorizare completă sarcină",
+  ],
+};
+
+// Structured data for pregnancy services
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "ANN Clinic - Ecografie Sarcină București",
+  description: seoDescription,
+  url: `${Astro.site}landing/ecografie-sarcina-bucuresti`,
+  medicalSpecialty: "Obstetrica-Ginecologie - Ecografie în Sarcină",
+  availableService: {
+    "@type": "MedicalTherapy",
+    name: "Ecografie în Sarcină",
+    description: "Servicii complete de ecografie și monitorizare fetală",
+    offers: {
+      "@type": "Offer",
+      price: "180",
+      priceCurrency: "RON",
+      availability: "InStock",
+    },
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Strada Exemplu 123",
+    addressLocality: "Bragadiru",
+    addressRegion: "Ilfov",
+    addressCountry: "RO",
+  },
+  telephone: "+40123456789",
+  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "156",
+  },
+  priceRange: "180-300 RON",
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywords}
+  structuredData={structuredData}
+>
+  <main class="min-h-screen">
+    <!-- Landing Page Hero Section - Pregnancy Focus -->
+    <ServiceHero
+      service={landingPageData}
+      isLandingPage={true}
+      showSpecialFeatures={true}
+      client:load
+    />
+
+    <!-- Service Details Section with Pregnancy Information -->
+    <ServiceDetails
+      service={landingPageData}
+      showTrustSignals={true}
+      showPregnancyInfo={true}
+      client:load
+    />
+
+    <!-- Doctor Profiles Section - Obstetric Expertise -->
+    <DoctorProfiles
+      service={landingPageData}
+      highlightObstetricExperience={true}
+      client:load
+    />
+
+    <!-- Prominent Booking Widget for Pregnancy Services -->
+    <BookingWidget
+      service={landingPageData}
+      priority="high"
+      showPregnancyOptions={true}
+      showEmergencyContact={true}
+      client:load
+    />
+  </main>
+</BaseLayout>

@@ -1,0 +1,205 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.tsx";
+import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
+import BookingWidget from "../../components/services/BookingWidget.tsx";
+
+// SEO optimization for "botox București" - high-value aesthetic treatment
+const seoTitle = "Botox București - Tratamente Estetice Faciale | ANN Clinic";
+const seoDescription =
+  "Botox București cu medici esteticieni experimentați. Tratamente anti-aging, riduri faciale, rezultate naturale. Consultație gratuită. Programează acum!";
+
+const keywords = [
+  "botox București",
+  "tratamente botox București",
+  "botox Bragadiru",
+  "medic estetician București",
+  "tratamente anti-aging București",
+  "botox riduri faciale",
+  "injecții botox București",
+  "clinică estetică București",
+  "botox profesional București",
+  "tratamente estetice faciale",
+];
+
+// Landing page specific content optimized for aesthetic treatments
+const landingPageData = {
+  name: "Botox București - Tratamente Estetice",
+  description:
+    "Tratamente Botox profesionale cu medici esteticieni experimentați în București",
+  longDescription:
+    "Clinica ANN oferă tratamente Botox de înaltă calitate în București cu medici esteticieni certificați. Rezultate naturale pentru reducerea ridurilor și întinerirea feței, în condiții de siguranță maximă.",
+  icon: "botox-treatment",
+  featured: true,
+  treatments: [
+    {
+      name: "Consultație estetică gratuită",
+      description:
+        "Evaluare completă și plan de tratament personalizat pentru Botox",
+      duration: 30,
+      price: 0,
+      highlight: true,
+    },
+    {
+      name: "Botox riduri frontale",
+      description:
+        "Tratament Botox pentru ridurile de pe frunte - rezultate naturale",
+      duration: 30,
+      price: 450,
+    },
+    {
+      name: "Botox riduri perioculare",
+      description:
+        "Tratament pentru ridurile de la colțurile ochilor (crow's feet)",
+      duration: 30,
+      price: 400,
+    },
+    {
+      name: "Botox riduri glabelă",
+      description:
+        "Tratament pentru ridurile dintre sprâncene (riduri de expresie)",
+      duration: 30,
+      price: 400,
+    },
+    {
+      name: "Botox complet facial",
+      description:
+        "Tratament complet pentru toate zonele faciale cu riduri de expresie",
+      duration: 60,
+      price: 1200,
+    },
+    {
+      name: "Botox preventiv",
+      description: "Tratament preventiv pentru persoanele tinere (25-35 ani)",
+      duration: 30,
+      price: 350,
+    },
+  ],
+  doctors: [
+    {
+      name: "Dr. Maria Ionescu",
+      specialization:
+        "Medic estetician senior, specialist în tratamente Botox și filler",
+      experience: 15,
+      qualifications: [
+        "Doctor în Medicină - UMF Carol Davila București",
+        "Specialist în Medicina Estetică - SROME",
+        "Certificare Internațională Botox - Allergan",
+        "Master în Medicina Anti-Aging - Italia",
+        "Membru al Societății Române de Medicină Estetică",
+      ],
+      languages: ["Română", "Engleză", "Italiană"],
+      availability: "Luni-Vineri: 10:00-18:00",
+      highlight: true,
+    },
+    {
+      name: "Dr. Alexandru Radu",
+      specialization:
+        "Medic estetician, specialist în tratamente faciale non-invazive",
+      experience: 10,
+      qualifications: [
+        "Doctor în Medicină - UMF Titu Maiorescu București",
+        "Specialist în Medicina Estetică",
+        "Certificare Botox și Filler - Galderma",
+        "Curs de perfecționare în Medicina Estetică - Franța",
+      ],
+      languages: ["Română", "Engleză", "Franceză"],
+      availability: "Marți-Sâmbătă: 09:00-17:00",
+    },
+  ],
+  trustSignals: [
+    "Peste 2000 de tratamente Botox realizate cu succes",
+    "Produse originale Allergan și Galderma",
+    "Rezultate vizibile în 3-7 zile",
+    "Medici esteticieni cu certificări internaționale",
+    "Consultație gratuită și plan de tratament personalizat",
+    "Garanție pentru rezultate naturale",
+  ],
+  emergencyContact: {
+    phone: "+40123456789",
+    whatsapp: "+40123456789",
+    email: "estetica@annclinic.ro",
+  },
+  beforeAfterGallery: true,
+  freeConsultation: true,
+};
+
+// Structured data for aesthetic treatments
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "ANN Clinic - Botox București",
+  description: seoDescription,
+  url: `${Astro.site}landing/botox-bucuresti`,
+  medicalSpecialty: "Medicina Estetică - Tratamente Botox",
+  availableService: {
+    "@type": "MedicalTherapy",
+    name: "Tratamente Botox",
+    description:
+      "Tratamente Botox profesionale pentru reducerea ridurilor faciale",
+    offers: {
+      "@type": "Offer",
+      price: "450",
+      priceCurrency: "RON",
+      availability: "InStock",
+    },
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Strada Exemplu 123",
+    addressLocality: "Bragadiru",
+    addressRegion: "Ilfov",
+    addressCountry: "RO",
+  },
+  telephone: "+40123456789",
+  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "89",
+  },
+  priceRange: "350-1200 RON",
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywords}
+  structuredData={structuredData}
+>
+  <main class="min-h-screen">
+    <!-- Landing Page Hero Section - Aesthetic Focus -->
+    <ServiceHero
+      service={landingPageData}
+      isLandingPage={true}
+      showFreeConsultation={true}
+      client:load
+    />
+
+    <!-- Service Details Section with Before/After Gallery -->
+    <ServiceDetails
+      service={landingPageData}
+      showTrustSignals={true}
+      showBeforeAfter={true}
+      client:load
+    />
+
+    <!-- Doctor Profiles Section - Aesthetic Expertise -->
+    <DoctorProfiles
+      service={landingPageData}
+      highlightCertifications={true}
+      client:load
+    />
+
+    <!-- Prominent Booking Widget with Free Consultation -->
+    <BookingWidget
+      service={landingPageData}
+      priority="high"
+      showFreeConsultation={true}
+      showEmergencyContact={true}
+      client:load
+    />
+  </main>
+</BaseLayout>

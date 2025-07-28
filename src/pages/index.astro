@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/home/HeroSection.tsx";
+import ServicesSection from "../components/home/ServicesSection.tsx";
+import ArticlesSection from "../components/home/ArticlesSection.tsx";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../config/site";
+
+// Get services and articles data for React components
+const services = await getCollection("services");
+const articles = await getCollection("articles");
+---
+
+<BaseLayout
+  title={siteConfig.title}
+  description={siteConfig.description}
+  keywords={[
+    "clinică medicală București",
+    "consultații medicale",
+    "cardiolog București",
+    "dermatolog București",
+    "ginecolog București",
+  ]}
+>
+  <!-- Hero Section - React Component -->
+  <HeroSection client:load />
+
+  <!-- Services Section - React Component -->
+  <ServicesSection services={services} client:load />
+
+  <!-- Articles Section - React Component -->
+  <ArticlesSection articles={articles} client:load />
+</BaseLayout>

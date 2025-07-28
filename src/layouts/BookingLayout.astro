@@ -1,0 +1,97 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  structuredData?: object;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+    type?: string;
+    url?: string;
+  };
+}
+
+const {
+  title = "Programare Online - ANN Clinic | Rezervă Consultația Ta",
+  description = "Programează-te online la ANN Clinic pentru consultații medicale în București. Sistem simplu de rezervare pentru toate specialitățile medicale. Confirmarea se face instant.",
+  keywords = [
+    "programare online",
+    "consultație medicală București",
+    "rezervare medic",
+    "programare medic București",
+    "consultații medicale online",
+    "ANN Clinic programare",
+    "rezervare consultație",
+    "medic București programare",
+  ],
+  canonicalUrl = `${Astro.site}programare`,
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: "ANN Clinic",
+    description: "Clinică medicală cu servicii complete în București",
+    url: Astro.site,
+    telephone: "+40 21 123 4567",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Strada Exemplu 123",
+      addressLocality: "Bragadiru",
+      addressRegion: "Ilfov",
+      postalCode: "077025",
+      addressCountry: "RO",
+    },
+    openingHours: ["Mo-Fr 08:00-20:00", "Sa 09:00-17:00"],
+    medicalSpecialty: [
+      "Cardiologie",
+      "Dermatologie",
+      "Ginecologie",
+      "Pediatrie",
+      "Ortopedie",
+      "ORL",
+      "Neurologie",
+      "Oftalmologie",
+      "Urologie",
+      "Estetică Facială",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicii Medicale",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "MedicalProcedure",
+            name: "Consultație Medicală Generală",
+          },
+        },
+      ],
+    },
+  },
+  openGraph = {
+    title: "Programare Online - ANN Clinic",
+    description:
+      "Programează-te online pentru consultații medicale în București. Sistem simplu și rapid de rezervare.",
+    image: "/images/ann-clinic-og.jpg",
+    imageAlt: "ANN Clinic - Programare Online",
+    type: "website",
+    url: canonicalUrl,
+  },
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
+  openGraph={openGraph}
+>
+  <slot />
+</BaseLayout>

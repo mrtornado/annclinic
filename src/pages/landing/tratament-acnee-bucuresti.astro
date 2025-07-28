@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.tsx";
+import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
+import BookingWidget from "../../components/services/BookingWidget.tsx";
+
+// SEO optimization for "tratament acnee București" - high-value landing page
+const seoTitle =
+  "Tratament Acnee București - Dermatolog Specialist | ANN Clinic";
+const seoDescription =
+  "Tratament acnee București cu dermatolog specialist. Soluții personalizate pentru acnee, cicatrici post-acneice. Rezultate garantate. Programează consultația!";
+
+const keywords = [
+  "tratament acnee București",
+  "dermatolog acnee București",
+  "tratament acnee Bragadiru",
+  "cicatrici acnee București",
+  "dermatolog specialist acnee",
+  "consultație acnee București",
+  "tratament acnee adolescenți",
+  "acnee severă tratament",
+  "dermatologie acnee București",
+  "clinică tratament acnee",
+];
+
+// Landing page specific content optimized for conversions
+const landingPageData = {
+  name: "Tratament Acnee București",
+  description:
+    "Tratament specializat pentru acnee cu dermatolog experimentat în București",
+  longDescription:
+    "Clinica ANN oferă tratamente complete pentru acnee în București cu dermatologi specializați. Soluții personalizate pentru toate tipurile de acnee, de la forme ușoare la severe, inclusiv tratamentul cicatricilor post-acneice.",
+  icon: "acne-treatment",
+  featured: true,
+  treatments: [
+    {
+      name: "Consultație specializată acnee",
+      description:
+        "Evaluare completă a tipului de acnee și stabilirea planului de tratament personalizat",
+      duration: 45,
+      price: 200,
+      highlight: true,
+    },
+    {
+      name: "Tratament acnee ușoară-moderată",
+      description:
+        "Tratament topical cu retinoizi și antibiotice pentru acnee ușoară și moderată",
+      duration: 30,
+      price: 180,
+    },
+    {
+      name: "Tratament acnee severă",
+      description:
+        "Tratament sistemic pentru acnee severă cu monitorizare specializată",
+      duration: 60,
+      price: 250,
+    },
+    {
+      name: "Tratament cicatrici post-acneice",
+      description:
+        "Proceduri moderne pentru reducerea cicatricilor și îmbunătățirea texturii pielii",
+      duration: 90,
+      price: 350,
+    },
+    {
+      name: "Peeling chimic pentru acnee",
+      description:
+        "Peeling-uri specializate pentru reducerea leziunilor acneice și prevenirea recidivelor",
+      duration: 45,
+      price: 220,
+    },
+  ],
+  doctors: [
+    {
+      name: "Dr. Elena Marinescu",
+      specialization:
+        "Dermatolog senior, specialist în tratamentul acneei și dermatoscopie",
+      experience: 18,
+      qualifications: [
+        "Doctor în Medicină - UMF Carol Davila București",
+        "Specialist în Dermatologie - Spitalul Clinic Colentina",
+        "Certificare în Tratamentul Acneei - EADV",
+        "Fellowship în Dermatologie Estetică - Germania",
+        "Membru al Societății Române de Dermatologie",
+      ],
+      languages: ["Română", "Engleză", "Germană"],
+      availability: "Luni-Vineri: 09:00-17:00",
+      highlight: true,
+    },
+    {
+      name: "Dr. Andrei Popescu",
+      specialization:
+        "Dermatolog pediatric, specialist în tratamentul acneei la adolescenți",
+      experience: 12,
+      qualifications: [
+        "Doctor în Medicină - UMF Iuliu Hațieganu Cluj",
+        "Specialist în Dermatologie - Institutul Național de Dermatologie",
+        "Certificare în Dermatologie Pediatrică",
+        "Specializare în Tratamentul Acneei - Franța",
+      ],
+      languages: ["Română", "Engleză", "Franceză"],
+      availability: "Marți-Sâmbătă: 08:00-16:00",
+    },
+  ],
+  trustSignals: [
+    "Peste 1000 de pacienți tratați cu succes",
+    "Rezultate vizibile în 4-6 săptămâni",
+    "Echipament dermatologic de ultimă generație",
+    "Dermatologi cu experiență de peste 15 ani",
+    "Tratamente personalizate pentru fiecare tip de acnee",
+  ],
+  emergencyContact: {
+    phone: "+40123456789",
+    whatsapp: "+40123456789",
+    email: "programari@annclinic.ro",
+  },
+};
+
+// Structured data for better SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "ANN Clinic - Tratament Acnee București",
+  description: seoDescription,
+  url: `${Astro.site}landing/tratament-acnee-bucuresti`,
+  medicalSpecialty: "Dermatologie - Tratament Acnee",
+  availableService: {
+    "@type": "MedicalTherapy",
+    name: "Tratament Acnee",
+    description:
+      "Tratament specializat pentru acnee cu dermatolog experimentat",
+    offers: {
+      "@type": "Offer",
+      price: "200",
+      priceCurrency: "RON",
+      availability: "InStock",
+    },
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Strada Exemplu 123",
+    addressLocality: "Bragadiru",
+    addressRegion: "Ilfov",
+    addressCountry: "RO",
+  },
+  telephone: "+40123456789",
+  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "127",
+  },
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywords}
+  structuredData={structuredData}
+>
+  <main class="min-h-screen">
+    <!-- Landing Page Hero Section - Conversion Optimized -->
+    <ServiceHero service={landingPageData} isLandingPage={true} client:load />
+
+    <!-- Service Details Section with Trust Signals -->
+    <ServiceDetails
+      service={landingPageData}
+      showTrustSignals={true}
+      client:load
+    />
+
+    <!-- Doctor Profiles Section - Credibility -->
+    <DoctorProfiles
+      service={landingPageData}
+      highlightExpertise={true}
+      client:load
+    />
+
+    <!-- Prominent Booking Widget - Conversion Focus -->
+    <BookingWidget
+      service={landingPageData}
+      priority="high"
+      showEmergencyContact={true}
+      client:load
+    />
+  </main>
+</BaseLayout>

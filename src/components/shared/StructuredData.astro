@@ -1,0 +1,234 @@
+---
+import { siteConfig } from "../../config/site";
+import type {
+  ServiceContent,
+  DoctorContent,
+  ArticleContent,
+} from "../../types/content";
+
+export interface Props {
+  type: "organization" | "service" | "doctor" | "article" | "breadcrumb";
+  service?: ServiceContent;
+  doctor?: DoctorContent;
+  article?: ArticleContent;
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { type, service, doctor, article, breadcrumbs } = Astro.props;
+
+// Base organization data
+const baseOrganization = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "@id": `${siteConfig.url}/#organization`,
+  name: siteConfig.name,
+  alternateName: "ANN Clinic București",
+  description: siteConfig.description,
+  url: siteConfig.url,
+  logo: {
+    "@type": "ImageObject",
+    url: `${siteConfig.url}/images/ann-clinic-logo.jpg`,
+    width: 400,
+    height: 400,
+  },
+  image: {
+    "@type": "ImageObject",
+    url: `${siteConfig.url}/images/ann-clinic-building.jpg`,
+    width: 1200,
+    height: 630,
+  },
+  telephone: siteConfig.contact.phone,
+  email: siteConfig.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
+    addressCountry: "RO",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: siteConfig.address.coordinates.lat,
+    longitude: siteConfig.address.coordinates.lng,
+  },
+  openingHours: ["Mo-Fr 08:00-20:00", "Sa 08:00-16:00"],
+  medicalSpecialty: siteConfig.specialties,
+  priceRange: "$$",
+  acceptsReservations: true,
+  hasMap: `https://maps.google.com/?q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`,
+  paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Health Insurance"],
+  currenciesAccepted: "RON",
+  sameAs: [
+    siteConfig.social.facebook,
+    siteConfig.social.instagram,
+    `https://twitter.com/${siteConfig.social.twitter}`,
+  ],
+  // Additional medical organization properties
+  isAcceptingNewPatients: true,
+  availableLanguage: ["Romanian", "English"],
+  areaServed: [
+    {
+      "@type": "City",
+      name: "București",
+    },
+    {
+      "@type": "City",
+      name: "Bragadiru",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Ilfov",
+    },
+  ],
+};
+
+// Generate structured data based on type
+let structuredData = {};
+
+switch (type) {
+  case "organization":
+    structuredData = baseOrganization;
+    break;
+
+  case "service":
+    if (service) {
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        name: service.data.name,
+        description: service.data.description,
+        url: `${siteConfig.url}/servicii/${service.slug}`,
+        performer: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        availableAtOrFrom: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        medicalSpecialty: service.data.name,
+        // Add treatment details if available
+        ...(service.data.treatments && {
+          subjectOf: service.data.treatments.map((treatment: any) => ({
+            "@type": "MedicalProcedure",
+            name: treatment.name,
+            description: treatment.description,
+            ...(treatment.duration && {
+              timeRequired: `PT${treatment.duration}M`,
+            }),
+            ...(treatment.price && {
+              offers: {
+                "@type": "Offer",
+                price: treatment.price,
+                priceCurrency: "RON",
+              },
+            }),
+          })),
+        }),
+      };
+    }
+    break;
+
+  case "doctor":
+    if (doctor) {
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${siteConfig.url}/medici/${doctor.slug}`,
+        name: doctor.data.name,
+        jobTitle: "Medic Specialist",
+        description: doctor.data.bio,
+        url: `${siteConfig.url}/medici/${doctor.slug}`,
+        image: doctor.data.photo,
+        worksFor: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        medicalSpecialty: doctor.data.specialties,
+        knowsLanguage: doctor.data.languages,
+        hasCredential: doctor.data.qualifications.map((qual: string) => ({
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: qual,
+        })),
+        // Add consultation types if available
+        ...(doctor.data.consultationTypes && {
+          serviceType: doctor.data.consultationTypes,
+        }),
+      };
+    }
+    break;
+
+  case "article":
+    if (article) {
+      const data = article.data as any; // Temporary fix for TypeScript
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "@id": `${siteConfig.url}/articole/${article.slug}`,
+        name: data.title,
+        headline: data.title,
+        description: data.description,
+        url: `${siteConfig.url}/articole/${article.slug}`,
+        datePublished: data.publishDate.toISOString(),
+        dateModified: (data.updatedDate || data.publishDate).toISOString(),
+        author: {
+          "@type": "Person",
+          name: data.author,
+          ...(data.authorBio && {
+            description: data.authorBio,
+          }),
+        },
+        publisher: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/articole/${article.slug}`,
+        },
+        medicalAudience: {
+          "@type": "MedicalAudience",
+          audienceType: "Patient",
+        },
+        ...(article.data.specialty && {
+          about: {
+            "@type": "MedicalSpecialty",
+            name: article.data.specialty,
+          },
+        }),
+        ...(article.data.medicallyReviewed &&
+          article.data.reviewedBy && {
+            reviewedBy: {
+              "@type": "Person",
+              name: article.data.reviewedBy,
+            },
+          }),
+        ...(article.data.readingTime && {
+          timeRequired: `PT${article.data.readingTime}M`,
+        }),
+      };
+    }
+    break;
+
+  case "breadcrumb":
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: crumb.name,
+          item: crumb.url,
+        })),
+      };
+    }
+    break;
+}
+---
+
+{
+  structuredData && Object.keys(structuredData).length > 0 && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  )
+}

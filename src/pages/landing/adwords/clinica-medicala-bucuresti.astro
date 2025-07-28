@@ -1,0 +1,439 @@
+---
+import AdWordsLandingLayout from "../../../layouts/AdWordsLandingLayout.astro";
+
+// AdWords campaign optimization for "clinică medicală București"
+const seoTitle =
+  "Clinică Medicală București - Consultații Specializate | ANN Clinic";
+const seoDescription =
+  "Clinică medicală București cu 14+ specialități. Consultații rapide, medici experimentați, echipament modern. Programare online în 24h. Sună acum!";
+
+const keywords = [
+  "clinică medicală București",
+  "consultații medicale București",
+  "medici specialiști București",
+  "clinică privată București",
+  "servicii medicale București",
+  "consultații specializate București",
+  "clinică medicală Bragadiru",
+  "medici București",
+  "investigații medicale București",
+  "clinică modernă București",
+];
+
+// Campaign-specific data for maximum conversion
+const campaignData = {
+  name: "Clinică Medicală București - Servicii Complete",
+  description:
+    "Clinică medicală modernă cu 14+ specialități și medici experimentați",
+  longDescription:
+    "ANN Clinic este clinica medicală de referință din București cu peste 14 specialități medicale, medici cu experiență vastă și echipament de ultimă generație. Oferim consultații rapide, investigații complete și tratamente personalizate.",
+  icon: "medical-clinic",
+  featured: true,
+
+  // Value propositions for AdWords
+  valuePropositions: [
+    "Programare în maximum 24 de ore",
+    "14+ specialități medicale în aceeași locație",
+    "Medici cu experiență de peste 15 ani",
+    "Echipament medical de ultimă generație",
+    "Consultații de urgență disponibile",
+    "Investigații complete în aceeași zi",
+  ],
+
+  // Popular services for conversion
+  popularServices: [
+    {
+      name: "Consultație Cardiologie",
+      description: "Evaluare completă cardiovasculară cu EKG inclus",
+      duration: 45,
+      price: 200,
+      urgency: "Programare în 24h",
+    },
+    {
+      name: "Consultație Dermatologie",
+      description: "Examinare completă piele + dermatoscopie",
+      duration: 45,
+      price: 180,
+      urgency: "Disponibil astăzi",
+    },
+    {
+      name: "Consultație Ginecologie",
+      description: "Consultație ginecologică + ecografie pelvină",
+      duration: 60,
+      price: 220,
+      urgency: "Programare rapidă",
+    },
+    {
+      name: "Consultație Pediatrie",
+      description: "Consultație pediatrică completă pentru copii",
+      duration: 45,
+      price: 160,
+      urgency: "Medic pediatru disponibil",
+    },
+  ],
+
+  // Trust signals for credibility
+  trustSignals: [
+    "Peste 10.000 de pacienți mulțumiți anual",
+    "Medici cu certificări internaționale",
+    "Clinică autorizată de Ministerul Sănătății",
+    "Echipament medical certificat CE",
+    "Rezultate investigații în maximum 24h",
+    "Garanție pentru serviciile medicale",
+  ],
+
+  // Emergency contact for immediate conversion
+  emergencyContact: {
+    phone: "+40123456789",
+    whatsapp: "+40123456789",
+    email: "urgente@annclinic.ro",
+  },
+
+  // Special offers for AdWords
+  specialOffers: [
+    {
+      title: "Consultație Gratuită Astăzi",
+      description: "Prima consultație gratuită pentru pacienții noi",
+      validUntil: "Oferta valabilă doar astăzi",
+      cta: "Revendică Oferta",
+    },
+    {
+      title: "Pachet Investigații Complete",
+      description: "Analize + EKG + Consultație specialist - 50% reducere",
+      originalPrice: 600,
+      discountPrice: 300,
+      cta: "Profită Acum",
+    },
+  ],
+};
+
+// Enhanced structured data for AdWords
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "ANN Clinic - Clinică Medicală București",
+  description: seoDescription,
+  url: `${Astro.site}landing/adwords/clinica-medicala-bucuresti`,
+  medicalSpecialty: ["Cardiologie", "Dermatologie", "Ginecologie", "Pediatrie"],
+  availableService: campaignData.popularServices.map((service) => ({
+    "@type": "MedicalTherapy",
+    name: service.name,
+    description: service.description,
+    offers: {
+      "@type": "Offer",
+      price: service.price.toString(),
+      priceCurrency: "RON",
+      availability: "InStock",
+    },
+  })),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Strada Exemplu 123",
+    addressLocality: "Bragadiru",
+    addressRegion: "Ilfov",
+    addressCountry: "RO",
+  },
+  telephone: "+40123456789",
+  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "1247",
+  },
+  priceRange: "160-300 RON",
+};
+---
+
+<AdWordsLandingLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywords}
+  campaign="medical-services-general"
+  adGroup="clinica-medicala-bucuresti"
+  variant="A"
+  structuredData={structuredData}
+>
+  <!-- Hero Section - Conversion Optimized -->
+  <section class="relative py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Value Proposition -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h1
+              class="text-4xl lg:text-5xl font-bold text leading-tight"
+            >
+              Clinică Medicală București
+              <span class="text-primary block">Cu Medici Experimentați</span>
+            </h1>
+            <p class="text-xl text-secondary leading-relaxed">
+              14+ specialități medicale, programare în 24h, echipament modern.
+              Consultații rapide cu medici cu experiență de peste 15 ani.
+            </p>
+          </div>
+
+          <!-- Value Propositions -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {
+              campaignData.valuePropositions.map((prop) => (
+                <div class="trust-badge">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-primary rounded-full" />
+                    <span class="text-sm font-medium text-gray-800">
+                      {prop}
+                    </span>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- Primary CTA -->
+          <div class="space-y-4">
+            <button
+              class="cta-button w-full text-center"
+              onclick="trackCTAClick('hero-primary'); window.location.href='#booking'"
+            >
+              📞 Programează Consultația ACUM - Răspuns în 5 minute
+            </button>
+            <p class="text-center text-sm text-muted">
+              ⏰ Programare în maximum 24 de ore garantat
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column - Contact Form -->
+        <div class="conversion-form">
+          <h3 class="text-2xl font-bold text mb-6 text-center">
+            Consultație Gratuită Astăzi
+          </h3>
+
+          <form
+            class="space-y-4"
+            onsubmit="trackConversion('consultation-request')"
+          >
+            <div>
+              <label class="block text-sm font-medium text mb-2">
+                Numele complet *
+              </label>
+              <input
+                type="text"
+                required
+                class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Introduceți numele complet"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text mb-2">
+                Numărul de telefon *
+              </label>
+              <input
+                type="tel"
+                required
+                class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="+40 XXX XXX XXX"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text mb-2">
+                Specialitatea dorită
+              </label>
+              <select
+                class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+                <option value="">Selectați specialitatea</option>
+                <option value="cardiologie">Cardiologie</option>
+                <option value="dermatologie">Dermatologie</option>
+                <option value="ginecologie">Ginecologie</option>
+                <option value="pediatrie">Pediatrie</option>
+                <option value="ortopedie">Ortopedie</option>
+                <option value="orl">ORL</option>
+                <option value="neurologie">Neurologie</option>
+                <option value="oftalmologie">Oftalmologie</option>
+              </select>
+            </div>
+
+            <button type="submit" class="cta-button w-full">
+              🎯 Trimite Cererea - Răspuns Garantat în 5 minute
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <p class="text-sm text-secondary">
+              Sau sună direct:
+              <a
+                href="tel:+40123456789"
+                class="font-bold text-primary hover:text-primary-hover"
+                onclick="trackPhoneClick()"
+              >
+                +40 123 456 789
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Services Section -->
+  <section class="py-16 bg-surface-secondary">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text mb-12">
+        Servicii Medicale Populare - Programare Rapidă
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          campaignData.popularServices.map((service) => (
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 class="text-lg font-bold text mb-3">
+                {service.name}
+              </h3>
+              <p class="text-secondary text-sm mb-4">{service.description}</p>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-muted">Preț:</span>
+                  <span class="font-bold text-primary">
+                    {service.price} RON
+                  </span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-muted">Durată:</span>
+                  <span class="text-sm font-medium">
+                    {service.duration} min
+                  </span>
+                </div>
+                <div
+                  class="rounded-lg p-2 text-center"
+                  style="background-color: var(--color-secondary-light);"
+                >
+                  <span
+                    class="text-xs font-bold"
+                    style="color: var(--color-secondary);"
+                  >
+                    {service.urgency}
+                  </span>
+                </div>
+              </div>
+              <button
+                class="w-full mt-4 bg-primary text-white py-2 rounded-lg hover:bg-primary-hover transition-colors"
+                onclick="trackCTAClick('service-booking'); window.location.href='#booking'"
+              >
+                Programează Acum
+              </button>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text mb-12">
+        De Ce Să Alegeți ANN Clinic București?
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          campaignData.trustSignals.map((signal) => (
+            <div class="trust-badge text-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-xl">✓</span>
+              </div>
+              <p class="font-medium text-gray-800">{signal}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers Section -->
+  <section
+    class="py-16"
+    style="background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover));"
+  >
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">
+        Oferte Speciale - Doar Astăzi!
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {
+          campaignData.specialOffers.map((offer) => (
+            <div class="bg-white rounded-xl p-8 shadow-2xl">
+              <h3 class="text-2xl font-bold text mb-4">
+                {offer.title}
+              </h3>
+              <p class="text-secondary mb-6">{offer.description}</p>
+              {offer.originalPrice && (
+                <div class="mb-4">
+                  <span class="text-lg text-muted line-through">
+                    {offer.originalPrice} RON
+                  </span>
+                  <span
+                    class="text-2xl font-bold ml-2"
+                    style="color: var(--color-accent);"
+                  >
+                    {offer.discountPrice} RON
+                  </span>
+                </div>
+              )}
+              <p
+                class="text-sm font-bold mb-6"
+                style="color: var(--color-secondary);"
+              >
+                {offer.validUntil}
+              </p>
+              <button
+                class="cta-button w-full"
+                onclick="trackCTAClick('special-offer'); window.location.href='#booking'"
+              >
+                {offer.cta}
+              </button>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section id="booking" class="py-20 bg-surface">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Programează Consultația Acum
+      </h2>
+      <p class="text-xl text-tertiary mb-8">
+        Răspuns garantat în 5 minute. Programare în maximum 24 de ore.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a
+            href="tel:+40123456789"
+            class="cta-button inline-block"
+            onclick="trackCTAClick('final-phone')"
+          >
+            📞 Sună Acum: +40 123 456 789
+          </a>
+          <a
+            href="https://wa.me/40123456789"
+            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+            onclick="trackCTAClick('final-whatsapp')"
+          >
+            💬 WhatsApp: Mesaj Rapid
+          </a>
+        </div>
+
+        <p class="text-muted text-sm">
+          Program: Luni-Vineri 08:00-20:00, Sâmbătă 09:00-15:00
+        </p>
+      </div>
+    </div>
+  </section>
+</AdWordsLandingLayout>

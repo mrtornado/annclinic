@@ -1,0 +1,49 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import type { ServiceContent } from "../types/content";
+
+export interface Props {
+  service: ServiceContent;
+  title?: string;
+  description?: string;
+}
+
+const { service, title, description } = Astro.props;
+
+const pageTitle = title || `${service.data.name} - Clinică Medicală București`;
+const pageDescription = description || service.data.description;
+const keywords = Array.isArray(service.data.keywords)
+  ? service.data.keywords
+  : [service.data.name, "clinică medicală", "București"];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: `Clinică Medicală - ${service.data.name}`,
+    description: pageDescription,
+    url: `${Astro.site}servicii/${service.slug}`,
+    medicalSpecialty: service.data.name,
+    availableService: {
+      "@type": "MedicalTherapy",
+      name: service.data.name,
+      description: service.data.description,
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Strada Exemplu 123",
+      addressLocality: "București",
+      addressCountry: "RO",
+    },
+    telephone: "+40123456789",
+    openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  }}
+>
+  <main class="min-h-screen">
+    <slot />
+  </main>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import { siteConfig } from "../../config/site";
+---
+
+<footer class="bg-surface-tertiary py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold text mb-4">{siteConfig.name}</h3>
+        <p class="text-secondary">
+          {siteConfig.description}
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text mb-4">Servicii</h4>
+        <ul class="space-y-2 text-secondary">
+          <li>
+            <a
+              href="/servicii/cardiologie"
+              class="hover:text-primary transition-colors">Cardiologie</a
+            >
+          </li>
+          <li>
+            <a
+              href="/servicii/dermatologie"
+              class="hover:text-primary transition-colors">Dermatologie</a
+            >
+          </li>
+          <li>
+            <a
+              href="/servicii/ginecologie"
+              class="hover:text-primary transition-colors">Ginecologie</a
+            >
+          </li>
+          <li>
+            <a
+              href="/servicii/pediatrie"
+              class="hover:text-primary transition-colors">Pediatrie</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text mb-4">Contact</h4>
+        <ul class="space-y-2 text-secondary">
+          <li>📞 {siteConfig.contact.phoneDisplay}</li>
+          <li>📧 {siteConfig.contact.email}</li>
+          <li>📍 {siteConfig.address.city}, {siteConfig.address.county}</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text mb-4">Program</h4>
+        <ul class="space-y-2 text-secondary">
+          <li>{siteConfig.schedule.weekdays}</li>
+          <li>{siteConfig.schedule.saturday}</li>
+          <li>{siteConfig.schedule.sunday}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-border mt-8 pt-8 text-center">
+      <p class="text-tertiary">
+        © 2024 {siteConfig.name}. Toate drepturile rezervate.
+      </p>
+    </div>
+  </div>
+</footer>

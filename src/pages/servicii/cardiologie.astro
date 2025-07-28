@@ -1,0 +1,34 @@
+---
+import { getEntry } from "astro:content";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.tsx";
+import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
+import BookingWidget from "../../components/services/BookingWidget.tsx";
+
+// Get the cardiology service content
+const service = await getEntry("services", "cardiologie");
+
+if (!service) {
+  return Astro.redirect("/404");
+}
+
+// SEO optimization for cardiology - targeting "cardiolog București" keywords
+const seoTitle = "Cardiolog București - Consultații Cardiologie | ANN Clinic";
+const seoDescription =
+  "Consultații cardiologie în București cu cardiologi experimentați. EKG, ecocardiografie, monitorizare Holter, investigații cardiologice complete. Programează-te la ANN Clinic Bragadiru.";
+---
+
+<ServiceLayout service={service} title={seoTitle} description={seoDescription}>
+  <!-- Service Hero Section -->
+  <ServiceHero service={service} client:load />
+
+  <!-- Service Details Section -->
+  <ServiceDetails service={service} client:load />
+
+  <!-- Doctor Profiles Section -->
+  <DoctorProfiles service={service} client:load />
+
+  <!-- Booking Widget Section -->
+  <BookingWidget service={service} client:load />
+</ServiceLayout>

@@ -1,0 +1,168 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  structuredData?: object;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+    type?: string;
+    url?: string;
+  };
+  twitter?: {
+    card?: string;
+    site?: string;
+    creator?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+const {
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  structuredData,
+  openGraph,
+  twitter,
+  noindex = false,
+  nofollow = false,
+} = Astro.props;
+
+import { siteConfig } from "../../config/site";
+
+// Default site information
+const siteTitle = siteConfig.title;
+const siteUrl = Astro.site?.toString() || siteConfig.url;
+const defaultImage = siteConfig.seo.defaultImage;
+
+// Construct full title
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+
+// Construct canonical URL
+const canonical =
+  canonicalUrl || new URL(Astro.url.pathname, siteUrl).toString();
+
+// Default Open Graph data
+const ogData = {
+  title: openGraph?.title || title,
+  description: openGraph?.description || description,
+  image: openGraph?.image || defaultImage,
+  imageAlt: openGraph?.imageAlt || title,
+  type: openGraph?.type || "website",
+  url: openGraph?.url || canonical,
+};
+
+// Default Twitter data
+const twitterData = {
+  card: twitter?.card || "summary_large_image",
+  site: twitter?.site || siteConfig.seo.twitterHandle,
+  creator: twitter?.creator || siteConfig.seo.twitterHandle,
+  title: twitter?.title || title,
+  description: twitter?.description || description,
+  image: twitter?.image || defaultImage,
+};
+
+// Robots meta content
+const robotsContent = [
+  noindex ? "noindex" : "index",
+  nofollow ? "nofollow" : "follow",
+].join(", ");
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
+<meta name="robots" content={robotsContent} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogData.type} />
+<meta property="og:url" content={ogData.url} />
+<meta property="og:title" content={ogData.title} />
+<meta property="og:description" content={ogData.description} />
+<meta property="og:image" content={ogData.image} />
+<meta property="og:image:alt" content={ogData.imageAlt} />
+<meta property="og:site_name" content={siteTitle} />
+<meta property="og:locale" content="ro_RO" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content={twitterData.card} />
+<meta property="twitter:url" content={canonical} />
+<meta property="twitter:title" content={twitterData.title} />
+<meta property="twitter:description" content={twitterData.description} />
+<meta property="twitter:image" content={twitterData.image} />
+{
+  twitterData.site && (
+    <meta property="twitter:site" content={twitterData.site} />
+  )
+}
+{
+  twitterData.creator && (
+    <meta property="twitter:creator" content={twitterData.creator} />
+  )
+}
+
+<!-- Additional Meta Tags for Medical Website -->
+<meta name="author" content="ANN Clinic" />
+<meta name="language" content="Romanian" />
+<meta name="geo.region" content="RO-IF" />
+<meta name="geo.placename" content="Bragadiru, Ilfov" />
+<meta name="geo.position" content="44.3601;26.0422" />
+<meta name="ICBM" content="44.3601, 26.0422" />
+
+<!-- Structured Data -->
+{
+  structuredData && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  )
+}
+
+<!-- Default Medical Organization Structured Data -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    name: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    logo: siteConfig.url + "/images/ann-clinic-logo.jpg",
+    image: siteConfig.url + "/images/ann-clinic-building.jpg",
+    telephone: siteConfig.contact.phone,
+    email: siteConfig.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.county,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: "RO",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.address.coordinates.lat,
+      longitude: siteConfig.address.coordinates.lng,
+    },
+    openingHours: ["Mo-Fr 08:00-20:00", "Sa 08:00-16:00"],
+    medicalSpecialty: siteConfig.mainServices,
+    priceRange: "$$",
+    acceptsReservations: true,
+    hasMap: `https://maps.google.com/?q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`,
+    paymentAccepted: ["Cash", "Credit Card", "Debit Card"],
+    currenciesAccepted: "RON",
+  })}
+/>

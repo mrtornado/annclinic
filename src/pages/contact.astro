@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactHero from "../components/contact/ContactHero.tsx";
+import ContactInfo from "../components/contact/ContactInfo.tsx";
+import ContactForm from "../components/contact/ContactForm.tsx";
+import LocationMap from "../components/contact/LocationMap.tsx";
+import { siteConfig } from "../config/site";
+
+const title = "Contact - ANN Clinic | Clinică Medicală București";
+const description =
+  "Contactează ANN Clinic pentru programări și informații. Suntem localizați în Bragadiru, lângă București. Telefon, email și formular de contact disponibile.";
+const keywords = [
+  "contact ANN Clinic",
+  "clinică medicală Bragadiru",
+  "programare medic București",
+  "contact clinică medicală",
+  "telefon clinică Bragadiru",
+  "adresa clinică medicală",
+  "program clinică medicală",
+  "urgențe medicale București",
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: `${siteConfig.url}/contact`,
+  telephone: siteConfig.contact.phone,
+  email: siteConfig.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
+    addressCountry: siteConfig.address.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: siteConfig.address.coordinates.lat,
+    longitude: siteConfig.address.coordinates.lng,
+  },
+  openingHours: ["Mo-Fr 08:00-20:00", "Sa 08:00-16:00"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.contact.phone,
+    contactType: "customer service",
+    availableLanguage: "Romanian",
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  structuredData={structuredData}
+  canonicalUrl={`${siteConfig.url}/contact`}
+>
+  <!-- Contact Hero Section -->
+  <ContactHero client:load />
+
+  <!-- Contact Information and Form -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <ContactInfo client:load />
+
+        <!-- Contact Form -->
+        <ContactForm client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map -->
+  <LocationMap client:load />
+
+  <!-- Emergency Contact Section -->
+  <section class="py-12 bg-accent/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div
+        class="bg-gradient-to-r from-accent/10 to-accent-hover/10 rounded-2xl p-8 border border-accent/20"
+      >
+        <div class="flex items-center justify-center mb-4">
+          <span class="text-4xl animate-pulse">🚨</span>
+        </div>
+        <h2 class="text-2xl font-bold text-accent mb-4">Urgențe Medicale</h2>
+        <p class="text-lg text-secondary mb-6">
+          Pentru urgențe medicale, sunați imediat la numărul de urgență sau
+          contactați serviciul de ambulanță.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="tel:112"
+            class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-xl font-semibold hover:bg-accent-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>🚑</span>
+            <span>Ambulanța: 112</span>
+          </a>
+          <a
+            href={`tel:${siteConfig.contact.phone}`}
+            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>📞</span>
+            <span>Clinica: {siteConfig.contact.phoneDisplay}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

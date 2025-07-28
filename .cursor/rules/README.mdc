@@ -1,0 +1,293 @@
+---
+alwaysApply: true
+---
+
+# ANN Clinic Website - Cursor Rules
+
+Acest director conține regulile de dezvoltare pentru website-ul medical ANN Clinic, organizate tematic pentru o implementare consistentă și de înaltă calitate.
+
+## 📋 Structura Regulilor
+
+### 🏗️ [Architecture Rules](./architecture.md)
+
+Regulile fundamentale pentru arhitectura hibridă Astro + React:
+
+- Utilizarea Astro ca shell SEO-optimizat
+- React pentru toate componentele interactive
+- Organizarea fișierelor și Content Collections
+- Cerințe TypeScript și limba română
+
+### 🎨 [Design System Rules](./design-system.md)
+
+Standardele pentru designul consistent și mobile-first:
+
+- Paleta de culori medicale
+- Componente Magic UI cu animații
+- Tipografie și hierarchy
+- Sisteme de teme și responsive design
+
+### 🔍 [SEO & Content Rules](./seo-content.md)
+
+Optimizări pentru piața românească de servicii medicale:
+
+- Strategia cuvintelor cheie țintă
+- Structured data pentru servicii medicale
+- Meta tags optimizate pentru București/Bragadiru
+- Linkare internă și local SEO
+
+### ⚛️ [Component Rules](./components.md)
+
+Standardele pentru componentele React și organizarea codului:
+
+- Interfețe TypeScript pentru toate componentele
+- Patterns pentru service cards și doctor profiles
+- Reguli pentru animații performante
+- Error handling și graceful degradation
+
+### ⚡ [Performance Rules](./performance.md)
+
+Optimizări pentru Core Web Vitals și experiența utilizatorului:
+
+- Targete de performanță < 2.5s LCP
+- Strategii de lazy loading și code splitting
+- Optimizarea imaginilor WebP
+- Bundle size limits și caching
+
+## 🚀 Cum să folosești aceste reguli
+
+### Pentru componente noi:
+
+1. **Verifică [Architecture Rules](./architecture.md)** - Astro sau React?
+2. **Aplică [Design System Rules](./design-system.md)** - Culori, animații, mobile-first
+3. **Implementează [Component Rules](./components.md)** - TypeScript interfaces, patterns
+4. **Optimizează cu [Performance Rules](./performance.md)** - Lazy loading, animații GPU
+
+### Pentru SEO și conținut:
+
+1. **Urmează [SEO Rules](./seo-content.md)** - Keywords România, meta tags
+2. **Verifică URL structure** - `/servicii/ginecologie` format
+3. **Aplică structured data** - Medical Organization schema
+4. **Testează pe mobile** - Mobile-first approach
+
+## 🎯 Principii cheie de dezvoltare
+
+### ✅ ÎNTOTDEAUNA fă acestea:
+
+- **Mobile-first design** - pornește de la mobile, extinde la desktop
+- **Modifică ambele view-uri** - mobile ȘI desktop când lucrezi la componente
+- **Folosește limba română** - tot conținutul, URL-uri, keywords
+- **Optimizează pentru performanță** - < 2.5s LCP, < 100ms FID
+- **Implementează type safety** - TypeScript interfaces pentru toate
+
+### ❌ NICIODATĂ nu face acestea:
+
+- Nu rula `npm run dev` - serverul se restartează automat
+- Nu folosi English în URL-uri pentru conținut românesc
+- Nu anima properties care afectează layout-ul (width, height, margin)
+- Nu adăuga JavaScript în Astro components fără motiv
+- Nu uita diacriticele românești: ă, â, î, ș, ț
+
+## 🔧 Quick Reference
+
+### Structura componentelor:
+
+```
+src/components/
+├── layout/     # Astro (.astro) - Header, Footer, BaseLayout
+├── magic-ui/   # React (.tsx) - AnimatedButton, MagicCard
+├── home/       # React (.tsx) - HeroSection, ServicesSection
+├── services/   # React (.tsx) - ServiceHero, BookingWidget
+└── shared/     # Mixed - SEO.astro, ThemeToggle.tsx
+```
+
+### Keywords principale:
+
+- `ginecolog București` → `/servicii/ginecologie`
+- `cardiolog București` → `/servicii/cardiologie`
+- `dermatolog București` → `/servicii/dermatologie`
+- `pediatru București` → `/servicii/pediatrie`
+
+### Culori pentru specialități:
+
+- **Cardiologie**: `#dc2626` (roșu)
+- **Dermatologie**: `#ea580c` (portocaliu)
+- **Ginecologie**: `#c2410c` (portocaliu cald)
+- **Pediatrie**: `#16a34a` (verde)
+
+### Magic UI componente standard:
+
+```tsx
+<AnimatedButton variant="primary" size="lg" href="/programare">
+  📅 Programează Consultație
+</AnimatedButton>
+
+<MagicCard glowColor="rgba(13, 148, 136, 0.4)">
+  {/* Conținut card */}
+</MagicCard>
+```
+
+## 📚 Resurse de referință
+
+- **Design Document**: `.kiro/specs/medical-clinic-website/design.md`
+- **Requirements Document**: `.kiro/specs/medical-clinic-website/requirements.md`
+- **Site Configuration**: `src/config/site.ts`
+- **Global Styles**: `src/styles/global.css`
+
+## 🆘 Need Help?
+
+Când întâmpini probleme:
+
+1. **Arhitectură**: Verifică [architecture.md](./architecture.md) pentru Astro vs React
+2. **Styling**: Verifică [design-system.md](./design-system.md) pentru Tailwind 4 și culori
+3. **SEO**: Verifică [seo-content.md](./seo-content.md) pentru keywords români
+4. **Componente**: Verifică [components.md](./components.md) pentru patterns și interfaces
+5. **Performance**: Verifică [performance.md](./performance.md) pentru optimizări
+
+---
+
+**Scopul acestor reguli:** Să creăm un website medical modern, rapid și SEO-optimizat care să atragă pacienți în București și Bragadiru prin căutări organice și campanii AdWords eficiente.
+
+# ANN Clinic Website - Cursor Rules
+
+Acest director conține regulile de dezvoltare pentru website-ul medical ANN Clinic, organizate tematic pentru o implementare consistentă și de înaltă calitate.
+
+## 📋 Structura Regulilor
+
+### 🏗️ [Architecture Rules](./architecture.md)
+
+Regulile fundamentale pentru arhitectura hibridă Astro + React:
+
+- Utilizarea Astro ca shell SEO-optimizat
+- React pentru toate componentele interactive
+- Organizarea fișierelor și Content Collections
+- Cerințe TypeScript și limba română
+
+### 🎨 [Design System Rules](./design-system.md)
+
+Standardele pentru designul consistent și mobile-first:
+
+- Paleta de culori medicale
+- Componente Magic UI cu animații
+- Tipografie și hierarchy
+- Sisteme de teme și responsive design
+
+### 🔍 [SEO & Content Rules](./seo-content.md)
+
+Optimizări pentru piața românească de servicii medicale:
+
+- Strategia cuvintelor cheie țintă
+- Structured data pentru servicii medicale
+- Meta tags optimizate pentru București/Bragadiru
+- Linkare internă și local SEO
+
+### ⚛️ [Component Rules](./components.md)
+
+Standardele pentru componentele React și organizarea codului:
+
+- Interfețe TypeScript pentru toate componentele
+- Patterns pentru service cards și doctor profiles
+- Reguli pentru animații performante
+- Error handling și graceful degradation
+
+### ⚡ [Performance Rules](./performance.md)
+
+Optimizări pentru Core Web Vitals și experiența utilizatorului:
+
+- Targete de performanță < 2.5s LCP
+- Strategii de lazy loading și code splitting
+- Optimizarea imaginilor WebP
+- Bundle size limits și caching
+
+## 🚀 Cum să folosești aceste reguli
+
+### Pentru componente noi:
+
+1. **Verifică [Architecture Rules](./architecture.md)** - Astro sau React?
+2. **Aplică [Design System Rules](./design-system.md)** - Culori, animații, mobile-first
+3. **Implementează [Component Rules](./components.md)** - TypeScript interfaces, patterns
+4. **Optimizează cu [Performance Rules](./performance.md)** - Lazy loading, animații GPU
+
+### Pentru SEO și conținut:
+
+1. **Urmează [SEO Rules](./seo-content.md)** - Keywords România, meta tags
+2. **Verifică URL structure** - `/servicii/ginecologie` format
+3. **Aplică structured data** - Medical Organization schema
+4. **Testează pe mobile** - Mobile-first approach
+
+## 🎯 Principii cheie de dezvoltare
+
+### ✅ ÎNTOTDEAUNA fă acestea:
+
+- **Mobile-first design** - pornește de la mobile, extinde la desktop
+- **Modifică ambele view-uri** - mobile ȘI desktop când lucrezi la componente
+- **Folosește limba română** - tot conținutul, URL-uri, keywords
+- **Optimizează pentru performanță** - < 2.5s LCP, < 100ms FID
+- **Implementează type safety** - TypeScript interfaces pentru toate
+
+### ❌ NICIODATĂ nu face acestea:
+
+- Nu rula `npm run dev` - serverul se restartează automat
+- Nu folosi English în URL-uri pentru conținut românesc
+- Nu anima properties care afectează layout-ul (width, height, margin)
+- Nu adăuga JavaScript în Astro components fără motiv
+- Nu uita diacriticele românești: ă, â, î, ș, ț
+
+## 🔧 Quick Reference
+
+### Structura componentelor:
+
+```
+src/components/
+├── layout/     # Astro (.astro) - Header, Footer, BaseLayout
+├── magic-ui/   # React (.tsx) - AnimatedButton, MagicCard
+├── home/       # React (.tsx) - HeroSection, ServicesSection
+├── services/   # React (.tsx) - ServiceHero, BookingWidget
+└── shared/     # Mixed - SEO.astro, ThemeToggle.tsx
+```
+
+### Keywords principale:
+
+- `ginecolog București` → `/servicii/ginecologie`
+- `cardiolog București` → `/servicii/cardiologie`
+- `dermatolog București` → `/servicii/dermatologie`
+- `pediatru București` → `/servicii/pediatrie`
+
+### Culori pentru specialități:
+
+- **Cardiologie**: `#dc2626` (roșu)
+- **Dermatologie**: `#ea580c` (portocaliu)
+- **Ginecologie**: `#c2410c` (portocaliu cald)
+- **Pediatrie**: `#16a34a` (verde)
+
+### Magic UI componente standard:
+
+```tsx
+<AnimatedButton variant="primary" size="lg" href="/programare">
+  📅 Programează Consultație
+</AnimatedButton>
+
+<MagicCard glowColor="rgba(13, 148, 136, 0.4)">
+  {/* Conținut card */}
+</MagicCard>
+```
+
+## 📚 Resurse de referință
+
+- **Design Document**: `.kiro/specs/medical-clinic-website/design.md`
+- **Requirements Document**: `.kiro/specs/medical-clinic-website/requirements.md`
+- **Site Configuration**: `src/config/site.ts`
+- **Global Styles**: `src/styles/global.css`
+
+## 🆘 Need Help?
+
+Când întâmpini probleme:
+
+1. **Arhitectură**: Verifică [architecture.md](./architecture.md) pentru Astro vs React
+2. **Styling**: Verifică [design-system.md](./design-system.md) pentru Tailwind 4 și culori
+3. **SEO**: Verifică [seo-content.md](./seo-content.md) pentru keywords români
+4. **Componente**: Verifică [components.md](./components.md) pentru patterns și interfaces
+5. **Performance**: Verifică [performance.md](./performance.md) pentru optimizări
+
+---
+
+**Scopul acestor reguli:** Să creăm un website medical modern, rapid și SEO-optimizat care să atragă pacienți în București și Bragadiru prin căutări organice și campanii AdWords eficiente.

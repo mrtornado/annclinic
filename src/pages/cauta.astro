@@ -1,0 +1,203 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SearchResultsPage from "../components/shared/SearchResultsPage.tsx";
+
+// Get all data for search functionality
+const services = await getCollection("services");
+const doctors = await getCollection("doctors");
+
+// Sort by relevance/order
+const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
+const sortedDoctors = doctors.sort((a, b) => a.data.order - b.data.order);
+
+// Get query parameters for SSR
+const searchQuery = Astro.url.searchParams.get("q") || "";
+const specialty = Astro.url.searchParams.get("specialty") || "";
+const serviceType = Astro.url.searchParams.get("tip") || "";
+
+// Generate SEO-optimized title and description based on search params
+let seoTitle = "Căutare Servicii Medicale București | ANN Clinic";
+let seoDescription =
+  "Caută servicii medicale și medici specializați în București. Filtrează după specialitate, disponibilitate și tip serviciu la ANN Clinic Bragadiru.";
+
+if (searchQuery) {
+  seoTitle = `Rezultate pentru "${searchQuery}" - Servicii Medicale București | ANN Clinic`;
+  seoDescription = `Găsește rezultate pentru "${searchQuery}" în serviciile medicale din București. Specialiști experimentați și echipamente moderne la ANN Clinic.`;
+}
+
+if (specialty) {
+  seoTitle = `${specialty} București - Specialiști și Servicii | ANN Clinic`;
+  seoDescription = `Găsește servicii și medici specializați în ${specialty} în București. Consultații, investigații și tratamente la ANN Clinic Bragadiru.`;
+}
+
+// Keywords for search page SEO
+const keywords = [
+  "căutare servicii medicale București",
+  "medici specializați București",
+  "consultații medicale București",
+  "investigații medicale București",
+  "specialiști medicali București",
+  "clinică medicală Bragadiru",
+  "programare medic București",
+  "servicii medicale complete",
+  "cardiolog dermatolog ginecolog București",
+  "pediatru neurolog oftalmolog București",
+];
+
+// Add specific keywords based on search params
+if (searchQuery) {
+  keywords.push(
+    `${searchQuery} București`,
+    `${searchQuery} servicii medicale`,
+    `găsire ${searchQuery}`
+  );
+}
+
+if (specialty) {
+  keywords.push(
+    `${specialty} București`,
+    `${specialty} specialiști`,
+    `servicii ${specialty}`
+  );
+}
+
+// Canonical URL with clean parameters
+let canonicalUrl = `${Astro.site}cauta`;
+const params = new URLSearchParams();
+if (searchQuery) params.set("q", searchQuery);
+if (specialty) params.set("specialty", specialty);
+if (serviceType) params.set("tip", serviceType);
+
+if (params.toString()) {
+  canonicalUrl += `?${params.toString()}`;
+}
+
+// Structured data for search results page
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SearchResultsPage",
+  name: seoTitle,
+  description: seoDescription,
+  url: canonicalUrl,
+  mainEntity: {
+    "@type": "WebSearchResult",
+    searchEngine: {
+      "@type": "WebSite",
+      name: "ANN Clinic",
+      url: Astro.site?.toString(),
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${Astro.site}cauta?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  },
+  provider: {
+    "@type": "MedicalOrganization",
+    name: "ANN Clinic",
+    url: Astro.site?.toString(),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bragadiru",
+      addressRegion: "Ilfov",
+      addressCountry: "RO",
+    },
+  },
+};
+
+// Open Graph data for social sharing
+const openGraph = {
+  title: seoTitle,
+  description: seoDescription,
+  url: canonicalUrl,
+  type: "website",
+  image: `${Astro.site}images/ann-clinic-og.jpg`,
+  imageAlt: "ANN Clinic - Servicii Medicale București",
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywords}
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
+  openGraph={openGraph}
+>
+  <main
+    class="min-h-screen bg-gradient-to-br from-surface via-surface-secondary to-surface-tertiary"
+  >
+    <!-- Search Results Interface -->
+    <SearchResultsPage
+      services={sortedServices}
+      doctors={sortedDoctors}
+      initialQuery={searchQuery}
+      initialSpecialty={specialty}
+      initialServiceType={serviceType}
+      client:load
+    />
+  </main>
+</BaseLayout>
+
+<!-- Preload critical search resources -->
+<link
+  rel="preload"
+  href="/images/search-bg.webp"
+  as="image"
+  type="image/webp"
+/>
+
+<!-- Additional meta tags for search page -->
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta
+  name="googlebot"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+
+<!-- JSON-LD for search functionality -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: Astro.site?.toString(),
+    potentialAction: [
+      {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${Astro.site}cauta?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    ],
+  })}
+/>
+
+<!-- Breadcrumb structured data -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Acasă",
+        item: Astro.site?.toString(),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Căutare",
+        item: `${Astro.site}cauta`,
+      },
+    ],
+  })}
+/>
+

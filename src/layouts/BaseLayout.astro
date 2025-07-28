@@ -1,0 +1,126 @@
+---
+import SEO from "../components/shared/SEO.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  structuredData?: object;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+    type?: string;
+    url?: string;
+  };
+  noindex?: boolean;
+  nofollow?: boolean;
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+const {
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  structuredData,
+  openGraph,
+  noindex,
+  nofollow,
+  showHeader = true,
+  showFooter = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ro" class="romanian-text">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <SEO
+      title={title}
+      description={description}
+      keywords={keywords}
+      canonicalUrl={canonicalUrl}
+      structuredData={structuredData}
+      openGraph={openGraph}
+      noindex={noindex}
+      nofollow={nofollow}
+    />
+
+    <!-- Theme initialization script (prevents flash) -->
+    <script is:inline>
+      (function () {
+        const theme = localStorage.getItem("theme") || "system";
+        const root = document.documentElement;
+
+        function applyTheme(themeToApply) {
+          if (themeToApply === "system") {
+            const systemTheme = window.matchMedia(
+              "(prefers-color-scheme: dark)"
+            ).matches
+              ? "dark"
+              : "light";
+            root.setAttribute("data-theme", systemTheme);
+          } else {
+            root.setAttribute("data-theme", themeToApply);
+          }
+        }
+
+        applyTheme(theme);
+
+        // Listen for system theme changes
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", function (e) {
+            const currentTheme = localStorage.getItem("theme") || "system";
+            if (currentTheme === "system") {
+              applyTheme("system");
+            }
+          });
+      })();
+    </script>
+  </head>
+  <body class="bg-surface text min-h-screen">
+    <div id="app" class="min-h-screen flex flex-col">
+      {showHeader && <Header />}
+      <main class="flex-1">
+        <slot />
+      </main>
+      {showFooter && <Footer />}
+    </div>
+
+    <!-- Analytics and tracking scripts would go here -->
+    <script>
+      // System theme change listener
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          const theme = localStorage.getItem("theme");
+          if (theme === "system") {
+            document.documentElement.setAttribute(
+              "data-theme",
+              e.matches ? "dark" : "light"
+            );
+          }
+        });
+    </script>
+  </body>
+</html>

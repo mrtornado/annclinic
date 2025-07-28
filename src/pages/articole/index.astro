@@ -1,0 +1,124 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticlesListing from "../../components/articles/ArticlesListing";
+import ArticlesHero from "../../components/articles/ArticlesHero";
+
+// Get all articles and sort by publish date (newest first)
+const allArticles = await getCollection("articles");
+const sortedArticles = allArticles.sort(
+  (a, b) =>
+    new Date(b.data.publishDate).getTime() -
+    new Date(a.data.publishDate).getTime()
+);
+
+// Get unique specialties for filtering
+const specialties = [
+  ...new Set(allArticles.map((article) => article.data.specialty)),
+].sort();
+
+// Get unique categories for filtering
+const categories = [
+  ...new Set(allArticles.map((article) => article.data.category)),
+].sort();
+
+// Get all tags for filtering
+const allTags = allArticles.flatMap((article) => article.data.tags);
+const uniqueTags = [...new Set(allTags)].sort();
+
+// Featured articles
+const featuredArticles = sortedArticles.filter(
+  (article) => article.data.featured
+);
+
+// Get URL parameters for initial filtering
+const url = new URL(Astro.request.url);
+const initialFilters = {
+  search: url.searchParams.get("search") || "",
+  specialty: url.searchParams.get("specialty") || "",
+  category: url.searchParams.get("category") || "",
+  tag: url.searchParams.get("tag") || "",
+};
+
+// SEO data
+const seoTitle =
+  "Articole Medicale și Ghiduri de Sănătate | ANN Clinic București";
+const seoDescription =
+  "Descoperiți articole medicale actualizate, ghiduri de sănătate și sfaturi de la specialiștii ANN Clinic. Informații credibile despre toate specialitățile medicale.";
+const seoKeywords = [
+  "articole medicale",
+  "ghiduri sănătate",
+  "informații medicale",
+  "blog medical",
+  "sfaturi sănătate",
+  "ANN Clinic București",
+  "specialități medicale",
+  "prevenție medicală",
+];
+
+// Structured data for the articles page
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Articole Medicale ANN Clinic",
+  description: seoDescription,
+  url: `${Astro.site}articole`,
+  publisher: {
+    "@type": "Organization",
+    name: "ANN Clinic",
+    logo: {
+      "@type": "ImageObject",
+      url: `${Astro.site}images/ann-clinic-logo.png`,
+    },
+  },
+  blogPost: sortedArticles.slice(0, 10).map((article) => ({
+    "@type": "BlogPosting",
+    headline: article.data.title,
+    description: article.data.description,
+    url: `${Astro.site}articole/${article.slug}`,
+    datePublished: article.data.publishDate.toISOString(),
+    dateModified: (
+      article.data.updatedDate || article.data.publishDate
+    ).toISOString(),
+    author: {
+      "@type": "Person",
+      name: article.data.author,
+    },
+    image: article.data.image
+      ? `${Astro.site}${article.data.image}`
+      : undefined,
+  })),
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={seoKeywords}
+  canonicalUrl={`${Astro.site}articole`}
+  ogType="website"
+>
+  <!-- Structured Data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData)}
+  />
+
+  <!-- Articles Hero Section -->
+  <ArticlesHero
+    client:load
+    totalArticles={sortedArticles.length}
+    specialties={specialties}
+    featuredArticles={featuredArticles.slice(0, 3)}
+  />
+
+  <!-- Articles Listing with Filters -->
+  <ArticlesListing
+    client:load
+    articles={sortedArticles}
+    specialties={specialties}
+    categories={categories}
+    tags={uniqueTags}
+    initialFilters={initialFilters}
+  />
+</BaseLayout>

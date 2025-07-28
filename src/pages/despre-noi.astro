@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutHero from "../components/about/AboutHero.tsx";
+import ClinicHistory from "../components/about/ClinicHistory.tsx";
+import MissionValues from "../components/about/MissionValues.tsx";
+import TeamSection from "../components/about/TeamSection.tsx";
+import Facilities from "../components/about/Facilities.tsx";
+import Certifications from "../components/about/Certifications.tsx";
+import { siteConfig } from "../config/site";
+
+const title =
+  "Despre Noi - ANN Clinic | Clinică Medicală de Încredere București";
+const description =
+  "Descoperă povestea ANN Clinic - o clinică medicală modernă din Bragadiru cu peste 14 specialități medicale, echipamente de ultimă generație și medici experimentați.";
+const keywords = [
+  "despre ANN Clinic",
+  "clinică medicală Bragadiru",
+  "istorie clinică medicală",
+  "echipa medicală București",
+  "facilități medicale moderne",
+  "certificări medicale",
+  "misiunea clinicii",
+  "valori medicale",
+  "echipamente medicale",
+  "experiență medicală București",
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: `${siteConfig.url}/despre-noi`,
+  foundingDate: "2020",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
+    addressCountry: siteConfig.address.country,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.contact.phone,
+    contactType: "customer service",
+    availableLanguage: "Romanian",
+  },
+  medicalSpecialty: siteConfig.specialties,
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Autorizație de funcționare",
+      recognizedBy: "Ministerul Sănătății",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  structuredData={structuredData}
+  canonicalUrl={`${siteConfig.url}/despre-noi`}
+>
+  <!-- About Hero Section -->
+  <AboutHero client:load />
+
+  <!-- Clinic History -->
+  <ClinicHistory client:load />
+
+  <!-- Mission and Values -->
+  <MissionValues client:load />
+
+  <!-- Team Section -->
+  <TeamSection client:load />
+
+  <!-- Facilities -->
+  <Facilities client:load />
+
+  <!-- Certifications -->
+  <Certifications client:load />
+</BaseLayout>
