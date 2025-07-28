@@ -3,6 +3,8 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://annclinic.ro",
@@ -58,4 +60,8 @@ export default defineConfig({
 
   // Output configuration for performance
   output: "static",
+
+  adapter: node({
+    mode: "standalone",
+  }),
 });
