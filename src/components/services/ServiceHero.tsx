@@ -28,23 +28,24 @@ const serviceIcons: Record<string, string> = {
   default: "🏥",
 };
 
+// Enhanced service colors with better visibility for dark mode
 const serviceColors: Record<string, string> = {
-  cardiologie: "from-red-500/20 to-red-600/20",
-  dermatologie: "from-amber-500/20 to-amber-600/20",
-  ginecologie: "from-pink-500/20 to-pink-600/20",
-  pediatrie: "from-green-500/20 to-green-600/20",
-  ortopedie: "from-blue-500/20 to-blue-600/20",
-  orl: "from-purple-500/20 to-purple-600/20",
-  "estetica-faciala": "from-orange-500/20 to-orange-600/20",
-  neurologie: "from-indigo-500/20 to-indigo-600/20",
-  endocrinologie: "from-emerald-500/20 to-emerald-600/20",
-  gastroenterologie: "from-yellow-500/20 to-yellow-600/20",
-  urologie: "from-sky-500/20 to-sky-600/20",
-  oftalmologie: "from-lime-500/20 to-lime-600/20",
-  psihiatrie: "from-violet-500/20 to-violet-600/20",
-  radiologie: "from-slate-500/20 to-slate-600/20",
-  laborator: "from-gray-500/20 to-gray-600/20",
-  default: "from-primary/20 to-primary-hover/20",
+  cardiologie: "#ef4444", // Cardiology - Bright red
+  dermatologie: "#f59e0b", // Dermatology - Amber
+  ginecologie: "#ec4899", // Gynecology - Pink
+  pediatrie: "#10b981", // Pediatrics - Emerald
+  ortopedie: "#3b82f6", // Orthopedics - Blue
+  orl: "#8b5cf6", // ORL - Purple
+  "estetica-faciala": "#f97316", // Aesthetics - Orange
+  neurologie: "#6366f1", // Neurology - Indigo
+  endocrinologie: "#059669", // Endocrinology - Teal
+  gastroenterologie: "#d97706", // Gastroenterology - Amber
+  urologie: "#0ea5e9", // Urology - Sky
+  oftalmologie: "#84cc16", // Ophthalmology - Lime
+  psihiatrie: "#a855f7", // Psychiatry - Violet
+  radiologie: "#64748b", // Radiology - Slate
+  laborator: "#475569", // Laboratory - Gray
+  default: "#1e40af", // Default - Primary blue
 };
 
 export default function ServiceHero({
@@ -201,9 +202,7 @@ export default function ServiceHero({
         <div className="w-6 h-10 border-2 border-text/50 rounded-full flex justify-center hover:border-text/70 transition-colors duration-300">
           <div className="w-1 h-3 bg-text/70 rounded-full mt-2 animate-pulse" />
         </div>
-        <p className="text 70 text-xs mt-2 font-medium text-center">
-          Scroll
-        </p>
+        <p className="text 70 text-xs mt-2 font-medium text-center">Scroll</p>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -8,6 +8,32 @@ export default defineConfig({
   site: "https://annclinic.ro",
   base: "/",
   trailingSlash: "ignore",
+
+  // Experimental features for better performance and SEO
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: "Inter",
+        cssVariable: "--font-inter",
+        // Optimize for medical website - clean, professional typography
+        weights: [400, 500, 600, 700],
+        styles: ["normal"],
+        // Romanian language support with latin-ext
+        subsets: ["latin", "latin-ext"],
+        // Optimized for medical content readability
+        fallbacks: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif",
+        ],
+        // Fast font loading for better UX
+        display: "swap",
+      },
+    ],
+  },
 
   // Performance optimizations
   build: {

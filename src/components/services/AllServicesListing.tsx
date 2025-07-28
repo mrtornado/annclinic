@@ -28,23 +28,24 @@ const serviceIcons: Record<string, string> = {
   default: "🏥",
 };
 
+// Enhanced service colors with better visibility for dark mode
 const serviceColors: Record<string, string> = {
-  cardiologie: "rgba(220, 38, 38, 0.4)",
-  dermatologie: "rgba(234, 88, 12, 0.4)",
-  ginecologie: "rgba(194, 65, 12, 0.4)",
-  pediatrie: "rgba(22, 163, 74, 0.4)",
-  ortopedie: "rgba(59, 130, 246, 0.4)",
-  orl: "rgba(139, 92, 246, 0.4)",
-  "estetica-faciala": "rgba(249, 115, 22, 0.4)",
-  neurologie: "rgba(99, 102, 241, 0.4)",
-  endocrinologie: "rgba(5, 150, 105, 0.4)",
-  gastroenterologie: "rgba(217, 119, 6, 0.4)",
-  urologie: "rgba(14, 165, 233, 0.4)",
-  oftalmologie: "rgba(132, 204, 22, 0.4)",
-  psihiatrie: "rgba(168, 85, 247, 0.4)",
-  radiologie: "rgba(100, 116, 139, 0.4)",
-  laborator: "rgba(71, 85, 105, 0.4)",
-  default: "rgba(30, 64, 175, 0.4)",
+  cardiologie: "#ef4444", // Cardiology - Bright red
+  dermatologie: "#f59e0b", // Dermatology - Amber
+  ginecologie: "#ec4899", // Gynecology - Pink
+  pediatrie: "#10b981", // Pediatrics - Emerald
+  ortopedie: "#3b82f6", // Orthopedics - Blue
+  orl: "#8b5cf6", // ORL - Purple
+  "estetica-faciala": "#f97316", // Aesthetics - Orange
+  neurologie: "#6366f1", // Neurology - Indigo
+  endocrinologie: "#059669", // Endocrinology - Teal
+  gastroenterologie: "#d97706", // Gastroenterology - Amber
+  urologie: "#0ea5e9", // Urology - Sky
+  oftalmologie: "#84cc16", // Ophthalmology - Lime
+  psihiatrie: "#a855f7", // Psychiatry - Violet
+  radiologie: "#64748b", // Radiology - Slate
+  laborator: "#475569", // Laboratory - Gray
+  default: "#1e40af", // Default - Primary blue
 };
 
 export default function AllServicesListing({
@@ -59,6 +60,11 @@ export default function AllServicesListing({
 
   const getServiceKey = (serviceName: string) => {
     return serviceName.toLowerCase().replace(/\s+/g, "-");
+  };
+
+  const getServiceColor = (serviceSlug: string) => {
+    const key = serviceSlug.toLowerCase().replace(/\s+/g, "-");
+    return serviceColors[key] || serviceColors.default;
   };
 
   return (
@@ -145,90 +151,95 @@ export default function AllServicesListing({
             return (
               <AnimatedText key={service.slug} delay={0.2 + index * 0.1}>
                 <article className="group relative bg-surface-elevated/90 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-border/20 hover:border-primary/30 overflow-hidden h-full flex flex-col">
-                  {/* Dynamic Background Gradient based on service */}
+                  {/* Enhanced glow and visibility effects */}
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
                     style={{
-                      background: `linear-gradient(135deg, ${
-                        serviceColors[serviceKey] || serviceColors.default
-                      }15, transparent)`,
+                      background: `linear-gradient(135deg, ${getServiceColor(
+                        service.slug
+                      )}30, transparent)`,
                     }}
                   />
 
-                  {/* Enhanced Glow Effect */}
                   <div
-                    className="absolute -inset-1 rounded-2xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-500"
+                    className="absolute -inset-1 rounded-3xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500"
                     style={{
-                      background: `linear-gradient(135deg, ${
-                        serviceColors[serviceKey] || serviceColors.default
-                      }, transparent)`,
+                      background: `linear-gradient(135deg, ${getServiceColor(
+                        service.slug
+                      )}40, transparent)`,
                     }}
                   />
 
-                  <div className="relative z-10 flex flex-col h-full">
-                    {/* Service Header */}
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="relative flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/30 to-primary/20 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                          <span className="text-2xl">
-                            {serviceIcons[serviceKey] || serviceIcons.default}
-                          </span>
-                        </div>
-                        <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
-                      </div>
-
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-xl lg:text-2xl font-bold text group-hover:text-primary transition-colors duration-300 mb-2 leading-tight line-clamp-2">
-                          {service.data.name}
-                        </h3>
-                        <div className="w-16 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full group-hover:w-24 transition-all duration-500" />
-                      </div>
+                  <div className="relative z-10">
+                    {/* Service Icon with enhanced colors */}
+                    <div
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300"
+                      style={{
+                        background: `linear-gradient(135deg, ${getServiceColor(
+                          service.slug
+                        )}20, ${getServiceColor(service.slug)}30)`,
+                      }}
+                    >
+                      <span className="text-2xl">
+                        {serviceIcons[service.slug] || serviceIcons.default}
+                      </span>
                     </div>
 
-                    {/* Service Description */}
-                    <div className="flex-1 mb-6">
-                      <p className="text-secondary text-sm leading-relaxed line-clamp-3">
-                        {service.data.description}
-                      </p>
-                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-text group-hover:text-primary transition-colors duration-300 mb-2">
+                        {service.data.name}
+                      </h3>
 
-                    {/* Service Features */}
-                    <div className="mb-6">
-                      <div className="flex flex-wrap gap-2">
-                        {["Consultații", "Investigații"].map((feature, idx) => (
-                          <span
-                            key={feature}
-                            className="text-xs bg-gradient-to-r from-primary/15 to-secondary/15 text-primary px-3 py-1.5 rounded-full border border-primary/20 group-hover:border-primary/40 transition-all duration-300 hover:scale-105 font-medium"
-                            style={{ animationDelay: `${idx * 0.1}s` }}
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Service Footer */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border/30 group-hover:border-primary/30 transition-colors duration-300">
-                      <AnimatedButton
-                        href={`/servicii/${service.slug}`}
-                        variant="outline"
-                        size="sm"
-                        className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 hover:scale-105 text-sm px-4 py-2"
-                      >
-                        <span className="flex items-center gap-2">
-                          <span>Detalii</span>
-                          <span className="text-sm">→</span>
-                        </span>
-                      </AnimatedButton>
-
-                      <div className="flex items-center gap-2 bg-surface/50 px-2 py-1 rounded-full">
-                        <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                        <span className="text-xs text-muted font-medium">
-                          Disponibil
-                        </span>
+                      <div className="flex flex-wrap gap-1">
+                        {service.data.keywords
+                          ?.slice(0, 2)
+                          .map((keyword: string) => (
+                            <span
+                              key={keyword}
+                              className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-medium border border-primary/20"
+                            >
+                              {keyword}
+                            </span>
+                          ))}
                       </div>
                     </div>
                   </div>
+
+                  {/* Service Description with better text colors */}
+                  <p className="text-text-secondary group-hover:text-text-tertiary transition-colors duration-300 mb-6 line-clamp-2">
+                    {service.data.description}
+                  </p>
+
+                  {/* Service Features with colored indicators */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <div className="flex items-center gap-2 text-sm text-text-tertiary">
+                      <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
+                      <span>Consultații</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-text-tertiary">
+                      <span className="w-2 h-2 bg-info rounded-full animate-pulse" />
+                      <span>Investigații</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-success">
+                      <span className="w-2 h-2 bg-success rounded-full" />
+                      <span className="font-medium">Disponibil</span>
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <AnimatedButton
+                    href={`/servicii/${service.slug}`}
+                    variant="outline"
+                    size="sm"
+                    className="w-full group-hover:border-primary group-hover:text-primary"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      <span>Detalii</span>
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">
+                        →
+                      </span>
+                    </span>
+                  </AnimatedButton>
                 </article>
               </AnimatedText>
             );
