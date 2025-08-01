@@ -1,20 +1,15 @@
 ---
 import { siteConfig } from "../../config/site";
-import type {
-  ServiceContent,
-  DoctorContent,
-  ArticleContent,
-} from "../../types/content";
+import type { ServiceContent, ArticleContent } from "../../types/content";
 
 export interface Props {
-  type: "organization" | "service" | "doctor" | "article" | "breadcrumb";
+  type: "organization" | "service" | "article" | "breadcrumb";
   service?: ServiceContent;
-  doctor?: DoctorContent;
   article?: ArticleContent;
   breadcrumbs?: { name: string; url: string }[];
 }
 
-const { type, service, doctor, article, breadcrumbs } = Astro.props;
+const { type, service, article, breadcrumbs } = Astro.props;
 
 // Base organization data
 const baseOrganization = {
@@ -123,34 +118,6 @@ switch (type) {
               },
             }),
           })),
-        }),
-      };
-    }
-    break;
-
-  case "doctor":
-    if (doctor) {
-      structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": `${siteConfig.url}/medici/${doctor.slug}`,
-        name: doctor.data.name,
-        jobTitle: "Medic Specialist",
-        description: doctor.data.bio,
-        url: `${siteConfig.url}/medici/${doctor.slug}`,
-        image: doctor.data.photo,
-        worksFor: {
-          "@id": `${siteConfig.url}/#organization`,
-        },
-        medicalSpecialty: doctor.data.specialties,
-        knowsLanguage: doctor.data.languages,
-        hasCredential: doctor.data.qualifications.map((qual: string) => ({
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: qual,
-        })),
-        // Add consultation types if available
-        ...(doctor.data.consultationTypes && {
-          serviceType: doctor.data.consultationTypes,
         }),
       };
     }

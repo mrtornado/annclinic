@@ -13,16 +13,14 @@ export default function ColorPalette() {
 
   return (
     <div className="p-8 bg-surface">
-      <h2 className="text-2xl font-bold text mb-6">
-        Medical Color Palette
-      </h2>
+      <h2 className="text-2xl font-bold text mb-6">Medical Color Palette</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {colors.map((color) => (
           <div key={color.name} className="text-center">
             <div
               className={`w-20 h-20 rounded-lg ${color.class} mx-auto mb-2 shadow-lg`}
             />
-            <p className="text-sm font-medium text">{color.name}</p">
+            <p className="text-sm font-medium text">{color.name}</p>
             <p className="text-xs text-secondary">{color.hex}</p>
           </div>
         ))}
