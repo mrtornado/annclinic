@@ -2,6 +2,20 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import AllServicesListing from "../../components/services/AllServicesListing.tsx";
+import { getImage } from "astro:assets";
+
+// Import service images
+import cardiologieImg from "../../assets/images/servicii/medicina-interna.jpg";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import ortopedieImg from "../../assets/images/servicii/orto.png";
+import orlImg from "../../assets/images/servicii/nefrologie.png";
+import esteticaImg from "../../assets/images/servicii/chirurgie.png";
+import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import oftalmologieImg from "../../assets/images/servicii/synevo.png";
+import urologieImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
+import famImg from "../../assets/images/servicii/fam-scaled.jpg";
 
 // Get all services content
 const services = await getCollection("services");
@@ -13,6 +27,94 @@ const sortedServices = services.sort((a, b) => {
   }
   return a.data.name.localeCompare(b.data.name);
 });
+
+// Optimize service images
+const serviceImages = {
+  cardiologie: await getImage({
+    src: cardiologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  dermatologie: await getImage({
+    src: dermatologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  ginecologie: await getImage({
+    src: ginecologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  pediatrie: await getImage({
+    src: pediatrieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  ortopedie: await getImage({
+    src: ortopedieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  orl: await getImage({
+    src: orlImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  "estetica-faciala": await getImage({
+    src: esteticaImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  neurologie: await getImage({
+    src: neurologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  oftalmologie: await getImage({
+    src: oftalmologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  urologie: await getImage({
+    src: urologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  "medicina-familie": await getImage({
+    src: famImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  default: await getImage({
+    src: famImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+};
 
 // SEO optimization for services page - targeting medical services in București
 const seoTitle =
@@ -196,7 +298,10 @@ const structuredData = {
     </section>
 
     <!-- All Services Listing -->
-    <AllServicesListing services={sortedServices} client:load />
+    <AllServicesListing
+      services={sortedServices}
+      serviceImages={serviceImages}
+      client:load
+    />
   </main>
 </BaseLayout>
-

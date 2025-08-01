@@ -13,19 +13,6 @@ const servicesCollection = defineCollection({
     keywords: z.array(z.string()),
     popularSearchTerms: z.array(z.string()),
     relatedServices: z.array(z.string()),
-    doctorIds: z.array(z.string()).optional(),
-    doctors: z
-      .array(
-        z.object({
-          name: z.string(),
-          specialization: z.string(),
-          experience: z.number(),
-          qualifications: z.array(z.string()),
-          languages: z.array(z.string()),
-          availability: z.string(),
-        })
-      )
-      .optional(),
     treatments: z
       .array(
         z.object({
@@ -137,26 +124,6 @@ const articlesCollection = defineCollection({
   }),
 });
 
-// Doctors Collection
-const doctorsCollection = defineCollection({
-  type: "content",
-  schema: z.object({
-    name: z.string(),
-    specialties: z.array(z.string()),
-    qualifications: z.array(z.string()),
-    experience: z.number(),
-    photo: z.string(),
-    bio: z.string(),
-    languages: z.array(z.string()),
-    seoTitle: z.string(),
-    seoDescription: z.string(),
-    featured: z.boolean().default(false),
-    order: z.number().default(0),
-    consultationTypes: z.array(z.string()).optional(),
-    availableDays: z.array(z.string()).optional(),
-  }),
-});
-
 // Landing Pages Collection (for AdWords campaigns)
 const landingPagesCollection = defineCollection({
   type: "content",
@@ -195,6 +162,5 @@ const landingPagesCollection = defineCollection({
 export const collections = {
   services: servicesCollection,
   articles: articlesCollection,
-  doctors: doctorsCollection,
   landing: landingPagesCollection,
 };

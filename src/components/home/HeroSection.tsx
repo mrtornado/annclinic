@@ -2,113 +2,83 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import AnimatedText from "../magic-ui/AnimatedText";
 import FloatingParticles from "../magic-ui/FloatingParticles";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  backgroundImage: string;
+}
+
+export default function HeroSection({ backgroundImage }: HeroSectionProps) {
   return (
-    <section className="relative h-screen hero-mobile-optimized flex items-center justify-center overflow-hidden hero-bg-medical hero-scroll-smooth">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+
+      {/* Modern Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary-hover/70 to-primary-dark/85" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
       {/* Floating Particles */}
-      <FloatingParticles count={50} />
+      <FloatingParticles count={30} />
 
-      {/* Background Elements */}
+      {/* Modern Geometric Elements */}
       <div className="absolute inset-0">
-        {/* Dynamic Geometric Shapes */}
-        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-20 sm:w-32 h-20 sm:h-32 bg-white/5 rounded-full blur-xl hero-pulse" />
-        <div className="absolute top-32 sm:top-40 right-8 sm:right-20 w-16 sm:w-24 h-16 sm:h-24 bg-secondary/20 rounded-full blur-lg hero-float" />
+        {/* Subtle geometric shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" />
         <div
-          className="absolute bottom-20 sm:bottom-32 left-1/4 w-24 sm:w-40 h-24 sm:h-40 bg-white/3 rounded-full blur-2xl hero-pulse"
+          className="absolute bottom-32 right-20 w-24 h-24 bg-secondary/10 rounded-full blur-xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
         <div
-          className="absolute top-1/3 right-1/3 w-12 sm:w-20 h-12 sm:h-20 bg-accent/10 rounded-full blur-lg hero-glow"
+          className="absolute top-1/3 right-1/4 w-16 h-16 bg-accent/8 rounded-full blur-lg animate-pulse"
           style={{ animationDelay: "2s" }}
         />
-        <div
-          className="absolute top-3/4 left-1/6 w-8 sm:w-16 h-8 sm:h-16 bg-secondary/15 rounded-full blur-md hero-particle-dance"
-          style={{ animationDelay: "3s" }}
-        />
-        <div
-          className="absolute top-1/6 right-1/6 w-6 sm:w-12 h-6 sm:h-12 bg-white/8 rounded-full blur-lg hero-float"
-          style={{ animationDelay: "4s" }}
-        />
 
-        {/* Medical Cross Pattern */}
+        {/* Modern grid pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 left-1/3 w-6 sm:w-8 h-6 sm:h-8 bg-white transform rotate-45" />
-          <div className="absolute top-3/4 right-1/4 w-4 sm:w-6 h-4 sm:h-6 bg-white transform rotate-45" />
-          <div className="absolute top-1/2 left-1/6 w-3 sm:w-4 h-3 sm:h-4 bg-white transform rotate-45" />
-          <div className="absolute top-1/6 right-1/3 w-5 sm:w-7 h-5 sm:h-7 bg-white transform rotate-45" />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+              backgroundSize: "50px 50px",
+            }}
+          />
         </div>
-
-        {/* Enhanced Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary-hover/90 to-primary-dark/95" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent hero-gradient-flow opacity-50" />
-
-        {/* Animated Light Rays */}
-        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-white/40 via-white/15 to-transparent transform -translate-x-1/2 hero-pulse" />
-        <div
-          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/25 to-transparent transform -translate-y-1/2 hero-glow"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute top-1/4 right-0 w-full h-px bg-gradient-to-l from-transparent via-secondary/20 to-transparent hero-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/15 to-transparent hero-glow"
-          style={{ animationDelay: "3s" }}
-        />
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex flex-col justify-center">
-        {/* Badge */}
+        {/* Modern Badge */}
         <AnimatedText delay={0.2}>
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/15 backdrop-blur-md text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hero-glow">
-            <div className="w-2 h-2 bg-secondary rounded-full hero-pulse" />
-            <span className="whitespace-nowrap">
-              Clinică Medicală de Încredere
-            </span>
+          <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-xl text-white px-6 py-3 rounded-2xl text-sm font-semibold mb-8 shadow-2xl border border-white/30 hover:bg-white/25 transition-all duration-500 hover:scale-105">
+            <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
+            <span>Clinică Medicală de Încredere</span>
             <div
-              className="w-2 h-2 bg-accent rounded-full hero-pulse"
+              className="w-2 h-2 bg-accent rounded-full animate-pulse"
               style={{ animationDelay: "0.5s" }}
             />
           </div>
         </AnimatedText>
 
-        {/* Main Heading */}
+        {/* Modern Main Heading */}
         <AnimatedText delay={0.4}>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight">
-            <span
-              className="block mb-2 sm:mb-4"
-              style={{
-                textShadow:
-                  "0 8px 16px rgba(0,0,0,0.4), 0 4px 8px rgba(0,0,0,0.3)",
-              }}
-            >
-              Sănătatea Ta,
-            </span>
-            <span
-              className="block bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent hero-gradient-flow hover:scale-105 transition-transform duration-500"
-              style={{
-                textShadow: "0 8px 16px rgba(0,0,0,0.4)",
-                backgroundSize: "200% 200%",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight">
+            <span className="block mb-4 drop-shadow-2xl">Sănătatea Ta,</span>
+            <span className="block bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent animate-pulse">
               Prioritatea Noastră
             </span>
           </h1>
         </AnimatedText>
 
-        {/* Subtitle */}
+        {/* Modern Subtitle */}
         <AnimatedText delay={0.6}>
-          <p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0"
-            style={{ textShadow: "0 4px 8px rgba(0,0,0,0.3)" }}
-          >
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-lg">
             Descoperă servicii medicale de excelență în peste{" "}
-            <span className="font-semibold text-secondary bg-secondary/20 px-2 py-1 rounded-lg backdrop-blur-sm">
+            <span className="font-bold text-secondary bg-secondary/30 px-3 py-1 rounded-xl backdrop-blur-sm border border-secondary/20">
               14 specialități
             </span>
             , cu echipamente de ultimă generație și o echipă de medici dedicați
@@ -116,63 +86,56 @@ export default function HeroSection() {
           </p>
         </AnimatedText>
 
-        {/* CTA Buttons */}
+        {/* Modern CTA Buttons */}
         <AnimatedText delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center mb-12 sm:mb-16 px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <AnimatedButton
               href="/programare"
               variant="secondary"
               size="lg"
-              className="hero-btn-primary w-full sm:w-auto"
+              className="bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-2xl font-semibold shadow-2xl hover:shadow-secondary/25 transition-all duration-300 hover:scale-105 border-2 border-secondary/20"
             >
-              <span className="flex items-center justify-center gap-2 sm:gap-3">
-                <span className="text-xl sm:text-2xl">📅</span>
-                <span className="text-sm sm:text-base font-medium">
-                  Programează Consultație
-                </span>
+              <span className="flex items-center justify-center gap-3">
+                <span className="text-2xl">📅</span>
+                <span className="text-lg">Programează Consultație</span>
               </span>
             </AnimatedButton>
             <AnimatedButton
               href="/servicii"
               variant="outline"
               size="lg"
-              className="hero-btn-outline w-full sm:w-auto"
+              className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold backdrop-blur-xl border-2 border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105"
             >
-              <span className="flex items-center justify-center gap-2 sm:gap-3">
-                <span className="text-xl sm:text-2xl">🏥</span>
-                <span className="text-sm sm:text-base font-medium">
-                  Explorează Serviciile
-                </span>
+              <span className="flex items-center justify-center gap-3">
+                <span className="text-2xl">🏥</span>
+                <span className="text-lg">Explorează Serviciile</span>
               </span>
             </AnimatedButton>
           </div>
         </AnimatedText>
 
-        {/* Trust Indicators */}
+        {/* Modern Trust Indicators */}
         <AnimatedText delay={1.0}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 px-4 sm:px-0">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: "14+", label: "Specialități Medicale", icon: "🏥" },
               { number: "1000+", label: "Pacienți Mulțumiți", icon: "😊" },
               { number: "15+", label: "Ani de Experiență", icon: "⭐" },
               { number: "24/7", label: "Suport Medical", icon: "📞" },
             ].map((stat, index) => (
-              <div key={index} className="text-center group cursor-pointer">
-                <div className="mb-2 sm:mb-3">
-                  <span className="text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300 inline-block">
+              <div
+                key={index}
+                className="text-center group cursor-pointer bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+              >
+                <div className="mb-4">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300 inline-block">
                     {stat.icon}
                   </span>
                 </div>
-                <div
-                  className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-secondary transition-colors duration-300"
-                  style={{ textShadow: "0 4px 8px rgba(0,0,0,0.3)" }}
-                >
+                <div className="text-3xl lg:text-4xl font-black text-white mb-2 group-hover:text-secondary transition-colors duration-300 drop-shadow-lg">
                   {stat.number}
                 </div>
-                <div
-                  className="text-xs sm:text-sm lg:text-base text-white/90 font-medium leading-tight"
-                  style={{ textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}
-                >
+                <div className="text-sm lg:text-base text-white/90 font-semibold leading-tight">
                   {stat.label}
                 </div>
               </div>
@@ -181,21 +144,13 @@ export default function HeroSection() {
         </AnimatedText>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
-        <div className="w-5 sm:w-6 h-8 sm:h-10 border-2 border-white/50 rounded-full flex justify-center hover:border-white/70 transition-colors duration-300">
-          <div className="w-1 h-2 sm:h-3 bg-white/70 rounded-full mt-2 animate-pulse" />
-        </div>
-        <p className="text-white/70 text-xs mt-2 font-medium text-center">
-          Scroll
-        </p>
-      </div>
-
-      {/* Mobile Scroll Hint */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
-        <div className="flex flex-col items-center animate-bounce">
-          <div className="w-8 h-1 bg-white/50 rounded-full mb-2" />
-          <p className="text-white/70 text-xs font-medium">Swipe up</p>
+      {/* Modern Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center">
+          <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center hover:border-white/80 transition-colors duration-300 bg-white/10 backdrop-blur-sm">
+            <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse" />
+          </div>
+          <p className="text-white/80 text-sm mt-3 font-semibold">Scroll</p>
         </div>
       </div>
     </section>

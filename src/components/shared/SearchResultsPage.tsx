@@ -6,11 +6,10 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedIcon from "../magic-ui/AnimatedIcon";
 import MagicCard from "../magic-ui/MagicCard";
-import type { ServiceContent, DoctorContent } from "../../types/content";
+import type { ServiceContent } from "../../types/content";
 
 interface SearchResultsPageProps {
   services: ServiceContent[];
-  doctors: DoctorContent[];
   initialQuery?: string;
   initialSpecialty?: string;
   initialServiceType?: string;

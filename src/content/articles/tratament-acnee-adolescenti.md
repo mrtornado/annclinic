@@ -24,8 +24,7 @@ reviewedBy: "Dr. Maria Popescu"
 reviewDate: 2024-01-22
 readingTime: 7
 difficulty: "Incepator"
-image: "/images/articles/acnee-adolescenti.jpg"
-imageAlt: "Adolescent cu probleme de acnee consultând dermatologul"
+imageAlt: "Tratament acnee adolescenți - înainte și după tratament"
 relatedArticles: ["simptome-probleme-cardiace"]
 relatedServices: ["dermatologie"]
 faq:

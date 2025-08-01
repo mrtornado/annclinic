@@ -5,11 +5,8 @@ import SearchResultsPage from "../components/shared/SearchResultsPage.tsx";
 
 // Get all data for search functionality
 const services = await getCollection("services");
-const doctors = await getCollection("doctors");
-
 // Sort by relevance/order
 const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
-const sortedDoctors = doctors.sort((a, b) => a.data.order - b.data.order);
 
 // Get query parameters for SSR
 const searchQuery = Astro.url.searchParams.get("q") || "";
@@ -134,7 +131,6 @@ const openGraph = {
     <!-- Search Results Interface -->
     <SearchResultsPage
       services={sortedServices}
-      doctors={sortedDoctors}
       initialQuery={searchQuery}
       initialSpecialty={specialty}
       initialServiceType={serviceType}
@@ -200,4 +196,3 @@ const openGraph = {
     ],
   })}
 />
-

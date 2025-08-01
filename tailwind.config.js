@@ -1,39 +1,38 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-        // Primary Colors - Elegant Teal
+        // Primary Colors - Medical Teal from ANN Clinic design
         primary: "var(--color-primary)",
         "primary-hover": "var(--color-primary-hover)",
         "primary-light": "var(--color-primary-light)",
         "primary-dark": "var(--color-primary-dark)",
 
-        // Secondary Colors - Warm Gold
+        // Secondary Colors - Complementary Green
         secondary: "var(--color-secondary)",
         "secondary-hover": "var(--color-secondary-hover)",
         "secondary-light": "var(--color-secondary-light)",
 
-        // Accent Colors - Soft Rose
+        // Accent Colors - Medical Blue
         accent: "var(--color-accent)",
         "accent-hover": "var(--color-accent-hover)",
         "accent-light": "var(--color-accent-light)",
 
-        // Surface colors (responsive to theme)
+        // Surface colors
         surface: "var(--color-surface)",
         "surface-secondary": "var(--color-surface-secondary)",
         "surface-tertiary": "var(--color-surface-tertiary)",
         "surface-elevated": "var(--color-surface-elevated)",
 
-        // Text colors (responsive to theme)
+        // Text colors
         text: "var(--color-text)",
         "text-secondary": "var(--color-text-secondary)",
         "text-tertiary": "var(--color-text-tertiary)",
         "text-muted": "var(--color-text-muted)",
 
-        // Border colors (responsive to theme)
+        // Border colors
         border: "var(--color-border)",
         "border-secondary": "var(--color-border-secondary)",
         "border-focus": "var(--color-border-focus)",
@@ -66,13 +65,13 @@ export default {
         "info-light": "var(--color-info-light)",
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
+        "gradient-primary": "linear-gradient(135deg, #4DB6AC 0%, #26A69A 100%)",
         "gradient-secondary":
-          "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+          "linear-gradient(135deg, #66BB6A 0%, #4CAF50 100%)",
         "gradient-hero":
-          "linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%)",
+          "linear-gradient(135deg, #4DB6AC 0%, #26A69A 50%, #00695C 100%)",
         "gradient-medical":
-          "linear-gradient(135deg, #1e40af 0%, #059669 50%, #3b82f6 100%)",
+          "linear-gradient(135deg, #4DB6AC 0%, #66BB6A 50%, #42A5F5 100%)",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

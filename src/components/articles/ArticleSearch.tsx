@@ -170,10 +170,7 @@ export default function ArticleSearch({
 
     return parts.map((part, index) =>
       regex.test(part) ? (
-        <mark
-          key={index}
-          className="bg-yellow-200 dark:bg-yellow-800 text dark:text-white"
-        >
+        <mark key={index} className="bg-yellow-200 text-yellow-800">
           {part}
         </mark>
       ) : (
@@ -194,7 +191,7 @@ export default function ArticleSearch({
           onKeyDown={handleKeyDown}
           onFocus={() => query && setIsOpen(true)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-3 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+          className="w-full pl-10 pr-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text placeholder-text-muted"
           autoComplete="off"
         />
 
@@ -224,7 +221,7 @@ export default function ArticleSearch({
               setIsOpen(false);
               inputRef.current?.focus();
             }}
-            className="absolute inset-y-0 right-0 pr-3 flex items-center text-muted hover:text-secondary dark:hover:text-tertiary"
+            className="absolute inset-y-0 right-0 pr-3 flex items-center text-text-muted hover:text-secondary"
           >
             <svg
               className="h-5 w-5"
@@ -245,29 +242,27 @@ export default function ArticleSearch({
 
       {/* Search Results Dropdown */}
       {isOpen && (query.trim() || results.length > 0) && (
-        <div className="absolute z-50 w-full mt-1 bg-white dark:bg-surface-elevated border border-border dark:border-border-secondary rounded-lg shadow-lg max-h-96 overflow-y-auto">
+        <div className="absolute z-50 w-full mt-1 bg-surface border border-border rounded-lg shadow-lg max-h-96 overflow-y-auto">
           {results.length > 0 ? (
             <>
               {results.map((article, index) => (
                 <button
                   key={article.slug}
                   onClick={() => handleResultClick(article)}
-                  className={`w-full text-left px-4 py-3 hover:bg-surface-secondary dark:hover:bg-surface-elevated border-b border-gray-100 dark:border-border-secondary last:border-b-0 transition-colors ${
-                    selectedIndex === index
-                      ? "bg-teal-50 dark:bg-teal-900/20"
-                      : ""
+                  className={`w-full text-left px-4 py-3 hover:bg-surface-secondary border-b border-border last:border-b-0 transition-colors ${
+                    selectedIndex === index ? "bg-primary-light" : ""
                   }`}
                 >
                   <div className="flex items-start gap-3">
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium text dark:text-white mb-1 line-clamp-1">
+                      <h4 className="text-sm font-medium text-text mb-1 line-clamp-1">
                         {highlightText(article.data.title, query)}
                       </h4>
-                      <p className="text-xs text-secondary dark:text-muted mb-2 line-clamp-2">
+                      <p className="text-xs text-text-secondary mb-2 line-clamp-2">
                         {highlightText(article.data.description, query)}
                       </p>
-                      <div className="flex items-center gap-2 text-xs text-muted dark:text-muted">
-                        <span className="px-2 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 rounded-full">
+                      <div className="flex items-center gap-2 text-xs text-text-muted">
+                        <span className="px-2 py-1 bg-primary-light text-primary-dark rounded-full">
                           {article.data.specialty}
                         </span>
                         <span>{formatDate(article.data.publishDate)}</span>

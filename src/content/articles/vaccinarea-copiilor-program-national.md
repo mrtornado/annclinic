@@ -32,8 +32,7 @@ reviewedBy: "Dr. Maria Popescu"
 reviewDate: 2024-01-26
 readingTime: 8
 difficulty: "Incepator"
-image: "/images/articles/vaccinare-copii.jpg"
-imageAlt: "Copil primind vaccin de la pediatru"
+imageAlt: "Copil primind vaccin de la pediatru - Program Național de Vaccinare"
 relatedArticles: ["simptome-probleme-cardiace", "tratament-acnee-adolescenti"]
 relatedServices: ["pediatrie"]
 faq:

@@ -1,7 +1,8 @@
 ---
-import ThemeToggle from "../shared/ThemeToggle.tsx";
 import AnimatedButton from "../magic-ui/AnimatedButton.tsx";
 import { siteConfig } from "../../config/site";
+import { Image } from "astro:assets";
+import logo from "../../assets/images/logo.png";
 ---
 
 <header
@@ -12,24 +13,18 @@ import { siteConfig } from "../../config/site";
     <div class="flex justify-between items-center h-16 sm:h-20">
       <!-- Logo Section -->
       <div class="flex items-center header-logo-section">
-        <a href="/" class="flex items-center space-x-3 group">
-          <div
-            class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary via-primary-hover to-primary-dark rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 header-logo-glow"
-          >
-            <span class="text-white font-bold text-lg sm:text-xl">🏥</span>
-          </div>
-          <div class="hidden sm:block">
-            <h1
-              class="text-xl sm:text-2xl font-bold text-text group-hover:text-primary transition-colors duration-300"
-            >
-              {siteConfig.name}
-            </h1>
-            <p
-              class="text-xs text-text-muted group-hover:text-secondary transition-colors duration-300"
-            >
-              {siteConfig.tagline}
-            </p>
-          </div>
+        <a href="/" class="flex items-center group">
+          <Image
+            src={logo}
+            alt={`${siteConfig.name} - ${siteConfig.tagline}`}
+            width={400}
+            height={80}
+            format="webp"
+            quality={100}
+            class="h-12 w-auto sm:h-16 max-w-none object-contain transition-all duration-300 group-hover:scale-105"
+            loading="eager"
+            decoding="sync"
+          />
         </a>
       </div>
 
@@ -39,7 +34,6 @@ import { siteConfig } from "../../config/site";
           [
             { href: "/", label: "Acasă", icon: "🏠" },
             { href: "/servicii", label: "Servicii", icon: "🏥" },
-            { href: "/medici", label: "Medici", icon: "👨‍⚕️" },
             { href: "/articole", label: "Articole", icon: "📰" },
             { href: "/contact", label: "Contact", icon: "📞" },
           ].map((item) => (
@@ -71,11 +65,6 @@ import { siteConfig } from "../../config/site";
           >
             0123 456 789
           </a>
-        </div>
-
-        <!-- Theme Toggle -->
-        <div class="header-theme-toggle">
-          <ThemeToggle client:load />
         </div>
 
         <!-- CTA Button -->
@@ -128,7 +117,6 @@ import { siteConfig } from "../../config/site";
           [
             { href: "/", label: "Acasă", icon: "🏠" },
             { href: "/servicii", label: "Servicii", icon: "🏥" },
-            { href: "/medici", label: "Medici", icon: "👨‍⚕️" },
             { href: "/articole", label: "Articole", icon: "📰" },
             { href: "/contact", label: "Contact", icon: "📞" },
           ].map((item) => (

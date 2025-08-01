@@ -96,11 +96,11 @@ const structuredData = {
   description={seoDescription}
   keywords={seoKeywords}
   canonicalUrl={`${Astro.site}articole`}
-  ogType="website"
 >
   <!-- Structured Data -->
   <script
     type="application/ld+json"
+    is:inline
     set:html={JSON.stringify(structuredData)}
   />
 

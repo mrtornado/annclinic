@@ -2,8 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
-import BookingWidget from "../../components/services/BookingWidget.tsx";
 
 // SEO optimization for "botox București" - high-value aesthetic treatment
 const seoTitle = "Botox București - Tratamente Estetice Faciale | ANN Clinic";
@@ -183,22 +181,6 @@ const structuredData = {
       service={landingPageData}
       showTrustSignals={true}
       showBeforeAfter={true}
-      client:load
-    />
-
-    <!-- Doctor Profiles Section - Aesthetic Expertise -->
-    <DoctorProfiles
-      service={landingPageData}
-      highlightCertifications={true}
-      client:load
-    />
-
-    <!-- Prominent Booking Widget with Free Consultation -->
-    <BookingWidget
-      service={landingPageData}
-      priority="high"
-      showFreeConsultation={true}
-      showEmergencyContact={true}
       client:load
     />
   </main>

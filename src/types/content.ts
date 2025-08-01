@@ -13,15 +13,7 @@ export interface ServiceContent {
     keywords: string[];
     popularSearchTerms: string[];
     relatedServices: string[];
-    doctorIds?: string[];
-    doctors?: {
-      name: string;
-      specialization: string;
-      experience: number;
-      qualifications: string[];
-      languages: string[];
-      availability: string;
-    }[];
+
     treatments?: {
       name: string;
       description: string;
@@ -52,25 +44,5 @@ export interface ArticleContent {
     readingTime?: number;
     image?: string;
     imageAlt?: string;
-  };
-}
-
-export interface DoctorContent {
-  id: string;
-  slug: string;
-  data: {
-    name: string;
-    specialties: string[];
-    qualifications: string[];
-    experience: number;
-    photo: string;
-    bio: string;
-    languages: string[];
-    seoTitle: string;
-    seoDescription: string;
-    featured: boolean;
-    order: number;
-    consultationTypes?: string[];
-    availableDays?: string[];
   };
 }

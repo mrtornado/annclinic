@@ -119,7 +119,7 @@ export default function ArticlesHero({
               {featuredArticles.map((article, index) => (
                 <div
                   key={article.slug}
-                  className="group bg-white dark:bg-surface-elevated rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-border dark:border-border-secondary"
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200"
                   style={{
                     animationDelay: `${index * 0.1}s`,
                     animation: "fadeInUp 0.6s ease-out forwards",
@@ -134,7 +134,7 @@ export default function ArticlesHero({
                         loading="lazy"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-block px-3 py-1 bg-teal-500 text-white text-sm font-medium rounded-full">
+                        <span className="inline-block px-3 py-1 bg-gradient-to-r from-primary to-secondary text-white text-sm font-bold rounded-full shadow-lg">
                           {article.data.specialty}
                         </span>
                       </div>
@@ -142,17 +142,17 @@ export default function ArticlesHero({
                   )}
 
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       <a href={`/articole/${article.slug}`}>
                         {article.data.title}
                       </a>
                     </h3>
 
-                    <p className="text-secondary dark:text-tertiary text-sm mb-4 line-clamp-3">
+                    <p className="text-slate-600 text-sm mb-4 line-clamp-3">
                       {article.data.description}
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-muted dark:text-muted">
+                    <div className="flex items-center justify-between text-xs text-slate-500">
                       <span>{formatDate(article.data.publishDate)}</span>
                       {article.data.readingTime && (
                         <span className="flex items-center gap-1">

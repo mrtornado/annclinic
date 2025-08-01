@@ -2,8 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
-import BookingWidget from "../../components/services/BookingWidget.tsx";
 
 // SEO optimization for "ecografie sarcină București" - high-value obstetric service
 const seoTitle =
@@ -173,34 +171,12 @@ const structuredData = {
 >
   <main class="min-h-screen">
     <!-- Landing Page Hero Section - Pregnancy Focus -->
-    <ServiceHero
-      service={landingPageData}
-      isLandingPage={true}
-      showSpecialFeatures={true}
-      client:load
-    />
+    <ServiceHero service={landingPageData} isLandingPage={true} client:load />
 
     <!-- Service Details Section with Pregnancy Information -->
     <ServiceDetails
       service={landingPageData}
       showTrustSignals={true}
-      showPregnancyInfo={true}
-      client:load
-    />
-
-    <!-- Doctor Profiles Section - Obstetric Expertise -->
-    <DoctorProfiles
-      service={landingPageData}
-      highlightObstetricExperience={true}
-      client:load
-    />
-
-    <!-- Prominent Booking Widget for Pregnancy Services -->
-    <BookingWidget
-      service={landingPageData}
-      priority="high"
-      showPregnancyOptions={true}
-      showEmergencyContact={true}
       client:load
     />
   </main>

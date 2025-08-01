@@ -2,8 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
-import BookingWidget from "../../components/services/BookingWidget.tsx";
 
 // SEO optimization for "tratament acnee București" - high-value landing page
 const seoTitle =
@@ -168,21 +166,6 @@ const structuredData = {
     <ServiceDetails
       service={landingPageData}
       showTrustSignals={true}
-      client:load
-    />
-
-    <!-- Doctor Profiles Section - Credibility -->
-    <DoctorProfiles
-      service={landingPageData}
-      highlightExpertise={true}
-      client:load
-    />
-
-    <!-- Prominent Booking Widget - Conversion Focus -->
-    <BookingWidget
-      service={landingPageData}
-      priority="high"
-      showEmergencyContact={true}
       client:load
     />
   </main>

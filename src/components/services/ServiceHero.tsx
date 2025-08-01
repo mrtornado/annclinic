@@ -115,7 +115,7 @@ export default function ServiceHero({
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text mb-8 leading-tight">
             <span className="block mb-4">{getServiceName()}</span>
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
-              în București
+              în București și Bragadiru
             </span>
           </h1>
         </AnimatedText>

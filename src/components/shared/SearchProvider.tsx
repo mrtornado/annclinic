@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import type { ReactNode } from "react";
-import type { ServiceContent, DoctorContent } from "../../types/content";
+import type { ServiceContent } from "../../types/content";
 
 // Search context types
 export interface SearchFilters {
@@ -12,7 +12,7 @@ export interface SearchFilters {
 
 export interface SearchResult {
   id: string;
-  type: "service" | "doctor";
+  type: "service";
   title: string;
   description: string;
   url: string;

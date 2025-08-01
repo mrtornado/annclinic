@@ -23,8 +23,7 @@ reviewedBy: "Dr. Ion Georgescu"
 reviewDate: 2024-01-20
 readingTime: 5
 difficulty: "Incepator"
-image: "/images/articles/heart-symptoms.jpg"
-imageAlt: "Ilustrație cu simptomele problemelor cardiace"
+imageAlt: "Ilustrație cu simptomele problemelor cardiace și diagnostic"
 relatedArticles:
   ["tratament-acnee-adolescenti", "vaccinarea-copiilor-program-national"]
 relatedServices: ["cardiologie"]

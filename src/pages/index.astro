@@ -5,10 +5,122 @@ import ServicesSection from "../components/home/ServicesSection.tsx";
 import ArticlesSection from "../components/home/ArticlesSection.tsx";
 import { getCollection } from "astro:content";
 import { siteConfig } from "../config/site";
+import { getImage } from "astro:assets";
+import bgImage from "../assets/images/bg-image.jpg";
 
 // Get services and articles data for React components
 const services = await getCollection("services");
 const articles = await getCollection("articles");
+
+// Optimize background image
+const optimizedBgImage = await getImage({
+  src: bgImage,
+  format: "webp",
+  quality: 85,
+  width: 1920,
+  height: 1080,
+});
+
+// Import service images for homepage
+import cardiologieImg from "../assets/images/servicii/medicina-interna.jpg";
+import dermatologieImg from "../assets/images/servicii/dermatologie.png";
+import ginecologieImg from "../assets/images/servicii/ginecologie.png";
+import pediatrieImg from "../assets/images/servicii/pediatrrie.png";
+import ortopedieImg from "../assets/images/servicii/orto.png";
+import orlImg from "../assets/images/servicii/nefrologie.png";
+import esteticaImg from "../assets/images/servicii/chirurgie.png";
+import neurologieImg from "../assets/images/servicii/medicina-muncii.jpg";
+import oftalmologieImg from "../assets/images/servicii/synevo.png";
+import urologieImg from "../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
+import famImg from "../assets/images/servicii/fam-scaled.jpg";
+
+// Optimize service images for homepage
+const homeServiceImages = {
+  cardiologie: await getImage({
+    src: cardiologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  dermatologie: await getImage({
+    src: dermatologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  ginecologie: await getImage({
+    src: ginecologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  pediatrie: await getImage({
+    src: pediatrieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  ortopedie: await getImage({
+    src: ortopedieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  orl: await getImage({
+    src: orlImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  "estetica-faciala": await getImage({
+    src: esteticaImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  neurologie: await getImage({
+    src: neurologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  oftalmologie: await getImage({
+    src: oftalmologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  urologie: await getImage({
+    src: urologieImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  "medicina-familie": await getImage({
+    src: famImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+  default: await getImage({
+    src: famImg,
+    format: "webp",
+    quality: 85,
+    width: 400,
+    height: 300,
+  }),
+};
 ---
 
 <BaseLayout
@@ -23,10 +135,14 @@ const articles = await getCollection("articles");
   ]}
 >
   <!-- Hero Section - React Component -->
-  <HeroSection client:load />
+  <HeroSection backgroundImage={optimizedBgImage.src} client:load />
 
   <!-- Services Section - React Component -->
-  <ServicesSection services={services} client:load />
+  <ServicesSection
+    services={services}
+    serviceImages={homeServiceImages}
+    client:load
+  />
 
   <!-- Articles Section - React Component -->
   <ArticlesSection articles={articles} client:load />

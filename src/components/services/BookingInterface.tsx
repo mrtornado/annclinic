@@ -11,7 +11,6 @@ interface BookingHistoryItem {
   date: string;
   time: string;
   service: string;
-  doctor: string;
   status: "completed" | "upcoming" | "cancelled";
 }
 
@@ -19,14 +18,12 @@ interface BookingInterfaceProps {
   showHistory?: boolean;
   showEmergencyContact?: boolean;
   preselectedService?: string;
-  preselectedDoctor?: string;
 }
 
 export default function BookingInterface({
   showHistory = true,
   showEmergencyContact = true,
   preselectedService = "",
-  preselectedDoctor = "",
 }: BookingInterfaceProps) {
   const [selectedStep, setSelectedStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +35,6 @@ export default function BookingInterface({
 
   const [formData, setFormData] = useState({
     service: preselectedService,
-    doctor: preselectedDoctor,
     date: "",
     time: "",
     name: "",
@@ -113,40 +109,6 @@ export default function BookingInterface({
     },
   ];
 
-  // Mock doctors data
-  const doctors = [
-    {
-      id: "dr-maria-popescu",
-      name: "Dr. Maria Popescu",
-      specialties: ["Cardiologie"],
-      experience: 15,
-    },
-    {
-      id: "dr-alexandru-ionescu",
-      name: "Dr. Alexandru Ionescu",
-      specialties: ["Dermatologie"],
-      experience: 12,
-    },
-    {
-      id: "dr-elena-radu",
-      name: "Dr. Elena Radu",
-      specialties: ["Ginecologie"],
-      experience: 18,
-    },
-    {
-      id: "dr-andrei-stefan",
-      name: "Dr. Andrei Ștefan",
-      specialties: ["Pediatrie"],
-      experience: 10,
-    },
-    {
-      id: "dr-cristina-popescu",
-      name: "Dr. Cristina Popescu",
-      specialties: ["Ortopedie"],
-      experience: 14,
-    },
-  ];
-
   // Mock booking history
   const [bookingHistory] = useState<BookingHistoryItem[]>([
     {
@@ -154,7 +116,6 @@ export default function BookingInterface({
       date: "2024-01-15",
       time: "10:00",
       service: "Cardiologie",
-      doctor: "Dr. Maria Popescu",
       status: "completed",
     },
     {
@@ -162,7 +123,6 @@ export default function BookingInterface({
       date: "2024-02-20",
       time: "14:30",
       service: "Dermatologie",
-      doctor: "Dr. Alexandru Ionescu",
       status: "upcoming",
     },
   ]);
@@ -184,23 +144,11 @@ export default function BookingInterface({
   ];
 
   const steps = [
-    { id: 1, title: "Serviciu & Medic", icon: "🏥" },
+    { id: 1, title: "Serviciu", icon: "🏥" },
     { id: 2, title: "Data & Ora", icon: "📅" },
     { id: 3, title: "Datele Tale", icon: "👤" },
     { id: 4, title: "Confirmare", icon: "✅" },
   ];
-
-  // Get available doctors for selected service
-  const getAvailableDoctors = () => {
-    if (!formData.service) return doctors;
-    return doctors.filter((doctor) =>
-      doctor.specialties.some(
-        (specialty) =>
-          specialty.toLowerCase().includes(formData.service.toLowerCase()) ||
-          formData.service.toLowerCase().includes(specialty.toLowerCase())
-      )
-    );
-  };
 
   // Validation functions
   const validateStep = (step: number): boolean => {
@@ -266,7 +214,6 @@ export default function BookingInterface({
         setSelectedStep(1);
         setFormData({
           service: preselectedService,
-          doctor: preselectedDoctor,
           date: "",
           time: "",
           name: "",
@@ -451,7 +398,7 @@ export default function BookingInterface({
                 {/* Step Content */}
                 <div className="min-h-[500px]">
                   <AnimatePresence mode="wait">
-                    {/* Step 1: Service & Doctor Selection */}
+                    {/* Step 1: Service Selection */}
                     {selectedStep === 1 && (
                       <motion.div
                         key="step1"
@@ -462,7 +409,7 @@ export default function BookingInterface({
                         className="space-y-8"
                       >
                         <h3 className="text-2xl font-bold text mb-6">
-                          Alege serviciul și medicul
+                          Alege serviciul medical
                         </h3>
 
                         {/* Service Selection */}
@@ -512,75 +459,6 @@ export default function BookingInterface({
                             </motion.p>
                           )}
                         </div>
-
-                        {/* Doctor Selection */}
-                        {formData.service && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                          >
-                            <label className="block text-sm font-medium text mb-4">
-                              Selectează medicul (opțional)
-                            </label>
-                            <div className="space-y-3">
-                              <motion.button
-                                className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-300 ${
-                                  !formData.doctor
-                                    ? "border-primary bg-primary/10 shadow-lg"
-                                    : "border-border hover:border-primary/50 hover:bg-primary/5"
-                                }`}
-                                onClick={() => handleInputChange("doctor", "")}
-                                whileHover={{ scale: 1.01 }}
-                                whileTap={{ scale: 0.99 }}
-                              >
-                                <div className="flex items-center gap-3">
-                                  <div className="text-2xl">👨‍⚕️</div>
-                                  <div>
-                                    <h4 className="font-semibold text">
-                                      Orice medic disponibil
-                                    </h4>
-                                    <p className="text-sm text-secondary">
-                                      Sistemul va aloca cel mai potrivit medic
-                                    </p>
-                                  </div>
-                                </div>
-                              </motion.button>
-
-                              {getAvailableDoctors().map((doctor, index) => (
-                                <motion.button
-                                  key={doctor.id}
-                                  className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-300 ${
-                                    formData.doctor === doctor.name
-                                      ? "border-primary bg-primary/10 shadow-lg"
-                                      : "border-border hover:border-primary/50 hover:bg-primary/5"
-                                  }`}
-                                  onClick={() =>
-                                    handleInputChange("doctor", doctor.name)
-                                  }
-                                  initial={{ opacity: 0, y: 20 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  transition={{ delay: index * 0.05 + 0.1 }}
-                                  whileHover={{ scale: 1.01 }}
-                                  whileTap={{ scale: 0.99 }}
-                                >
-                                  <div className="flex items-center gap-3">
-                                    <div className="text-2xl">👩‍⚕️</div>
-                                    <div>
-                                      <h4 className="font-semibold text">
-                                        {doctor.name}
-                                      </h4>
-                                      <p className="text-sm text-secondary">
-                                        {doctor.specialties.join(", ")} •{" "}
-                                        {doctor.experience} ani experiență
-                                      </p>
-                                    </div>
-                                  </div>
-                                </motion.button>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
                       </motion.div>
                     )}
 
@@ -864,27 +742,9 @@ export default function BookingInterface({
                                 color="text-primary"
                               />
                               <div>
-                                <h4 className="font-semibold text">
-                                  Serviciu
-                                </h4>
+                                <h4 className="font-semibold text">Serviciu</h4>
                                 <p className="text-secondary">
                                   {formData.service}
-                                </p>
-                              </div>
-                            </div>
-
-                            <div className="flex items-center gap-4">
-                              <AnimatedIcon
-                                icon="👨‍⚕️"
-                                size="lg"
-                                color="text-primary"
-                              />
-                              <div>
-                                <h4 className="font-semibold text">
-                                  Medic
-                                </h4>
-                                <p className="text-secondary">
-                                  {formData.doctor || "Orice medic disponibil"}
                                 </p>
                               </div>
                             </div>
@@ -921,9 +781,7 @@ export default function BookingInterface({
                                 color="text-primary"
                               />
                               <div>
-                                <h4 className="font-semibold text">
-                                  Pacient
-                                </h4>
+                                <h4 className="font-semibold text">Pacient</h4>
                                 <p className="text-secondary">
                                   {formData.name} • {formData.phone} •{" "}
                                   {formData.email}
@@ -1098,9 +956,7 @@ export default function BookingInterface({
                                 <p className="font-medium text text-sm">
                                   {booking.service}
                                 </p>
-                                <p className="text-xs text-secondary">
-                                  {booking.doctor}
-                                </p>
+
                                 <p className="text-xs text-secondary">
                                   {new Date(booking.date).toLocaleDateString(
                                     "ro-RO"

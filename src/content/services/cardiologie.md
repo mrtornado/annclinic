@@ -64,27 +64,6 @@ treatments:
     description: "Evaluare rapidă pentru simptome cardiace acute"
     duration: 30
     price: 300
-doctors:
-  - name: "Dr. Maria Popescu"
-    specialization: "Cardiolog senior, specialist în aritmii cardiace"
-    experience: 15
-    qualifications:
-      - "Doctor în Medicină - UMF Carol Davila București"
-      - "Specialist în Cardiologie - Spitalul de Urgență Floreasca"
-      - "Certificare în Ecocardiografie - ESC"
-      - "Membru al Societății Române de Cardiologie"
-    languages: ["Română", "Engleză", "Franceză"]
-    availability: "Luni-Vineri: 08:00-16:00"
-  - name: "Dr. Alexandru Ionescu"
-    specialization: "Cardiolog interventional, specialist în hipertensiune arterială"
-    experience: 12
-    qualifications:
-      - "Doctor în Medicină - UMF Iuliu Hațieganu Cluj"
-      - "Specialist în Cardiologie - Institutul de Boli Cardiovasculare"
-      - "Fellowship în Cardiologie Interventională - Germania"
-      - "Certificare în Monitorizare Holter"
-    languages: ["Română", "Engleză", "Germană"]
-    availability: "Marți-Sâmbătă: 09:00-17:00"
 ---
 
 # Cardiolog București - Servicii Complete de Cardiologie

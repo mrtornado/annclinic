@@ -7,6 +7,7 @@ import type { ServiceContent } from "../../types/content";
 
 interface AllServicesListingProps {
   services: ServiceContent[];
+  serviceImages: Record<string, { src: string; width: number; height: number }>;
 }
 
 const serviceIcons: Record<string, string> = {
@@ -50,6 +51,7 @@ const serviceColors: Record<string, string> = {
 
 export default function AllServicesListing({
   services,
+  serviceImages,
 }: AllServicesListingProps) {
   const [visibleServices, setVisibleServices] = useState<ServiceContent[]>([]);
 
@@ -68,7 +70,7 @@ export default function AllServicesListing({
   };
 
   return (
-    <section className="relative py-20 sm:py-32 bg-gradient-to-br from-surface-secondary via-surface to-surface-tertiary overflow-hidden">
+    <section className="relative py-20 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <FloatingParticles count={40} />
@@ -122,18 +124,18 @@ export default function AllServicesListing({
           </AnimatedText>
 
           <AnimatedText delay={0.4}>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text mb-8 leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               <span className="block mb-2">Servicii Complete de</span>
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 Sănătate
               </span>
             </h2>
           </AnimatedText>
 
           <AnimatedText delay={0.6}>
-            <p className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Echipa noastră de{" "}
-              <span className="font-semibold text-primary bg-primary/10 px-2 py-1 rounded-lg">
+              <span className="font-semibold text-primary bg-primary/10 px-3 py-1 rounded-xl">
                 {services.length} specialiști experimentați
               </span>{" "}
               oferă îngrijire medicală de înaltă calitate într-o gamă completă
@@ -143,117 +145,127 @@ export default function AllServicesListing({
           </AnimatedText>
         </div>
 
-        {/* Services Grid */}
+        {/* Modern Services Grid with Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-          {visibleServices.map((service, index) => {
-            const serviceKey = getServiceKey(service.data.name);
-
-            return (
-              <AnimatedText key={service.slug} delay={0.2 + index * 0.1}>
-                <article className="group relative bg-surface-elevated/90 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-border/20 hover:border-primary/30 overflow-hidden h-full flex flex-col">
-                  {/* Enhanced glow and visibility effects */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-                    style={{
-                      background: `linear-gradient(135deg, ${getServiceColor(
-                        service.slug
-                      )}30, transparent)`,
-                    }}
+          {visibleServices.map((service, index) => (
+            <AnimatedText key={service.slug} delay={0.2 + index * 0.1}>
+              <article className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 overflow-hidden h-full flex flex-col border border-gray-100">
+                {/* Service Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={
+                      serviceImages[service.slug]?.src ||
+                      serviceImages.default?.src
+                    }
+                    alt={service.data.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={
+                      serviceImages[service.slug]?.width ||
+                      serviceImages.default?.width
+                    }
+                    height={
+                      serviceImages[service.slug]?.height ||
+                      serviceImages.default?.height
+                    }
                   />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                  <div
-                    className="absolute -inset-1 rounded-3xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-                    style={{
-                      background: `linear-gradient(135deg, ${getServiceColor(
-                        service.slug
-                      )}40, transparent)`,
-                    }}
-                  />
-
-                  <div className="relative z-10">
-                    {/* Service Icon with enhanced colors */}
-                    <div
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300"
-                      style={{
-                        background: `linear-gradient(135deg, ${getServiceColor(
-                          service.slug
-                        )}20, ${getServiceColor(service.slug)}30)`,
-                      }}
-                    >
-                      <span className="text-2xl">
+                  {/* Service Icon */}
+                  <div className="absolute top-3 right-3">
+                    <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-lg">
                         {serviceIcons[service.slug] || serviceIcons.default}
                       </span>
                     </div>
+                  </div>
 
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-text group-hover:text-primary transition-colors duration-300 mb-2">
-                        {service.data.name}
-                      </h3>
+                  {/* Featured Badge */}
+                  {service.data.featured && (
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-secondary text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                </div>
 
-                      <div className="flex flex-wrap gap-1">
-                        {service.data.keywords
-                          ?.slice(0, 2)
-                          .map((keyword: string) => (
-                            <span
-                              key={keyword}
-                              className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-medium border border-primary/20"
-                            >
-                              {keyword}
-                            </span>
-                          ))}
+                {/* Card Content */}
+                <div className="p-5 flex flex-col flex-1">
+                  {/* Service Header */}
+                  <div className="mb-3">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                      {service.data.name}
+                    </h3>
+                    <div className="flex flex-wrap gap-1">
+                      {service.data.keywords
+                        ?.slice(0, 2)
+                        .map((keyword: string) => (
+                          <span
+                            key={keyword}
+                            className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-medium"
+                          >
+                            {keyword}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Service Description */}
+                  <div className="flex-1 mb-4">
+                    <p className="text-gray-600 leading-relaxed text-sm line-clamp-2">
+                      {service.data.description}
+                    </p>
+                  </div>
+
+                  {/* Service Features */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <div className="flex items-center gap-1 text-gray-500">
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+                        <span>Consultații</span>
+                      </div>
+                      <div className="flex items-center gap-1 text-gray-500">
+                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                        <span>Investigații</span>
+                      </div>
+                      <div className="flex items-center gap-1 text-green-600">
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                        <span className="font-medium">Disponibil</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Service Description with better text colors */}
-                  <p className="text-text-secondary group-hover:text-text-tertiary transition-colors duration-300 mb-6 line-clamp-2">
-                    {service.data.description}
-                  </p>
-
-                  {/* Service Features with colored indicators */}
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <div className="flex items-center gap-2 text-sm text-text-tertiary">
-                      <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
-                      <span>Consultații</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-text-tertiary">
-                      <span className="w-2 h-2 bg-info rounded-full animate-pulse" />
-                      <span>Investigații</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-success">
-                      <span className="w-2 h-2 bg-success rounded-full" />
-                      <span className="font-medium">Disponibil</span>
-                    </div>
-                  </div>
-
                   {/* Action Button */}
-                  <AnimatedButton
-                    href={`/servicii/${service.slug}`}
-                    variant="outline"
-                    size="sm"
-                    className="w-full group-hover:border-primary group-hover:text-primary"
-                  >
-                    <span className="flex items-center justify-center gap-2">
-                      <span>Detalii</span>
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        →
+                  <div className="mt-auto">
+                    <AnimatedButton
+                      href={`/servicii/${service.slug}`}
+                      variant="outline"
+                      size="sm"
+                      className="w-full border-2 border-gray-200 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 text-sm py-2"
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        <span>Detalii</span>
+                        <span className="group-hover:translate-x-1 transition-transform duration-300">
+                          →
+                        </span>
                       </span>
-                    </span>
-                  </AnimatedButton>
-                </article>
-              </AnimatedText>
-            );
-          })}
+                    </AnimatedButton>
+                  </div>
+                </div>
+              </article>
+            </AnimatedText>
+          ))}
         </div>
 
         {/* Bottom Call to Action */}
         <AnimatedText delay={1.0}>
           <div className="text-center mt-20">
-            <div className="bg-surface-elevated/90 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-border/20 shadow-xl">
-              <h3 className="text-2xl sm:text-3xl font-bold text mb-6">
+            <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-xl">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Nu găsești ce cauți?
               </h3>
-              <p className="text-secondary text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
                 Contactează-ne pentru mai multe informații despre serviciile
                 noastre sau pentru a programa o consultație personalizată.
               </p>
@@ -263,7 +275,7 @@ export default function AllServicesListing({
                   href="/programare"
                   variant="primary"
                   size="lg"
-                  className="hero-btn-primary shadow-2xl"
+                  className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   <span className="flex items-center gap-3">
                     <AnimatedIcon icon="📅" size="sm" />
@@ -276,7 +288,7 @@ export default function AllServicesListing({
                   href="/contact"
                   variant="outline"
                   size="lg"
-                  className="hero-btn-outline"
+                  className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-2xl font-semibold border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:scale-105"
                 >
                   <span className="flex items-center gap-3">
                     <AnimatedIcon icon="📞" size="sm" />

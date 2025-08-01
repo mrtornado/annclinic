@@ -3,8 +3,6 @@ import { getEntry } from "astro:content";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import DoctorProfiles from "../../components/services/DoctorProfiles.tsx";
-import BookingWidget from "../../components/services/BookingWidget.tsx";
 
 // Get the neurology service content
 const service = await getEntry("services", "neurologie");
@@ -25,10 +23,4 @@ const seoDescription =
 
   <!-- Service Details Section -->
   <ServiceDetails service={service} client:load />
-
-  <!-- Doctor Profiles Section -->
-  <DoctorProfiles service={service} client:load />
-
-  <!-- Booking Widget Section -->
-  <BookingWidget service={service} client:load />
 </ServiceLayout>

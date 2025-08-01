@@ -296,3 +296,22 @@ This implementation follows a **hybrid Astro + React architecture**:
     - Prepare AdWords campaigns with keyword groups from research
     - Test Astro + React hybrid architecture performance
     - _Requirements: 2.1, 3.1, 5.1, 5.4, 7.1_
+
+- [ ] 15. Remove Doctor Selection and Modernize Articles
+
+  - [ ] 15.1 Remove doctor selection from booking system
+
+    - Remove all doctor-related functionality from BookingInterface component
+    - Update booking form to focus only on service selection
+    - Simplify booking flow by removing doctor selection step
+    - Update form data structure to remove doctor fields
+    - Update booking history to remove doctor references
+    - _Requirements: 3.1, 3.2, 7.1_
+
+  - [ ] 15.2 Modernize articles page design
+    - Update ArticleLayout with modern Magic UI components
+    - Enhance ArticlesListing with better visual design
+    - Add Magic UI animations and interactions to article pages
+    - Improve article card design with better typography and spacing
+    - Add modern gradient backgrounds and visual effects
+    - _Requirements: 8.1, 8.2, 9.1_

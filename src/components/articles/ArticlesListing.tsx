@@ -1,6 +1,11 @@
 import React, { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import MagicCard from "../magic-ui/MagicCard";
 import AnimatedButton from "../magic-ui/AnimatedButton";
+import AnimatedText, { GradientText } from "../magic-ui/AnimatedText";
+import AnimatedIcon from "../magic-ui/AnimatedIcon";
+import FloatingParticles from "../magic-ui/FloatingParticles";
+import AnimatedSearchInput from "../magic-ui/AnimatedSearchInput";
 
 interface Article {
   slug: string;
@@ -147,152 +152,164 @@ export default function ArticlesListing({
     sortBy !== "newest";
 
   return (
-    <section id="articole" className="py-16 bg-white dark:bg-surface">
-      <div className="max-w-7xl mx-auto px-4">
+    <section
+      id="articole"
+      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+    >
+      {/* Background Effects */}
+      <FloatingParticles
+        count={20}
+        colors={["#0d9488", "#14b8a6", "#d97706"]}
+      />
+
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute bottom-20 left-20 w-40 h-40 bg-secondary/5 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-accent/3 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "4s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-indigo-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "4s" }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 py-16">
         {/* Filters Section */}
-        <div className="bg-surface-secondary dark:bg-surface-elevated rounded-xl p-6 mb-8 border border-border dark:border-border-secondary">
-          <div className="flex flex-col lg:flex-row gap-4 mb-4">
-            {/* Search */}
-            <div className="flex-1">
-              <label
-                htmlFor="search"
-                className="block text-sm font-medium text dark:text-tertiary mb-2"
-              >
-                Caută articole
-              </label>
-              <div className="relative">
-                <input
-                  type="text"
-                  id="search"
+        <AnimatedText delay={0.2}>
+          <MagicCard
+            className="p-8 mb-12 backdrop-blur-md bg-slate-800/90 border border-slate-700/50 shadow-2xl"
+            glowColor="rgba(13, 148, 136, 0.4)"
+          >
+            <div className="flex flex-col lg:flex-row gap-4 mb-4">
+              {/* Search */}
+              <div className="flex-1">
+                <label className="block text-sm font-medium text-white mb-3">
+                  Caută articole medicale
+                </label>
+                <AnimatedSearchInput
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={setSearchTerm}
                   placeholder="Caută după titlu, descriere sau etichete..."
-                  className="w-full pl-10 pr-4 py-2 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white"
+                  className="w-full"
                 />
-                <svg
-                  className="absolute left-3 top-2.5 h-5 w-5 text-muted"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              </div>
+
+              {/* Sort */}
+              <div className="lg:w-48">
+                <label
+                  htmlFor="sort"
+                  className="block text-sm font-medium text-white mb-3"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
+                  Sortează după
+                </label>
+                <select
+                  id="sort"
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                >
+                  <option value="newest">Cele mai noi</option>
+                  <option value="oldest">Cele mai vechi</option>
+                  <option value="title">Titlu (A-Z)</option>
+                  <option value="specialty">Specialitate</option>
+                </select>
               </div>
             </div>
 
-            {/* Sort */}
-            <div className="lg:w-48">
-              <label
-                htmlFor="sort"
-                className="block text-sm font-medium text dark:text-tertiary mb-2"
-              >
-                Sortează după
-              </label>
-              <select
-                id="sort"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white"
-              >
-                <option value="newest">Cele mai noi</option>
-                <option value="oldest">Cele mai vechi</option>
-                <option value="title">Titlu (A-Z)</option>
-                <option value="specialty">Specialitate</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Specialty Filter */}
-            <div>
-              <label
-                htmlFor="specialty"
-                className="block text-sm font-medium text dark:text-tertiary mb-2"
-              >
-                Specialitate
-              </label>
-              <select
-                id="specialty"
-                value={selectedSpecialty}
-                onChange={(e) => setSelectedSpecialty(e.target.value)}
-                className="w-full px-3 py-2 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white"
-              >
-                <option value="">Toate specialitățile</option>
-                {specialties.map((specialty) => (
-                  <option key={specialty} value={specialty}>
-                    {specialty}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Category Filter */}
-            <div>
-              <label
-                htmlFor="category"
-                className="block text-sm font-medium text dark:text-tertiary mb-2"
-              >
-                Categorie
-              </label>
-              <select
-                id="category"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white"
-              >
-                <option value="">Toate categoriile</option>
-                {categories.map((category) => (
-                  <option key={category} value={category}>
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Tag Filter */}
-            <div>
-              <label
-                htmlFor="tag"
-                className="block text-sm font-medium text dark:text-tertiary mb-2"
-              >
-                Etichetă
-              </label>
-              <select
-                id="tag"
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                className="w-full px-3 py-2 border border-border dark:border-border-secondary rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white dark:bg-surface-elevated text dark:text-white"
-              >
-                <option value="">Toate etichetele</option>
-                {tags.map((tag) => (
-                  <option key={tag} value={tag}>
-                    #{tag}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Active Filters and Clear */}
-          {hasActiveFilters && (
-            <div className="flex items-center justify-between mt-4 pt-4 border-t border-border dark:border-border-secondary">
-              <div className="text-sm text-secondary dark:text-muted">
-                {filteredAndSortedArticles.length} articole găsite
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Specialty Filter */}
+              <div>
+                <label
+                  htmlFor="specialty"
+                  className="block text-sm font-medium text-white mb-3"
+                >
+                  Specialitate
+                </label>
+                <select
+                  id="specialty"
+                  value={selectedSpecialty}
+                  onChange={(e) => setSelectedSpecialty(e.target.value)}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                >
+                  <option value="">Toate specialitățile</option>
+                  {specialties.map((specialty) => (
+                    <option key={specialty} value={specialty}>
+                      {specialty}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <button
-                onClick={clearFilters}
-                className="text-sm text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 font-medium"
-              >
-                Șterge toate filtrele
-              </button>
+
+              {/* Category Filter */}
+              <div>
+                <label
+                  htmlFor="category"
+                  className="block text-sm font-medium text-white mb-3"
+                >
+                  Categorie
+                </label>
+                <select
+                  id="category"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                >
+                  <option value="">Toate categoriile</option>
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Tag Filter */}
+              <div>
+                <label
+                  htmlFor="tag"
+                  className="block text-sm font-medium text-white mb-3"
+                >
+                  Etichetă
+                </label>
+                <select
+                  id="tag"
+                  value={selectedTag}
+                  onChange={(e) => setSelectedTag(e.target.value)}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                >
+                  <option value="">Toate etichetele</option>
+                  {tags.map((tag) => (
+                    <option key={tag} value={tag}>
+                      #{tag}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-          )}
-        </div>
+
+            {/* Active Filters and Clear */}
+            {hasActiveFilters && (
+              <div className="flex items-center justify-between mt-6 pt-4 border-t border-primary/20">
+                <div className="text-sm font-medium text-white">
+                  {filteredAndSortedArticles.length} articole găsite
+                </div>
+                <AnimatedButton
+                  onClick={clearFilters}
+                  variant="outline"
+                  size="sm"
+                  className="text-sm"
+                >
+                  Șterge toate filtrele
+                </AnimatedButton>
+              </div>
+            )}
+          </MagicCard>
+        </AnimatedText>
 
         {/* Articles Grid */}
         {paginatedArticles.length > 0 ? (
@@ -310,7 +327,7 @@ export default function ArticlesListing({
                     glowColor="rgba(13, 148, 136, 0.3)"
                     className="group h-full"
                   >
-                    <div className="h-full bg-white dark:bg-surface-elevated rounded-xl overflow-hidden border border-border dark:border-border-secondary">
+                    <div className="h-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-300 transform hover:scale-[1.02]">
                       {article.data.image && (
                         <div className="relative h-48 overflow-hidden">
                           <img
@@ -320,11 +337,11 @@ export default function ArticlesListing({
                             loading="lazy"
                           />
                           <div className="absolute top-4 left-4 flex gap-2">
-                            <span className="inline-block px-3 py-1 bg-teal-500 text-white text-xs font-medium rounded-full">
+                            <span className="inline-block px-3 py-1 bg-gradient-to-r from-primary to-secondary text-white text-xs font-bold rounded-full shadow-lg">
                               {article.data.specialty}
                             </span>
                             {article.data.featured && (
-                              <span className="inline-block px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">
+                              <span className="inline-block px-3 py-1 bg-gradient-to-r from-accent to-yellow-500 text-white text-xs font-bold rounded-full shadow-lg">
                                 Recomandat
                               </span>
                             )}
@@ -356,17 +373,17 @@ export default function ArticlesListing({
 
                       <div className="p-6 flex flex-col h-full">
                         <div className="flex-1">
-                          <div className="text-sm text-teal-600 dark:text-teal-400 mb-2">
+                          <div className="text-sm font-semibold text-primary mb-2">
                             {article.data.category}
                           </div>
 
-                          <h3 className="text-xl font-semibold text dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:via-secondary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 line-clamp-2 leading-tight">
                             <a href={`/articole/${article.slug}`}>
                               {article.data.title}
                             </a>
                           </h3>
 
-                          <p className="text-secondary dark:text-tertiary text-sm mb-4 line-clamp-3">
+                          <p className="text-slate-600 text-sm mb-4 line-clamp-3 leading-relaxed">
                             {article.data.description}
                           </p>
 
@@ -375,21 +392,21 @@ export default function ArticlesListing({
                             {article.data.tags.slice(0, 3).map((tag) => (
                               <span
                                 key={tag}
-                                className="inline-block px-2 py-1 bg-surface-secondary dark:bg-surface-elevated text-secondary dark:text-tertiary text-xs rounded-full"
+                                className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20 font-medium"
                               >
                                 #{tag}
                               </span>
                             ))}
                             {article.data.tags.length > 3 && (
-                              <span className="inline-block px-2 py-1 bg-surface-secondary dark:bg-surface-elevated text-secondary dark:text-tertiary text-xs rounded-full">
+                              <span className="inline-block px-2 py-1 bg-accent/20 text-accent text-xs rounded-full border border-accent/30 font-bold">
                                 +{article.data.tags.length - 3}
                               </span>
                             )}
                           </div>
                         </div>
 
-                        <div className="flex items-center justify-between text-xs text-muted dark:text-muted pt-4 border-t border-border dark:border-border-secondary">
-                          <div className="flex items-center gap-2">
+                        <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-200">
+                          <div className="flex items-center gap-2 font-medium">
                             <span>{article.data.author}</span>
                             <span>•</span>
                             <span>{formatDate(article.data.publishDate)}</span>
@@ -423,25 +440,27 @@ export default function ArticlesListing({
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center gap-2">
-                <button
+                <AnimatedButton
                   onClick={() =>
                     setCurrentPage((prev) => Math.max(prev - 1, 1))
                   }
                   disabled={currentPage === 1}
-                  className="px-4 py-2 text-sm font-medium text-muted bg-white border border-border rounded-lg hover:bg-surface-secondary disabled:opacity-50 disabled:cursor-not-allowed dark:bg-surface-elevated dark:border-border-secondary dark:text-muted dark:hover:bg-surface-elevated"
+                  variant="outline"
+                  size="sm"
+                  className="disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Anterior
-                </button>
+                </AnimatedButton>
 
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                   (page) => (
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className={`px-4 py-2 text-sm font-medium rounded-lg ${
+                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                         currentPage === page
-                          ? "bg-teal-600 text-white"
-                          : "text-muted bg-white border border-border hover:bg-surface-secondary dark:bg-surface-elevated dark:border-border-secondary dark:text-muted dark:hover:bg-surface-elevated"
+                          ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg"
+                          : "text-gray-600 bg-white border border-gray-200 hover:bg-gray-50 hover:border-primary/30"
                       }`}
                     >
                       {page}
@@ -454,7 +473,7 @@ export default function ArticlesListing({
                     setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                   }
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 text-sm font-medium text-muted bg-white border border-border rounded-lg hover:bg-surface-secondary disabled:opacity-50 disabled:cursor-not-allowed dark:bg-surface-elevated dark:border-border-secondary dark:text-muted dark:hover:bg-surface-elevated"
+                  className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-primary/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
                   Următor
                 </button>
@@ -474,10 +493,10 @@ export default function ArticlesListing({
                 />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text dark:text-white mb-2">
+            <h3 className="text-lg font-medium text-white mb-2">
               Nu am găsit articole
             </h3>
-            <p className="text-secondary dark:text-muted mb-4">
+            <p className="text-slate-300 mb-4">
               Încearcă să modifici filtrele sau termenii de căutare.
             </p>
             <AnimatedButton onClick={clearFilters} variant="outline" size="md">
@@ -488,22 +507,41 @@ export default function ArticlesListing({
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ai întrebări despre sănătatea ta?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Programează o consultație cu specialiștii noștri pentru sfaturi
-              personalizate.
-            </p>
-            <AnimatedButton
-              href="/programare"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-teal-600 hover:bg-surface-secondary"
-            >
-              📅 Programează Consultație
-            </AnimatedButton>
+          <div className="relative bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl p-8 lg:p-12 text-white overflow-hidden shadow-2xl">
+            {/* Background Effects */}
+            <div className="absolute inset-0">
+              <div className="absolute top-4 right-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-4 left-4 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+            </div>
+
+            <div className="relative z-10">
+              <div className="text-5xl mb-4">🏥</div>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                Ai întrebări despre sănătatea ta?
+              </h3>
+              <p className="text-lg lg:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Programează o consultație cu specialiștii noștri pentru sfaturi
+                personalizate și tratamente de calitate.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <AnimatedButton
+                  href="/programare"
+                  variant="secondary"
+                  size="lg"
+                  className="bg-white text-primary hover:bg-surface-secondary transform hover:scale-105 shadow-lg"
+                >
+                  📅 Programează Consultație
+                </AnimatedButton>
+                <AnimatedButton
+                  href="/servicii"
+                  variant="outline"
+                  size="lg"
+                  className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-white/30"
+                >
+                  🔍 Vezi Toate Serviciile
+                </AnimatedButton>
+              </div>
+            </div>
           </div>
         </div>
       </div>
