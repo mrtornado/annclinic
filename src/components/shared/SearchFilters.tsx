@@ -23,7 +23,7 @@ export default function SearchFilters({
   className = "",
   variant = "sidebar",
 }: SearchFiltersProps) {
-  const { filters, setFilters, clearFilters, services, doctors } = useSearch();
+  const { filters, setFilters, clearFilters, services, 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
@@ -46,11 +46,11 @@ export default function SearchFilters({
     return () => observer.disconnect();
   }, []);
 
-  // Extract unique specialties from services and doctors
+  // Extract unique specialties from services and 
   const specialties = Array.from(
     new Set([
       ...services.map((service) => service.data.name),
-      ...doctors.flatMap((doctor) => doctor.data.specialties || []),
+      ...
     ])
   ).sort();
 

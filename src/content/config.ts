@@ -25,6 +25,7 @@ const servicesCollection = defineCollection({
       )
       .optional(),
     featured: z.boolean().default(false),
+    comingSoon: z.boolean().default(false),
     order: z.number().default(0),
   }),
 });

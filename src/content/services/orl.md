@@ -6,18 +6,18 @@ icon: "ear"
 seoTitle: "Medic ORL București - Consultații Otorinolaringologie | ANN Clinic"
 seoDescription: "Medic ORL București cu experiență vastă. Consultații ORL, tratament sinuzită, otită, probleme gât, audiometrie. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "medic ORL București"
-  - "consultație ORL București"
-  - "sinuzită București"
-  - "ORL Bragadiru"
-  - "otită tratament București"
-  - "probleme gât"
-  - "dureri ureche"
-  - "rinită alergică"
-  - "audiometrie București"
-  - "consultații ORL"
-  - "ORL experimentat"
-  - "amigdalită tratament"
+  - "medic ORL București Bragadiru"
+  - "consultație ORL București Bragadiru"
+  - "sinuzită București Bragadiru"
+  - "ORL Bragadiru București"
+  - "otită tratament București Bragadiru"
+  - "probleme gât București"
+  - "dureri ureche București"
+  - "rinită alergică București"
+  - "audiometrie București Bragadiru"
+  - "consultații ORL București"
+  - "ORL experimentat București Bragadiru"
+  - "amigdalită tratament București"
 popularSearchTerms:
   - "medic ORL București"
   - "sinuzită tratament"
@@ -32,6 +32,7 @@ relatedServices:
   - "laringoscopia"
   - "tratament-sinuzita"
 featured: true
+comingSoon: true
 order: 6
 treatments:
   - name: "Consultație ORL"

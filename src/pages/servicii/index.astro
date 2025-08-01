@@ -13,7 +13,7 @@ import ortopedieImg from "../../assets/images/servicii/orto.png";
 import orlImg from "../../assets/images/servicii/nefrologie.png";
 import esteticaImg from "../../assets/images/servicii/chirurgie.png";
 import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
-import oftalmologieImg from "../../assets/images/servicii/synevo.png";
+import oftalmologieImg from "../../assets/images/servicii/orto.png";
 import urologieImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
 import famImg from "../../assets/images/servicii/fam-scaled.jpg";
 
@@ -29,91 +29,107 @@ const sortedServices = services.sort((a, b) => {
 });
 
 // Optimize service images
+const cardiologieOptimized = await getImage({
+  src: cardiologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const dermatologieOptimized = await getImage({
+  src: dermatologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ginecologieOptimized = await getImage({
+  src: ginecologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const pediatrieOptimized = await getImage({
+  src: pediatrieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ortopedieOptimized = await getImage({
+  src: ortopedieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const orlOptimized = await getImage({
+  src: orlImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const esteticaOptimized = await getImage({
+  src: esteticaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const neurologieOptimized = await getImage({
+  src: neurologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const oftalmologieOptimized = await getImage({
+  src: oftalmologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const urologieOptimized = await getImage({
+  src: urologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const famOptimized = await getImage({
+  src: famImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
 const serviceImages = {
-  cardiologie: await getImage({
-    src: cardiologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  dermatologie: await getImage({
-    src: dermatologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  ginecologie: await getImage({
-    src: ginecologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  pediatrie: await getImage({
-    src: pediatrieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  ortopedie: await getImage({
-    src: ortopedieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  orl: await getImage({
-    src: orlImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  "estetica-faciala": await getImage({
-    src: esteticaImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  neurologie: await getImage({
-    src: neurologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  oftalmologie: await getImage({
-    src: oftalmologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  urologie: await getImage({
-    src: urologieImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  "medicina-familie": await getImage({
-    src: famImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
-  default: await getImage({
-    src: famImg,
-    format: "webp",
-    quality: 85,
-    width: 400,
-    height: 300,
-  }),
+  cardiologie: { src: cardiologieOptimized.src, width: 400, height: 300 },
+  dermatologie: { src: dermatologieOptimized.src, width: 400, height: 300 },
+  ginecologie: { src: ginecologieOptimized.src, width: 400, height: 300 },
+  pediatrie: { src: pediatrieOptimized.src, width: 400, height: 300 },
+  ortopedie: { src: ortopedieOptimized.src, width: 400, height: 300 },
+  orl: { src: orlOptimized.src, width: 400, height: 300 },
+  "estetica-faciala": { src: esteticaOptimized.src, width: 400, height: 300 },
+  neurologie: { src: neurologieOptimized.src, width: 400, height: 300 },
+  oftalmologie: { src: oftalmologieOptimized.src, width: 400, height: 300 },
+  urologie: { src: urologieOptimized.src, width: 400, height: 300 },
+  "medicina-familie": { src: famOptimized.src, width: 400, height: 300 },
+  default: { src: famOptimized.src, width: 400, height: 300 },
 };
 
 // SEO optimization for services page - targeting medical services in București

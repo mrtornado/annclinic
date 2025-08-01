@@ -6,18 +6,18 @@ icon: "eye"
 seoTitle: "Oftalmolog București - Consultații Oftalmologie | ANN Clinic"
 seoDescription: "Oftalmolog București cu experiență vastă. Consultații oftalmologie, control vedere, cataractă, glaucom, retină. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "oftalmolog București"
-  - "consultație oftalmologie București"
-  - "control vedere București"
-  - "oftalmolog Bragadiru"
-  - "cataractă tratament București"
-  - "glaucom"
-  - "retină probleme"
-  - "miopie tratament"
-  - "astigmatism"
-  - "consultații oftalmologie"
-  - "oftalmolog experimentat"
-  - "OCT retină"
+  - "oftalmolog București Bragadiru"
+  - "consultație oftalmologie București Bragadiru"
+  - "control vedere București Bragadiru"
+  - "oftalmolog Bragadiru București"
+  - "cataractă tratament București Bragadiru"
+  - "glaucom București"
+  - "retină probleme București"
+  - "miopie tratament București"
+  - "astigmatism București"
+  - "consultații oftalmologie București"
+  - "oftalmolog experimentat București Bragadiru"
+  - "OCT retină București Bragadiru"
 popularSearchTerms:
   - "oftalmolog București"
   - "control vedere"
@@ -32,6 +32,7 @@ relatedServices:
   - "campimetrie"
   - "tratament-cataracta"
 featured: true
+comingSoon: true
 order: 9
 treatments:
   - name: "Consultație oftalmologie"

@@ -443,13 +443,13 @@ function SearchResultsContent() {
 
 export default function SearchResultsPage({
   services,
-  doctors,
+  
   initialQuery = "",
   initialSpecialty = "",
   initialServiceType = "",
 }: SearchResultsPageProps) {
   return (
-    <SearchProvider services={services} doctors={doctors}>
+    <SearchProvider services={services} 
       <SearchInitializer
         initialQuery={initialQuery}
         initialSpecialty={initialSpecialty}

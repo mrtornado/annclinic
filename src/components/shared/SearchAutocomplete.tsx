@@ -25,7 +25,7 @@ export default function SearchAutocomplete({
   maxSuggestions = 8,
   showCategories = true,
 }: SearchAutocompleteProps) {
-  const { query, suggestions, services, doctors, setQuery, selectSuggestion } =
+  const { query, suggestions, services, 
     useSearch();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -100,7 +100,7 @@ export default function SearchAutocomplete({
     });
 
     // Add doctor names and specialties
-    doctors.forEach((doctor) => {
+    
       // Doctor names
       if (doctor.data.name.toLowerCase().includes(normalizedQuery)) {
         suggestions.push({
@@ -179,7 +179,7 @@ export default function SearchAutocomplete({
       .slice(0, maxSuggestions);
 
     setCategorizedSuggestions(sortedSuggestions);
-  }, [query, services, doctors, maxSuggestions]);
+  }, [query, services, 
 
   // Keyboard navigation
   useEffect(() => {

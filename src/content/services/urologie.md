@@ -6,18 +6,18 @@ icon: "medical"
 seoTitle: "Urolog București - Consultații Urologie | ANN Clinic"
 seoDescription: "Urolog București cu experiență vastă. Consultații urologie, prostată, calculi renali, infecții urinare. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "urolog București"
-  - "consultație urologie București"
-  - "prostată București"
-  - "urolog Bragadiru"
-  - "calculi renali tratament"
-  - "infecții urinare"
-  - "incontinență urinară"
-  - "disfuncție erectilă"
-  - "hipertrofia de prostată"
-  - "consultații urologie"
-  - "urolog experimentat"
-  - "ecografie prostatică"
+  - "urolog București Bragadiru"
+  - "consultație urologie București Bragadiru"
+  - "prostată București Bragadiru"
+  - "urolog Bragadiru București"
+  - "calculi renali tratament București"
+  - "infecții urinare București"
+  - "incontinență urinară București"
+  - "disfuncție erectilă București"
+  - "hipertrofia de prostată București"
+  - "consultații urologie București"
+  - "urolog experimentat București Bragadiru"
+  - "ecografie prostatică București Bragadiru"
 popularSearchTerms:
   - "urolog București"
   - "prostată"
@@ -32,6 +32,7 @@ relatedServices:
   - "cistoscopia"
   - "consultatie-urologie"
 featured: true
+comingSoon: true
 order: 10
 treatments:
   - name: "Consultație urologie"

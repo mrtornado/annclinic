@@ -6,18 +6,18 @@ icon: "heart"
 seoTitle: "Cardiolog București - Consultații Cardiologie | ANN Clinic"
 seoDescription: "Cardiolog București cu experiență vastă. Consultații cardiologie, EKG, ecocardiografie, monitorizare Holter, investigații cardiologice complete. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "cardiolog București"
-  - "consultație cardiologie București"
-  - "EKG București"
-  - "ecocardiografie București"
-  - "cardiolog Bragadiru"
-  - "investigații cardiologice București"
-  - "monitorizare Holter"
-  - "dureri în piept"
-  - "hipertensiune arterială"
-  - "aritmii cardiace"
-  - "consultații cardiologie"
-  - "cardiolog experimentat"
+  - "cardiolog București Bragadiru"
+  - "consultație cardiologie București Bragadiru"
+  - "EKG București Bragadiru"
+  - "ecocardiografie București Bragadiru"
+  - "cardiolog Bragadiru București"
+  - "investigații cardiologice București Bragadiru"
+  - "monitorizare Holter București"
+  - "dureri în piept București"
+  - "hipertensiune arterială București"
+  - "aritmii cardiace București"
+  - "consultații cardiologie București"
+  - "cardiolog experimentat București Bragadiru"
 popularSearchTerms:
   - "cardiolog București"
   - "consultație cardiologie"
@@ -32,6 +32,7 @@ relatedServices:
   - "ecocardiografie"
   - "proba-efort"
 featured: true
+comingSoon: true
 order: 1
 treatments:
   - name: "Consultație cardiologie"

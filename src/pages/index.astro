@@ -1,12 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/home/HeroSection.tsx";
+import WelcomeSection from "../components/home/WelcomeSection.tsx";
 import ServicesSection from "../components/home/ServicesSection.tsx";
+import ComingSoonSection from "../components/home/ComingSoonSection.tsx";
 import ArticlesSection from "../components/home/ArticlesSection.tsx";
 import { getCollection } from "astro:content";
 import { siteConfig } from "../config/site";
 import { getImage } from "astro:assets";
 import bgImage from "../assets/images/bg-image.jpg";
+import welcomeImage from "../assets/images/welcome.webp";
+
+// Import logos
+import annLogo from "../assets/images/altfel-de-logo.png";
+import synevoLogo from "../assets/images/synevo.png";
 
 // Get services and articles data for React components
 const services = await getCollection("services");
@@ -21,105 +28,429 @@ const optimizedBgImage = await getImage({
   height: 1080,
 });
 
-// Import service images for homepage
-import cardiologieImg from "../assets/images/servicii/medicina-interna.jpg";
-import dermatologieImg from "../assets/images/servicii/dermatologie.png";
-import ginecologieImg from "../assets/images/servicii/ginecologie.png";
+// Optimize logos
+const optimizedAnnLogo = await getImage({
+  src: annLogo,
+  format: "webp",
+  quality: 100,
+  width: 300,
+  height: 120,
+});
+
+const optimizedSynevoLogo = await getImage({
+  src: synevoLogo,
+  format: "webp",
+  quality: 100,
+  width: 250,
+  height: 100,
+});
+
+// Optimize welcome image
+const optimizedWelcomeImage = await getImage({
+  src: welcomeImage,
+  format: "webp",
+  quality: 90,
+  width: 800,
+  height: 600,
+});
+
+// Import service images for homepage - correctly mapped
+import medicinaFamilieImg from "../assets/images/servicii/fam-scaled.jpg";
 import pediatrieImg from "../assets/images/servicii/pediatrrie.png";
+import medicinaInternaImg from "../assets/images/servicii/medicina-interna.jpg";
+import chirurgieGeneralaImg from "../assets/images/servicii/chirurgie.png";
+import chirurgiePediatricaImg from "../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
+import ginecologieImg from "../assets/images/servicii/ginecologie.png";
 import ortopedieImg from "../assets/images/servicii/orto.png";
+import nefrologieImg from "../assets/images/servicii/nefrologie.png";
+import analizeLaboratorImg from "../assets/images/servicii/medicina-muncii.jpg";
+import dermatologieImg from "../assets/images/servicii/dermatologie.png";
+import medicinaMunciiImg from "../assets/images/servicii/medicina-muncii.jpg";
+// Keep existing for other services
+import cardiologieImg from "../assets/images/servicii/medicina-interna.jpg";
 import orlImg from "../assets/images/servicii/nefrologie.png";
 import esteticaImg from "../assets/images/servicii/chirurgie.png";
 import neurologieImg from "../assets/images/servicii/medicina-muncii.jpg";
-import oftalmologieImg from "../assets/images/servicii/synevo.png";
+import oftalmologieImg from "../assets/images/servicii/orto.png";
 import urologieImg from "../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
-import famImg from "../assets/images/servicii/fam-scaled.jpg";
 
-// Optimize service images for homepage
+// Import coming soon service images
+import reumatologieImgSoon from "../assets/images/servicii/soon/reumatologie.jpg";
+import pneumologieImgSoon from "../assets/images/servicii/soon/pneumologie.png";
+import endocrinologieImgSoon from "../assets/images/servicii/soon/endocrinologie.png";
+import psihiatrieImgSoon from "../assets/images/servicii/soon/psihiatrie.jpg";
+import recuperareMedicalaImgSoon from "../assets/images/servicii/soon/RECUPERARE-MEDICALA.png";
+import alergologieImgSoon from "../assets/images/servicii/soon/alergologie.png";
+import ortopediePediatricaImgSoon from "../assets/images/servicii/soon/ORTOPEDIE-PEDIATRICA.png";
+// Additional coming soon services (existing services moved to coming soon)
+import cardiologieImgSoon from "../assets/images/servicii/soon/cardiologie.png";
+import orlImgSoon from "../assets/images/servicii/soon/ORL.png";
+import oftalmologieImgSoon from "../assets/images/servicii/soon/oftamologie.jpg";
+import urologieImgSoon from "../assets/images/servicii/soon/UROLOGIE.png";
+
+// Optimize service images for homepage - new mapping
+const medicinaFamilieImage = await getImage({
+  src: medicinaFamilieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const pediatrieImage = await getImage({
+  src: pediatrieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const medicinaInternaImage = await getImage({
+  src: medicinaInternaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const chirurgieGeneralaImage = await getImage({
+  src: chirurgieGeneralaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const chirurgiePediatricaImage = await getImage({
+  src: chirurgiePediatricaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ginecologieImage = await getImage({
+  src: ginecologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ortopedieImage = await getImage({
+  src: ortopedieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const nefrologieImage = await getImage({
+  src: nefrologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const analizeLaboratorImage = await getImage({
+  src: analizeLaboratorImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const dermatologieImage = await getImage({
+  src: dermatologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const medicinaMunciiImage = await getImage({
+  src: medicinaMunciiImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+// Keep existing optimized images for other services
+const cardiologieImage = await getImage({
+  src: cardiologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const orlImage = await getImage({
+  src: orlImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const esteticaImage = await getImage({
+  src: esteticaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const neurologieImage = await getImage({
+  src: neurologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const oftalmologieImage = await getImage({
+  src: oftalmologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const urologieImage = await getImage({
+  src: urologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+// Optimize coming soon service images
+const reumatologieImage = await getImage({
+  src: reumatologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const pneumologieImage = await getImage({
+  src: pneumologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const endocrinologieImage = await getImage({
+  src: endocrinologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const psihiatrieImage = await getImage({
+  src: psihiatrieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const recuperareMedicalaImage = await getImage({
+  src: recuperareMedicalaImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const alergologieImage = await getImage({
+  src: alergologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ortopediePediatricaImage = await getImage({
+  src: ortopediePediatricaImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+// Additional coming soon services optimization
+const cardiologieComingSoonImage = await getImage({
+  src: cardiologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const orlComingSoonImage = await getImage({
+  src: orlImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const oftalmologieComingSoonImage = await getImage({
+  src: oftalmologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const urologieComingSoonImage = await getImage({
+  src: urologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
 const homeServiceImages = {
-  cardiologie: await getImage({
-    src: cardiologieImg,
-    format: "webp",
-    quality: 85,
+  // New services with correct image mapping
+  "medicina-familie": {
+    src: medicinaFamilieImage.src,
     width: 400,
     height: 300,
-  }),
-  dermatologie: await getImage({
-    src: dermatologieImg,
-    format: "webp",
-    quality: 85,
+  },
+  pediatrie: {
+    src: pediatrieImage.src,
     width: 400,
     height: 300,
-  }),
-  ginecologie: await getImage({
-    src: ginecologieImg,
-    format: "webp",
-    quality: 85,
+  },
+  "medicina-interna": {
+    src: medicinaInternaImage.src,
     width: 400,
     height: 300,
-  }),
-  pediatrie: await getImage({
-    src: pediatrieImg,
-    format: "webp",
-    quality: 85,
+  },
+  "chirurgie-generala": {
+    src: chirurgieGeneralaImage.src,
     width: 400,
     height: 300,
-  }),
-  ortopedie: await getImage({
-    src: ortopedieImg,
-    format: "webp",
-    quality: 85,
+  },
+  "chirurgie-pediatrica": {
+    src: chirurgiePediatricaImage.src,
     width: 400,
     height: 300,
-  }),
-  orl: await getImage({
-    src: orlImg,
-    format: "webp",
-    quality: 85,
+  },
+  ginecologie: {
+    src: ginecologieImage.src,
     width: 400,
     height: 300,
-  }),
-  "estetica-faciala": await getImage({
-    src: esteticaImg,
-    format: "webp",
-    quality: 85,
+  },
+  ortopedie: {
+    src: ortopedieImage.src,
     width: 400,
     height: 300,
-  }),
-  neurologie: await getImage({
-    src: neurologieImg,
-    format: "webp",
-    quality: 85,
+  },
+  nefrologie: {
+    src: nefrologieImage.src,
     width: 400,
     height: 300,
-  }),
-  oftalmologie: await getImage({
-    src: oftalmologieImg,
-    format: "webp",
-    quality: 85,
+  },
+  "analize-laborator": {
+    src: analizeLaboratorImage.src,
     width: 400,
     height: 300,
-  }),
-  urologie: await getImage({
-    src: urologieImg,
-    format: "webp",
-    quality: 85,
+  },
+  dermatologie: {
+    src: dermatologieImage.src,
     width: 400,
     height: 300,
-  }),
-  "medicina-familie": await getImage({
-    src: famImg,
-    format: "webp",
-    quality: 85,
+  },
+  "medicina-muncii": {
+    src: medicinaMunciiImage.src,
     width: 400,
     height: 300,
-  }),
-  default: await getImage({
-    src: famImg,
-    format: "webp",
-    quality: 85,
+  },
+  // Existing services for backward compatibility (excluding coming soon services)
+  "estetica-faciala": {
+    src: esteticaImage.src,
     width: 400,
     height: 300,
-  }),
+  },
+  neurologie: {
+    src: neurologieImage.src,
+    width: 400,
+    height: 300,
+  },
+  // Coming soon services
+  reumatologie: {
+    src: reumatologieImage.src,
+    width: 400,
+    height: 300,
+  },
+  pneumologie: {
+    src: pneumologieImage.src,
+    width: 400,
+    height: 300,
+  },
+  endocrinologie: {
+    src: endocrinologieImage.src,
+    width: 400,
+    height: 300,
+  },
+  psihiatrie: {
+    src: psihiatrieImage.src,
+    width: 400,
+    height: 300,
+  },
+  "recuperare-medicala": {
+    src: recuperareMedicalaImage.src,
+    width: 400,
+    height: 300,
+  },
+  alergologie: {
+    src: alergologieImage.src,
+    width: 400,
+    height: 300,
+  },
+  "ortopedie-pediatrica": {
+    src: ortopediePediatricaImage.src,
+    width: 400,
+    height: 300,
+  },
+  "diabet-metabolism": {
+    src: endocrinologieImage.src, // Using endocrinologie image for diabet-metabolism
+    width: 400,
+    height: 300,
+  },
+  // Coming soon services that already exist but moved to coming soon
+  cardiologie: {
+    src: cardiologieComingSoonImage.src,
+    width: 400,
+    height: 300,
+  },
+  orl: {
+    src: orlComingSoonImage.src,
+    width: 400,
+    height: 300,
+  },
+  oftalmologie: {
+    src: oftalmologieComingSoonImage.src,
+    width: 400,
+    height: 300,
+  },
+  urologie: {
+    src: urologieComingSoonImage.src,
+    width: 400,
+    height: 300,
+  },
+  default: {
+    src: medicinaFamilieImage.src,
+    width: 400,
+    height: 300,
+  },
 };
 ---
 
@@ -135,12 +466,29 @@ const homeServiceImages = {
   ]}
 >
   <!-- Hero Section - React Component -->
-  <HeroSection backgroundImage={optimizedBgImage.src} client:load />
+  <HeroSection
+    backgroundImage={optimizedBgImage.src}
+    annLogo={optimizedAnnLogo.src}
+    synevoLogo={optimizedSynevoLogo.src}
+    client:load
+  />
+
+  <!-- Welcome Section - React Component -->
+  <WelcomeSection welcomeImage={optimizedWelcomeImage.src} client:load />
 
   <!-- Services Section - React Component -->
   <ServicesSection
     services={services}
     serviceImages={homeServiceImages}
+    backgroundImage={optimizedWelcomeImage.src}
+    client:load
+  />
+
+  <!-- Coming Soon Section - React Component -->
+  <ComingSoonSection
+    services={services}
+    serviceImages={homeServiceImages}
+    backgroundImage={optimizedWelcomeImage.src}
     client:load
   />
 

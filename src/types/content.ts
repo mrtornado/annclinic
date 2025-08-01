@@ -22,6 +22,7 @@ export interface ServiceContent {
       preparation?: string[];
     }[];
     featured: boolean;
+    comingSoon: boolean;
     order: number;
   };
 }

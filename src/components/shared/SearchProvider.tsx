@@ -43,7 +43,7 @@ export interface SearchContextType extends SearchState {
   toggleSearch: () => void;
   selectSuggestion: (suggestion: string) => void;
   services: ServiceContent[];
-  doctors: DoctorContent[];
+  
 }
 
 // Initial state
@@ -116,7 +116,7 @@ const calculateRelevanceScore = (
 const generateSuggestions = (
   query: string,
   services: ServiceContent[],
-  doctors: DoctorContent[]
+  
 ): string[] => {
   if (query.length < 2) return [];
 
@@ -146,7 +146,7 @@ const generateSuggestions = (
   });
 
   // Add doctor specialties
-  doctors.forEach((doctor) => {
+  
     doctor.data.specialties?.forEach((specialty) => {
       if (normalizeText(specialty).includes(normalizedQuery)) {
         suggestions.add(specialty);
@@ -191,13 +191,13 @@ const generateSuggestions = (
 interface SearchProviderProps {
   children: ReactNode;
   services: ServiceContent[];
-  doctors: DoctorContent[];
+  
 }
 
 export function SearchProvider({
   children,
   services,
-  doctors,
+  
 }: SearchProviderProps) {
   const [state, setState] = useState<SearchState>(initialState);
 
@@ -273,8 +273,8 @@ export function SearchProvider({
       }
     });
 
-    // Search doctors
-    doctors.forEach((doctor) => {
+    // Search 
+    
       const tags = [
         ...(doctor.data.specialties || []),
         ...(doctor.data.qualifications || []),
@@ -321,7 +321,7 @@ export function SearchProvider({
     results.sort((a, b) => b.priority - a.priority);
 
     // Generate suggestions
-    const suggestions = generateSuggestions(query, services, doctors);
+    const suggestions = generateSuggestions(query, services, 
 
     setState((prev) => ({
       ...prev,
@@ -377,7 +377,7 @@ export function SearchProvider({
     toggleSearch,
     selectSuggestion,
     services,
-    doctors,
+    
   };
 
   return (

@@ -14,7 +14,7 @@ const PAGE_PRIORITIES = {
   homepage: 1.0,
   services: 0.9,
   serviceMain: 0.8,
-  doctors: 0.8,
+
   doctorMain: 0.7,
   articles: 0.7,
   articleMain: 0.6,
@@ -29,7 +29,7 @@ const PAGE_CHANGEFREQ = {
   homepage: "weekly",
   services: "monthly",
   serviceMain: "monthly",
-  doctors: "monthly",
+
   doctorMain: "monthly",
   articles: "weekly",
   articleMain: "monthly",
@@ -85,20 +85,7 @@ export const GET: APIRoute = async () => {
     console.warn("Could not load services for sitemap:", error);
   }
 
-  // Add dynamic doctor pages
-  try {
-    const doctors = await getCollection("doctors");
-    doctors.forEach((doctor) => {
-      urls.push({
-        url: `${siteConfig.url}/medici/${doctor.slug}`,
-        lastmod,
-        changefreq: PAGE_CHANGEFREQ.doctors,
-        priority: PAGE_PRIORITIES.doctors,
-      });
-    });
-  } catch (error) {
-    console.warn("Could not load doctors for sitemap:", error);
-  }
+  // Doctors section removed
 
   // Add dynamic article pages
   try {
