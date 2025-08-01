@@ -48,6 +48,7 @@ export default defineConfig({
     css: {
       devSourcemap: true,
     },
+
     build: {
       // Optimize CSS for production
       cssCodeSplit: true,
@@ -65,10 +66,12 @@ export default defineConfig({
         },
       },
     },
+
     // Optimize development
     optimizeDeps: {
       include: ["react", "react-dom", "framer-motion"],
     },
+
     plugins: [tailwindcss()],
   },
 
