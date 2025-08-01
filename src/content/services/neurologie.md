@@ -6,31 +6,31 @@ icon: "brain"
 seoTitle: "Neurolog București - Consultații Neurologie | ANN Clinic"
 seoDescription: "Neurolog București cu experiență vastă. Consultații neurologie, dureri de cap, migrene, epilepsie, AVC. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  [
-    "neurolog București",
-    "consultație neurologie București",
-    "dureri de cap București",
-    "neurolog Bragadiru",
-    "migrene tratament București",
-    "epilepsie",
-    "AVC recuperare",
-    "scleroza multiplă",
-    "Parkinson tratament",
-    "consultații neurologie",
-    "neurolog experimentat",
-    "EEG București",
-  ]
+  - "neurolog București"
+  - "consultație neurologie București"
+  - "dureri de cap București"
+  - "neurolog Bragadiru"
+  - "migrene tratament București"
+  - "epilepsie"
+  - "AVC recuperare"
+  - "scleroza multiplă"
+  - "Parkinson tratament"
+  - "consultații neurologie"
+  - "neurolog experimentat"
+  - "EEG București"
 popularSearchTerms:
-  [
-    "neurolog București",
-    "dureri de cap",
-    "migrene",
-    "epilepsie",
-    "AVC",
-    "Parkinson",
-    "consultație neurologie",
-  ]
-relatedServices: ["EEG", "EMG", "ecografie-doppler", "consultatie-neurologie"]
+  - "neurolog București"
+  - "dureri de cap"
+  - "migrene"
+  - "epilepsie"
+  - "AVC"
+  - "Parkinson"
+  - "consultație neurologie"
+relatedServices:
+  - "EEG"
+  - "EMG"
+  - "ecografie-doppler"
+  - "consultatie-neurologie"
 featured: true
 order: 8
 treatments:
@@ -58,3 +58,66 @@ treatments:
     description: "Evaluare și planul de recuperare după accident vascular cerebral"
     duration: 60
     price: 300
+---
+
+# Neurologie București - Consultații și Tratamente Neurologice
+
+Departamentul de **neurologie** al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic în București și Bragadiru. Echipa noastră de neurologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate.
+
+## Servicii de Neurologie
+
+### Consultații Neurologice
+
+- **Evaluare neurologică completă** - examinare detaliată a sistemului nervos
+- **Consultații de specialitate** pentru afecțiuni complexe
+- **Monitorizarea evoluției** bolilor neurologice cronice
+- **Consultații de urgență** pentru simptome neurologice acute
+
+### Investigații Neurologice
+
+- **EEG (Electroencefalogramă)** - înregistrarea activității electrice a creierului
+- **EMG (Electromiografie)** - evaluarea funcției musculare și a nervilor
+- **Ecografie Doppler** - investigarea circulației cerebrale
+- **Teste neurologice specializate** - pentru diagnostic precis
+
+### Tratamente Neurologice
+
+- **Tratament migrene** - terapii personalizate pentru cefalee
+- **Management epilepsie** - controlul crizelor epileptice
+- **Recuperare post-AVC** - programe de reabilitare neurologică
+- **Tratament Parkinson** - managementul bolilor neurodegenerative
+
+## De Ce Să Alegi ANN Clinic pentru Neurologie?
+
+### Echipă Specializată
+
+- **Neurologi cu experiență vastă** în diagnosticul și tratamentul afecțiunilor neurologice
+- **Formare continuă** în cele mai noi tehnici neurologice
+- **Abordare multidisciplinară** pentru cazuri complexe
+
+### Tehnologie Avansată
+
+- **Echipamente moderne** pentru investigații neurologice
+- **EEG de înaltă rezoluție** pentru diagnostic precis
+- **Aparatură specializată** pentru toate tipurile de investigații
+
+### Servicii Complete
+
+- **Consultații de urgență** pentru simptome neurologice acute
+- **Programe de monitorizare** pentru boli cronice
+- **Tratamente personalizate** pentru toate vârstele
+
+## Programare Neurolog București
+
+Pentru a programa o consultație de neurologie la ANN Clinic:
+
+- **Evaluare neurologică** - pentru diagnostic precis
+- **Investigații specializate** - EEG, EMG, Doppler
+- **Tratamente personalizate** - adaptate nevoilor individuale
+
+**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Program**: Luni - Vineri, 8:00 - 20:00
+
+---
+
+_Departamentul de neurologie al ANN Clinic oferă servicii medicale de calitate superioară pentru afecțiunile sistemului nervos. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._

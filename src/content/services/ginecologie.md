@@ -6,41 +6,57 @@ icon: "flower"
 seoTitle: "Ginecolog București - Consultații Ginecologie | ANN Clinic"
 seoDescription: "Consultații ginecologie în București cu ginecologi experimentați. Screening, consultații, investigații ginecologice. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  [
-    "ginecolog București",
-    "consultație ginecologie",
-    "ginecolog Bragadiru",
-    "screening ginecologic",
-    "investigații ginecologice",
-    "consultații femei",
-  ]
+  - "ginecolog București"
+  - "consultație ginecologie"
+  - "ginecolog Bragadiru"
+  - "screening ginecologic"
+  - "investigații ginecologice"
+  - "consultații femei"
+  - "ecografie ginecologică"
+  - "testare HPV"
+  - "colposcopie"
+  - "ginecolog experimentat"
+  - "menstruație probleme"
+  - "contraceptie"
 popularSearchTerms:
-  [
-    "ginecolog București",
-    "consultație ginecologie",
-    "screening ginecologic",
-    "investigații ginecologice",
-  ]
+  - "ginecolog București"
+  - "consultație ginecologie"
+  - "screening ginecologic"
+  - "investigații ginecologice"
+  - "ecografie ginecologică"
+  - "testare HPV"
+  - "consultații femei"
 relatedServices:
-  ["obstetrica", "screening-ginecologic", "investigații-ginecologice"]
+  - "obstetrica"
+  - "screening-ginecologic"
+  - "investigații-ginecologice"
 featured: true
 order: 2
 treatments:
   - name: "Consultație ginecologie"
     description: "Evaluare completă a sănătății ginecologice"
     duration: 45
+    price: 180
   - name: "Screening ginecologic"
     description: "Examinări preventive pentru depistarea precoce"
     duration: 30
+    price: 150
   - name: "Ecografie ginecologică"
     description: "Investigație prin ultrasunete a organelor genitale"
     duration: 30
+    price: 200
   - name: "Testare HPV"
     description: "Testare pentru virusul papiloma uman"
     duration: 15
+    price: 120
   - name: "Colposcopie"
     description: "Examinare detaliată a colului uterin"
     duration: 30
+    price: 250
+  - name: "Citologie cervicală (Papanicolau)"
+    description: "Test de screening pentru cancerul de col uterin"
+    duration: 20
+    price: 100
 ---
 
 # Servicii de Ginecologie la ANN Clinic

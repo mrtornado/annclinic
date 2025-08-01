@@ -6,39 +6,33 @@ icon: "baby"
 seoTitle: "Pediatru București - Consultații Pediatrie | ANN Clinic"
 seoDescription: "Pediatru București cu experiență vastă. Consultații pediatrie, vaccinări copii, investigații pediatrice, monitorizare dezvoltare. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  [
-    "pediatru București",
-    "consultație pediatrie București",
-    "vaccinări copii București",
-    "pediatru Bragadiru",
-    "investigații pediatrice București",
-    "consultații copii",
-    "medic copii București",
-    "pediatru experimentat",
-    "vaccinuri copii",
-    "monitorizare dezvoltare copii",
-    "consultații adolescenți",
-    "pediatrie București",
-    "doctor copii",
-    "consultații nou-născuți",
-  ]
+  - "pediatru București"
+  - "consultație pediatrie București"
+  - "vaccinări copii București"
+  - "pediatru Bragadiru"
+  - "investigații pediatrice București"
+  - "consultații copii"
+  - "medic copii București"
+  - "pediatru experimentat"
+  - "vaccinuri copii"
+  - "monitorizare dezvoltare copii"
+  - "consultații adolescenți"
+  - "pediatrie București"
+  - "doctor copii"
+  - "consultații nou-născuți"
 popularSearchTerms:
-  [
-    "pediatru București",
-    "consultație pediatrie",
-    "vaccinări copii",
-    "medic copii",
-    "investigații pediatrice",
-    "monitorizare dezvoltare",
-    "consultații adolescenți",
-  ]
+  - "pediatru București"
+  - "consultație pediatrie"
+  - "vaccinări copii"
+  - "medic copii"
+  - "investigații pediatrice"
+  - "monitorizare dezvoltare"
+  - "consultații adolescenți"
 relatedServices:
-  [
-    "vaccinari-copii",
-    "monitorizare-dezvoltare",
-    "consultații-adolescenți",
-    "investigații-pediatrice",
-  ]
+  - "vaccinari-copii"
+  - "monitorizare-dezvoltare"
+  - "consultații-adolescenți"
+  - "investigații-pediatrice"
 featured: true
 order: 4
 treatments:
@@ -70,3 +64,66 @@ treatments:
     description: "Evaluare rapidă pentru afecțiuni acute la copii"
     duration: 30
     price: 200
+---
+
+# Pediatrie București - Consultații Specializate pentru Copii
+
+Departamentul de **pediatrie** al ANN Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților în București și Bragadiru. Echipa noastră de pediatri experimentați oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor.
+
+## Servicii de Pediatrie
+
+### Consultații Pediatrice
+
+- **Consultații generale de pediatrie** - evaluare completă a stării de sănătate
+- **Consultații nou-născuți** - îngrijire specializată pentru primele luni de viață
+- **Consultații adolescenți** - evaluări adaptate vârstei adolescenței
+- **Monitorizare dezvoltare** - urmărirea creșterii și dezvoltării copilului
+
+### Vaccinări Copii
+
+- **Schema națională de vaccinare** - toate vaccinurile obligatorii
+- **Vaccinuri opționale** - protecție suplimentară pentru copii
+- **Vaccinare adaptată** - programe personalizate de imunizare
+- **Consiliere vaccinare** - informații complete pentru părinți
+
+### Investigații Pediatrice
+
+- **Interpretarea analizelor** - evaluarea rezultatelor medicale la copii
+- **Investigații de rutină** - screening-uri preventive
+- **Teste specializate** - pentru diagnostic precis
+- **Monitorizare parametri** - greutate, înălțime, dezvoltare
+
+## De Ce Să Alegi ANN Clinic pentru Pediatrie?
+
+### Echipă Specializată
+
+- **Pediatri cu experiență vastă** în îngrijirea copiilor de toate vârstele
+- **Formare continuă** în cele mai noi ghiduri pediatrice
+- **Abordare prietenoasă** - mediu adaptat copiilor și părinților
+
+### Mediu Prietenos
+
+- **Spații adaptate copiilor** - cabinete colorate și primitoare
+- **Personal empatic** - înțelegere pentru nevoile copiilor
+- **Flexibilitate program** - consultații adaptate programului familiei
+
+### Servicii Complete
+
+- **Consultații de urgență** pentru probleme acute ale copiilor
+- **Programe de prevenție** - screening-uri și vaccinări
+- **Consiliere părinți** - suport pentru creșterea sănătoasă
+
+## Programare Pediatru București
+
+Pentru a programa o consultație de pediatrie la ANN Clinic:
+
+- **Consultații regulate** - pentru monitorizarea dezvoltării
+- **Vaccinări la timp** - conform schemei naționale
+- **Evaluări specializate** - pentru copii cu nevoi speciale
+
+**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Program**: Luni - Vineri, 8:00 - 20:00
+
+---
+
+_Departamentul de pediatrie al ANN Clinic oferă îngrijire medicală de calitate superioară pentru copii și adolescenți. Echipa noastră de pediatri vă așteaptă pentru consultații personalizate într-un mediu prietenos în București și Bragadiru._
