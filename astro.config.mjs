@@ -39,10 +39,6 @@ export default defineConfig({
   build: {
     inlineStylesheets: "auto",
   },
-  image: {
-    responsiveStyles: true,
-  },
-
   vite: {
     // CSS optimization
     css: {
