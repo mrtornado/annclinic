@@ -444,10 +444,13 @@ export default function ArticlesListing({
                   onClick={() =>
                     setCurrentPage((prev) => Math.max(prev - 1, 1))
                   }
-                  disabled={currentPage === 1}
                   variant="outline"
                   size="sm"
-                  className="disabled:opacity-50 disabled:cursor-not-allowed"
+                  className={`${
+                    currentPage === 1
+                      ? "opacity-50 cursor-not-allowed pointer-events-none"
+                      : ""
+                  }`}
                 >
                   Anterior
                 </AnimatedButton>

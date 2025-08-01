@@ -48,17 +48,19 @@ export default function ArticlesHero({
         <div className="text-center mb-12">
           {/* Main Heading */}
           <AnimatedText
-            text="Articole Medicale și Ghiduri de Sănătate"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text dark:text-white mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text mb-6"
             delay={0.1}
-          />
+          >
+            Articole Medicale și Ghiduri de Sănătate
+          </AnimatedText>
 
           {/* Subtitle */}
           <AnimatedText
-            text="Informații credibile și actualizate de la specialiștii ANN Clinic"
-            className="text-xl md:text-2xl text-secondary dark:text-tertiary mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto"
             delay={0.3}
-          />
+          >
+            Informații credibile și actualizate de la specialiștii ANN Clinic
+          </AnimatedText>
 
           {/* Statistics */}
           <div className="flex flex-wrap justify-center gap-8 mb-8">
