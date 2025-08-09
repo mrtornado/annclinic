@@ -37,7 +37,7 @@ export default function ArticlesHero({
   };
 
   return (
-    <section className="relative min-h-[85vh] pt-16 sm:pt-20 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] pt-16 sm:pt-20 flex items-center justify-center overflow-hidden pb-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary-hover/85 to-primary-dark/90" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/30 via-transparent to-transparent" />
@@ -212,15 +212,7 @@ export default function ArticlesHero({
           </div>
         )}
 
-        {/* Modern Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center">
-            <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center hover:border-white/80 transition-colors duration-300 bg-white/10 backdrop-blur-sm">
-              <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse" />
-            </div>
-            <p className="text-white/80 text-sm mt-3 font-semibold">Scroll</p>
-          </div>
-        </div>
+        {/* Removed wave divider as requested */}
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ interface WelcomeSectionProps {
 
 export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden">
+    <section className="pt-0 sm:pt-0 pb-16 sm:pb-24 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Image */}
@@ -149,6 +149,8 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent/5 to-primary/5 rounded-full blur-2xl -z-10" />
+
+      {/* Removed wave divider at top - not needed with new design */}
     </section>
   );
 }

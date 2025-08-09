@@ -14,7 +14,7 @@ export default function HeroSection({
   synevoLogo,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen pt-16 sm:pt-20 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-16 sm:pt-20 flex items-center justify-center overflow-hidden pb-24">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -179,14 +179,19 @@ export default function HeroSection({
         </AnimatedText>
       </div>
 
-      {/* Modern Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center">
-          <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center hover:border-white/80 transition-colors duration-300 bg-white/10 backdrop-blur-sm">
-            <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse" />
-          </div>
-          <p className="text-white/80 text-sm mt-3 font-semibold">Scroll</p>
-        </div>
+      {/* Wave Divider - More Prominent */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+        <svg
+          className="relative block w-full"
+          style={{ height: "120px" }}
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="fill-surface"
+          ></path>
+        </svg>
       </div>
     </section>
   );

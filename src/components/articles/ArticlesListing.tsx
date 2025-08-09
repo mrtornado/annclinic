@@ -154,7 +154,7 @@ export default function ArticlesListing({
   return (
     <section
       id="articole"
-      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden pt-28 sm:pt-32"
+      className="relative min-h-screen bg-white overflow-hidden pt-16 sm:pt-20"
     >
       {/* Background Effects */}
       <FloatingParticles
