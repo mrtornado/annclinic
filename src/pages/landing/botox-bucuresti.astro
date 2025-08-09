@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import { siteConfig } from "../../config/site";
 
 // SEO optimization for "botox București" - high-value aesthetic treatment
 const seoTitle = "Botox București - Tratamente Estetice Faciale | ANN Clinic";
@@ -115,8 +116,8 @@ const landingPageData = {
     "Garanție pentru rezultate naturale",
   ],
   emergencyContact: {
-    phone: "+40123456789",
-    whatsapp: "+40123456789",
+    phone: siteConfig.contact.phone,
+    whatsapp: siteConfig.contact.phone,
     email: "estetica@annclinic.ro",
   },
   beforeAfterGallery: true,
@@ -127,7 +128,7 @@ const landingPageData = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  name: "ANN Clinic - Botox București",
+  name: landingPageData.name,
   description: seoDescription,
   url: `${Astro.site}landing/botox-bucuresti`,
   medicalSpecialty: "Medicina Estetică - Tratamente Botox",
@@ -145,13 +146,14 @@ const structuredData = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Strada Exemplu 123",
-    addressLocality: "Bragadiru",
-    addressRegion: "Ilfov",
+    streetAddress: `${siteConfig.address.street}, ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: "+40123456789",
-  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  telephone: siteConfig.contact.phone,
+  openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}, Sa ${siteConfig.schedule.saturday}`,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",

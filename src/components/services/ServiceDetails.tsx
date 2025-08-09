@@ -1,6 +1,7 @@
 import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedButton from "../magic-ui/AnimatedButton";
 import type { ServiceContent } from "../../types/content";
+import { siteConfig } from "../../config/site";
 
 interface ServiceDetailsProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
@@ -28,6 +29,7 @@ export default function ServiceDetails({
 
   const treatments = getTreatments();
   const relatedServices = getRelatedServices();
+  const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
 
   return (
     <section className="relative py-20 sm:py-32 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden">
@@ -211,7 +213,7 @@ export default function ServiceDetails({
                   </span>
                 </AnimatedButton>
                 <AnimatedButton
-                  href="tel:+40123456789"
+                  href={telHref}
                   variant="outline"
                   size="lg"
                   className="hero-btn-outline"

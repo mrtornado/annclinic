@@ -3,6 +3,8 @@ import AnimatedButton from "../magic-ui/AnimatedButton.tsx";
 import { siteConfig } from "../../config/site";
 import { Image } from "astro:assets";
 import logo from "../../assets/images/logo.png";
+
+const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
 ---
 
 <header
@@ -60,10 +62,10 @@ import logo from "../../assets/images/logo.png";
             <span class="font-medium text-text-secondary">Urgențe:</span>
           </div>
           <a
-            href="tel:+40123456789"
+            href={telHref}
             class="font-bold text-primary hover:text-primary-hover transition-colors duration-300"
           >
-            0123 456 789
+            {siteConfig.contact.phoneDisplay}
           </a>
         </div>
 
@@ -150,11 +152,11 @@ import logo from "../../assets/images/logo.png";
         <div class="pt-3 text-center">
           <div class="text-sm text-text-muted mb-1">Urgențe 24/7</div>
           <a
-            href="tel:+40123456789"
+            href={telHref}
             class="text-lg font-bold text-accent hover:text-accent-hover transition-colors duration-300 flex items-center justify-center gap-2"
           >
             <span class="animate-pulse">🚨</span>
-            <span>0123 456 789</span>
+            <span>{siteConfig.contact.phoneDisplay}</span>
           </a>
         </div>
       </div>

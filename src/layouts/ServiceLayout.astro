@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import type { ServiceContent } from "../types/content";
+import { siteConfig } from "../config/site";
 
 export interface Props {
   service: ServiceContent;
@@ -35,12 +36,14 @@ const keywords = Array.isArray(service.data.keywords)
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Strada Exemplu 123",
-      addressLocality: "București",
+      streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.county,
+      postalCode: siteConfig.address.postalCode,
       addressCountry: "RO",
     },
-    telephone: "+40123456789",
-    openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+    telephone: siteConfig.contact.phone,
+    openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   }}
 >
   <main class="min-h-screen">

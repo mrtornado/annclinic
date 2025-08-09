@@ -37,7 +37,7 @@ export default function ArticlesHero({
   };
 
   return (
-    <section className="relative min-h-[85vh] pt-16 sm:pt-20 flex items-center justify-center overflow-hidden pb-24">
+    <section className="relative min-h-[85vh] pt-16 sm:pt-20 flex items-center justify-center overflow-hidden pb-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary-hover/85 to-primary-dark/90" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/30 via-transparent to-transparent" />
@@ -212,7 +212,7 @@ export default function ArticlesHero({
           </div>
         )}
 
-        {/* Removed wave divider as requested */}
+        {/* Wave divider removed as requested */}
       </div>
     </section>
   );

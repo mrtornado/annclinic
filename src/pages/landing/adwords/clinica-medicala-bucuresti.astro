@@ -1,37 +1,34 @@
 ---
 import AdWordsLandingLayout from "../../../layouts/AdWordsLandingLayout.astro";
+import { siteConfig } from "../../../config/site";
 
-// AdWords campaign optimization for "clinică medicală București"
-const seoTitle =
-  "Clinică Medicală București - Consultații Specializate | ANN Clinic";
-const seoDescription =
-  "Clinică medicală București cu 14+ specialități. Consultații rapide, medici experimentați, echipament modern. Programare online în 24h. Sună acum!";
-
-const keywords = [
-  "clinică medicală București",
-  "consultații medicale București",
-  "medici specialiști București",
-  "clinică privată București",
-  "servicii medicale București",
-  "consultații specializate București",
-  "clinică medicală Bragadiru",
-  "medici București",
-  "investigații medicale București",
-  "clinică modernă București",
-];
-
-// Campaign-specific data for maximum conversion
-const campaignData = {
-  name: "Clinică Medicală București - Servicii Complete",
+// SEO & Page Configuration
+const pageConfig = {
+  name: "ANN Clinic - Clinică Medicală București",
   description:
-    "Clinică medicală modernă cu 14+ specialități și medici experimentați",
-  longDescription:
-    "ANN Clinic este clinica medicală de referință din București cu peste 14 specialități medicale, medici cu experiență vastă și echipament de ultimă generație. Oferim consultații rapide, investigații complete și tratamente personalizate.",
-  icon: "medical-clinic",
-  featured: true,
-
-  // Value propositions for AdWords
-  valuePropositions: [
+    "Clinică medicală București cu 14+ specialități. Consultații rapide, medici experimentați, echipament modern. Programare online în 24h. Sună acum!",
+  keywords: [
+    "clinică medicală București",
+    "consultații medicale București",
+    "medici specialiști București",
+    "clinică privată București",
+    "servicii medicale București",
+    "consultații specializate București",
+    "clinică medicală Bragadiru",
+    "medici București",
+    "investigații medicale București",
+    "clinică modernă București",
+  ],
+  ogImage: `${Astro.site}images/og-image.jpg`,
+  hero: {
+    title: "Clinică Medicală Modernă în București",
+    subtitle: "Peste 14 specialități medicale și programare online rapidă",
+    ctaPrimary: "Vezi Specialitățile Noastre",
+    ctaSecondary: "Programează-te Acum",
+    phone: siteConfig.contact.phoneDisplay,
+    whatsapp: siteConfig.contact.phone,
+  },
+  benefits: [
     "Programare în maximum 24 de ore",
     "14+ specialități medicale în aceeași locație",
     "Medici cu experiență de peste 15 ani",
@@ -39,8 +36,6 @@ const campaignData = {
     "Consultații de urgență disponibile",
     "Investigații complete în aceeași zi",
   ],
-
-  // Popular services for conversion
   popularServices: [
     {
       name: "Consultație Cardiologie",
@@ -71,8 +66,6 @@ const campaignData = {
       urgency: "Medic pediatru disponibil",
     },
   ],
-
-  // Trust signals for credibility
   trustSignals: [
     "Peste 10.000 de pacienți mulțumiți anual",
     "Medici cu certificări internaționale",
@@ -81,15 +74,11 @@ const campaignData = {
     "Rezultate investigații în maximum 24h",
     "Garanție pentru serviciile medicale",
   ],
-
-  // Emergency contact for immediate conversion
   emergencyContact: {
-    phone: "+40123456789",
-    whatsapp: "+40123456789",
+    phone: siteConfig.contact.phone,
+    whatsapp: siteConfig.contact.phone,
     email: "urgente@annclinic.ro",
   },
-
-  // Special offers for AdWords
   specialOffers: [
     {
       title: "Consultație Gratuită Astăzi",
@@ -111,11 +100,12 @@ const campaignData = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  name: "ANN Clinic - Clinică Medicală București",
-  description: seoDescription,
+  name: pageConfig.name,
+  description: pageConfig.description,
   url: `${Astro.site}landing/adwords/clinica-medicala-bucuresti`,
+  image: pageConfig.ogImage,
   medicalSpecialty: ["Cardiologie", "Dermatologie", "Ginecologie", "Pediatrie"],
-  availableService: campaignData.popularServices.map((service) => ({
+  availableService: pageConfig.popularServices.map((service) => ({
     "@type": "MedicalTherapy",
     name: service.name,
     description: service.description,
@@ -128,29 +118,34 @@ const structuredData = {
   })),
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Strada Exemplu 123",
-    addressLocality: "Bragadiru",
-    addressRegion: "Ilfov",
+    streetAddress: `${siteConfig.address.street}, ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: "+40123456789",
-  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  telephone: siteConfig.contact.phone,
+  openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
     reviewCount: "1247",
   },
   priceRange: "160-300 RON",
+  hasMap: "https://g.page/r/Cexample",
 };
+
+const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
+const whatsappHref = `https://wa.me/${siteConfig.contact.phone.replace(
+  /\s+/g,
+  ""
+)}`;
 ---
 
 <AdWordsLandingLayout
-  title={seoTitle}
-  description={seoDescription}
-  keywords={keywords}
-  campaign="medical-services-general"
-  adGroup="clinica-medicala-bucuresti"
-  variant="A"
+  title={pageConfig.name}
+  description={pageConfig.description}
+  keywords={pageConfig.keywords}
   structuredData={structuredData}
 >
   <!-- Hero Section - Conversion Optimized -->
@@ -160,9 +155,7 @@ const structuredData = {
         <!-- Left Column - Value Proposition -->
         <div class="space-y-8">
           <div class="space-y-4">
-            <h1
-              class="text-4xl lg:text-5xl font-bold text leading-tight"
-            >
+            <h1 class="text-4xl lg:text-5xl font-bold text leading-tight">
               Clinică Medicală București
               <span class="text-primary block">Cu Medici Experimentați</span>
             </h1>
@@ -175,7 +168,7 @@ const structuredData = {
           <!-- Value Propositions -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {
-              campaignData.valuePropositions.map((prop) => (
+              pageConfig.benefits.map((prop) => (
                 <div class="trust-badge">
                   <div class="flex items-center space-x-3">
                     <div class="w-2 h-2 bg-primary rounded-full" />
@@ -264,11 +257,11 @@ const structuredData = {
             <p class="text-sm text-secondary">
               Sau sună direct:
               <a
-                href="tel:+40123456789"
+                href={telHref}
                 class="font-bold text-primary hover:text-primary-hover"
                 onclick="trackPhoneClick()"
               >
-                +40 123 456 789
+                {siteConfig.contact.phoneDisplay}
               </a>
             </p>
           </div>
@@ -286,11 +279,9 @@ const structuredData = {
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
-          campaignData.popularServices.map((service) => (
+          pageConfig.popularServices.map((service) => (
             <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <h3 class="text-lg font-bold text mb-3">
-                {service.name}
-              </h3>
+              <h3 class="text-lg font-bold text mb-3">{service.name}</h3>
               <p class="text-secondary text-sm mb-4">{service.description}</p>
               <div class="space-y-2">
                 <div class="flex justify-between items-center">
@@ -339,7 +330,7 @@ const structuredData = {
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
-          campaignData.trustSignals.map((signal) => (
+          pageConfig.trustSignals.map((signal) => (
             <div class="trust-badge text-center">
               <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <span class="text-white text-xl">✓</span>
@@ -364,11 +355,9 @@ const structuredData = {
 
       <div class="grid md:grid-cols-2 gap-8">
         {
-          campaignData.specialOffers.map((offer) => (
+          pageConfig.specialOffers.map((offer) => (
             <div class="bg-white rounded-xl p-8 shadow-2xl">
-              <h3 class="text-2xl font-bold text mb-4">
-                {offer.title}
-              </h3>
+              <h3 class="text-2xl font-bold text mb-4">{offer.title}</h3>
               <p class="text-secondary mb-6">{offer.description}</p>
               {offer.originalPrice && (
                 <div class="mb-4">
@@ -415,24 +404,59 @@ const structuredData = {
       <div class="space-y-6">
         <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a
-            href="tel:+40123456789"
+            href="/programare"
+            class="cta-button inline-block"
+            onclick="trackCTAClick('final-online-booking')"
+          >
+            📅 Programează Online
+          </a>
+          <a
+            href={telHref}
             class="cta-button inline-block"
             onclick="trackCTAClick('final-phone')"
           >
-            📞 Sună Acum: +40 123 456 789
-          </a>
-          <a
-            href="https://wa.me/40123456789"
-            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-            onclick="trackCTAClick('final-whatsapp')"
-          >
-            💬 WhatsApp: Mesaj Rapid
+            📞 Sună Acum
           </a>
         </div>
 
         <p class="text-muted text-sm">
-          Program: Luni-Vineri 08:00-20:00, Sâmbătă 09:00-15:00
+          Program: Luni-Vineri {siteConfig.schedule.weekdays}, Sâmbătă {
+            siteConfig.schedule.saturday
+          }, Duminică {siteConfig.schedule.sunday}
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Contact și Program</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        {siteConfig.address.street}, {siteConfig.address.number}, {
+          siteConfig.address.city
+        }, {siteConfig.address.county}
+      </p>
+      <div class="flex justify-center items-center gap-8 text-xl font-semibold">
+        <a
+          href={telHref}
+          class="text-primary hover:text-primary-hover transition-colors"
+          onclick="trackPhoneClick()"
+        >
+          📞 {siteConfig.contact.phoneDisplay}
+        </a>
+        <a
+          href={whatsappHref}
+          class="text-green-500 hover:text-green-600 transition-colors"
+          onclick="trackWhatsappClick()"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+      <div class="mt-8 text-gray-500">
+        <p>Luni - Vineri: {siteConfig.schedule.weekdays}</p>
+        <p>Sâmbătă: {siteConfig.schedule.saturday}</p>
+        <p>Duminică: {siteConfig.schedule.sunday}</p>
       </div>
     </div>
   </section>

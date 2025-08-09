@@ -1,5 +1,60 @@
 ---
 import AdWordsLandingLayout from "../../../layouts/AdWordsLandingLayout.astro";
+import { siteConfig } from "../../../config/site";
+
+// SEO & Page Configuration
+const pageConfig = {
+  name: "ANN Clinic - Cardiolog București",
+  description:
+    "Cardiolog București cu experiență vastă. EKG, ecocardiografie, consultații urgente. Programare în 24h. Investigații cardiologice complete. Sună acum!",
+  keywords: [
+    "cardiolog București",
+    "consultație cardiologie București",
+    "EKG București",
+    "ecocardiografie București",
+    "investigații cardiologice București",
+    "cardiolog urgență București",
+    "consultații cardiologie Bragadiru",
+    "medic cardiolog București",
+    "clinică cardiologie București",
+    "control cardiac București",
+  ],
+  ogImage: `${Astro.site}landing/adwords/cardiolog-bucuresti.jpg`,
+  hero: {
+    title: "Cardiolog București - Consultație de Urgență",
+    subtitle: "Programare rapidă în 24h la medic cardiolog experimentat",
+    ctaPrimary: "Programează-te Acum",
+    ctaSecondary: "Sună pentru Urgențe",
+    phone: siteConfig.contact.phoneDisplay,
+    whatsapp: siteConfig.contact.phone,
+  },
+  benefits: [
+    {
+      icon: "❤️",
+      title: "EKG Inclus",
+      description: "În fiecare consultație",
+    },
+    {
+      icon: "🔍",
+      title: "Ecocardiografie",
+      description: "Echipament modern",
+    },
+    {
+      icon: "⚡",
+      title: "Urgențe Cardiace",
+      description: "Disponibil 24/7",
+    },
+    {
+      icon: "📋",
+      title: "Rezultate Imediate",
+      description: "Interpretare pe loc",
+    },
+  ],
+  ctaPrimary: "Programează-te Acum",
+  ctaSecondary: "Sună pentru Urgențe",
+  phone: siteConfig.contact.phoneDisplay,
+  whatsapp: siteConfig.contact.phone,
+};
 
 // AdWords campaign optimization for "cardiolog București"
 const seoTitle =
@@ -24,9 +79,10 @@ const keywords = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  name: "ANN Clinic - Cardiolog București",
-  description: seoDescription,
+  name: pageConfig.name,
+  description: pageConfig.description,
   url: `${Astro.site}landing/adwords/cardiolog-bucuresti`,
+  image: pageConfig.ogImage,
   medicalSpecialty: "Cardiologie",
   availableService: {
     "@type": "MedicalTherapy",
@@ -41,28 +97,29 @@ const structuredData = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Strada Exemplu 123",
-    addressLocality: "Bragadiru",
-    addressRegion: "Ilfov",
+    streetAddress: `${siteConfig.address.street}, ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: "+40123456789",
-  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  telephone: siteConfig.contact.phone,
+  openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "234",
   },
+  hasMap: "https://g.page/r/Cexample",
 };
+
+const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
 ---
 
 <AdWordsLandingLayout
-  title={seoTitle}
-  description={seoDescription}
-  keywords={keywords}
-  campaign="cardiology-services"
-  adGroup="cardiolog-bucuresti"
-  variant="A"
+  title={pageConfig.name}
+  description={pageConfig.description}
+  keywords={pageConfig.keywords}
   structuredData={structuredData}
 >
   <!-- Hero Section - Cardiology Focus -->
@@ -81,9 +138,7 @@ const structuredData = {
               <span>🚨</span>
               <span>Consultații Cardiologie de Urgență</span>
             </div>
-            <h1
-              class="text-4xl lg:text-5xl font-bold text leading-tight"
-            >
+            <h1 class="text-4xl lg:text-5xl font-bold text leading-tight">
               Cardiolog București
               <span class="text-red-600 block">Consultații în 24 Ore</span>
             </h1>
@@ -159,7 +214,7 @@ const structuredData = {
               class="cta-button w-full text-center"
               onclick="trackCTAClick('cardiology-hero'); window.location.href='#booking'"
             >
-              🚨 URGENȚĂ CARDIACĂ - Sună Acum: +40 123 456 789
+              🚨 URGENȚĂ CARDIACĂ - Sună Acum: {siteConfig.contact.phoneDisplay}
             </button>
             <button
               class="w-full bg-white border-2 border-red-600 text-red-600 font-semibold py-4 px-8 rounded-lg hover:bg-red-50 transition-colors"
@@ -256,11 +311,11 @@ const structuredData = {
             <p class="text-sm text-secondary">
               Urgențe cardiace:
               <a
-                href="tel:+40123456789"
+                href={telHref}
                 class="font-bold text-red-600 hover:text-red-700"
                 onclick="trackPhoneClick()"
               >
-                +40 123 456 789
+                {siteConfig.contact.phoneDisplay}
               </a>
             </p>
             <p class="text-xs text-muted">
@@ -386,7 +441,7 @@ const structuredData = {
           </div>
           <button
             class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors animate-pulse"
-            onclick="trackCTAClick('emergency-cardiology'); window.location.href='tel:+40123456789'"
+            onclick="trackCTAClick('emergency-cardiology'); window.location.href=`${telHref}`"
           >
             Sună pentru Urgență
           </button>
@@ -416,9 +471,7 @@ const structuredData = {
 
           <div class="md:col-span-2 space-y-4">
             <div>
-              <h4 class="font-bold text mb-2">
-                Experiență și Calificări:
-              </h4>
+              <h4 class="font-bold text mb-2">Experiență și Calificări:</h4>
               <ul class="space-y-1 text-sm text-secondary">
                 <li>• 20+ ani experiență în cardiologie</li>
                 <li>• Specialist în cardiologie interventională</li>
@@ -472,11 +525,11 @@ const structuredData = {
       <div class="space-y-6">
         <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a
-            href="tel:+40123456789"
+            href={telHref}
             class="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-surface-secondary transition-colors inline-block"
             onclick="trackCTAClick('final-emergency-phone')"
           >
-            🚨 URGENȚĂ CARDIACĂ: +40 123 456 789
+            🚨 URGENȚĂ CARDIACĂ: {siteConfig.contact.phoneDisplay}
           </a>
           <button
             class="bg-red-800 hover:bg-red-900 text-white font-semibold py-4 px-8 rounded-lg transition-colors"

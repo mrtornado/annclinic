@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import { siteConfig } from "../../config/site";
 
 // SEO optimization for "tratament acnee București" - high-value landing page
 const seoTitle =
@@ -109,8 +110,8 @@ const landingPageData = {
     "Tratamente personalizate pentru fiecare tip de acnee",
   ],
   emergencyContact: {
-    phone: "+40123456789",
-    whatsapp: "+40123456789",
+    phone: siteConfig.contact.phone,
+    whatsapp: siteConfig.contact.phone,
     email: "programari@annclinic.ro",
   },
 };
@@ -119,9 +120,10 @@ const landingPageData = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  name: "ANN Clinic - Tratament Acnee București",
-  description: seoDescription,
+  name: landingPageData.name,
+  description: landingPageData.description,
   url: `${Astro.site}landing/tratament-acnee-bucuresti`,
+  image: siteConfig.seo.defaultImage,
   medicalSpecialty: "Dermatologie - Tratament Acnee",
   availableService: {
     "@type": "MedicalTherapy",
@@ -137,13 +139,14 @@ const structuredData = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Strada Exemplu 123",
-    addressLocality: "Bragadiru",
-    addressRegion: "Ilfov",
+    streetAddress: `${siteConfig.address.street}, ${siteConfig.address.number}`,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.county,
+    postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: "+40123456789",
-  openingHours: "Mo-Fr 08:00-20:00, Sa 09:00-15:00",
+  telephone: siteConfig.contact.phone,
+  openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",

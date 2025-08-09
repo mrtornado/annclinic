@@ -154,7 +154,7 @@ export default function ArticlesListing({
   return (
     <section
       id="articole"
-      className="relative min-h-screen bg-white overflow-hidden pt-16 sm:pt-20"
+      className="relative min-h-screen bg-white overflow-hidden pt-0 sm:pt-0"
     >
       {/* Background Effects */}
       <FloatingParticles
