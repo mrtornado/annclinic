@@ -4,6 +4,7 @@ import MagicCard from "../magic-ui/MagicCard";
 import AnimatedButton from "../magic-ui/AnimatedButton";
 import AnimatedText from "../magic-ui/AnimatedText";
 import { siteConfig } from "../../config/site";
+import type { ServiceContent } from "../../types/content";
 
 interface FormData {
   name: string;
@@ -15,7 +16,11 @@ interface FormData {
   urgency: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  services: ServiceContent[];
+}
+
+export default function ContactForm({ services }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -190,11 +195,13 @@ export default function ContactForm() {
                   className={inputClasses}
                 >
                   <option value="">Selectați specialitatea</option>
-                  {siteConfig.specialties.map((specialty) => (
-                    <option key={specialty} value={specialty.toLowerCase()}>
-                      {specialty}
-                    </option>
-                  ))}
+                  {services
+                    .filter((service) => !service.data.comingSoon)
+                    .map((service) => (
+                      <option key={service.slug} value={service.slug}>
+                        {service.data.name}
+                      </option>
+                    ))}
                 </select>
               </motion.div>
 

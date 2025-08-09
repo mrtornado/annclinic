@@ -5,16 +5,14 @@ export const siteConfig = {
     "Clinică medicală modernă în Bragadiru, oferind servicii medicale complete în peste 14 specialități. Programează-te online pentru consultații de specialitate.",
   tagline: "Sănătate & Încredere",
   url: "https://annclinic.ro",
-
   contact: {
-    phone: "+40-XXX-XXX-XXX",
-    phoneDisplay: "+40 XXX XXX XXX",
+    phone: "+40 775 11 9063",
+    phoneDisplay: "+40 775 11 9063",
     email: "contact@annclinic.ro",
   },
-
   address: {
-    street: "Strada Exemplu",
-    number: "Nr. 1",
+    street: "Șoseaua Alexandriei",
+    number: "Nr. 101",
     city: "Bragadiru",
     county: "Ilfov",
     postalCode: "077025",
@@ -24,46 +22,16 @@ export const siteConfig = {
       lng: 26.0422,
     },
   },
-
   schedule: {
-    weekdays: "Luni - Vineri: 08:00 - 20:00",
-    saturday: "Sâmbătă: 08:00 - 16:00",
-    sunday: "Duminică: Închis",
+    weekdays: "08:00 - 20:00",
+    saturday: "În curând",
+    sunday: "Închis",
   },
-
   social: {
-    facebook: "https://facebook.com/annclinic",
-    instagram: "https://instagram.com/annclinic",
-    twitter: "@annclinic",
+    facebook:
+      "https://www.facebook.com/profile.php?id=61574771646433&locale=ro_RO",
+    instagram: "https://www.instagram.com/annmedicalclinic/",
   },
-
-  specialties: [
-    "Cardiologie",
-    "Dermatologie",
-    "Ginecologie",
-    "Pediatrie",
-    "Ortopedie",
-    "ORL",
-    "Estetică Facială",
-    "Neurologie",
-    "Endocrinologie",
-    "Gastroenterologie",
-    "Urologie",
-    "Oftalmologie",
-    "Psihiatrie",
-    "Radiologie",
-  ],
-
-  mainServices: [
-    "Cardiologie",
-    "Dermatologie",
-    "Ginecologie",
-    "Pediatrie",
-    "Ortopedie",
-    "ORL",
-    "Estetică Facială",
-  ],
-
   seo: {
     defaultImage: "/images/placeholder.svg",
     twitterHandle: "@annclinic",

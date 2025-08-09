@@ -51,7 +51,6 @@ export default function ComingSoonSection({
         <div className="text-center mb-16">
           <AnimatedText delay={0.2}>
             <div className="inline-flex items-center gap-3 mb-6">
-              <span className="text-4xl">🚀</span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
                 În Curând
               </h2>

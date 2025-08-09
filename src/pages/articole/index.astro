@@ -3,6 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticlesListing from "../../components/articles/ArticlesListing";
 import ArticlesHero from "../../components/articles/ArticlesHero";
+import { getImage } from "astro:assets";
+import { siteConfig } from "../../config/site";
+import bgImage from "../../assets/images/bg-image.jpg";
 
 // Get all articles and sort by publish date (newest first)
 const allArticles = await getCollection("articles");
@@ -11,6 +14,15 @@ const sortedArticles = allArticles.sort(
     new Date(b.data.publishDate).getTime() -
     new Date(a.data.publishDate).getTime()
 );
+
+// Optimize background image for hero section
+const optimizedBgImage = await getImage({
+  src: bgImage,
+  format: "webp",
+  quality: 85,
+  width: 1920,
+  height: 1080,
+});
 
 // Get unique specialties for filtering
 const specialties = [

@@ -5,6 +5,10 @@ import ContactInfo from "../components/contact/ContactInfo.tsx";
 import ContactForm from "../components/contact/ContactForm.tsx";
 import LocationMap from "../components/contact/LocationMap.tsx";
 import { siteConfig } from "../config/site";
+import { getCollection } from "astro:content";
+
+// Get all services data
+const services = await getCollection("services");
 
 const title = "Contact - ANN Clinic | Clinică Medicală București";
 const description =
@@ -69,7 +73,7 @@ const structuredData = {
         <ContactInfo client:load />
 
         <!-- Contact Form -->
-        <ContactForm client:load />
+        <ContactForm client:load services={services} />
       </div>
     </div>
   </section>

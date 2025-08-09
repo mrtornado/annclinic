@@ -5,6 +5,8 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import MagicCard from "../magic-ui/MagicCard";
 import AnimatedIcon from "../magic-ui/AnimatedIcon";
 import FloatingParticles from "../magic-ui/FloatingParticles";
+import { siteConfig } from "../../config/site";
+import type { ServiceContent } from "../../types/content";
 
 interface BookingHistoryItem {
   id: string;
@@ -15,12 +17,14 @@ interface BookingHistoryItem {
 }
 
 interface BookingInterfaceProps {
+  services: ServiceContent[];
   showHistory?: boolean;
   showEmergencyContact?: boolean;
   preselectedService?: string;
 }
 
 export default function BookingInterface({
+  services,
   showHistory = true,
   showEmergencyContact = true,
   preselectedService = "",
@@ -45,69 +49,31 @@ export default function BookingInterface({
     patientId: "",
   });
 
-  // Mock services data
-  const services = [
-    {
-      id: "cardiologie",
-      name: "Cardiologie",
-      icon: "❤️",
-      description: "Consultații și investigații cardiologice",
-    },
-    {
-      id: "dermatologie",
-      name: "Dermatologie",
-      icon: "🧴",
-      description: "Tratamente pentru afecțiuni ale pielii",
-    },
-    {
-      id: "ginecologie",
-      name: "Ginecologie",
-      icon: "🌸",
-      description: "Sănătatea femeii și consultații ginecologice",
-    },
-    {
-      id: "pediatrie",
-      name: "Pediatrie",
-      icon: "👶",
-      description: "Îngrijire medicală pentru copii",
-    },
-    {
-      id: "ortopedie",
-      name: "Ortopedie",
-      icon: "🦴",
-      description: "Tratamente pentru afecțiuni osteoarticulare",
-    },
-    {
-      id: "orl",
-      name: "ORL",
-      icon: "👂",
-      description: "Otorinolaringologie - urechi, nas, gât",
-    },
-    {
-      id: "neurologie",
-      name: "Neurologie",
-      icon: "🧠",
-      description: "Afecțiuni ale sistemului nervos",
-    },
-    {
-      id: "oftalmologie",
-      name: "Oftalmologie",
-      icon: "👁️",
-      description: "Sănătatea ochilor și vederii",
-    },
-    {
-      id: "urologie",
-      name: "Urologie",
-      icon: "🔬",
-      description: "Afecțiuni ale sistemului urogenital",
-    },
-    {
-      id: "estetica-faciala",
-      name: "Estetică Facială",
-      icon: "✨",
-      description: "Tratamente estetice și anti-aging",
-    },
-  ];
+  // Filtrez serviciile disponibile (care nu sunt "coming soon")
+  const availableServices = services
+    .filter((service) => !service.data.comingSoon)
+    .map((service) => {
+      // Mapare de iconuri text la emoji
+      const iconMap: Record<string, string> = {
+        skin: "🧴",
+        lab: "🧪",
+        surgical: "🔪",
+        flower: "🌸",
+        "child-medical": "👶",
+        sparkles: "✨",
+        stethoscope: "🩺",
+        "work-safety": "⚒️",
+        family: "👨‍👩‍👧‍👦",
+        brain: "🧠",
+      };
+
+      return {
+        id: service.slug,
+        name: service.data.name,
+        icon: iconMap[service.data.icon] || "🏥",
+        description: service.data.description,
+      };
+    });
 
   // Mock booking history
   const [bookingHistory] = useState<BookingHistoryItem[]>([
@@ -418,7 +384,7 @@ export default function BookingInterface({
                             Selectează serviciul medical *
                           </label>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {services.map((service, index) => (
+                            {availableServices.map((service, index) => (
                               <motion.button
                                 key={service.id}
                                 className={`p-4 rounded-xl border-2 text-left transition-all duration-300 ${
@@ -911,7 +877,7 @@ export default function BookingInterface({
                     <AnimatedButton
                       variant="primary"
                       size="md"
-                      href="tel:+40211234567"
+                      href={`tel:${siteConfig.contact.phone}`}
                       className="w-full bg-red-500 hover:bg-red-600"
                     >
                       📞 Sună Acum
@@ -1001,7 +967,8 @@ export default function BookingInterface({
                     <div>
                       <p className="text-sm font-medium text">Adresa</p>
                       <p className="text-xs text-secondary">
-                        Strada Exemplu 123, Bragadiru
+                        {siteConfig.address.street} {siteConfig.address.number},{" "}
+                        {siteConfig.address.city}
                       </p>
                     </div>
                   </div>
@@ -1009,7 +976,9 @@ export default function BookingInterface({
                     <AnimatedIcon icon="📞" size="sm" color="text-primary" />
                     <div>
                       <p className="text-sm font-medium text">Telefon</p>
-                      <p className="text-xs text-secondary">+40 21 123 4567</p>
+                      <p className="text-xs text-secondary">
+                        {siteConfig.contact.phoneDisplay}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -1017,9 +986,9 @@ export default function BookingInterface({
                     <div>
                       <p className="text-sm font-medium text">Program</p>
                       <p className="text-xs text-secondary">
-                        Lun-Vin: 08:00-20:00
+                        Luni - Vineri: {siteConfig.schedule.weekdays}
                         <br />
-                        Sâm: 09:00-17:00
+                        Sâmbătă: {siteConfig.schedule.saturday}
                       </p>
                     </div>
                   </div>

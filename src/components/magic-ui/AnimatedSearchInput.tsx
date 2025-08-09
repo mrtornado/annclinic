@@ -20,10 +20,8 @@ export default function AnimatedSearchInput({
   return (
     <div className={`relative ${className}`}>
       <motion.div
-        className={`relative overflow-hidden rounded-xl border-2 transition-all duration-300 ${
-          isFocused
-            ? "border-primary shadow-lg shadow-primary/20"
-            : "border-border hover:border-primary/50"
+        className={`relative overflow-hidden rounded-xl transition-all duration-300 ${
+          isFocused ? "shadow-lg shadow-primary/20" : "hover:shadow-md"
         }`}
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}

@@ -154,7 +154,7 @@ export default function ArticlesListing({
   return (
     <section
       id="articole"
-      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden pt-28 sm:pt-32"
     >
       {/* Background Effects */}
       <FloatingParticles
@@ -178,11 +178,11 @@ export default function ArticlesListing({
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-16">
+      <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-16">
         {/* Filters Section */}
         <AnimatedText delay={0.2}>
           <MagicCard
-            className="p-8 mb-12 backdrop-blur-md bg-slate-800/90 border border-slate-700/50 shadow-2xl"
+            className="p-6 sm:p-8 mb-12 backdrop-blur-md bg-slate-800/90 border border-slate-700/50 shadow-2xl rounded-2xl"
             glowColor="rgba(13, 148, 136, 0.4)"
           >
             <div className="flex flex-col lg:flex-row gap-4 mb-4">
@@ -195,7 +195,7 @@ export default function ArticlesListing({
                   value={searchTerm}
                   onChange={setSearchTerm}
                   placeholder="Caută după titlu, descriere sau etichete..."
-                  className="w-full"
+                  className="w-full shadow-lg border-0 focus:ring-2 focus:ring-primary/20"
                 />
               </div>
 
@@ -211,7 +211,7 @@ export default function ArticlesListing({
                   id="sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-white/95 text-gray-900 focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium shadow-lg border-0"
                 >
                   <option value="newest">Cele mai noi</option>
                   <option value="oldest">Cele mai vechi</option>
@@ -234,7 +234,7 @@ export default function ArticlesListing({
                   id="specialty"
                   value={selectedSpecialty}
                   onChange={(e) => setSelectedSpecialty(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-white/95 text-gray-900 focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium shadow-lg border-0"
                 >
                   <option value="">Toate specialitățile</option>
                   {specialties.map((specialty) => (
@@ -257,7 +257,7 @@ export default function ArticlesListing({
                   id="category"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-white/95 text-gray-900 focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium shadow-lg border-0"
                 >
                   <option value="">Toate categoriile</option>
                   {categories.map((category) => (
@@ -280,7 +280,7 @@ export default function ArticlesListing({
                   id="tag"
                   value={selectedTag}
                   onChange={(e) => setSelectedTag(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white text-gray-900 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium"
+                  className="w-full px-4 py-3 rounded-xl bg-white/95 text-gray-900 focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-medium shadow-lg border-0"
                 >
                   <option value="">Toate etichetele</option>
                   {tags.map((tag) => (

@@ -6,17 +6,21 @@ interface MagicCardProps {
   children: ReactNode;
   className?: string;
   glowColor?: string;
+  disableAnimation?: boolean;
 }
 
 export default function MagicCard({
   children,
   className = "",
-  glowColor = "rgba(13, 148, 136, 0.3)",
+  glowColor = "rgba(13, 148, 136, 0.2)",
+  disableAnimation = false,
 }: MagicCardProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (disableAnimation) return;
+
     const rect = e.currentTarget.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
@@ -24,42 +28,35 @@ export default function MagicCard({
     });
   };
 
+  // Varianta simplificată, fără animații care distrag
   return (
     <motion.div
-      className={`relative group ${className}`}
+      className={`relative ${className}`}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ y: -8 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      onMouseEnter={() => !disableAnimation && setIsHovered(true)}
+      onMouseLeave={() => !disableAnimation && setIsHovered(false)}
+      whileHover={disableAnimation ? {} : { y: -3 }} // Reducere subtilă, nu salt mare
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
-      {/* Glow effect */}
-      <div
-        className="absolute -inset-0.5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${glowColor}, transparent 50%)`,
-        }}
-      />
+      {/* Efect de glow subtil */}
+      {!disableAnimation && (
+        <div
+          className="absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 blur-md"
+          style={{
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${glowColor}, transparent 70%)`,
+            opacity: isHovered ? 0.4 : 0,
+          }}
+        />
+      )}
 
-      {/* Border gradient */}
-      <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(13, 148, 136, 0.8), transparent 50%)`,
-          padding: "1px",
-        }}
-      >
-        <div className="w-full h-full rounded-2xl bg-surface" />
-      </div>
-
-      {/* Main card */}
-      <div className="relative bg-surface rounded-2xl border border-border/50 group-hover:border-primary/30 transition-all duration-300 overflow-hidden">
-        {/* Spotlight effect */}
-        {isHovered && (
+      {/* Card principal */}
+      <div className="relative rounded-xl overflow-hidden transition-all duration-200 shadow-sm hover:shadow-md">
+        {/* Efect de strălucire subtil */}
+        {isHovered && !disableAnimation && (
           <div
-            className="absolute pointer-events-none opacity-40 transition-opacity duration-300"
+            className="absolute pointer-events-none opacity-20 transition-opacity duration-200"
             style={{
-              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.1), transparent 50%)`,
+              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.1), transparent 60%)`,
               width: "100%",
               height: "100%",
             }}

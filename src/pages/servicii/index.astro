@@ -2,20 +2,81 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import AllServicesListing from "../../components/services/AllServicesListing.tsx";
+import ServicesSection from "../../components/home/ServicesSection.tsx";
+import ComingSoonSection from "../../components/home/ComingSoonSection.tsx";
+import AnimatedText from "../../components/magic-ui/AnimatedText.tsx";
+import FloatingParticles from "../../components/magic-ui/FloatingParticles.tsx";
 import { getImage } from "astro:assets";
+import { siteConfig } from "../../config/site";
+import bgImage from "../../assets/images/bg-image.jpg";
+import welcomeImage from "../../assets/images/welcome.webp";
 
-// Import service images
-import cardiologieImg from "../../assets/images/servicii/medicina-interna.jpg";
-import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
-import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+// Import service images - toate serviciile cu imagini corecte
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
 import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
+import chirurgieGeneralaImg from "../../assets/images/servicii/chirurgie.png";
+import chirurgiePediatricaImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
 import ortopedieImg from "../../assets/images/servicii/orto.png";
-import orlImg from "../../assets/images/servicii/nefrologie.png";
-import esteticaImg from "../../assets/images/servicii/chirurgie.png";
+import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
+import analizeLaboratorImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
 import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
-import oftalmologieImg from "../../assets/images/servicii/orto.png";
-import urologieImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
-import famImg from "../../assets/images/servicii/fam-scaled.jpg";
+import esteticaImg from "../../assets/images/servicii/chirurgie.png";
+
+// Coming soon service images
+import reumatologieImgSoon from "../../assets/images/servicii/soon/reumatologie.jpg";
+import pneumologieImgSoon from "../../assets/images/servicii/soon/pneumologie.png";
+import endocrinologieImgSoon from "../../assets/images/servicii/soon/endocrinologie.png";
+import psihiatrieImgSoon from "../../assets/images/servicii/soon/psihiatrie.jpg";
+import recuperareMedicalaImgSoon from "../../assets/images/servicii/soon/RECUPERARE-MEDICALA.png";
+import alergologieImgSoon from "../../assets/images/servicii/soon/alergologie.png";
+import ortopediePediatricaImgSoon from "../../assets/images/servicii/soon/ORTOPEDIE-PEDIATRICA.png";
+import cardiologieImgSoon from "../../assets/images/servicii/soon/cardiologie.png";
+import orlImgSoon from "../../assets/images/servicii/soon/ORL.png";
+import oftalmologieImgSoon from "../../assets/images/servicii/soon/oftamologie.jpg";
+import urologieImgSoon from "../../assets/images/servicii/soon/UROLOGIE.png";
+
+// Import logos
+import annLogo from "../../assets/images/altfel-de-logo.png";
+import synevoLogo from "../../assets/images/synevo.png";
+
+// Optimize background image
+const optimizedBgImage = await getImage({
+  src: bgImage,
+  format: "webp",
+  quality: 85,
+  width: 1920,
+  height: 1080,
+});
+
+// Optimize welcome image for section backgrounds
+const optimizedWelcomeImage = await getImage({
+  src: welcomeImage,
+  format: "webp",
+  quality: 90,
+  width: 800,
+  height: 600,
+});
+
+// Optimize logos
+const optimizedAnnLogo = await getImage({
+  src: annLogo,
+  format: "webp",
+  quality: 100,
+  width: 300,
+  height: 120,
+});
+
+const optimizedSynevoLogo = await getImage({
+  src: synevoLogo,
+  format: "webp",
+  quality: 100,
+  width: 250,
+  height: 100,
+});
 
 // Get all services content
 const services = await getCollection("services");
@@ -28,25 +89,9 @@ const sortedServices = services.sort((a, b) => {
   return a.data.name.localeCompare(b.data.name);
 });
 
-// Optimize service images
-const cardiologieOptimized = await getImage({
-  src: cardiologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const dermatologieOptimized = await getImage({
-  src: dermatologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const ginecologieOptimized = await getImage({
-  src: ginecologieImg,
+// Optimize service images - disponibile acum
+const medicinaFamilieOptimized = await getImage({
+  src: medicinaFamilieImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -61,6 +106,38 @@ const pediatrieOptimized = await getImage({
   height: 300,
 });
 
+const medicinaInternaOptimized = await getImage({
+  src: medicinaInternaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const chirurgieGeneralaOptimized = await getImage({
+  src: chirurgieGeneralaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const chirurgiePediatricaOptimized = await getImage({
+  src: chirurgiePediatricaImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ginecologieOptimized = await getImage({
+  src: ginecologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
 const ortopedieOptimized = await getImage({
   src: ortopedieImg,
   format: "webp",
@@ -69,8 +146,32 @@ const ortopedieOptimized = await getImage({
   height: 300,
 });
 
-const orlOptimized = await getImage({
-  src: orlImg,
+const nefrologieOptimized = await getImage({
+  src: nefrologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const analizeLaboratorOptimized = await getImage({
+  src: analizeLaboratorImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const dermatologieOptimized = await getImage({
+  src: dermatologieImg,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const medicinaMunciiOptimized = await getImage({
+  src: medicinaMunciiImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -93,8 +194,81 @@ const neurologieOptimized = await getImage({
   height: 300,
 });
 
+// Optimize coming soon service images
+const reumatologieOptimized = await getImage({
+  src: reumatologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const pneumologieOptimized = await getImage({
+  src: pneumologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const endocrinologieOptimized = await getImage({
+  src: endocrinologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const psihiatrieOptimized = await getImage({
+  src: psihiatrieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const recuperareMedicalaOptimized = await getImage({
+  src: recuperareMedicalaImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const alergologieOptimized = await getImage({
+  src: alergologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const ortopediePediatricaOptimized = await getImage({
+  src: ortopediePediatricaImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const cardiologieOptimized = await getImage({
+  src: cardiologieImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
+const orlOptimized = await getImage({
+  src: orlImgSoon,
+  format: "webp",
+  quality: 85,
+  width: 400,
+  height: 300,
+});
+
 const oftalmologieOptimized = await getImage({
-  src: oftalmologieImg,
+  src: oftalmologieImgSoon,
   format: "webp",
   quality: 85,
   width: 400,
@@ -102,15 +276,7 @@ const oftalmologieOptimized = await getImage({
 });
 
 const urologieOptimized = await getImage({
-  src: urologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const famOptimized = await getImage({
-  src: famImg,
+  src: urologieImgSoon,
   format: "webp",
   quality: 85,
   width: 400,
@@ -118,18 +284,74 @@ const famOptimized = await getImage({
 });
 
 const serviceImages = {
-  cardiologie: { src: cardiologieOptimized.src, width: 400, height: 300 },
-  dermatologie: { src: dermatologieOptimized.src, width: 400, height: 300 },
-  ginecologie: { src: ginecologieOptimized.src, width: 400, height: 300 },
+  // Servicii disponibile acum
+  "medicina-familie": {
+    src: medicinaFamilieOptimized.src,
+    width: 400,
+    height: 300,
+  },
   pediatrie: { src: pediatrieOptimized.src, width: 400, height: 300 },
+  "medicina-interna": {
+    src: medicinaInternaOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  "chirurgie-generala": {
+    src: chirurgieGeneralaOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  "chirurgie-pediatrica": {
+    src: chirurgiePediatricaOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  ginecologie: { src: ginecologieOptimized.src, width: 400, height: 300 },
   ortopedie: { src: ortopedieOptimized.src, width: 400, height: 300 },
-  orl: { src: orlOptimized.src, width: 400, height: 300 },
+  nefrologie: { src: nefrologieOptimized.src, width: 400, height: 300 },
+  "analize-laborator": {
+    src: analizeLaboratorOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  dermatologie: { src: dermatologieOptimized.src, width: 400, height: 300 },
+  "medicina-muncii": {
+    src: medicinaMunciiOptimized.src,
+    width: 400,
+    height: 300,
+  },
   "estetica-faciala": { src: esteticaOptimized.src, width: 400, height: 300 },
   neurologie: { src: neurologieOptimized.src, width: 400, height: 300 },
+
+  // Coming soon services
+  reumatologie: { src: reumatologieOptimized.src, width: 400, height: 300 },
+  pneumologie: { src: pneumologieOptimized.src, width: 400, height: 300 },
+  endocrinologie: { src: endocrinologieOptimized.src, width: 400, height: 300 },
+  psihiatrie: { src: psihiatrieOptimized.src, width: 400, height: 300 },
+  "recuperare-medicala": {
+    src: recuperareMedicalaOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  alergologie: { src: alergologieOptimized.src, width: 400, height: 300 },
+  "ortopedie-pediatrica": {
+    src: ortopediePediatricaOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  "diabet-metabolism": {
+    src: endocrinologieOptimized.src,
+    width: 400,
+    height: 300,
+  },
+
+  // Servicii care sunt în coming soon dar au și pagină dedicată
+  cardiologie: { src: cardiologieOptimized.src, width: 400, height: 300 },
+  orl: { src: orlOptimized.src, width: 400, height: 300 },
   oftalmologie: { src: oftalmologieOptimized.src, width: 400, height: 300 },
   urologie: { src: urologieOptimized.src, width: 400, height: 300 },
-  "medicina-familie": { src: famOptimized.src, width: 400, height: 300 },
-  default: { src: famOptimized.src, width: 400, height: 300 },
+
+  default: { src: medicinaFamilieOptimized.src, width: 400, height: 300 },
 };
 
 // SEO optimization for services page - targeting medical services in București
@@ -203,117 +425,258 @@ const structuredData = {
   structuredData={structuredData}
 >
   <main class="min-h-screen">
-    <!-- Services Hero Section -->
+    <!-- Services Hero Section - Similar to Homepage Hero -->
     <section
-      class="relative pt-24 pb-16 sm:pt-32 sm:pb-20 bg-gradient-to-br from-surface via-surface-secondary to-surface-tertiary overflow-hidden"
+      class="relative min-h-[85vh] pt-16 sm:pt-20 flex items-center justify-center overflow-hidden"
     >
-      <!-- Background Effects -->
+      {/* Background Image */}
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${optimizedBgImage.src})` }}
+      >
+      </div>
+
+      {/* Gradient Overlay - matching the green/teal from image */}
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary-hover/85 to-primary-dark/90"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-primary-dark/30 via-transparent to-transparent"
+      >
+      </div>
+
+      {/* Floating Particles */}
+      <FloatingParticles count={30} client:load />
+
+      {/* Modern Geometric Elements */}
       <div class="absolute inset-0">
+        {/* Subtle shapes */}
         <div
-          class="absolute top-10 left-10 w-40 h-40 bg-primary/12 rounded-full blur-3xl hero-float"
+          class="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse"
         >
         </div>
         <div
-          class="absolute top-1/3 right-20 w-32 h-32 bg-secondary/12 rounded-full blur-2xl hero-pulse"
-          style="animation-delay: 1s"
+          class="absolute bottom-32 right-20 w-24 h-24 bg-white/8 rounded-full blur-xl animate-pulse"
+          style={{ animationDelay: "1s" }}
         >
         </div>
         <div
-          class="absolute bottom-20 left-1/4 w-48 h-48 bg-accent/12 rounded-full blur-3xl hero-glow"
-          style="animation-delay: 2s"
-        >
-        </div>
-
-        <!-- Medical Pattern -->
-        <div class="absolute inset-0 opacity-8">
-          <div
-            class="absolute top-1/4 left-1/5 w-8 h-8 bg-primary/30 transform rotate-45 rounded-sm"
-          >
-          </div>
-          <div
-            class="absolute top-3/4 right-1/4 w-6 h-6 bg-secondary/30 transform rotate-45 rounded-sm"
-          >
-          </div>
-          <div
-            class="absolute top-1/2 left-2/3 w-4 h-4 bg-accent/30 transform rotate-45 rounded-sm"
-          >
-          </div>
-        </div>
-
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-surface/70 via-transparent to-surface/70"
+          class="absolute top-1/3 right-1/4 w-16 h-16 bg-white/6 rounded-full blur-lg animate-pulse"
+          style={{ animationDelay: "2s" }}
         >
         </div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Main Content Container */}
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center"
+      >
+        {/* Top Section with Main Content */}
         <div
-          class="inline-flex items-center gap-3 bg-surface-elevated/80 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-xl border border-primary/20"
+          class="flex flex-col lg:flex-row items-center justify-between mb-16"
         >
-          <span class="text-xl">🏥</span>
-          <span>Servicii Medicale Complete</span>
-          <div class="flex gap-1">
-            <div class="w-2 h-2 bg-primary rounded-full hero-pulse"></div>
-            <div
-              class="w-2 h-2 bg-secondary rounded-full hero-pulse"
-              style="animation-delay: 0.5s"
-            >
-            </div>
-            <div
-              class="w-2 h-2 bg-accent rounded-full hero-pulse"
-              style="animation-delay: 1s"
-            >
-            </div>
+          {/* Left Content */}
+          <div class="flex-1 text-left lg:pr-12">
+            {/* Main Heading */}
+            <AnimatedText delay={0.4} client:load>
+              <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              >
+                Servicii Medicale <br />
+                <span class="text-4xl sm:text-5xl lg:text-6xl">București</span>
+              </h1>
+            </AnimatedText>
+
+            {/* Description */}
+            <AnimatedText delay={0.6} client:load>
+              <p
+                class="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed"
+              >
+                Descoperă gama completă de servicii medicale oferite de
+                <strong> specialiștii noștri experimentați</strong> din București.
+                De la consultații de rutină la investigații complexe, oferim îngrijire
+                medicală de înaltă calitate cu tehnologie modernă.
+              </p>
+            </AnimatedText>
+
+            {/* CTA Buttons */}
+            <AnimatedText delay={0.8} client:load>
+              <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a
+                  href="/programare"
+                  class="bg-white hover:bg-white/90 text-primary px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                >
+                  <span class="text-xl">📅</span>
+                  <span>Programează-te acum!</span>
+                </a>
+                <a
+                  href="/contact"
+                  class="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/50 hover:border-white/70 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                >
+                  <span class="text-xl">📞</span>
+                  <span>Contactează-ne</span>
+                </a>
+              </div>
+            </AnimatedText>
+          </div>
+
+          {/* Right Side - Logo Area */}
+          <div class="flex-shrink-0 text-center lg:text-right space-y-8">
+            {/* ANN Medical Clinic Logo */}
+            <AnimatedText delay={1.0} client:load>
+              <div class="flex justify-center lg:justify-end">
+                <img
+                  src={optimizedAnnLogo.src}
+                  alt="ANN Medical Clinic"
+                  class="h-16 sm:h-20 lg:h-24 w-auto object-contain filter drop-shadow-lg hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                />
+              </div>
+            </AnimatedText>
+
+            {/* Synevo Partner Logo */}
+            <AnimatedText delay={1.2} client:load>
+              <div class="flex flex-col items-center lg:items-end">
+                <img
+                  src={optimizedSynevoLogo.src}
+                  alt="Synevo - Partner"
+                  class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-0 invert drop-shadow-lg hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                />
+              </div>
+            </AnimatedText>
           </div>
         </div>
 
-        <h1
-          class="text-4xl sm:text-5xl lg:text-6xl font-bold text mb-8 leading-tight"
-        >
-          <span class="block mb-2">Servicii Medicale</span>
-          <span
-            class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow"
-          >
-            București
-          </span>
-        </h1>
+        {/* Bottom Features Section */}
+        <AnimatedText delay={1.4} client:load>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {/* Medici Experți */}
+            <div
+              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <span class="text-2xl">👨‍⚕️</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg mb-1">
+                  Medici Specialiști
+                </h3>
+                <p class="text-white/80 text-sm">
+                  Profesioniști dedicați sănătății tale.
+                </p>
+              </div>
+            </div>
 
-        <p
-          class="text-lg sm:text-xl text-secondary max-w-4xl mx-auto leading-relaxed mb-12"
-        >
-          Descoperă gama completă de servicii medicale oferite de
-          <span
-            class="font-semibold text-primary bg-primary/10 px-2 py-1 rounded-lg"
-          >
-            specialiștii noștri experimentați
-          </span>
-          din București. De la consultații de rutină la investigații complexe, oferim
-          îngrijire medicală de înaltă calitate cu tehnologie modernă.
-        </p>
+            {/* Tehnologie Modernă */}
+            <div
+              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <span class="text-2xl">🔬</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg mb-1">
+                  Tehnologie Modernă
+                </h3>
+                <p class="text-white/80 text-sm">
+                  Echipamente de ultimă generație.
+                </p>
+              </div>
+            </div>
 
-        <div
-          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
-        >
-          <a
-            href="/programare"
-            class="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
-          >
-            <span class="text-xl">📅</span>
-            <span>Programează Consultație</span>
-          </a>
+            {/* Programare Online */}
+            <div
+              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <span class="text-2xl">📅</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg mb-1">
+                  Programare Rapidă
+                </h3>
+                <p class="text-white/80 text-sm">
+                  Simplu și rapid, direct de acasă.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedText>
+      </div>
 
-          <a
-            href="/contact"
-            class="inline-flex items-center gap-3 border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+      {/* Modern Scroll Indicator */}
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center hover:border-white/80 transition-colors duration-300 bg-white/10 backdrop-blur-sm"
           >
-            <span class="text-xl">📞</span>
-            <span>Contactează-ne</span>
-          </a>
+            <div class="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse">
+            </div>
+          </div>
+          <p class="text-white/80 text-sm mt-3 font-semibold">Scroll</p>
         </div>
       </div>
     </section>
 
-    <!-- All Services Listing -->
+    <!-- Modern Services Introduction Section -->
+    <section class="relative py-20 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedText delay={0.2} client:load>
+          <div class="text-center mb-16">
+            <div
+              class="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/20"
+            >
+              <span class="text-xl">⚕️</span>
+              <span>Alegerea Pacienților</span>
+            </div>
+            <h2
+              class="text-3xl sm:text-4xl font-bold text-text mb-6 leading-tight"
+            >
+              <span class="block mb-2">Specialități Medicale</span>
+              <span
+                class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow"
+              >
+                De Înaltă Calitate
+              </span>
+            </h2>
+            <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+              În centrul medical <span class="font-semibold text-primary"
+                >ANN Clinic</span
+              > oferim o gamă completă de servicii medicale adaptate nevoilor pacienților
+              noștri, cu echipamente moderne și medici cu experiență.
+            </p>
+          </div>
+        </AnimatedText>
+      </div>
+    </section>
+
+    <!-- Servicii Disponibile - Similar cu homepage-ul -->
+    <ServicesSection
+      services={sortedServices}
+      serviceImages={serviceImages}
+      backgroundImage={optimizedWelcomeImage.src}
+      client:load
+    />
+
+    <!-- Servicii În Curând Disponibile - Similar cu homepage-ul -->
+    <ComingSoonSection
+      services={sortedServices}
+      serviceImages={serviceImages}
+      backgroundImage={optimizedWelcomeImage.src}
+      client:load
+    />
+
+    <!-- All Services Listing - Detailed Grid -->
     <AllServicesListing
       services={sortedServices}
       serviceImages={serviceImages}

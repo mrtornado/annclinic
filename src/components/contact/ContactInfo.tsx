@@ -39,10 +39,23 @@ export default function ContactInfo() {
     },
   ];
 
+  // Program de lucru din configurația site-ului
   const schedule = [
-    { day: "Luni - Vineri", hours: "08:00 - 20:00", available: true },
-    { day: "Sâmbătă", hours: "08:00 - 16:00", available: true },
-    { day: "Duminică", hours: "Închis", available: false },
+    {
+      day: "Luni - Vineri",
+      hours: siteConfig.schedule.weekdays,
+      available: true,
+    },
+    {
+      day: "Sâmbătă",
+      hours: siteConfig.schedule.saturday,
+      available: siteConfig.schedule.saturday !== "În curând",
+    },
+    {
+      day: "Duminică",
+      hours: siteConfig.schedule.sunday,
+      available: false,
+    },
   ];
 
   return (
