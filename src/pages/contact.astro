@@ -88,11 +88,10 @@ const structuredData = {
           class="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
-            href="tel:112"
+            href={`tel:${siteConfig.contact.shortPhone}`}
             class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-xl font-semibold hover:bg-accent-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            <span>🚑</span>
-            <span>Ambulanța: 112</span>
+            <span>Tel: {siteConfig.contact.shortPhone}</span>
           </a>
           <a
             href={`tel:${siteConfig.contact.phone}`}

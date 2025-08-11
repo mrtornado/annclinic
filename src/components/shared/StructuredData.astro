@@ -1,6 +1,7 @@
 ---
 import { siteConfig } from "../../config/site";
 import type { ServiceContent, ArticleContent } from "../../types/content";
+import { getCollection } from "astro:content";
 
 export interface Props {
   type: "organization" | "service" | "article" | "breadcrumb";
@@ -10,6 +11,10 @@ export interface Props {
 }
 
 const { type, service, article, breadcrumbs } = Astro.props;
+
+// Obține toate specialitățile din colecția de servicii
+const services = await getCollection("services");
+const specialties = services.map((service) => service.data.name);
 
 // Base organization data
 const baseOrganization = {
@@ -22,13 +27,13 @@ const baseOrganization = {
   url: siteConfig.url,
   logo: {
     "@type": "ImageObject",
-    url: `${siteConfig.url}/images/ann-clinic-logo.jpg`,
+    url: `${siteConfig.url}/images/logo.png`,
     width: 400,
     height: 400,
   },
   image: {
     "@type": "ImageObject",
-    url: `${siteConfig.url}/images/ann-clinic-building.jpg`,
+    url: `${siteConfig.url}/images/bg-image.jpg`,
     width: 1200,
     height: 630,
   },
@@ -48,7 +53,7 @@ const baseOrganization = {
     longitude: siteConfig.address.coordinates.lng,
   },
   openingHours: ["Mo-Fr 08:00-20:00", "Sa 08:00-16:00"],
-  medicalSpecialty: siteConfig.specialties,
+  medicalSpecialty: specialties,
   priceRange: "$$",
   acceptsReservations: true,
   hasMap: `https://maps.google.com/?q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`,
@@ -57,7 +62,7 @@ const baseOrganization = {
   sameAs: [
     siteConfig.social.facebook,
     siteConfig.social.instagram,
-    `https://twitter.com/${siteConfig.social.twitter}`,
+    // Twitter URL poate fi adăugat aici când va fi disponibil
   ],
   // Additional medical organization properties
   isAcceptingNewPatients: true,

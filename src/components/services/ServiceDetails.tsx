@@ -2,19 +2,27 @@ import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedButton from "../magic-ui/AnimatedButton";
 import type { ServiceContent } from "../../types/content";
 import { siteConfig } from "../../config/site";
+import { useState, useEffect } from "react";
 
 interface ServiceDetailsProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
   showTrustSignals?: boolean;
   showBeforeAfter?: boolean;
-  imageSrc?: string; // Optional optimized image to display for the service
+  serviceImages?: Record<
+    string,
+    {
+      src: string;
+      width: number;
+      height: number;
+    }
+  >;
 }
 
 export default function ServiceDetails({
   service,
   showTrustSignals = false,
   showBeforeAfter = false,
-  imageSrc,
+  serviceImages = {},
 }: ServiceDetailsProps) {
   // Handle both ServiceContent and direct objects from landing pages
   const getTreatments = () => {
@@ -28,6 +36,16 @@ export default function ServiceDetails({
     if (service?.relatedServices) return service.relatedServices; // Direct object format
     return [];
   };
+
+  const getServiceSlug = () => {
+    if (service?.slug) return service.slug; // ServiceContent format
+    if (service?.data?.slug) return service.data.slug; // Sometimes nested in data
+    // Fallback to converting name to slug format
+    const name = service?.data?.name || service?.name || "";
+    return name.toLowerCase().replace(/\s+/g, "-");
+  };
+
+  const serviceSlug = getServiceSlug();
 
   const treatments = getTreatments();
   const relatedServices = getRelatedServices();
@@ -101,20 +119,68 @@ export default function ServiceDetails({
                 </div>
               </div>
               <div className="relative">
-                {imageSrc ? (
-                  <img
-                    src={imageSrc}
-                    alt={
-                      service?.data?.name || service?.name || "Serviciu medical"
-                    }
-                    className="w-full h-80 object-cover rounded-2xl shadow-xl"
-                    loading="eager"
-                  />
-                ) : (
-                  <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center shadow-xl">
-                    <span className="text-8xl opacity-50">🏥</span>
-                  </div>
-                )}
+                <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl overflow-hidden shadow-xl">
+                  {/* Folosim imaginile optimizate din serviceImageMap cu verificare de siguranță */}
+                  {console.log(
+                    "ServiceDetails - serviceImages:",
+                    serviceImages
+                  )}
+                  {console.log("ServiceDetails - serviceSlug:", serviceSlug)}
+                  {serviceImages &&
+                    serviceSlug &&
+                    console.log(
+                      "ServiceDetails - serviceImages[serviceSlug]:",
+                      serviceImages[serviceSlug]
+                    )}
+                  {serviceImages &&
+                  serviceSlug &&
+                  serviceImages[serviceSlug] ? (
+                    <img
+                      src={serviceImages[serviceSlug].src}
+                      alt={`${
+                        service?.data?.name ||
+                        service?.name ||
+                        "Serviciu medical"
+                      }`}
+                      width={800}
+                      height={600}
+                      loading="eager"
+                      className="w-full h-full object-cover object-center"
+                    />
+                  ) : serviceImages &&
+                    serviceImages.default &&
+                    serviceImages.default.src ? (
+                    (console.log(
+                      "ServiceDetails - folosim imaginea default:",
+                      serviceImages.default
+                    ),
+                    (
+                      <img
+                        src={serviceImages.default.src}
+                        alt={`${
+                          service?.data?.name ||
+                          service?.name ||
+                          "Serviciu medical"
+                        }`}
+                        width={800}
+                        height={600}
+                        loading="eager"
+                        className="w-full h-full object-cover object-center"
+                      />
+                    ))
+                  ) : (
+                    (console.log(
+                      "ServiceDetails - nu avem imagine disponibilă!"
+                    ),
+                    (
+                      <div className="w-full h-full flex items-center justify-center bg-surface-elevated">
+                        <p className="text-lg text-secondary">
+                          Imagine indisponibilă
+                        </p>
+                      </div>
+                    ))
+                  )}
+                </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur opacity-30" />
               </div>
             </div>
@@ -153,10 +219,7 @@ export default function ServiceDetails({
                         {treatment.description}
                       </p>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-primary font-semibold">
-                          {treatment.duration || "30-60 min"}
-                        </span>
+                      <div className="flex items-center justify-center">
                         <AnimatedButton
                           href="/programare"
                           variant="outline"
@@ -174,33 +237,7 @@ export default function ServiceDetails({
           </div>
         )}
 
-        {/* Related Services */}
-        {relatedServices.length > 0 && (
-          <AnimatedText delay={1.4}>
-            <div className="text-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text mb-8">
-                Servicii Conexe
-              </h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                {relatedServices.map(
-                  (relatedService: string, index: number) => (
-                    <AnimatedButton
-                      key={index}
-                      href={`/servicii/${relatedService
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      variant="outline"
-                      size="sm"
-                      className="hover:scale-105 transition-transform duration-300"
-                    >
-                      {relatedService}
-                    </AnimatedButton>
-                  )
-                )}
-              </div>
-            </div>
-          </AnimatedText>
-        )}
+        {/* Secțiunea de Servicii Conexe a fost eliminată la cerere */}
 
         {/* CTA Section */}
         <AnimatedText delay={1.6}>

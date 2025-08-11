@@ -1,0 +1,120 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#ef4444;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#f87171;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626" />
+      <stop offset="100%" style="stop-color:#ef4444" />
+    </linearGradient>
+    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Medical cross pattern -->
+  <g opacity="0.05">
+    <rect x="100" y="150" width="40" height="10" fill="#dc2626" rx="5"/>
+    <rect x="115" y="135" width="10" height="40" fill="#dc2626" rx="5"/>
+    <rect x="650" y="400" width="40" height="10" fill="#ef4444" rx="5"/>
+    <rect x="665" y="385" width="10" height="40" fill="#ef4444" rx="5"/>
+    <rect x="200" y="450" width="30" height="8" fill="#f87171" rx="4"/>
+    <rect x="211" y="439" width="8" height="30" fill="#f87171" rx="4"/>
+  </g>
+  
+  <!-- Main illustration -->
+  <g transform="translate(400, 300)">
+    <!-- Large heart -->
+    <g transform="translate(0, -20)">
+      <path d="M 0 20 C -40 -20 -80 -20 -80 0 C -80 20 -40 60 0 80 C 40 60 80 20 80 0 C 80 -20 40 -20 0 20 Z" 
+            fill="url(#heart)" 
+            stroke="#b91c1c" 
+            stroke-width="3"/>
+      
+      <!-- Heart pulse lines inside -->
+      <g stroke="url(#pulse)" stroke-width="3" fill="none" opacity="0.8">
+        <path d="M -50 0 L -40 0 L -35 -15 L -30 15 L -25 -10 L -20 10 L -15 0 L 15 0 L 20 -10 L 25 10 L 30 -15 L 35 15 L 40 0 L 50 0"/>
+      </g>
+      
+      <!-- Heartbeat animation dots -->
+      <circle cx="-30" cy="0" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30" cy="0" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Stethoscope -->
+    <g transform="translate(-120, -80)">
+      <!-- Stethoscope tube -->
+      <path d="M 0 0 Q 20 -20 40 -10 Q 60 0 80 20 Q 100 40 120 60" 
+            stroke="#374151" 
+            stroke-width="6" 
+            fill="none" 
+            stroke-linecap="round"/>
+      
+      <!-- Earpieces -->
+      <circle cx="0" cy="0" r="8" fill="#6b7280"/>
+      <circle cx="10" cy="-5" r="8" fill="#6b7280"/>
+      
+      <!-- Chest piece -->
+      <circle cx="120" cy="60" r="20" fill="#374151" stroke="#1f2937" stroke-width="3"/>
+      <circle cx="120" cy="60" r="12" fill="#4b5563"/>
+    </g>
+    
+    <!-- ECG Monitor -->
+    <g transform="translate(120, -60)">
+      <!-- Monitor screen -->
+      <rect x="0" y="0" width="100" height="60" fill="#1f2937" rx="8" stroke="#374151" stroke-width="2"/>
+      
+      <!-- ECG line -->
+      <g stroke="#10b981" stroke-width="2" fill="none">
+        <path d="M 10 30 L 20 30 L 25 10 L 30 50 L 35 20 L 40 40 L 45 30 L 90 30">
+          <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="2s" repeatCount="indefinite"/>
+        </path>
+      </g>
+      
+      <!-- Monitor base -->
+      <rect x="20" y="60" width="60" height="15" fill="#374151" rx="3"/>
+    </g>
+    
+    <!-- Warning symbols -->
+    <g transform="translate(-150, 80)" fill="#f59e0b" opacity="0.7">
+      <polygon points="0,-15 13,10 -13,10" stroke="#d97706" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#92400e">!</text>
+    </g>
+    
+    <g transform="translate(150, 80)" fill="#f59e0b" opacity="0.7">
+      <polygon points="0,-15 13,10 -13,10" stroke="#d97706" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#92400e">!</text>
+    </g>
+    
+    <!-- Pulse waves -->
+    <g stroke="#10b981" stroke-width="2" fill="none" opacity="0.6">
+      <path d="M -200 100 Q -180 80 -160 100 Q -140 120 -120 100">
+        <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 120 100 Q 140 80 160 100 Q 180 120 200 100">
+        <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#dc2626">
+    Probleme Cardiace
+  </text>
+  <text x="400" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6b7280">
+    Simptome și Diagnostic
+  </text>
+</svg>

@@ -72,7 +72,7 @@ export default function ServiceHero({
 
   return (
     <section
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${gradientClass} pt-20 sm:pt-24`}
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${gradientClass} pt-24 sm:pt-28`}
     >
       {/* Background Effects */}
       <div className="absolute inset-0">

@@ -4,10 +4,11 @@ import BaseLayout from "./BaseLayout.astro";
 import { formatDate } from "../utils/romanian";
 import { Image } from "astro:assets";
 
-// Import article images
-import vaccinareImage from "../assets/images/articles/vaccinare-copii.svg";
-import cardiaceImage from "../assets/images/articles/simptome-probleme-cardiace.svg";
-import acneeImage from "../assets/images/articles/tratament-acnee-adolescenti.svg";
+// Definim calea către imaginile articolelor
+const articleImagesPath = "/images/articles/";
+const vaccinareImagePath = `${articleImagesPath}vaccinare-copii.svg`;
+const cardiaceImagePath = `${articleImagesPath}simptome-probleme-cardiace.svg`;
+const acneeImagePath = `${articleImagesPath}tratament-acnee-adolescenti.svg`;
 
 interface Props {
   article: CollectionEntry<"articles">;
@@ -17,17 +18,17 @@ interface Props {
 const { article, relatedArticles = [] } = Astro.props;
 const { Content } = await article.render();
 
-// Function to get the correct image for each article
-const getArticleImage = (slug: string) => {
-  const imageMap: Record<string, any> = {
-    "vaccinarea-copiilor-program-national": vaccinareImage,
-    "simptome-probleme-cardiace": cardiaceImage,
-    "tratament-acnee-adolescenti": acneeImage,
+// Function to get the correct image path for each article
+const getArticleImagePath = (slug: string) => {
+  const imageMap: Record<string, string> = {
+    "vaccinarea-copiilor-program-national": vaccinareImagePath,
+    "simptome-probleme-cardiace": cardiaceImagePath,
+    "tratament-acnee-adolescenti": acneeImagePath,
   };
   return imageMap[slug] || null;
 };
 
-const articleImage = getArticleImage(article.slug);
+const articleImagePath = getArticleImagePath(article.slug);
 
 // SEO optimization
 const seoTitle = article.data.seoTitle || `${article.data.title} | ANN Clinic`;
@@ -370,14 +371,12 @@ const medicalStructuredData = {
         <div class="mt-8">
           <div class="relative overflow-hidden rounded-2xl shadow-2xl">
             {
-              articleImage ? (
-                <Image
-                  src={articleImage}
+              articleImagePath ? (
+                <img
+                  src={articleImagePath}
                   alt={article.data.imageAlt || article.data.title}
                   class="w-full h-64 md:h-80 lg:h-96 object-cover"
                   loading="eager"
-                  format="webp"
-                  quality={85}
                 />
               ) : article.data.image ? (
                 <img
@@ -493,17 +492,15 @@ const medicalStructuredData = {
                     class="block bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-primary/10 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
                   >
                     <div class="relative">
-                      {getArticleImage(relatedArticle.slug) ? (
-                        <Image
-                          src={getArticleImage(relatedArticle.slug)}
+                      {getArticleImagePath(relatedArticle.slug) ? (
+                        <img
+                          src={getArticleImagePath(relatedArticle.slug)}
                           alt={
                             relatedArticle.data.imageAlt ||
                             relatedArticle.data.title
                           }
                           class="w-full h-48 object-cover"
                           loading="lazy"
-                          format="webp"
-                          quality={80}
                         />
                       ) : relatedArticle.data.image ? (
                         <img

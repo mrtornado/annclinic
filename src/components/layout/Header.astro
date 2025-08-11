@@ -4,7 +4,7 @@ import { siteConfig } from "../../config/site";
 import { Image } from "astro:assets";
 import logo from "../../assets/images/logo.png";
 
-const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
+const telHref = `tel:${siteConfig.contact.shortPhone}`;
 ---
 
 <header
@@ -36,11 +36,17 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
           [
             { href: "/", label: "Acasă", icon: "🏠" },
             { href: "/servicii", label: "Servicii", icon: "🏥" },
-            { href: "/articole", label: "Articole", icon: "📰" },
+            {
+              href: "https://ann.comet.ro/ext_view_investigatie.php",
+              label: "Analize",
+              icon: "📈",
+              target: "_blank",
+            },
             { href: "/contact", label: "Contact", icon: "📞" },
           ].map((item) => (
             <a
               href={item.href}
+              target={item.target || "_self"}
               class="nav-link px-3 py-2 rounded-lg text-text hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium relative group flex items-center gap-2"
             >
               <span class="text-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300">
@@ -65,7 +71,7 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
             href={telHref}
             class="font-bold text-primary hover:text-primary-hover transition-colors duration-300"
           >
-            {siteConfig.contact.phoneDisplay}
+            {siteConfig.contact.shortPhone}
           </a>
         </div>
 
@@ -119,11 +125,17 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
           [
             { href: "/", label: "Acasă", icon: "🏠" },
             { href: "/servicii", label: "Servicii", icon: "🏥" },
-            { href: "/articole", label: "Articole", icon: "📰" },
+            {
+              href: "https://ann.comet.ro/ext_view_investigatie.php",
+              label: "Analize",
+              icon: "📈",
+              target: "_blank",
+            },
             { href: "/contact", label: "Contact", icon: "📞" },
           ].map((item) => (
             <a
               href={item.href}
+              target={item.target || "_self"}
               class="mobile-nav-link flex items-center gap-3 px-3 py-3 rounded-lg text-text hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium"
             >
               <span class="text-lg">{item.icon}</span>
@@ -150,13 +162,13 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
 
         <!-- Mobile Emergency Contact -->
         <div class="pt-3 text-center">
-          <div class="text-sm text-text-muted mb-1">Urgențe 24/7</div>
+          <div class="text-sm text-text-muted mb-1">Urgențe</div>
           <a
             href={telHref}
             class="text-lg font-bold text-accent hover:text-accent-hover transition-colors duration-300 flex items-center justify-center gap-2"
           >
             <span class="animate-pulse">🚨</span>
-            <span>{siteConfig.contact.phoneDisplay}</span>
+            <span>{siteConfig.contact.shortPhone}</span>
           </a>
         </div>
       </div>

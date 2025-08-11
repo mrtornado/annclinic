@@ -125,7 +125,7 @@ export default function ClinicHistory() {
             { number: "5000+", label: "Pacienți mulțumiți", icon: "😊" },
             { number: "15000+", label: "Consultații realizate", icon: "🩺" },
             { number: "98%", label: "Rata de satisfacție", icon: "⭐" },
-            { number: "24/7", label: "Suport pentru urgențe", icon: "🚨" },
+            { number: "", label: "Suport pentru urgențe", icon: "🚨" },
           ].map((stat, index) => (
             <MagicCard key={stat.label}>
               <div className="p-6 text-center">

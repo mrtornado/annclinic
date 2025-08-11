@@ -4,17 +4,43 @@ import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
 import { getImage } from "astro:assets";
-import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
-import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
+
+// Importăm direct imaginile necesare
+import chirurgieImg from "../../assets/images/servicii/chirurgie.png";
+import chirurgiePediatricaImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
 import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
 import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
-import ortopedieImg from "../../assets/images/servicii/orto.png";
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
 import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
-import chirurgieGeneralaImg from "../../assets/images/servicii/chirurgie.png";
+import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
 import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
-import analizeLaboratorImg from "../../assets/images/servicii/medicina-muncii.jpg";
-import esteticaImg from "../../assets/images/servicii/chirurgie.png";
-import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import ortopedieImg from "../../assets/images/servicii/orto.png";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.png";
+import orlImg from "../../assets/images/servicii/soon/ORL.png";
+import oftalmologieImg from "../../assets/images/servicii/soon/oftamologie.jpg";
+import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.png";
+import neurologieImg from "../../assets/images/servicii/medicina-interna.jpg"; // Folosim o imagine temporară
+
+// Creăm o mapare a imaginilor pentru servicii
+const serviceImageMap: Record<string, any> = {
+  "chirurgie-generala": chirurgieImg,
+  "chirurgie-pediatrica": chirurgiePediatricaImg,
+  dermatologie: dermatologieImg,
+  ginecologie: ginecologieImg,
+  "medicina-familie": medicinaFamilieImg,
+  "medicina-interna": medicinaInternaImg,
+  "medicina-muncii": medicinaMunciiImg,
+  nefrologie: nefrologieImg,
+  ortopedie: ortopedieImg,
+  pediatrie: pediatrieImg,
+  cardiologie: cardiologieImg,
+  orl: orlImg,
+  oftalmologie: oftalmologieImg,
+  urologie: urologieImg,
+  neurologie: neurologieImg,
+  default: medicinaFamilieImg,
+};
 
 export async function getStaticPaths() {
   const services = await getCollection("services");
@@ -25,40 +51,84 @@ export async function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+const serviceSlug = service.slug;
+const serviceName = service.data.name;
 
-// Map service slugs to local images similar to services index page
-const imageMap: Record<string, any> = {
-  pediatrie: pediatrieImg,
-  "medicina-familie": medicinaFamilieImg,
-  dermatologie: dermatologieImg,
-  ginecologie: ginecologieImg,
-  ortopedie: ortopedieImg,
-  "medicina-interna": medicinaInternaImg,
-  "chirurgie-generala": chirurgieGeneralaImg,
-  nefrologie: nefrologieImg,
-  "analize-laborator": analizeLaboratorImg,
-  "estetica-faciala": esteticaImg,
-  neurologie: neurologieImg,
-};
+// Optimizăm imaginile pentru servicii direct în pagina Astro
+const optimizedServiceImages: Record<string, any> = {};
 
-const localSrc = imageMap[service.slug] || medicinaFamilieImg;
-const optimizedServiceImage = await getImage({
-  src: localSrc,
-  format: "webp",
-  quality: 85,
+// Adăugăm loguri pentru debug
+console.log("[...slug].astro - serviceSlug:", serviceSlug);
+console.log(
+  "[...slug].astro - serviceImageMap keys:",
+  Object.keys(serviceImageMap)
+);
+
+// Întotdeauna optimizăm imaginea default pentru a evita erorile
+const defaultImg = serviceImageMap.default;
+console.log("[...slug].astro - defaultImg:", defaultImg);
+
+const optimizedDefaultImg = await getImage({
+  src: defaultImg,
   width: 800,
   height: 600,
+  format: "webp",
+  quality: 80,
 });
+
+console.log("[...slug].astro - optimizedDefaultImg:", optimizedDefaultImg);
+
+// Adaugăm imaginea default în optimizedServiceImages
+optimizedServiceImages.default = optimizedDefaultImg;
+console.log(
+  "[...slug].astro - optimizedServiceImages.default:",
+  optimizedServiceImages.default
+);
+
+// Optimizăm imaginea pentru serviciul curent dacă există în serviceImageMap
+if (serviceSlug in serviceImageMap) {
+  const serviceImg = serviceImageMap[serviceSlug];
+  console.log(
+    "[...slug].astro - serviceImg pentru",
+    serviceSlug,
+    ":",
+    serviceImg
+  );
+
+  const optimizedImg = await getImage({
+    src: serviceImg,
+    width: 800,
+    height: 600,
+    format: "webp",
+    quality: 80,
+  });
+
+  console.log(
+    "[...slug].astro - optimizedImg pentru",
+    serviceSlug,
+    ":",
+    optimizedImg
+  );
+  optimizedServiceImages[serviceSlug] = optimizedImg;
+  console.log(
+    "[...slug].astro - optimizedServiceImages[",
+    serviceSlug,
+    "]:",
+    optimizedServiceImages[serviceSlug]
+  );
+}
 ---
 
 <ServiceLayout service={service}>
   <!-- Service Hero Section -->
   <ServiceHero service={service} client:load />
 
-  <!-- Service Details Section -->
+  <!-- Service Details Section with optimized images -->
   <ServiceDetails
     service={service}
-    imageSrc={optimizedServiceImage.src}
+    serviceImages={optimizedServiceImages}
     client:load
   />
 </ServiceLayout>
+
+<!-- Removed optimization script since we're using direct imports -->

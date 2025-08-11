@@ -38,9 +38,9 @@ export default function ContactInfo() {
     {
       icon: "🚨",
       title: "Urgențe",
-      primary: "112 - Ambulanța",
-      secondary: "24/7 disponibil",
-      action: "tel:112",
+      primary: `${siteConfig.contact.shortPhone}`,
+      secondary: "disponibil",
+      action: `tel:${siteConfig.contact.shortPhone}`,
       color: "from-red-500 to-red-600",
       description:
         "Pentru urgențe medicale, apelează imediat numărul de urgență sau serviciul de ambulanță.",
@@ -181,7 +181,7 @@ export default function ContactInfo() {
                 <p className="text-primary font-medium flex items-center gap-2">
                   <span className="text-xl">💡</span>
                   <span>
-                    Pentru urgențe medicale, sunați la 112 sau contactați
+                    Pentru urgențe medicale, sunați la 021 9063 sau contactați
                     serviciul de ambulanță.
                   </span>
                 </p>

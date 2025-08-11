@@ -3,6 +3,9 @@ import { getEntry } from "astro:content";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import { getImage } from "astro:assets";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
 
 // Get the pediatrie service content
 const service = await getEntry("services", "pediatrie");
@@ -10,6 +13,54 @@ const service = await getEntry("services", "pediatrie");
 if (!service) {
   return Astro.redirect("/404");
 }
+
+// Optimizăm imaginile pentru servicii direct în pagina Astro
+const optimizedServiceImages: Record<string, any> = {};
+const serviceSlug = "pediatrie";
+
+// Adăugăm loguri pentru debug
+console.log("pediatrie.astro - serviceSlug:", serviceSlug);
+
+// Optimizăm imaginea default
+const optimizedDefaultImg = await getImage({
+  src: medicinaFamilieImg,
+  width: 800,
+  height: 600,
+  format: "webp",
+  quality: 80,
+});
+
+console.log("pediatrie.astro - optimizedDefaultImg:", optimizedDefaultImg);
+
+// Adaugăm imaginea default în optimizedServiceImages
+optimizedServiceImages.default = optimizedDefaultImg;
+console.log(
+  "pediatrie.astro - optimizedServiceImages.default:",
+  optimizedServiceImages.default
+);
+
+// Optimizăm imaginea pentru serviciul curent
+const optimizedImg = await getImage({
+  src: pediatrieImg,
+  width: 800,
+  height: 600,
+  format: "webp",
+  quality: 80,
+});
+
+console.log(
+  "pediatrie.astro - optimizedImg pentru",
+  serviceSlug,
+  ":",
+  optimizedImg
+);
+optimizedServiceImages[serviceSlug] = optimizedImg;
+console.log(
+  "pediatrie.astro - optimizedServiceImages[",
+  serviceSlug,
+  "]:",
+  optimizedServiceImages[serviceSlug]
+);
 
 // SEO optimization for pediatrie - targeting "pediatru București" keywords
 const seoTitle = "Pediatru București - Consultații Pediatrie | ANN Clinic";
@@ -21,6 +72,10 @@ const seoDescription =
   <!-- Service Hero Section -->
   <ServiceHero service={service} client:load />
 
-  <!-- Service Details Section -->
-  <ServiceDetails service={service} client:load />
+  <!-- Service Details Section with optimized images -->
+  <ServiceDetails
+    service={service}
+    serviceImages={optimizedServiceImages}
+    client:load
+  />
 </ServiceLayout>

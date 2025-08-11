@@ -4,7 +4,7 @@ import { siteConfig } from "../../config/site";
 
 <footer class="bg-surface-tertiary py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
       <div>
         <h3 class="text-lg font-semibold text mb-4">{siteConfig.name}</h3>
         <p class="text-secondary">
@@ -54,6 +54,34 @@ import { siteConfig } from "../../config/site";
           <li>Luni - Vineri: {siteConfig.schedule.weekdays}</li>
           <li>Sâmbătă: {siteConfig.schedule.saturday}</li>
           <li>Duminică: {siteConfig.schedule.sunday}</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text mb-4">Articole</h4>
+        <ul class="space-y-2 text-secondary">
+          <li>
+            <a
+              href="/articole/simptome-probleme-cardiace"
+              class="hover:text-primary transition-colors">Simptome Cardiace</a
+            >
+          </li>
+          <li>
+            <a
+              href="/articole/tratament-acnee-adolescenti"
+              class="hover:text-primary transition-colors">Tratament Acnee</a
+            >
+          </li>
+          <li>
+            <a
+              href="/articole/vaccinarea-copiilor-program-national"
+              class="hover:text-primary transition-colors">Vaccinare Copii</a
+            >
+          </li>
+          <li>
+            <a href="/articole" class="hover:text-primary transition-colors"
+              >Toate Articolele</a
+            >
+          </li>
         </ul>
       </div>
     </div>

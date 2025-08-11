@@ -1,0 +1,162 @@
+---
+// Importă doar ceea ce este necesar
+import { Image } from "astro:assets";
+console.log("ServiceImageProvider loaded!");
+
+// Importă imaginile direct
+import chirurgieImg from "../../assets/images/servicii/chirurgie.png";
+import chirurgiePediatricaImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
+import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
+import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
+import ortopedieImg from "../../assets/images/servicii/orto.png";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import alergologieImg from "../../assets/images/servicii/soon/alergologie.png";
+import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.png";
+import diabetImg from "../../assets/images/servicii/soon/diabet.jpg";
+import endocrinologieImg from "../../assets/images/servicii/soon/endocrinologie.png";
+import oftalmologieImg from "../../assets/images/servicii/soon/oftamologie.jpg";
+import orlImg from "../../assets/images/servicii/soon/ORL.png";
+import ortopediePediatricaImg from "../../assets/images/servicii/soon/ORTOPEDIE-PEDIATRICA.png";
+import pneumologieImg from "../../assets/images/servicii/soon/pneumologie.png";
+import psihiatrieImg from "../../assets/images/servicii/soon/psihiatrie.jpg";
+import recuperareMedicalaImg from "../../assets/images/servicii/soon/RECUPERARE-MEDICALA.png";
+import reumatologieImg from "../../assets/images/servicii/soon/reumatologie.jpg";
+import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.png";
+
+// Adaugăm loguri pentru debug
+console.log("ServiceImageProvider - cardiologieImg:", cardiologieImg);
+console.log("ServiceImageProvider - dermatologieImg:", dermatologieImg);
+
+// Importăm getImage pentru optimizare
+import { getImage } from "astro:assets";
+
+// Exportăm maparea cu imaginile originale (fără optimizare)
+// Vom optimiza imaginile în [...slug].astro pentru a evita erorile
+export const serviceImageMap = {
+  "chirurgie-generala": {
+    src: chirurgieImg.src,
+    width: chirurgieImg.width,
+    height: chirurgieImg.height,
+  },
+  "chirurgie-pediatrica": {
+    src: chirurgiePediatricaImg.src,
+    width: chirurgiePediatricaImg.width,
+    height: chirurgiePediatricaImg.height,
+  },
+  dermatologie: {
+    src: dermatologieImg.src,
+    width: dermatologieImg.width,
+    height: dermatologieImg.height,
+  },
+  ginecologie: {
+    src: ginecologieImg.src,
+    width: ginecologieImg.width,
+    height: ginecologieImg.height,
+  },
+  "medicina-familie": {
+    src: medicinaFamilieImg.src,
+    width: medicinaFamilieImg.width,
+    height: medicinaFamilieImg.height,
+  },
+  "medicina-interna": {
+    src: medicinaInternaImg.src,
+    width: medicinaInternaImg.width,
+    height: medicinaInternaImg.height,
+  },
+  "medicina-muncii": {
+    src: medicinaMunciiImg.src,
+    width: medicinaMunciiImg.width,
+    height: medicinaMunciiImg.height,
+  },
+  nefrologie: {
+    src: nefrologieImg.src,
+    width: nefrologieImg.width,
+    height: nefrologieImg.height,
+  },
+  ortopedie: {
+    src: ortopedieImg.src,
+    width: ortopedieImg.width,
+    height: ortopedieImg.height,
+  },
+  pediatrie: {
+    src: pediatrieImg.src,
+    width: pediatrieImg.width,
+    height: pediatrieImg.height,
+  },
+  alergologie: {
+    src: alergologieImg.src,
+    width: alergologieImg.width,
+    height: alergologieImg.height,
+  },
+  cardiologie: {
+    src: cardiologieImg.src,
+    width: cardiologieImg.width,
+    height: cardiologieImg.height,
+  },
+  "diabet-metabolism": {
+    src: diabetImg.src,
+    width: diabetImg.width,
+    height: diabetImg.height,
+  },
+  endocrinologie: {
+    src: endocrinologieImg.src,
+    width: endocrinologieImg.width,
+    height: endocrinologieImg.height,
+  },
+  oftalmologie: {
+    src: oftalmologieImg.src,
+    width: oftalmologieImg.width,
+    height: oftalmologieImg.height,
+  },
+  orl: {
+    src: orlImg.src,
+    width: orlImg.width,
+    height: orlImg.height,
+  },
+  "ortopedie-pediatrica": {
+    src: ortopediePediatricaImg.src,
+    width: ortopediePediatricaImg.width,
+    height: ortopediePediatricaImg.height,
+  },
+  pneumologie: {
+    src: pneumologieImg.src,
+    width: pneumologieImg.width,
+    height: pneumologieImg.height,
+  },
+  psihiatrie: {
+    src: psihiatrieImg.src,
+    width: psihiatrieImg.width,
+    height: psihiatrieImg.height,
+  },
+  "recuperare-medicala": {
+    src: recuperareMedicalaImg.src,
+    width: recuperareMedicalaImg.width,
+    height: recuperareMedicalaImg.height,
+  },
+  reumatologie: {
+    src: reumatologieImg.src,
+    width: reumatologieImg.width,
+    height: reumatologieImg.height,
+  },
+  urologie: {
+    src: urologieImg.src,
+    width: urologieImg.width,
+    height: urologieImg.height,
+  },
+  default: {
+    src: medicinaFamilieImg.src,
+    width: medicinaFamilieImg.width,
+    height: medicinaFamilieImg.height,
+  },
+};
+
+// Acest component nu mai are nevoie să rendereze nimic vizibil
+// deoarece doar exportă serviceImageMap
+---
+
+<!-- Component gol - doar pentru export -->
+<div class="hidden"></div>
