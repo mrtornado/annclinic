@@ -1,15 +1,13 @@
-# luat culorile exact de la siteul vechi
-
 # de refacut paginiile de servicii sa arate mai bine si sa vada la fiecare serviciu ce se poate face.
 
 # si cele de landing.
 
-# pozele in loc de inconitele din cardurile de servicii
+# poze in loc de inconitele din paginiile de servicii
 
-# fara preturi
+# paginiile de servicii facute sa nu mai intre in header
 
-# de schimbat oriunde e bucuresti sa fie bragadiru.
+# de scos inconitele din paginile de serivivi detaliate
 
-# homepageu de pus mai multe chestii pe el
+# Administrare perfuzii cu tratamentul pacientului - de pus ca și serviciu..la secțiunea tratamente clinica
 
-# au parcare cica
+# sa mai facem o sectiune cu programu pe homepage

@@ -6,7 +6,9 @@ export const siteConfig = {
   tagline: "Sănătate & Încredere",
   url: "https://annclinic.ro",
   contact: {
+    shortPhone: "021 9063",
     phone: "+40 775 11 9063",
+    secondaryPhone: "+40 775 22 9063",
     phoneDisplay: "+40 775 11 9063",
     email: "contact@annclinic.ro",
   },

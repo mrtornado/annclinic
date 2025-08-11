@@ -3,6 +3,18 @@ import { getCollection } from "astro:content";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
+import { getImage } from "astro:assets";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+import ortopedieImg from "../../assets/images/servicii/orto.png";
+import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
+import chirurgieGeneralaImg from "../../assets/images/servicii/chirurgie.png";
+import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
+import analizeLaboratorImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import esteticaImg from "../../assets/images/servicii/chirurgie.png";
+import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
 
 export async function getStaticPaths() {
   const services = await getCollection("services");
@@ -13,6 +25,30 @@ export async function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+
+// Map service slugs to local images similar to services index page
+const imageMap: Record<string, any> = {
+  pediatrie: pediatrieImg,
+  "medicina-familie": medicinaFamilieImg,
+  dermatologie: dermatologieImg,
+  ginecologie: ginecologieImg,
+  ortopedie: ortopedieImg,
+  "medicina-interna": medicinaInternaImg,
+  "chirurgie-generala": chirurgieGeneralaImg,
+  nefrologie: nefrologieImg,
+  "analize-laborator": analizeLaboratorImg,
+  "estetica-faciala": esteticaImg,
+  neurologie: neurologieImg,
+};
+
+const localSrc = imageMap[service.slug] || medicinaFamilieImg;
+const optimizedServiceImage = await getImage({
+  src: localSrc,
+  format: "webp",
+  quality: 85,
+  width: 800,
+  height: 600,
+});
 ---
 
 <ServiceLayout service={service}>
@@ -20,5 +56,9 @@ const { service } = Astro.props;
   <ServiceHero service={service} client:load />
 
   <!-- Service Details Section -->
-  <ServiceDetails service={service} client:load />
+  <ServiceDetails
+    service={service}
+    imageSrc={optimizedServiceImage.src}
+    client:load
+  />
 </ServiceLayout>

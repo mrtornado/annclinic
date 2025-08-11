@@ -3,12 +3,14 @@ import { useState } from "react";
 import MagicCard from "../magic-ui/MagicCard";
 import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedButton from "../magic-ui/AnimatedButton";
+import type { AnimatedButtonProps } from "../magic-ui/AnimatedButton";
 import { siteConfig } from "../../config/site";
 
 export default function LocationMap() {
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}&zoom=15`;
+  // Google Maps embed URL direct (fără API key)
+  const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.4410003225206!2d26.03968867675105!3d44.36329080215218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae00f6b6f8a2a5%3A0x62c5eda8e599c505!2sSos.%20Alexandriei%20101%2C%20Bragadiru%20077025!5e0!3m2!1sro!2sro!4v1718286484204!5m2!1sro!2sro`;
 
   // Fallback static map URL (using OpenStreetMap)
   const staticMapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${
@@ -43,13 +45,21 @@ export default function LocationMap() {
   ];
 
   return (
-    <section className="py-16 bg-surface-secondary">
+    <section className="py-24 bg-gradient-to-br from-surface-secondary/50 via-white to-surface-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedText>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text mb-4">
-              Locația Noastră
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-surface-elevated/80 backdrop-blur-md text-secondary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-secondary/20">
+              <span className="text-secondary">📍</span>
+              <span>Vizitează-ne la clinică</span>
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-accent to-secondary-hover">
+                Locația Noastră
+              </span>
             </h2>
+
             <p className="text-xl text-secondary max-w-3xl mx-auto">
               Ne găsești în Bragadiru, într-o locație accesibilă și cu parcare
               gratuită. Suntem aproape de București, cu acces facil din toate
@@ -74,7 +84,7 @@ export default function LocationMap() {
                   )}
 
                   <iframe
-                    src={staticMapUrl}
+                    src={googleMapsUrl}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -89,10 +99,12 @@ export default function LocationMap() {
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
                   <AnimatedButton
-                    href={directionsUrl}
+                    href="https://www.google.com/maps/dir/?api=1&destination=Sos.+Alexandriei+101+Bragadiru+Ilfov+Romania"
                     variant="primary"
                     size="md"
                     className="flex-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="flex items-center gap-2">
                       <span>🧭</span>
@@ -101,10 +113,12 @@ export default function LocationMap() {
                   </AnimatedButton>
 
                   <AnimatedButton
-                    href={`https://maps.google.com/?q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`}
+                    href="https://maps.google.com/?q=Soseaua+Alexandriei+101+Bragadiru+Ilfov+Romania"
                     variant="outline"
                     size="md"
                     className="flex-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="flex items-center gap-2">
                       <span>📍</span>

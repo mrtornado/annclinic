@@ -72,7 +72,7 @@ export default function ServiceHero({
 
   return (
     <section
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${gradientClass}`}
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${gradientClass} pt-20 sm:pt-24`}
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -158,52 +158,10 @@ export default function ServiceHero({
           </div>
         </AnimatedText>
 
-        {/* Service Highlights */}
-        <AnimatedText delay={1.0}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              {
-                icon: "👨‍⚕️",
-                title: "Specialiști Experimentați",
-                desc: "Medici cu experiență vastă",
-              },
-              {
-                icon: "🏥",
-                title: "Echipamente Moderne",
-                desc: "Tehnologie de ultimă generație",
-              },
-              {
-                icon: "⏰",
-                title: "Program Flexibil",
-                desc: "Luni-Vineri 8:00-20:00",
-              },
-              {
-                icon: "💯",
-                title: "Rezultate Garantate",
-                desc: "Tratamente eficiente",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-surface-elevated/80 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">{item.icon}</span>
-                </div>
-                <h3 className="text-lg font-semibold text mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-secondary text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </AnimatedText>
+        {/* Service Highlights removed */}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
-        <div className="w-6 h-10 border-2 border-text/50 rounded-full flex justify-center hover:border-text/70 transition-colors duration-300">
-          <div className="w-1 h-3 bg-text/70 rounded-full mt-2 animate-pulse" />
-        </div>
-        <p className="text 70 text-xs mt-2 font-medium text-center">Scroll</p>
-      </div>
+      {/* Scroll Indicator removed */}
     </section>
   );
 }

@@ -2,13 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactHero from "../components/contact/ContactHero.tsx";
 import ContactInfo from "../components/contact/ContactInfo.tsx";
-import ContactForm from "../components/contact/ContactForm.tsx";
 import LocationMap from "../components/contact/LocationMap.tsx";
 import { siteConfig } from "../config/site";
-import { getCollection } from "astro:content";
-
-// Get all services data
-const services = await getCollection("services");
 
 const title = "Contact - ANN Clinic | Clinică Medicală București";
 const description =
@@ -65,16 +60,10 @@ const structuredData = {
   <!-- Contact Hero Section -->
   <ContactHero client:load />
 
-  <!-- Contact Information and Form -->
-  <section class="py-16 bg-surface">
+  <!-- Contact Information Section -->
+  <section class="py-16 pt-0 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Contact Information -->
-        <ContactInfo client:load />
-
-        <!-- Contact Form -->
-        <ContactForm client:load services={services} />
-      </div>
+      <ContactInfo client:load />
     </div>
   </section>
 

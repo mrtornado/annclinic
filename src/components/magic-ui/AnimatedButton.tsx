@@ -6,13 +6,15 @@ import {
   type ButtonSize,
 } from "../../config/magic-ui";
 
-interface AnimatedButtonProps {
+export interface AnimatedButtonProps {
   children: ReactNode;
   href?: string;
   onClick?: () => void;
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function AnimatedButton({
@@ -22,6 +24,8 @@ export default function AnimatedButton({
   variant = magicUIConfig.defaults.button.variant,
   size = magicUIConfig.defaults.button.size,
   className = "",
+  target,
+  rel,
 }: AnimatedButtonProps) {
   const baseClasses =
     "relative inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 overflow-hidden group";
@@ -64,6 +68,8 @@ export default function AnimatedButton({
         whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        target={target}
+        rel={rel}
       >
         <ButtonContent />
       </motion.a>

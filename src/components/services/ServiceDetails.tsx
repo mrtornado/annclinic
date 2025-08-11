@@ -7,12 +7,14 @@ interface ServiceDetailsProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
   showTrustSignals?: boolean;
   showBeforeAfter?: boolean;
+  imageSrc?: string; // Optional optimized image to display for the service
 }
 
 export default function ServiceDetails({
   service,
   showTrustSignals = false,
   showBeforeAfter = false,
+  imageSrc,
 }: ServiceDetailsProps) {
   // Handle both ServiceContent and direct objects from landing pages
   const getTreatments = () => {
@@ -99,9 +101,20 @@ export default function ServiceDetails({
                 </div>
               </div>
               <div className="relative">
-                <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center shadow-xl">
-                  <span className="text-8xl opacity-50">🏥</span>
-                </div>
+                {imageSrc ? (
+                  <img
+                    src={imageSrc}
+                    alt={
+                      service?.data?.name || service?.name || "Serviciu medical"
+                    }
+                    className="w-full h-80 object-cover rounded-2xl shadow-xl"
+                    loading="eager"
+                  />
+                ) : (
+                  <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center shadow-xl">
+                    <span className="text-8xl opacity-50">🏥</span>
+                  </div>
+                )}
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur opacity-30" />
               </div>
             </div>
