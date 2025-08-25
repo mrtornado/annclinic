@@ -32,7 +32,7 @@ const structuredData = {
     name: "ANN Clinic",
     description: "Clinică medicală cu servicii complete în București",
     url: Astro.site,
-    telephone: siteConfig.contact.phone,
+    telephone: siteConfig.contact.shortPhone,
     address: {
       "@type": "PostalAddress",
       streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
@@ -198,7 +198,7 @@ const openGraph = {
               <li>• Adu cu tine actul de identitate și cardul de sănătate</li>
               <li>
                 • Pentru anulări, contactează-ne cu cel puțin 24h înainte la {
-                  siteConfig.contact.phoneDisplay
+                  siteConfig.contact.shortPhone
                 }
               </li>
             </ul>

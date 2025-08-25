@@ -328,7 +328,7 @@ export default function ContactForm({ services }: ContactFormProps) {
                   Pentru urgențe medicale, nu folosiți acest formular. Sunați
                   imediat la <strong>{siteConfig.contact.shortPhone}</strong>{" "}
                   sau contactați-ne telefonic la{" "}
-                  <strong>{siteConfig.contact.phoneDisplay}</strong>.
+                  <strong>{siteConfig.contact.shortPhone}</strong>.
                 </p>
               </div>
             </div>

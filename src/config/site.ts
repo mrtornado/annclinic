@@ -33,6 +33,7 @@ export const siteConfig = {
     facebook:
       "https://www.facebook.com/profile.php?id=61574771646433&locale=ro_RO",
     instagram: "https://www.instagram.com/annmedicalclinic/",
+    tiktok: "https://www.tiktok.com/@ann.medical.clinic",
   },
   seo: {
     defaultImage: "/images/placeholder.svg",

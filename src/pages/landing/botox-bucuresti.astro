@@ -116,8 +116,8 @@ const landingPageData = {
     "Garanție pentru rezultate naturale",
   ],
   emergencyContact: {
-    phone: siteConfig.contact.phone,
-    whatsapp: siteConfig.contact.phone,
+    phone: siteConfig.contact.shortPhone,
+    whatsapp: siteConfig.contact.shortPhone,
     email: "estetica@annclinic.ro",
   },
   beforeAfterGallery: true,
@@ -152,7 +152,7 @@ const structuredData = {
     postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: siteConfig.contact.phone,
+  telephone: siteConfig.contact.shortPhone,
   openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}, Sa ${siteConfig.schedule.saturday}`,
   aggregateRating: {
     "@type": "AggregateRating",

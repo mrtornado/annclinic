@@ -25,8 +25,8 @@ const pageConfig = {
     subtitle: "Programare rapidă în 24h la medic cardiolog experimentat",
     ctaPrimary: "Programează-te Acum",
     ctaSecondary: "Sună pentru Urgențe",
-    phone: siteConfig.contact.phoneDisplay,
-    whatsapp: siteConfig.contact.phone,
+    phone: siteConfig.contact.shortPhone,
+    whatsapp: siteConfig.contact.shortPhone,
   },
   benefits: [
     {
@@ -52,8 +52,8 @@ const pageConfig = {
   ],
   ctaPrimary: "Programează-te Acum",
   ctaSecondary: "Sună pentru Urgențe",
-  phone: siteConfig.contact.phoneDisplay,
-  whatsapp: siteConfig.contact.phone,
+  phone: siteConfig.contact.shortPhone,
+  whatsapp: siteConfig.contact.shortPhone,
 };
 
 // AdWords campaign optimization for "cardiolog București"
@@ -103,7 +103,7 @@ const structuredData = {
     postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: siteConfig.contact.phone,
+  telephone: siteConfig.contact.shortPhone,
   openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",
@@ -113,7 +113,7 @@ const structuredData = {
   hasMap: "https://g.page/r/Cexample",
 };
 
-const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
+const telHref = `tel:${siteConfig.contact.shortPhone.replace(/\s+/g, "")}`;
 ---
 
 <AdWordsLandingLayout
@@ -214,7 +214,7 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
               class="cta-button w-full text-center"
               onclick="trackCTAClick('cardiology-hero'); window.location.href='#booking'"
             >
-              🚨 URGENȚĂ CARDIACĂ - Sună Acum: {siteConfig.contact.phoneDisplay}
+              🚨 URGENȚĂ CARDIACĂ - Sună Acum: {siteConfig.contact.shortPhone}
             </button>
             <button
               class="w-full bg-white border-2 border-red-600 text-red-600 font-semibold py-4 px-8 rounded-lg hover:bg-red-50 transition-colors"
@@ -316,7 +316,7 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
                 class="font-bold text-red-600 hover:text-red-700"
                 onclick="trackPhoneClick()"
               >
-                {siteConfig.contact.phoneDisplay}
+                {siteConfig.contact.shortPhone}
               </a>
             </p>
             <p class="text-xs text-muted">
@@ -530,7 +530,7 @@ const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
             class="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-surface-secondary transition-colors inline-block"
             onclick="trackCTAClick('final-emergency-phone')"
           >
-            🚨 URGENȚĂ CARDIACĂ: {siteConfig.contact.phoneDisplay}
+            🚨 URGENȚĂ CARDIACĂ: {siteConfig.contact.shortPhone}
           </a>
           <button
             class="bg-red-800 hover:bg-red-900 text-white font-semibold py-4 px-8 rounded-lg transition-colors"

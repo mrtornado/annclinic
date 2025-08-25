@@ -110,8 +110,8 @@ const landingPageData = {
     "Tratamente personalizate pentru fiecare tip de acnee",
   ],
   emergencyContact: {
-    phone: siteConfig.contact.phone,
-    whatsapp: siteConfig.contact.phone,
+    phone: siteConfig.contact.shortPhone,
+    whatsapp: siteConfig.contact.shortPhone,
     email: "programari@annclinic.ro",
   },
 };
@@ -145,7 +145,7 @@ const structuredData = {
     postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: siteConfig.contact.phone,
+  telephone: siteConfig.contact.shortPhone,
   openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",

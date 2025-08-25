@@ -25,6 +25,7 @@ const serviceIcons: Record<string, string> = {
   psihiatrie: "🧘",
   radiologie: "📡",
   laborator: "🔬",
+  perfuzii: "💉",
   default: "🏥",
 };
 
@@ -45,6 +46,7 @@ const serviceColors: Record<string, string> = {
   psihiatrie: "#a855f7", // Psychiatry - Violet
   radiologie: "#64748b", // Radiology - Slate
   laborator: "#475569", // Laboratory - Gray
+  perfuzii: "#0284c7", // Perfusions - Sky Blue
   default: "#1e40af", // Default - Primary blue
 };
 
@@ -68,6 +70,7 @@ const getServiceButtonText = (serviceName: string): string => {
     Oftalmologie: "Consultație Oftalmolog",
     Urologie: "Consultație Urolog",
     "Estetică Facială": "Tratamente Estetice",
+    "Administrare Perfuzii": "Servicii Perfuzii",
   };
 
   return buttonTexts[serviceName] || "Vezi Serviciul";
@@ -78,30 +81,15 @@ export default function ServicesSection({
   serviceImages,
   backgroundImage,
 }: ServicesSectionProps) {
-  // Serviciile specifice din imagine, în ordinea dorită
-  const medicalSpecialities = [
-    "medicina-familie",
-    "pediatrie",
-    "medicina-interna",
-    "chirurgie-generala",
-    "chirurgie-pediatrica",
-    "ginecologie",
-    "ortopedie",
-    "nefrologie",
-    "analize-laborator",
-    "dermatologie",
-    "medicina-muncii",
-  ];
+  // Filtrăm serviciile care nu sunt în categoria "coming soon"
+  const activeServices = services.filter(
+    (service) => service.data.comingSoon !== true
+  );
 
-  // Mapăm serviciile să includă toate din imagine
-  const specialityServices = medicalSpecialities
-    .map((slug) => {
-      return (
-        services.find((service) => service.slug === slug) ||
-        services.find((s) => s.slug === slug.replace("-", ""))
-      );
-    })
-    .filter(Boolean);
+  // Sortăm serviciile după ordinea specificată în content
+  const specialityServices = activeServices.sort(
+    (a, b) => (a.data.order || 99) - (b.data.order || 99)
+  );
 
   return (
     <section className="relative py-16 sm:py-24 overflow-hidden">

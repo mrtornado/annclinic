@@ -25,7 +25,7 @@ const structuredData = {
   name: siteConfig.name,
   description: siteConfig.description,
   url: `${siteConfig.url}/contact`,
-  telephone: siteConfig.contact.phone,
+  telephone: siteConfig.contact.shortPhone,
   email: siteConfig.contact.email,
   address: {
     "@type": "PostalAddress",
@@ -43,7 +43,7 @@ const structuredData = {
   openingHours: ["Mo-Fr 08:00-20:00", "Sa 08:00-16:00"],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: siteConfig.contact.phone,
+    telephone: siteConfig.contact.shortPhone,
     contactType: "customer service",
     availableLanguage: "Romanian",
   },
@@ -69,39 +69,4 @@ const structuredData = {
 
   <!-- Location Map -->
   <LocationMap client:load />
-
-  <!-- Emergency Contact Section -->
-  <section class="py-12 bg-accent/5">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div
-        class="bg-gradient-to-r from-accent/10 to-accent-hover/10 rounded-2xl p-8 border border-accent/20"
-      >
-        <div class="flex items-center justify-center mb-4">
-          <span class="text-4xl animate-pulse">🚨</span>
-        </div>
-        <h2 class="text-2xl font-bold text-accent mb-4">Urgențe Medicale</h2>
-        <p class="text-lg text-secondary mb-6">
-          Pentru urgențe medicale, sunați imediat la numărul de urgență sau
-          contactați serviciul de ambulanță.
-        </p>
-        <div
-          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <a
-            href={`tel:${siteConfig.contact.shortPhone}`}
-            class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-xl font-semibold hover:bg-accent-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            <span>Tel: {siteConfig.contact.shortPhone}</span>
-          </a>
-          <a
-            href={`tel:${siteConfig.contact.phone}`}
-            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            <span>📞</span>
-            <span>Clinica: {siteConfig.contact.phoneDisplay}</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 </BaseLayout>

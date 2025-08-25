@@ -25,8 +25,8 @@ const pageConfig = {
     subtitle: "Peste 14 specialități medicale și programare online rapidă",
     ctaPrimary: "Vezi Specialitățile Noastre",
     ctaSecondary: "Programează-te Acum",
-    phone: siteConfig.contact.phoneDisplay,
-    whatsapp: siteConfig.contact.phone,
+    phone: siteConfig.contact.shortPhone,
+    whatsapp: siteConfig.contact.shortPhone,
   },
   benefits: [
     "Programare în maximum 24 de ore",
@@ -75,8 +75,8 @@ const pageConfig = {
     "Garanție pentru serviciile medicale",
   ],
   emergencyContact: {
-    phone: siteConfig.contact.phone,
-    whatsapp: siteConfig.contact.phone,
+    phone: siteConfig.contact.shortPhone,
+    whatsapp: siteConfig.contact.shortPhone,
     email: "urgente@annclinic.ro",
   },
   specialOffers: [
@@ -124,7 +124,7 @@ const structuredData = {
     postalCode: siteConfig.address.postalCode,
     addressCountry: "RO",
   },
-  telephone: siteConfig.contact.phone,
+  telephone: siteConfig.contact.shortPhone,
   openingHours: `Mo-Fr ${siteConfig.schedule.weekdays}`,
   aggregateRating: {
     "@type": "AggregateRating",
@@ -135,8 +135,8 @@ const structuredData = {
   hasMap: "https://g.page/r/Cexample",
 };
 
-const telHref = `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`;
-const whatsappHref = `https://wa.me/${siteConfig.contact.phone.replace(
+const telHref = `tel:${siteConfig.contact.shortPhone.replace(/\s+/g, "")}`;
+const whatsappHref = `https://wa.me/${siteConfig.contact.shortPhone.replace(
   /\s+/g,
   ""
 )}`;
@@ -261,7 +261,7 @@ const whatsappHref = `https://wa.me/${siteConfig.contact.phone.replace(
                 class="font-bold text-primary hover:text-primary-hover"
                 onclick="trackPhoneClick()"
               >
-                {siteConfig.contact.phoneDisplay}
+                {siteConfig.contact.shortPhone}
               </a>
             </p>
           </div>
@@ -443,7 +443,7 @@ const whatsappHref = `https://wa.me/${siteConfig.contact.phone.replace(
           class="text-primary hover:text-primary-hover transition-colors"
           onclick="trackPhoneClick()"
         >
-          📞 {siteConfig.contact.phoneDisplay}
+          📞 {siteConfig.contact.shortPhone}
         </a>
         <a
           href={whatsappHref}

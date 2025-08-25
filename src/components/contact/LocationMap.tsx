@@ -27,8 +27,8 @@ export default function LocationMap() {
     {
       icon: "🚗",
       title: "Cu mașina",
-      description: "Parcare gratuită disponibilă",
-      details: "Acces facil din București prin A1",
+      description: "Acces din București prin A1",
+      details: "Șoseaua Alexandriei nr. 101",
     },
     {
       icon: "🚌",
@@ -39,8 +39,8 @@ export default function LocationMap() {
     {
       icon: "🚶",
       title: "Pe jos",
-      description: "Zonă pietonală",
-      details: "Acces facil pentru persoane cu dizabilități",
+      description: "Zonă accesibilă",
+      details: "Facilități pentru persoane cu dizabilități",
     },
   ];
 
@@ -219,44 +219,6 @@ export default function LocationMap() {
             </MagicCard>
           </div>
         </div>
-
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          <MagicCard>
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-3">🅿️</div>
-              <h4 className="font-semibold text mb-2">Parcare Gratuită</h4>
-              <p className="text-sm text-secondary">
-                Locuri de parcare disponibile în fața cliniicii
-              </p>
-            </div>
-          </MagicCard>
-
-          <MagicCard>
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-3">♿</div>
-              <h4 className="font-semibold text mb-2">Acces Facil</h4>
-              <p className="text-sm text-secondary">
-                Facilități pentru persoane cu dizabilități
-              </p>
-            </div>
-          </MagicCard>
-
-          <MagicCard>
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-3">🏥</div>
-              <h4 className="font-semibold text mb-2">Locație Centrală</h4>
-              <p className="text-sm text-secondary">
-                În centrul Bragadiru, aproape de toate serviciile
-              </p>
-            </div>
-          </MagicCard>
-        </motion.div>
       </div>
     </section>
   );
