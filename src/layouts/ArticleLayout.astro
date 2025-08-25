@@ -179,9 +179,7 @@ const medicalStructuredData = {
     )
   }
 
-  <main
-    class="min-h-screen bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden"
-  >
+  <main class="min-h-screen overflow-hidden pt-24">
     <!-- Background Effects -->
     <div class="absolute inset-0 pointer-events-none">
       <div
@@ -206,29 +204,24 @@ const medicalStructuredData = {
     >
       <div class="max-w-4xl mx-auto px-4 py-8">
         <!-- Breadcrumb -->
-        <nav class="mb-6 text-sm text-secondary dark:text-muted">
-          <a href="/" class="hover:text-teal-600 dark:hover:text-teal-400"
-            >Acasă</a
-          >
+        <nav class="mb-6 text-sm text-gray-600">
+          <a href="/" class="hover:text-teal-600">Acasă</a>
           <span class="mx-2">›</span>
-          <a
-            href="/articole"
-            class="hover:text-teal-600 dark:hover:text-teal-400">Articole</a
-          >
+          <a href="/articole" class="hover:text-teal-600">Articole</a>
           <span class="mx-2">›</span>
           <a
             href={`/articole?specialty=${encodeURIComponent(article.data.specialty)}`}
-            class="hover:text-teal-600 dark:hover:text-teal-400"
+            class="hover:text-teal-600"
           >
             {article.data.specialty}
           </a>
           <span class="mx-2">›</span>
-          <span class="text dark:text-white">{article.data.title}</span>
+          <span class="text-gray-900">{article.data.title}</span>
         </nav>
 
         <!-- Article Meta -->
         <div
-          class="flex flex-wrap items-center gap-4 mb-6 text-sm text-secondary dark:text-muted"
+          class="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-600"
         >
           <div class="flex items-center gap-2">
             <span class="inline-block w-2 h-2 bg-teal-500 rounded-full"></span>
@@ -301,21 +294,21 @@ const medicalStructuredData = {
           {article.data.title}
         </h1>
         <p
-          class="text-lg md:text-xl text-secondary dark:text-tertiary mb-8 leading-relaxed max-w-4xl"
+          class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-4xl"
         >
           {article.data.description}
         </p>
 
         <!-- Author and Medical Review Info -->
         <div
-          class="flex flex-wrap items-center justify-between gap-4 p-4 bg-surface-secondary dark:bg-surface-elevated rounded-lg"
+          class="flex flex-wrap items-center justify-between gap-4 p-4 bg-gray-50 rounded-lg"
         >
           <div class="flex items-center gap-3">
             <div
-              class="w-10 h-10 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center"
+              class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center"
             >
               <svg
-                class="w-5 h-5 text-teal-600 dark:text-teal-400"
+                class="w-5 h-5 text-teal-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -329,14 +322,12 @@ const medicalStructuredData = {
               </svg>
             </div>
             <div>
-              <p class="font-medium text dark:text-white">
+              <p class="font-medium text text-gray-900">
                 {article.data.author}
               </p>
               {
                 article.data.authorBio && (
-                  <p class="text-sm text-secondary dark:text-muted">
-                    {article.data.authorBio}
-                  </p>
+                  <p class="text-sm text-gray-600">{article.data.authorBio}</p>
                 )
               }
             </div>
@@ -344,7 +335,7 @@ const medicalStructuredData = {
 
           {
             article.data.medicallyReviewed && (
-              <div class="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+              <div class="flex items-center gap-2 text-sm text-green-600">
                 <svg
                   class="w-4 h-4"
                   fill="none"
@@ -410,7 +401,7 @@ const medicalStructuredData = {
       <div
         class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-primary/10 p-8 lg:p-12 mb-8"
       >
-        <div class="prose prose-lg prose-teal dark:prose-invert max-w-none">
+        <div class="prose prose-lg prose-teal max-w-none">
           <Content />
         </div>
       </div>
@@ -418,15 +409,13 @@ const medicalStructuredData = {
       <!-- Tags -->
       {
         article.data.tags.length > 0 && (
-          <div class="mt-12 pt-8 border-t border-border dark:border-border-secondary">
-            <h3 class="text-lg font-semibold text dark:text-white mb-4">
-              Etichete
-            </h3>
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Etichete</h3>
             <div class="flex flex-wrap gap-2">
               {article.data.tags.map((tag) => (
                 <a
                   href={`/articole?tag=${encodeURIComponent(tag)}`}
-                  class="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 rounded-full text-sm hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors"
+                  class="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm hover:bg-teal-200 transition-colors"
                 >
                   #{tag}
                 </a>
@@ -439,19 +428,19 @@ const medicalStructuredData = {
       <!-- FAQ Section -->
       {
         article.data.faq && article.data.faq.length > 0 && (
-          <div class="mt-12 pt-8 border-t border-border dark:border-border-secondary">
-            <h3 class="text-2xl font-bold text dark:text-white mb-6">
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
               Întrebări Frecvente
             </h3>
             <div class="space-y-4">
               {article.data.faq.map((faq, index) => (
-                <details class="group bg-white dark:bg-surface-elevated rounded-lg shadow-sm border border-border dark:border-border-secondary">
-                  <summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-surface-secondary dark:hover:bg-surface-elevated rounded-lg">
-                    <h4 class="font-medium text dark:text-white pr-4">
+                <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                  <summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 rounded-lg">
+                    <h4 class="font-medium text-gray-900 pr-4">
                       {faq.question}
                     </h4>
                     <svg
-                      class="w-5 h-5 text-muted group-open:rotate-180 transition-transform"
+                      class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -464,7 +453,7 @@ const medicalStructuredData = {
                       />
                     </svg>
                   </summary>
-                  <div class="px-4 pb-4 text-secondary dark:text-tertiary">
+                  <div class="px-4 pb-4 text-gray-600">
                     <p>{faq.answer}</p>
                   </div>
                 </details>

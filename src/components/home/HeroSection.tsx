@@ -14,7 +14,7 @@ export default function HeroSection({
   synevoLogo,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen pt-16 sm:pt-20 flex items-center justify-center overflow-hidden pb-24">
+    <section className="relative min-h-screen pt-24 flex items-center justify-center overflow-hidden pb-24">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -50,14 +50,14 @@ export default function HeroSection({
           <div className="flex-1 text-left lg:pr-12">
             {/* Phone Number */}
             <AnimatedText delay={0.2}>
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#03606C] mb-8">
                 021 9063
               </div>
             </AnimatedText>
 
             {/* Main Heading */}
             <AnimatedText delay={0.4}>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#03606C] mb-6 leading-tight">
                 Îngrijire Medicală de Top,
                 <br />
                 Într-un Centru Medical
@@ -116,11 +116,11 @@ export default function HeroSection({
 
             {/* Synevo Partner Logo */}
             <AnimatedText delay={1.2}>
-              <div className="flex flex-col items-center lg:items-end">
+              <div className="flex flex-col items-center lg:items-end space-y-2">
                 <img
                   src={synevoLogo}
                   alt="Synevo - Partner"
-                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-0 invert drop-shadow-lg hover:scale-105 transition-transform duration-300"
+                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
                   loading="eager"
                 />
               </div>

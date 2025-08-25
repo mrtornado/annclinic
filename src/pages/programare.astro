@@ -134,19 +134,10 @@ const openGraph = {
   structuredData={structuredData}
   openGraph={openGraph}
 >
-  <div
-    class="relative min-h-screen bg-gradient-to-br from-surface via-surface-secondary to-surface pt-28 pb-24 overflow-hidden"
-  >
+  <div class="bg-white pt-32">
     <!-- Header Section -->
-    <div class="text-center mb-12 max-w-4xl mx-auto px-4">
-      <div
-        class="inline-flex items-center gap-2 bg-surface-elevated/80 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/20"
-      >
-        <span class="text-primary">📅</span>
-        <span>Programare Online</span>
-      </div>
-
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+    <div class="text-center mb-6 max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
         <span class="block">Programează-te</span>
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent"
@@ -155,56 +146,27 @@ const openGraph = {
         </span>
       </h1>
 
-      <p class="text-xl text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
+      <p class="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
         Rezervă consultația ta medicală online în sistemul nostru de programări.
         Confirmarea se face instant și primești toate detaliile pe email.
       </p>
     </div>
 
     <!-- External Booking System Iframe -->
-    <div class="max-w-6xl mx-auto px-4 mb-16">
-      <div
-        class="bg-white rounded-2xl shadow-xl overflow-hidden border border-primary/10"
+    <div class="w-full mt-20">
+      <iframe
+        src="https://ann.comet.ro/ext_programare.php?id_cabinet=1"
+        class="w-full h-[1200px] border-0"
+        title="Sistem de Programări ANN Clinic"
+        loading="lazy"
+        frameborder="0"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        referrerpolicy="origin"
+        id="booking-iframe"
       >
-        <iframe
-          src="https://ann.comet.ro/ext_programare.php"
-          class="w-full h-[800px] border-0"
-          title="Sistem de Programări ANN Clinic"
-          loading="lazy"
-          frameborder="0"
-          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-          referrerpolicy="origin"
-        >
-          Browserul dvs. nu suportă iframe-uri. Vă rugăm să accesați pagina de
-          programări direct.
-        </iframe>
-      </div>
-    </div>
-
-    <!-- Additional Info -->
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <div
-        class="bg-blue-50 border border-blue-200 rounded-xl p-6 inline-block"
-      >
-        <div class="flex items-start gap-4">
-          <div class="text-3xl text-blue-600">ℹ️</div>
-          <div class="text-left">
-            <h4 class="font-semibold text-blue-800 mb-3 text-lg">
-              Informații importante
-            </h4>
-            <ul class="text-sm text-blue-700 space-y-2">
-              <li>• Vei primi confirmarea pe email în câteva minute</li>
-              <li>• Te rugăm să ajungi cu 15 minute înainte de programare</li>
-              <li>• Adu cu tine actul de identitate și cardul de sănătate</li>
-              <li>
-                • Pentru anulări, contactează-ne cu cel puțin 24h înainte la {
-                  siteConfig.contact.shortPhone
-                }
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        Browserul dvs. nu suportă iframe-uri. Vă rugăm să accesați pagina de
+        programări direct.
+      </iframe>
     </div>
   </div>
 </BookingLayout>
