@@ -159,48 +159,51 @@ export default function AllServicesListing({
   };
 
   // Function to highlight search terms in text (supports diacritics)
-  const highlightSearchTerm = (text: string, searchQuery: string) => {
+  const highlightSearchTerm = (
+    text: string,
+    searchQuery: string
+  ): React.ReactNode => {
     if (!searchQuery.trim()) return text;
 
     const query = searchQuery.toLowerCase().trim();
     const queryNoDiacritics = removeDiacritics(query);
-    
-    // Create a more comprehensive regex that matches both with and without diacritics
-    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const escapedQueryNoDiacritics = queryNoDiacritics.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    
-    // Build regex pattern that matches both versions
-    let pattern = escapedQuery;
-    if (escapedQuery !== escapedQueryNoDiacritics) {
-      pattern = `(${escapedQuery}|${escapedQueryNoDiacritics})`;
+
+    // Use regex to find matches with flexible diacritic matching
+    const escapeRegex = (str: string) =>
+      str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    // Create a pattern that matches the query with or without diacritics
+    let pattern = escapeRegex(query);
+
+    // If the query doesn't have diacritics, make it flexible to match diacritics too
+    if (query === queryNoDiacritics) {
+      pattern = queryNoDiacritics
+        .split("")
+        .map((char) => {
+          switch (char) {
+            case "a":
+              return "[aăâ]";
+            case "e":
+              return "[eê]";
+            case "i":
+              return "[iî]";
+            case "s":
+              return "[sș]";
+            case "t":
+              return "[tț]";
+            default:
+              return escapeRegex(char);
+          }
+        })
+        .join("");
     }
-    
-    // Also create a reverse pattern to match diacritics when searching without them
-    const diacriticMap: { [key: string]: string } = {
-      'a': '[aăâ]',
-      'e': '[eê]', 
-      'i': '[iî]',
-      'o': '[o]',
-      'u': '[u]',
-      's': '[sș]',
-      't': '[tț]'
-    };
-    
-    let flexiblePattern = queryNoDiacritics;
-    for (const [base, variants] of Object.entries(diacriticMap)) {
-      flexiblePattern = flexiblePattern.replace(new RegExp(base, 'g'), variants);
-    }
-    
-    const finalPattern = `(${escapedQuery}|${flexiblePattern})`;
-    const regex = new RegExp(finalPattern, "gi");
-    
+
+    const regex = new RegExp(`(${pattern})`, "gi");
     const parts = text.split(regex);
 
     return parts.map((part, index) => {
-      const partLower = part.toLowerCase();
-      const partNoDiacritics = removeDiacritics(partLower);
-      
-      if (partLower.includes(query) || partNoDiacritics.includes(queryNoDiacritics) || regex.test(part)) {
+      if (index % 2 === 1) {
+        // This is a matched part
         return (
           <span
             key={index}
