@@ -23,15 +23,6 @@ export default function ContactInfo() {
       description:
         "Trimite-ne un email pentru informații detaliate sau solicitări care nu sunt urgente.",
     },
-    {
-      icon: "📍",
-      title: "Adresa",
-      primary: `${siteConfig.address.street} ${siteConfig.address.number}`,
-      secondary: `${siteConfig.address.city}, ${siteConfig.address.county}`,
-      action: `https://maps.google.com/?q=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`,
-      description:
-        "Ne găsești într-o locație convenabilă pentru pacienții din București și împrejurimi.",
-    },
   ];
 
   // Program de lucru din configurația site-ului
@@ -211,7 +202,8 @@ export default function ContactInfo() {
                   <span className="text-xl">🎯</span>
                   <span>
                     Urmăritorii noștri primesc acces la oferte speciale și
-                    evenimente medicale gratuite. Se aplică termeni și condiții.
+                    evenimente medicale gratuite.
+                    <p>Se aplică termeni și condiții.</p>
                   </span>
                 </p>
               </div>
