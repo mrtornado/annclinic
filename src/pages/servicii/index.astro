@@ -503,26 +503,6 @@ const structuredData = {
                 medicală de înaltă calitate cu tehnologie modernă.
               </p>
             </AnimatedText>
-
-            {/* CTA Buttons */}
-            <AnimatedText delay={0.8} client:load>
-              <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                <a
-                  href="/programare"
-                  class="bg-white hover:bg-white/90 text-primary px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-                >
-                  <span class="text-xl">📅</span>
-                  <span>Programează-te acum!</span>
-                </a>
-                <a
-                  href="/contact"
-                  class="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/50 hover:border-white/70 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-                >
-                  <span class="text-xl">📞</span>
-                  <span>Contactează-ne</span>
-                </a>
-              </div>
-            </AnimatedText>
           </div>
 
           {/* Right Side - Logo Area */}
@@ -552,68 +532,6 @@ const structuredData = {
             </AnimatedText>
           </div>
         </div>
-
-        {/* Bottom Features Section */}
-        <AnimatedText delay={1.4} client:load>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Medici Experți */}
-            <div
-              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <div
-                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
-              >
-                <span class="text-2xl">👨‍⚕️</span>
-              </div>
-              <div>
-                <h3 class="text-white font-bold text-lg mb-1">
-                  Medici Specialiști
-                </h3>
-                <p class="text-white/80 text-sm">
-                  Profesioniști dedicați sănătății tale.
-                </p>
-              </div>
-            </div>
-
-            {/* Tehnologie Modernă */}
-            <div
-              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <div
-                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
-              >
-                <span class="text-2xl">🔬</span>
-              </div>
-              <div>
-                <h3 class="text-white font-bold text-lg mb-1">
-                  Tehnologie Modernă
-                </h3>
-                <p class="text-white/80 text-sm">
-                  Echipamente de ultimă generație.
-                </p>
-              </div>
-            </div>
-
-            {/* Programare Online */}
-            <div
-              class="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <div
-                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"
-              >
-                <span class="text-2xl">📅</span>
-              </div>
-              <div>
-                <h3 class="text-white font-bold text-lg mb-1">
-                  Programare Rapidă
-                </h3>
-                <p class="text-white/80 text-sm">
-                  Simplu și rapid, direct de acasă.
-                </p>
-              </div>
-            </div>
-          </div>
-        </AnimatedText>
       </div>
 
       {/* Wave Divider - More Prominent */}
@@ -630,54 +548,6 @@ const structuredData = {
         </svg>
       </div>
     </section>
-
-    <!-- Modern Services Introduction Section -->
-    <section class="relative pt-0 pb-20 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedText delay={0.2} client:load>
-          <div class="text-center mb-16">
-            <div
-              class="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/20"
-            >
-              <span class="text-xl">⚕️</span>
-              <span>Alegerea Pacienților</span>
-            </div>
-            <h2
-              class="text-3xl sm:text-4xl font-bold text-text mb-6 leading-tight"
-            >
-              <span class="block mb-2">Specialități Medicale</span>
-              <span
-                class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow"
-              >
-                De Înaltă Calitate
-              </span>
-            </h2>
-            <p class="text-lg text-text-secondary max-w-3xl mx-auto">
-              În centrul medical <span class="font-semibold text-primary"
-                >ANN Clinic</span
-              > oferim o gamă completă de servicii medicale adaptate nevoilor pacienților
-              noștri, cu echipamente moderne și medici cu experiență.
-            </p>
-          </div>
-        </AnimatedText>
-      </div>
-    </section>
-
-    <!-- Servicii Disponibile - Similar cu homepage-ul -->
-    <ServicesSection
-      services={sortedServices}
-      serviceImages={serviceImages}
-      backgroundImage={optimizedWelcomeImage.src}
-      client:load
-    />
-
-    <!-- Servicii În Curând Disponibile - Similar cu homepage-ul -->
-    <ComingSoonSection
-      services={sortedServices}
-      serviceImages={serviceImages}
-      backgroundImage={optimizedWelcomeImage.src}
-      client:load
-    />
 
     <!-- All Services Listing - Detailed Grid -->
     <AllServicesListing
