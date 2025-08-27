@@ -109,7 +109,6 @@ export default function HeroSection({
                   className="bg-gradient-to-r from-accent to-accent-hover hover:from-accent-hover hover:to-accent text-white px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-accent/50"
                 >
                   <span className="flex items-center gap-2">
-                    <span>🔬</span>
                     <span>Analize Laborator CAS</span>
                   </span>
                 </AnimatedButton>

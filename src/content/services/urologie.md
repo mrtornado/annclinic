@@ -33,7 +33,7 @@ relatedServices:
   - "consultatie-urologie"
 featured: true
 comingSoon: true
-order: 6
+order: 16
 treatments:
   - name: "Consultație urologie"
     description: "Evaluare completă a aparatului urogenital cu urolog experimentat"

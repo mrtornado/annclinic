@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-alergologie"
 featured: false
 comingSoon: true
-order: 5
+order: 15
 treatments:
   - name: "Consultație alergologie"
     description: "Evaluare alergologică completă și plan de tratament"

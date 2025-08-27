@@ -32,7 +32,7 @@ relatedServices:
   - "monitorizare-glicemie"
 featured: false
 comingSoon: true
-order: 2
+order: 12
 treatments:
   - name: "Consultație diabetolog"
     description: "Evaluare completă și plan de management diabet"

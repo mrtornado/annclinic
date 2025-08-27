@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-reumatologie"
 featured: false
 comingSoon: true
-order: 9
+order: 19
 treatments:
   - name: "Consultație reumatologie"
     description: "Evaluare specializată pentru afecțiuni reumatismale"

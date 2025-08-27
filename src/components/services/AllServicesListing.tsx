@@ -171,22 +171,21 @@ export default function AllServicesListing({
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                  {/* Service Icon */}
-                  <div className="absolute top-3 right-3">
-                    <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
-                      <span className="text-lg">
-                        {serviceIcons[service.slug] || serviceIcons.default}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Featured Badge */}
-                  {service.data.featured && (
+                  {/* Status Badge */}
+                  {service.data.comingSoon ? (
                     <div className="absolute top-3 left-3">
-                      <span className="bg-secondary text-white px-2 py-1 rounded-full text-xs font-semibold">
-                        Popular
+                      <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        În Curând
                       </span>
                     </div>
+                  ) : (
+                    service.data.featured && (
+                      <div className="absolute top-3 left-3">
+                        <span className="bg-secondary text-white px-2 py-1 rounded-full text-xs font-semibold">
+                          Popular
+                        </span>
+                      </div>
+                    )
                   )}
                 </div>
 
@@ -229,10 +228,17 @@ export default function AllServicesListing({
                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                         <span>Investigații</span>
                       </div>
-                      <div className="flex items-center gap-1 text-green-600">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                        <span className="font-medium">Disponibil</span>
-                      </div>
+                      {service.data.comingSoon ? (
+                        <div className="flex items-center gap-1 text-orange-600">
+                          <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
+                          <span className="font-medium">În Curând</span>
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-1 text-green-600">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                          <span className="font-medium">Disponibil</span>
+                        </div>
+                      )}
                     </div>
                   </div>
 
