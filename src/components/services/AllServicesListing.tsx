@@ -58,7 +58,7 @@ export default function AllServicesListing({
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
   useEffect(() => {
-    // Show all services for the main services page
+    // Show all services (already filtered in Astro)
     setVisibleServices(services);
   }, [services]);
 

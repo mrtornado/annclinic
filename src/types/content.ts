@@ -23,6 +23,7 @@ export interface ServiceContent {
     }[];
     featured: boolean;
     comingSoon: boolean;
+    hidden?: boolean;
     order: number;
   };
 }

@@ -81,9 +81,10 @@ export default function ServicesSection({
   serviceImages,
   backgroundImage,
 }: ServicesSectionProps) {
-  // Filtrăm serviciile care nu sunt în categoria "coming soon"
+  // Filtrăm serviciile care nu sunt în categoria "coming soon" și nu sunt hidden
   const activeServices = services.filter(
-    (service) => service.data.comingSoon !== true
+    (service) =>
+      service.data.comingSoon !== true && service.data.hidden !== true
   );
 
   // Sortăm serviciile după ordinea specificată în content

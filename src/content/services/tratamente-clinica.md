@@ -32,7 +32,7 @@ relatedServices:
   - "diagnostic-respirator"
   - "medicina-familie"
 featured: true
-comingSoon: true
+hidden: true
 order: 11
 treatments:
   - name: "Test rapid streptococ"

@@ -82,13 +82,15 @@ const optimizedSynevoLogo = await getImage({
 // Get all services content
 const services = await getCollection("services");
 
-// Sort services by order and then by name
-const sortedServices = services.sort((a, b) => {
-  if (a.data.order !== b.data.order) {
-    return a.data.order - b.data.order;
-  }
-  return a.data.name.localeCompare(b.data.name);
-});
+// Filter out hidden services and sort by order and then by name
+const sortedServices = services
+  .filter((service) => service.data.hidden !== true)
+  .sort((a, b) => {
+    if (a.data.order !== b.data.order) {
+      return a.data.order - b.data.order;
+    }
+    return a.data.name.localeCompare(b.data.name);
+  });
 
 // Optimize service images - disponibile acum
 const medicinaFamilieOptimized = await getImage({

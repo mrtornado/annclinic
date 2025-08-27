@@ -13,9 +13,10 @@ export default function ComingSoonSection({
   serviceImages,
   backgroundImage,
 }: ComingSoonSectionProps) {
-  // Filtrăm doar serviciile care au comingSoon: true
+  // Filtrăm doar serviciile care au comingSoon: true și nu sunt hidden
   const comingSoonServices = services.filter(
-    (service) => service.data.comingSoon === true
+    (service) =>
+      service.data.comingSoon === true && service.data.hidden !== true
   );
 
   if (comingSoonServices.length === 0) {
