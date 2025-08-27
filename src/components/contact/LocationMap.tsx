@@ -3,25 +3,13 @@ import { useState } from "react";
 import MagicCard from "../magic-ui/MagicCard";
 import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedButton from "../magic-ui/AnimatedButton";
-import type { AnimatedButtonProps } from "../magic-ui/AnimatedButton";
 import { siteConfig } from "../../config/site";
 
 export default function LocationMap() {
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  // Google Maps embed URL direct (fără API key)
-  const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.4410003225206!2d26.03968867675105!3d44.36329080215218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae00f6b6f8a2a5%3A0x62c5eda8e599c505!2sSos.%20Alexandriei%20101%2C%20Bragadiru%20077025!5e0!3m2!1sro!2sro!4v1718286484204!5m2!1sro!2sro`;
-
-  // Fallback static map URL (using OpenStreetMap)
-  const staticMapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${
-    siteConfig.address.coordinates.lng - 0.01
-  },${siteConfig.address.coordinates.lat - 0.01},${
-    siteConfig.address.coordinates.lng + 0.01
-  },${siteConfig.address.coordinates.lat + 0.01}&layer=mapnik&marker=${
-    siteConfig.address.coordinates.lat
-  },${siteConfig.address.coordinates.lng}`;
-
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`;
+  // Google Maps embed URL pentru Ann Medical Clinic (coordonatele corecte)
+  const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2851.091659844327!2d26.0041646!3d44.3868225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40adff5417f61649:0x603662fc6541411d!2sANN+Medical+Clinic!5e0!3m2!1sro!2sro!4v1735044000000!5m2!1sro!2sro`;
 
   const transportOptions = [
     {
@@ -99,7 +87,7 @@ export default function LocationMap() {
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
                   <AnimatedButton
-                    href="https://www.google.com/maps/dir/?api=1&destination=Sos.+Alexandriei+101+Bragadiru+Ilfov+Romania"
+                    href="https://www.google.com/maps/dir/?api=1&destination=44.3868187,26.0067395"
                     variant="primary"
                     size="md"
                     className="flex-1"
@@ -113,7 +101,7 @@ export default function LocationMap() {
                   </AnimatedButton>
 
                   <AnimatedButton
-                    href="https://maps.google.com/?q=Soseaua+Alexandriei+101+Bragadiru+Ilfov+Romania"
+                    href="https://www.google.com/maps/place/ANN+Medical+Clinic/@44.3868225,26.0041646,17z/data=!3m1!4b1!4m6!3m5!1s0x40adff5417f61649:0x603662fc6541411d!8m2!3d44.3868187!4d26.0067395!16s%2Fg%2F11mckbtny9?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
                     variant="outline"
                     size="md"
                     className="flex-1"
@@ -148,72 +136,6 @@ export default function LocationMap() {
                   </p>
                   <p>Cod poștal: {siteConfig.address.postalCode}</p>
                   <p>{siteConfig.address.country}</p>
-                </div>
-              </div>
-            </MagicCard>
-
-            {/* Transport Options */}
-            <MagicCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text mb-4 flex items-center gap-2">
-                  <span className="text-2xl">🚗</span>
-                  Cum Ajungi
-                </h3>
-                <div className="space-y-4">
-                  {transportOptions.map((option, index) => (
-                    <motion.div
-                      key={option.title}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-secondary transition-colors duration-300"
-                    >
-                      <span className="text-2xl">{option.icon}</span>
-                      <div>
-                        <h4 className="font-semibold text">{option.title}</h4>
-                        <p className="text-sm text-primary font-medium">
-                          {option.description}
-                        </p>
-                        <p className="text-xs text-secondary mt-1">
-                          {option.details}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </MagicCard>
-
-            {/* Landmarks */}
-            <MagicCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text mb-4 flex items-center gap-2">
-                  <span className="text-2xl">🏢</span>
-                  Puncte de Reper
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <span className="text-primary">•</span>
-                    <span className="text-secondary">
-                      Lângă Primăria Bragadiru
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-primary">•</span>
-                    <span className="text-secondary">
-                      Vizavi de Parcul Central
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-primary">•</span>
-                    <span className="text-secondary">
-                      La 15 min de București
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-primary">•</span>
-                    <span className="text-secondary">Acces facil din A1</span>
-                  </div>
                 </div>
               </div>
             </MagicCard>
