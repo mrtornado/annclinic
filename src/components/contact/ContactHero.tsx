@@ -28,8 +28,8 @@ export default function ContactHero() {
 
         <AnimatedText delay={0.4}>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="block mb-2">Suntem Aici</span>
-            <GradientText>Pentru Sănătatea Ta</GradientText>
+            <span className="block mb-2">Sănătatea Ta</span>
+            <GradientText>Este Prioritatea Noastră</GradientText>
           </h1>
         </AnimatedText>
 
@@ -38,44 +38,6 @@ export default function ContactHero() {
             Echipa noastră medicală este pregătită să îți ofere servicii de
             înaltă calitate și să răspundă tuturor întrebărilor tale.
           </p>
-        </AnimatedText>
-
-        <AnimatedText delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg">
-            <motion.div
-              className="flex items-center gap-3 bg-surface-elevated/90 backdrop-blur-md px-6 py-4 rounded-xl shadow-lg border border-primary/20"
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <span className="text-2xl">📞</span>
-              <span className="font-semibold text-primary">
-                Răspundem rapid
-              </span>
-            </motion.div>
-
-            <motion.div
-              className="flex items-center gap-3 bg-surface-elevated/90 backdrop-blur-md px-6 py-4 rounded-xl shadow-lg border border-secondary/20"
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <span className="text-2xl">🏥</span>
-              <span className="font-semibold text-secondary">
-                Locație accesibilă
-              </span>
-            </motion.div>
-
-            <motion.div
-              className="flex items-center gap-3 bg-surface-elevated/90 backdrop-blur-md px-6 py-4 rounded-xl shadow-lg border border-accent/20"
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <span className="text-2xl">⏰</span>
-              <span className="font-semibold text-accent">Program extins</span>
-            </motion.div>
-          </div>
         </AnimatedText>
       </div>
 

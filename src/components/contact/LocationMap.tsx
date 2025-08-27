@@ -40,7 +40,7 @@ export default function LocationMap() {
       icon: "🚶",
       title: "Pe jos",
       description: "Zonă accesibilă",
-      details: "Facilități pentru persoane cu dizabilități",
+      details: "",
     },
   ];
 

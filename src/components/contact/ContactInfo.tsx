@@ -55,21 +55,6 @@ export default function ContactInfo() {
 
   return (
     <div className="space-y-16">
-      <div className="text-center max-w-3xl mx-auto">
-        <AnimatedText>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent inline-block">
-            Suntem Aici Pentru Tine
-          </h2>
-        </AnimatedText>
-        <AnimatedText delay={0.2}>
-          <p className="text-xl text-secondary leading-relaxed">
-            Echipa noastră medicală este disponibilă pentru a răspunde
-            întrebărilor tale și pentru a-ți oferi asistență medicală de
-            calitate.
-          </p>
-        </AnimatedText>
-      </div>
-
       {/* Contact Methods - Modern Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {contactMethods.map((method, index) => (
