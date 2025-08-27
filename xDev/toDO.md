@@ -7,3 +7,5 @@
 # sa mai facem o sectiune cu programu pe homepage
 
 - de reparat vizibilitatea la articole (dar aici trebuie si articolele facute)
+
+- de pus contul meu in loc de analize

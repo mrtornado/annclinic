@@ -89,12 +89,12 @@ export default function HeroSection({
                   Programează-te acum!
                 </AnimatedButton>
                 <AnimatedButton
-                  href="/servicii"
+                  href="/servicii/tratamente-clinica"
                   variant="outline"
                   size="lg"
                   className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/50 hover:border-white/70 transition-all duration-300 hover:scale-105"
                 >
-                  Vezi Serviciile
+                  Tratamente Clinica
                 </AnimatedButton>
               </div>
             </AnimatedText>
