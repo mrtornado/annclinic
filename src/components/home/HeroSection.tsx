@@ -98,6 +98,23 @@ export default function HeroSection({
                 </AnimatedButton>
               </div>
             </AnimatedText>
+
+            {/* Special Lab Button */}
+            <AnimatedText delay={1.0}>
+              <div className="mb-8">
+                <AnimatedButton
+                  href="/servicii/analize-laborator"
+                  variant="primary"
+                  size="lg"
+                  className="bg-gradient-to-r from-accent to-accent-hover hover:from-accent-hover hover:to-accent text-white px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-accent/50"
+                >
+                  <span className="flex items-center gap-2">
+                    <span>🔬</span>
+                    <span>Analize Laborator CAS</span>
+                  </span>
+                </AnimatedButton>
+              </div>
+            </AnimatedText>
           </div>
 
           {/* Right Side - Logo Area */}

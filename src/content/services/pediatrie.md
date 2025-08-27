@@ -34,7 +34,7 @@ relatedServices:
   - "consultații-adolescenți"
   - "investigații-pediatrice"
 featured: true
-order: 4
+order: 2
 treatments:
   - name: "Consultație pediatrie"
     description: "Evaluare completă a stării de sănătate a copilului cu pediatru experimentat"

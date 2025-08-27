@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-recuperare"
 featured: false
 comingSoon: true
-order: 24
+order: 11
 treatments:
   - name: "Consultație recuperare medicală"
     description: "Evaluare stare funcțională și plan de reabilitare"

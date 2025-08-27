@@ -33,7 +33,7 @@ relatedServices:
   - "tratament-sinuzita"
 featured: true
 comingSoon: true
-order: 6
+order: 4
 treatments:
   - name: "Consultație ORL"
     description: "Evaluare completă ORL cu medic otorinolaringolog experimentat"

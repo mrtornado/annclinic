@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-pneumologie"
 featured: false
 comingSoon: true
-order: 21
+order: 3
 treatments:
   - name: "Consultație pneumologie"
     description: "Evaluare completă a aparatului respirator"

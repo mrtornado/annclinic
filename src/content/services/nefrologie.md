@@ -32,7 +32,7 @@ relatedServices:
   - "biopsia-renala"
   - "consultatie-nefrologie"
 featured: true
-order: 9
+order: 3
 treatments:
   - name: "Consultație nefrologie"
     description: "Evaluare completă a funcției renale și afecțiunilor asociate"

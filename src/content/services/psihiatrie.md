@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-psihiatrie"
 featured: false
 comingSoon: true
-order: 23
+order: 8
 treatments:
   - name: "Consultație psihiatrie"
     description: "Evaluare psihiatrică completă și plan de tratament"

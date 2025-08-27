@@ -31,7 +31,7 @@ relatedServices:
   - "orteze-pediatrice"
 featured: false
 comingSoon: true
-order: 26
+order: 10
 treatments:
   - name: "Consultație ortopedie pediatrică"
     description: "Evaluare specializată aparatul locomotor la copii"

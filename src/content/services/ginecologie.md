@@ -31,7 +31,7 @@ relatedServices:
   - "screening-ginecologic"
   - "investigații-ginecologice"
 featured: true
-order: 2
+order: 6
 treatments:
   - name: "Consultație ginecologie"
     description: "Evaluare completă a sănătății ginecologice"

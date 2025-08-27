@@ -32,7 +32,7 @@ relatedServices:
   - "consultatie-endocrinologie"
 featured: false
 comingSoon: true
-order: 22
+order: 7
 treatments:
   - name: "Consultație endocrinologie"
     description: "Evaluare completă a sistemului endocrin"

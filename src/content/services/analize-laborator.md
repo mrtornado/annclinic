@@ -32,6 +32,7 @@ relatedServices:
   - "analize-urgente"
   - "consultatie-rezultate"
 featured: true
+comingSoon: true
 order: 11
 treatments:
   - name: "Hemoleucogramă completă"

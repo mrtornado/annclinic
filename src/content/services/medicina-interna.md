@@ -32,7 +32,7 @@ relatedServices:
   - "ecografie-abdominala"
   - "consultatie-medicina-interna"
 featured: true
-order: 3
+order: 5
 treatments:
   - name: "Consultație medicina internă"
     description: "Evaluare medicală completă și diagnostic diferențial"
