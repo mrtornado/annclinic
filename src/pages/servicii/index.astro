@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import AllServicesListing from "../../components/services/AllServicesListing.tsx";
 import ServicesSection from "../../components/home/ServicesSection.tsx";
 import ComingSoonSection from "../../components/home/ComingSoonSection.tsx";
+import ServicesSearch from "../../components/services/ServicesSearch.tsx";
 import AnimatedText from "../../components/magic-ui/AnimatedText.tsx";
 import FloatingParticles from "../../components/magic-ui/FloatingParticles.tsx";
 import { getImage } from "astro:assets";
@@ -429,13 +430,14 @@ const structuredData = {
   structuredData={structuredData}
 >
   <main class="min-h-screen">
-    <!-- Services Hero Section - Similar to Homepage Hero -->
-
     <!-- All Services Listing - Detailed Grid -->
     <AllServicesListing
       services={sortedServices}
       serviceImages={serviceImages}
       client:load
     />
+
+    <!-- Search Services - Bottom -->
+    <ServicesSearch services={sortedServices} variant="bottom" client:load />
   </main>
 </BaseLayout>
