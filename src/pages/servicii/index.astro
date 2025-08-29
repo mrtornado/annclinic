@@ -40,45 +40,6 @@ import orlImgSoon from "../../assets/images/servicii/soon/ORL.png";
 import oftalmologieImgSoon from "../../assets/images/servicii/soon/oftamologie.jpg";
 import urologieImgSoon from "../../assets/images/servicii/soon/UROLOGIE.png";
 
-// Import logos
-import annLogo from "../../assets/images/altfel-de-logo.png";
-import synevoLogo from "../../assets/images/synevo.png";
-
-// Optimize background image
-const optimizedBgImage = await getImage({
-  src: bgImage,
-  format: "webp",
-  quality: 85,
-  width: 1920,
-  height: 1080,
-});
-
-// Optimize welcome image for section backgrounds
-const optimizedWelcomeImage = await getImage({
-  src: welcomeImage,
-  format: "webp",
-  quality: 90,
-  width: 800,
-  height: 600,
-});
-
-// Optimize logos
-const optimizedAnnLogo = await getImage({
-  src: annLogo,
-  format: "webp",
-  quality: 100,
-  width: 300,
-  height: 120,
-});
-
-const optimizedSynevoLogo = await getImage({
-  src: synevoLogo,
-  format: "webp",
-  quality: 100,
-  width: 250,
-  height: 100,
-});
-
 // Get all services content
 const services = await getCollection("services");
 

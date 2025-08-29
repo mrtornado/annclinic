@@ -77,40 +77,40 @@ export default function HeroSection({
               </p>
             </AnimatedText>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - All same size */}
             <AnimatedText delay={0.8}>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-2xl">
                 <AnimatedButton
                   href="/programare"
                   variant="secondary"
                   size="lg"
-                  className="bg-white hover:bg-white/90 text-primary px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="w-full bg-white hover:bg-white/90 text-primary px-6 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 min-h-[60px] flex items-center justify-center"
                 >
-                  Programează-te acum!
+                  📅 Programează-te acum!
                 </AnimatedButton>
                 <AnimatedButton
                   href="/servicii/tratamente-clinica"
                   variant="outline"
                   size="lg"
-                  className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/50 hover:border-white/70 transition-all duration-300 hover:scale-105"
+                  className="w-full bg-transparent hover:bg-white/10 text-white px-6 py-4 rounded-xl font-semibold border-2 border-white/50 hover:border-white/70 transition-all duration-300 hover:scale-105 min-h-[60px] flex items-center justify-center"
                 >
-                  Tratamente Clinica
+                  🏥 Tratamente Clinica
                 </AnimatedButton>
-              </div>
-            </AnimatedText>
-
-            {/* Special Lab Button */}
-            <AnimatedText delay={1.0}>
-              <div className="mb-8">
                 <AnimatedButton
                   href="/servicii/analize-laborator"
                   variant="primary"
                   size="lg"
-                  className="bg-gradient-to-r from-accent to-accent-hover hover:from-accent-hover hover:to-accent text-white px-8 py-4 rounded-xl font-semibold shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-accent/50"
+                  className="w-full sm:col-span-2 relative bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white px-6 py-4 rounded-xl font-bold shadow-2xl transition-all duration-300 hover:scale-105 min-h-[60px] border-2 border-white/20 hover:border-white/40 overflow-hidden group flex items-center justify-center"
                 >
-                  <span className="flex items-center gap-2">
-                    <span>Analize Laborator CAS</span>
+                  <span className="relative z-10 flex items-center justify-center gap-3">
+                    <span className="text-2xl">🔬</span>
+                    <span className="text-lg">Analize Laborator CAS</span>
+                    <span className="text-sm bg-white/20 px-2 py-1 rounded-full">
+                      RAPID
+                    </span>
                   </span>
+                  {/* Animated background shimmer */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 </AnimatedButton>
               </div>
             </AnimatedText>
