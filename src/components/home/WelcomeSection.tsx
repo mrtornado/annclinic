@@ -94,6 +94,12 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
                     description:
                       "Colaborare cu liderul în analize medicale din România",
                   },
+                  {
+                    icon: "💳",
+                    title: "Specialități în contract cu CAS",
+                    description:
+                      "Servicii medicale acoperite de Casa de Asigurări de Sănătate",
+                  },
                 ].map((feature, index) => (
                   <div
                     key={index}

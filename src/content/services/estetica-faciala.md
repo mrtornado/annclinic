@@ -32,7 +32,7 @@ relatedServices:
   - "mezoterapie"
   - "peeling-chimic"
 featured: true
-order: 7
+order: 8
 treatments:
   - name: "Consultație medicină estetică"
     description: "Evaluare completă și planificarea tratamentelor estetice personalizate"

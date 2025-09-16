@@ -34,7 +34,7 @@ relatedServices:
   - "tratament-psoriazis"
   - "investigații-dermatologice"
 featured: true
-order: 8
+order: 7
 treatments:
   - name: "Consultație dermatologie"
     description: "Evaluare completă a afecțiunilor pielii cu dermatolog experimentat"

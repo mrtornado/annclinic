@@ -1,7 +1,7 @@
 ---
 name: "Analize Laborator CAS"
 description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
-longDescription: "Laboratorul de analize medicale al ANN Clinic, în parteneriat cu Synevo, oferă o gamă completă de investigații de laborator în București. Analizele noastre acoperă toate specialitățile medicale, cu rezultate rapide și precise pentru diagnostic și monitorizare tratament."
+longDescription: "Laborator de analize medicale al ANN MEDICAL CLINIC ofera o gama completa de investigatii de laborator, cu rezultate rapide si precise pentru diagnostic si monitorizare tratament."
 icon: "lab"
 seoTitle: "Analize Medicale București - Laborator Synevo | ANN Clinic"
 seoDescription: "Analize medicale București cu rezultate rapide și precise. Laborator Synevo, analize sânge, urină, hormonale. Recoltare la ANN Clinic Bragadiru."
@@ -33,7 +33,7 @@ relatedServices:
   - "consultatie-rezultate"
 featured: true
 hidden: true
-order: 11
+order: 16
 treatments:
   - name: "Hemoleucogramă completă"
     description: "Analize sânge de bază pentru evaluarea generală"

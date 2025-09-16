@@ -32,7 +32,8 @@ relatedServices:
   - "ecografie-doppler"
   - "consultatie-neurologie"
 featured: true
-order: 8
+comingSoon: true
+order: 13
 treatments:
   - name: "Consultație neurologie"
     description: "Evaluare completă a sistemului nervos cu neurolog experimentat"

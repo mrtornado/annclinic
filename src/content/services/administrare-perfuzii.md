@@ -32,7 +32,8 @@ relatedServices:
   - "recoltare-analize"
   - "consultatie-medicina-interna"
 featured: true
-order: 8
+hidden: true
+order: 12
 treatments:
   - name: "Administrare perfuzie standard"
     description: "Administrarea tratamentului intravenos prescris de medicul curant"

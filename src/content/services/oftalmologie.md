@@ -33,7 +33,7 @@ relatedServices:
   - "tratament-cataracta"
 featured: true
 comingSoon: true
-order: 9
+order: 13
 treatments:
   - name: "Consultație oftalmologie"
     description: "Evaluare completă a ochilor și acuității vizuale"

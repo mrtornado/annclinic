@@ -14,6 +14,12 @@ keywords:
   - "EKG București Bragadiru"
   - "spirometrie București"
   - "injecție intramusculară București"
+  - "injecție subcutanată București"
+  - "injecție intravenoasă București"
+  - "perfuzii terapeutice București"
+  - "holter cardiac București"
+  - "holter tensiune București"
+  - "aerosoli copii București"
   - "teste medicale rapide București"
   - "investigații clinice București Bragadiru"
   - "diagnostic rapid București"
@@ -25,6 +31,10 @@ popularSearchTerms:
   - "EKG București"
   - "spirometrie"
   - "injecții intramusculare"
+  - "perfuzii"
+  - "holter cardiac"
+  - "holter tensiune"
+  - "aerosoli copii"
   - "diagnostic rapid"
 relatedServices:
   - "urgente-medicale"
@@ -33,7 +43,7 @@ relatedServices:
   - "medicina-familie"
 featured: true
 hidden: true
-order: 11
+order: 15
 treatments:
   - name: "Test rapid streptococ"
     description: "Diagnostic rapid pentru infecții streptococice"
@@ -59,6 +69,30 @@ treatments:
     description: "Evaluarea funcției respiratorii"
     duration: 20
     price: 80
+  - name: "Injecție subcutanată"
+    description: "Administrare medicație prin injecție subcutanată"
+    duration: 5
+    price: 25
+  - name: "Injecție intravenoasă"
+    description: "Administrare medicație prin injecție intravenoasă"
+    duration: 10
+    price: 35
+  - name: "Aerosoli copii"
+    description: "Administrare medicație prin aerosoli pentru copii"
+    duration: 15
+    price: 40
+  - name: "Perfuzii"
+    description: "Administrare perfuzii terapeutice"
+    duration: 60
+    price: 120
+  - name: "Holter tensiune"
+    description: "Monitorizare tensiune arterială 24h"
+    duration: 30
+    price: 180
+  - name: "Holter cardiac"
+    description: "Monitorizare EKG continuă 24h"
+    duration: 30
+    price: 200
 ---
 
 # Tratamente Clinica București - Servicii Medicale Rapide
@@ -106,6 +140,31 @@ Departamentul de **tratamente clinica** al ANN Clinic oferă servicii medicale r
 - **Medicina muncii** - pentru expuneri ocupaționale
 - **Monitorizare tratament** - urmărirea progresului terapeutic
 
+### Monitorizare Cardiologică Continuă
+
+#### Holter Cardiac (EKG 24h)
+
+- **Monitorizare continuă** - înregistrare EKG timp de 24 de ore
+- **Diagnostic aritmii** - detectarea tulburărilor de ritm intermitente
+- **Evaluare ischemie** - identificarea episoadelor de ischemie silentă
+- **Analiză computerizată** - raportare detaliată cu interpretare medicală
+
+#### Holter Tensiune (MAPA)
+
+- **Monitorizare tensiune arterială** - măsurători automate 24h
+- **Profil circadian** - evaluarea variațiilor zilnice ale tensiunii
+- **Diagnostic hipertensiune** - confirmarea hipertensiunii arteriale
+- **Evaluare tratament** - monitorizarea eficacității terapiei antihipertensive
+
+### Terapii Respiratorii Pediatrice
+
+#### Aerosoli pentru Copii
+
+- **Administrare specifică pediatrică** - dozare și tehnici adaptate vârstei
+- **Medicație bronhodilatatoare** - pentru astm și bronșiolită
+- **Procedură non-invazivă** - confort maxim pentru copii
+- **Monitorizare continuă** - supraveghere medicală pe parcursul procedurii
+
 ### Tratamente Ambulatorii
 
 #### Injecții Intramusculare
@@ -114,6 +173,27 @@ Departamentul de **tratamente clinica** al ANN Clinic oferă servicii medicale r
 - **Medicație diversă** - antibiotice, vitamine, analgezice
 - **Procedeură sterilă** - în condiții de siguranță maximă
 - **Monitorizare post-injecție** - pentru reacții adverse
+
+#### Injecții Subcutanate
+
+- **Administrare precisă** - în țesutul subcutanat
+- **Medicație specifică** - insulină, anticoagulante, vaccinuri
+- **Absorbție controlată** - pentru efect terapeutic optim
+- **Procedură minimally invasivă** - disconfort minim pentru pacient
+
+#### Injecții Intravenoase
+
+- **Acces venos sigur** - pentru administrare rapidă
+- **Medicație de urgență** - antibiotice, analgezice, corticosteroizi
+- **Bioavailabilitate maximă** - efect terapeutic imediat
+- **Monitorizare continuă** - pentru siguranța pacientului
+
+#### Perfuzii Terapeutice
+
+- **Administrare controlată** - medicație în doze precise și continue
+- **Hidratare intensivă** - pentru dezechilibre electrolitice severe
+- **Tratamente de lungă durată** - antibioterapie, chimioterapie
+- **Monitorizare parametrilor vitali** - siguranță maximă pe parcursul perfuziei
 
 ## Avantajele Tratamentelor Clinica
 
