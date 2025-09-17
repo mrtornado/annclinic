@@ -39,4 +39,20 @@ export const siteConfig = {
     defaultImage: "/images/placeholder.svg",
     twitterHandle: "@annclinic",
   },
+  mainServices: [
+    "Cardiologie",
+    "Ginecologie", 
+    "Dermatologie",
+    "Pediatrie",
+    "Medicina Internă",
+    "Oftalmologie",
+    "ORL",
+    "Ortopedie",
+    "Endocrinologie",
+    "Pneumologie",
+    "Nefrologie",
+    "Reumatologie",
+    "Psihiatrie",
+    "Alergologie"
+  ],
 } as const;
