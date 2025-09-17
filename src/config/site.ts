@@ -41,7 +41,7 @@ export const siteConfig = {
   },
   mainServices: [
     "Cardiologie",
-    "Ginecologie", 
+    "Ginecologie",
     "Dermatologie",
     "Pediatrie",
     "Medicina Internă",
@@ -53,6 +53,6 @@ export const siteConfig = {
     "Nefrologie",
     "Reumatologie",
     "Psihiatrie",
-    "Alergologie"
+    "Alergologie",
   ],
 } as const;
