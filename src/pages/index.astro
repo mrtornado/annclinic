@@ -60,11 +60,11 @@ import pediatrieImg from "../assets/images/servicii/pediatrrie.png";
 import medicinaInternaImg from "../assets/images/servicii/medicina-interna.jpg";
 import chirurgieGeneralaImg from "../assets/images/servicii/chirurgie.png";
 import chirurgiePediatricaImg from "../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
-import ginecologieImg from "../assets/images/servicii/ginecologie.png";
-import ortopedieImg from "../assets/images/servicii/orto.png";
+import obstetricaGinecologieImg from "../assets/images/servicii/ginecologie.png";
+import ortopedieTraumatologieImg from "../assets/images/servicii/orto.png";
 import nefrologieImg from "../assets/images/servicii/nefrologie.png";
 import analizeLaboratorImg from "../assets/images/servicii/medicina-muncii.jpg";
-import dermatologieImg from "../assets/images/servicii/dermatologie.png";
+import dermatovenerologieImg from "../assets/images/servicii/dermatologie.png";
 import medicinaMunciiImg from "../assets/images/servicii/medicina-muncii.jpg";
 // Keep existing for other services
 import cardiologieImg from "../assets/images/servicii/medicina-interna.jpg";
@@ -129,16 +129,16 @@ const chirurgiePediatricaImage = await getImage({
   height: 300,
 });
 
-const ginecologieImage = await getImage({
-  src: ginecologieImg,
+const obstetricaGinecologieImage = await getImage({
+  src: obstetricaGinecologieImg,
   format: "webp",
   quality: 85,
   width: 400,
   height: 300,
 });
 
-const ortopedieImage = await getImage({
-  src: ortopedieImg,
+const ortopedieTraumatologieImage = await getImage({
+  src: ortopedieTraumatologieImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -161,8 +161,8 @@ const analizeLaboratorImage = await getImage({
   height: 300,
 });
 
-const dermatologieImage = await getImage({
-  src: dermatologieImg,
+const dermatovenerologieImage = await getImage({
+  src: dermatovenerologieImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -343,13 +343,13 @@ const homeServiceImages = {
     width: 400,
     height: 300,
   },
-  ginecologie: {
-    src: ginecologieImage.src,
+  "obstetrica-ginecologie": {
+    src: obstetricaGinecologieImage.src,
     width: 400,
     height: 300,
   },
-  ortopedie: {
-    src: ortopedieImage.src,
+  "ortopedie-traumatologie": {
+    src: ortopedieTraumatologieImage.src,
     width: 400,
     height: 300,
   },
@@ -363,8 +363,8 @@ const homeServiceImages = {
     width: 400,
     height: 300,
   },
-  dermatologie: {
-    src: dermatologieImage.src,
+  dermatovenerologie: {
+    src: dermatovenerologieImage.src,
     width: 400,
     height: 300,
   },

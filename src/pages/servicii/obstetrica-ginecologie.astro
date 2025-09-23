@@ -4,17 +4,18 @@ import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
 
-// Get the gynecology service content
-const service = await getEntry("services", "ginecologie");
+// Get the obstetrics-gynecology service content
+const service = await getEntry("services", "obstetrica-ginecologie");
 
 if (!service) {
   return Astro.redirect("/404");
 }
 
-// SEO optimization for gynecology
-const seoTitle = "Ginecolog București - Consultații Ginecologie | ANN Clinic";
+// SEO optimization for obstetrics-gynecology
+const seoTitle =
+  "Obstetrician-Ginecolog București - Consultații Obstetrică-Ginecologie | ANN Clinic";
 const seoDescription =
-  "Consultații ginecologie în București cu ginecologi experimentați. Screening ginecologic, investigații, tratamente personalizate. Programează-te la ANN Clinic Bragadiru.";
+  "Consultații obstetrică-ginecologie în București cu medici obstetricieni-ginecologi experimentați. Screening ginecologic, investigații, tratamente personalizate. Programează-te la ANN Clinic Bragadiru.";
 ---
 
 <ServiceLayout service={service} title={seoTitle} description={seoDescription}>

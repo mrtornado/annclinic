@@ -11,10 +11,10 @@ interface ServicesSectionProps {
 // Service icons mapping pentru iconițe emoji
 const serviceIcons: Record<string, string> = {
   cardiologie: "❤️",
-  dermatologie: "🧴",
-  ginecologie: "🌸",
+  dermatovenerologie: "🧴",
+  "obstetrica-ginecologie": "🌸",
   pediatrie: "👶",
-  ortopedie: "🦴",
+  "ortopedie-traumatologie": "🦴",
   orl: "👂",
   estetica: "✨",
   neurologie: "🧠",
@@ -32,10 +32,10 @@ const serviceIcons: Record<string, string> = {
 // Enhanced service colors with better visibility for dark mode
 const serviceColors: Record<string, string> = {
   cardiologie: "#ef4444", // Cardiology - Bright red
-  dermatologie: "#f59e0b", // Dermatology - Amber
-  ginecologie: "#ec4899", // Gynecology - Pink
+  dermatovenerologie: "#f59e0b", // Dermatovenereology - Amber
+  "obstetrica-ginecologie": "#ec4899", // Obstetrics-Gynecology - Pink
   pediatrie: "#10b981", // Pediatrics - Emerald
-  ortopedie: "#3b82f6", // Orthopedics - Blue
+  "ortopedie-traumatologie": "#3b82f6", // Orthopedics and Traumatology - Blue
   orl: "#8b5cf6", // ORL - Purple
   estetica: "#f97316", // Aesthetics - Orange
   neurologie: "#6366f1", // Neurology - Indigo

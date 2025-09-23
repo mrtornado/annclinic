@@ -1,26 +1,26 @@
 ---
-name: "Ginecologie"
-description: "Servicii complete de ginecologie cu consultații specializate și investigații moderne"
-longDescription: "Departamentul de ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret."
+name: "Obstetrică-Ginecologie"
+description: "Servicii complete de obstetrică-ginecologie cu consultații specializate și investigații moderne"
+longDescription: "Departamentul de obstetrică-ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret."
 icon: "flower"
-seoTitle: "Ginecolog București - Consultații Ginecologie | ANN Clinic"
-seoDescription: "Consultații ginecologie în București cu ginecologi experimentați. Screening, consultații, investigații ginecologice. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Obstetrician-Ginecolog București - Consultații Obstetrică-Ginecologie | ANN Clinic"
+seoDescription: "Consultații obstetrică-ginecologie în București cu medici obstetricieni-ginecologi experimentați. Screening, consultații, investigații ginecologice. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "ginecolog București Bragadiru"
-  - "consultație ginecologie București"
-  - "ginecolog Bragadiru București"
+  - "obstetrician ginecolog București Bragadiru"
+  - "consultație obstetrică ginecologie București"
+  - "obstetrician ginecolog Bragadiru București"
   - "screening ginecologic București"
   - "investigații ginecologice București"
   - "consultații femei București"
   - "ecografie ginecologică București"
   - "testare HPV București"
   - "colposcopie București"
-  - "ginecolog experimentat București Bragadiru"
+  - "obstetrician ginecolog experimentat București Bragadiru"
   - "menstruație probleme București"
   - "contraceptie București Bragadiru"
 popularSearchTerms:
-  - "ginecolog București"
-  - "consultație ginecologie"
+  - "obstetrician ginecolog București"
+  - "consultație obstetrică ginecologie"
   - "screening ginecologic"
   - "investigații ginecologice"
   - "ecografie ginecologică"
@@ -33,8 +33,8 @@ relatedServices:
 featured: true
 order: 6
 treatments:
-  - name: "Consultație ginecologie"
-    description: "Evaluare completă a sănătății ginecologice"
+  - name: "Consultație obstetrică-ginecologie"
+    description: "Evaluare completă a sănătății ginecologice și obstetricale"
     duration: 45
     price: 180
   - name: "Screening ginecologic"
@@ -59,19 +59,20 @@ treatments:
     price: 100
 ---
 
-# Servicii de Ginecologie la ANN Clinic
+# Servicii de Obstetrică-Ginecologie la ANN Clinic
 
-Departamentul de ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret.
+Departamentul de obstetrică-ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret.
 
 ## Servicii Oferite
 
-### Consultații Ginecologie
+### Consultații Obstetrică-Ginecologie
 
-- Evaluare completă a sănătății ginecologice
+- Evaluare completă a sănătății ginecologice și obstetricale
 - Consultații pentru afecțiuni ginecologice
 - Planificare familială și contraceptie
 - Consultații pentru menopauză
-- Monitorizarea sarcinii (trimestrul I)
+- Monitorizarea sarcinii și îngrijire prenatală
+- Consultații postnatale
 
 ### Investigații Ginecologice
 
@@ -102,8 +103,8 @@ Departamentul de ginecologie al ANN Clinic oferă servicii medicale complete pen
 
 ## Echipa Medicală
 
-Ginecologii noștri sunt specializați în sănătatea femeii, cu experiență vastă în diagnosticarea și tratamentul afecțiunilor ginecologice. Oferim îngrijire medicală de calitate într-un mediu confortabil și confidențial.
+Medicii obstetricieni-ginecologi noștri sunt specializați în sănătatea femeii, cu experiență vastă în diagnosticarea și tratamentul afecțiunilor ginecologice și în îngrijirea obstetricală. Oferim îngrijire medicală de calitate într-un mediu confortabil și confidențial.
 
 ## Programare
 
-Pentru o consultație de ginecologie, vă rugăm să ne contactați pentru a programa o întâlnire. Oferim consultații de urgență pentru cazurile acute și un mediu discret pentru toate pacientele.
+Pentru o consultație de obstetrică-ginecologie, vă rugăm să ne contactați pentru a programa o întâlnire. Oferim consultații de urgență pentru cazurile acute și un mediu discret pentru toate pacientele.

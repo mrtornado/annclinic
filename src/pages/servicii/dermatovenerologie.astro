@@ -4,17 +4,18 @@ import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
 
-// Get the dermatology service content
-const service = await getEntry("services", "dermatologie");
+// Get the dermatovenereology service content
+const service = await getEntry("services", "dermatovenerologie");
 
 if (!service) {
   return Astro.redirect("/404");
 }
 
-// SEO optimization for dermatology - targeting "dermatolog București" keywords
-const seoTitle = "Dermatolog București - Consultații Dermatologie | ANN Clinic";
+// SEO optimization for dermatovenereology - targeting "dermatovenerolog București" keywords
+const seoTitle =
+  "Dermatovenerolog București - Consultații Dermatovenerologie | ANN Clinic";
 const seoDescription =
-  "Dermatolog București cu experiență vastă. Consultații dermatologie, tratament acnee, dermatoscopie, investigații dermatologice complete. Programează-te la ANN Clinic Bragadiru.";
+  "Dermatovenerolog București cu experiență vastă. Consultații dermatovenerologie, tratament acnee, dermatoscopie, investigații dermatologice și venerice complete. Programează-te la ANN Clinic Bragadiru.";
 ---
 
 <ServiceLayout service={service} title={seoTitle} description={seoDescription}>

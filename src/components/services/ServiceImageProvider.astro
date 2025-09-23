@@ -6,13 +6,13 @@ console.log("ServiceImageProvider loaded!");
 // Importă imaginile direct
 import chirurgieImg from "../../assets/images/servicii/chirurgie.png";
 import chirurgiePediatricaImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
-import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
-import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+import dermatovenerologieImg from "../../assets/images/servicii/dermatologie.png";
+import obstetricaGinecologieImg from "../../assets/images/servicii/ginecologie.png";
 import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
 import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
 import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
 import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
-import ortopedieImg from "../../assets/images/servicii/orto.png";
+import ortopedieTraumatologieImg from "../../assets/images/servicii/orto.png";
 import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
 import alergologieImg from "../../assets/images/servicii/soon/alergologie.png";
 import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.png";
@@ -29,7 +29,10 @@ import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.png";
 
 // Adaugăm loguri pentru debug
 console.log("ServiceImageProvider - cardiologieImg:", cardiologieImg);
-console.log("ServiceImageProvider - dermatologieImg:", dermatologieImg);
+console.log(
+  "ServiceImageProvider - dermatovenerologieImg:",
+  dermatovenerologieImg
+);
 
 // Importăm getImage pentru optimizare
 import { getImage } from "astro:assets";
@@ -47,15 +50,15 @@ export const serviceImageMap = {
     width: chirurgiePediatricaImg.width,
     height: chirurgiePediatricaImg.height,
   },
-  dermatologie: {
-    src: dermatologieImg.src,
-    width: dermatologieImg.width,
-    height: dermatologieImg.height,
+  dermatovenerologie: {
+    src: dermatovenerologieImg.src,
+    width: dermatovenerologieImg.width,
+    height: dermatovenerologieImg.height,
   },
-  ginecologie: {
-    src: ginecologieImg.src,
-    width: ginecologieImg.width,
-    height: ginecologieImg.height,
+  "obstetrica-ginecologie": {
+    src: obstetricaGinecologieImg.src,
+    width: obstetricaGinecologieImg.width,
+    height: obstetricaGinecologieImg.height,
   },
   "medicina-familie": {
     src: medicinaFamilieImg.src,
@@ -77,10 +80,10 @@ export const serviceImageMap = {
     width: nefrologieImg.width,
     height: nefrologieImg.height,
   },
-  ortopedie: {
-    src: ortopedieImg.src,
-    width: ortopedieImg.width,
-    height: ortopedieImg.height,
+  "ortopedie-traumatologie": {
+    src: ortopedieTraumatologieImg.src,
+    width: ortopedieTraumatologieImg.width,
+    height: ortopedieTraumatologieImg.height,
   },
   pediatrie: {
     src: pediatrieImg.src,

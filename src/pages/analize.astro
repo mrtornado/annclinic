@@ -1,0 +1,377 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AnimatedButton from "../components/magic-ui/AnimatedButton.tsx";
+import MagicCard from "../components/magic-ui/MagicCard.tsx";
+
+const pageTitle = "Analize Medicale Online";
+const pageDescription =
+  "Accesează rezultatele analizelor medicale online prin partenerii noștri: Hemolab și Synevo. Rezultate rapide, sigure și accesibile 24/7.";
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={[
+    "analize medicale online",
+    "rezultate analize",
+    "hemolab",
+    "synevo",
+    "analize laborator",
+    "rezultate online București",
+  ]}
+>
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen bg-gradient-to-br from-primary/5 via-surface to-secondary/5"
+  >
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div
+        class="absolute inset-0"
+        style="background-image: radial-gradient(circle at 25% 25%, #0d9488 0%, transparent 50%), radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%);"
+      >
+      </div>
+    </div>
+
+    <div
+      class="relative z-10 pt-32 sm:pt-36 lg:pt-40 pb-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">
+            <span
+              class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+            >
+              Analize Medicale
+            </span>
+            <br />
+            <span class="text-text-secondary text-3xl sm:text-4xl lg:text-5xl"
+              >Online</span
+            >
+          </h1>
+          <p class="text-xl text-text-muted max-w-3xl mx-auto mb-8">
+            Accesează rezultatele analizelor medicale prin partenerii noștri de
+            încredere. Rezultate rapide, sigure și disponibile 24/7.
+          </p>
+        </div>
+
+        <!-- Main Content - Desktop: Side by Side, Mobile: Stacked -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 min-h-[600px]"
+        >
+          <!-- Hemolab Card -->
+          <div class="order-1">
+            <div class="relative group h-full">
+              <a
+                href="https://hemolab.ro/?page_id=9127"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute inset-0 z-10 cursor-pointer"
+                aria-label="Accesează Hemolab pentru rezultate analize"></a>
+              <MagicCard
+                className="h-full p-8 lg:p-12 bg-surface/80 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-xl"
+                glowColor="rgba(13, 148, 136, 0.3)"
+                client:load
+              >
+                <div class="flex flex-col h-full">
+                  <!-- Header -->
+                  <div class="text-center mb-8">
+                    <div
+                      class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-lg"
+                    >
+                      <span class="text-3xl">🧬</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-text mb-4">Hemolab</h2>
+                    <p class="text-text-muted leading-relaxed">
+                      Laborator medical de referință cu tehnologie de ultimă
+                      generație. Rezultate precise și rapoarte detaliate pentru
+                      toate tipurile de analize.
+                    </p>
+                  </div>
+
+                  <!-- Features -->
+                  <div class="flex-1 mb-8">
+                    <div class="space-y-4">
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-primary/20 text-primary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">
+                            Analize Complete
+                          </h4>
+                          <p class="text-sm text-text-muted">
+                            Biochimie, hematologie, imunologie, microbiologie
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-primary/20 text-primary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">
+                            Rezultate Rapide
+                          </h4>
+                          <p class="text-sm text-text-muted">
+                            Rezultate disponibile în 24-48 ore
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-primary/20 text-primary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">Acces Online</h4>
+                          <p class="text-sm text-text-muted">
+                            Platformă sigură pentru vizualizarea rezultatelor
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CTA Button -->
+                  <div class="text-center">
+                    <div
+                      class="bg-primary text-white px-6 py-3 rounded-lg font-semibold shadow-lg group-hover:bg-primary-hover transition-colors duration-300"
+                    >
+                      <span class="flex items-center gap-3 justify-center">
+                        <span class="text-lg">🧬</span>
+                        <span>Accesează Hemolab</span>
+                        <span class="text-sm opacity-75">↗</span>
+                      </span>
+                    </div>
+                    <p class="text-xs text-text-muted mt-3">
+                      Vei fi redirecționat către platforma Hemolab
+                    </p>
+                  </div>
+                </div>
+              </MagicCard>
+            </div>
+          </div>
+
+          <!-- Synevo Card -->
+          <div class="order-2">
+            <div class="relative group h-full">
+              <a
+                href="https://webresults.synevo.ro/Account/Login?defaultusertype=0&_gl=1*1en3w5o*_gcl_au*MzQ5OTEyNDE5LjE3NTA2Nzk4MTE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute inset-0 z-10 cursor-pointer"
+                aria-label="Accesează Synevo pentru rezultate analize"></a>
+              <MagicCard
+                className="h-full p-8 lg:p-12 bg-surface/80 backdrop-blur-sm border border-border/30 hover:border-secondary/30 transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-xl"
+                glowColor="rgba(6, 182, 212, 0.3)"
+                client:load
+              >
+                <div class="flex flex-col h-full">
+                  <!-- Header -->
+                  <div class="text-center mb-8">
+                    <div
+                      class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl flex items-center justify-center shadow-lg"
+                    >
+                      <span class="text-3xl">🔬</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-text mb-4">Synevo</h2>
+                    <p class="text-text-muted leading-relaxed">
+                      Rețea internațională de laboratoare medicale cu standarde
+                      europene. Acuratețe maximă și tehnologie avansată.
+                    </p>
+                  </div>
+
+                  <!-- Features -->
+                  <div class="flex-1 mb-8">
+                    <div class="space-y-4">
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-secondary/20 text-secondary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">
+                            Tehnologie Avansată
+                          </h4>
+                          <p class="text-sm text-text-muted">
+                            Echipamente de ultimă generație și metode moderne
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-secondary/20 text-secondary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">
+                            Standarde Europene
+                          </h4>
+                          <p class="text-sm text-text-muted">
+                            Certificări internaționale și control de calitate
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-6 h-6 bg-secondary/20 text-secondary rounded-lg flex items-center justify-center text-sm mt-0.5"
+                          >✓</span
+                        >
+                        <div>
+                          <h4 class="font-semibold text-text">Gamă Extinsă</h4>
+                          <p class="text-sm text-text-muted">
+                            Peste 4000 de tipuri de analize disponibile
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CTA Button -->
+                  <div class="text-center">
+                    <div
+                      class="bg-secondary text-white px-6 py-3 rounded-lg font-semibold shadow-lg group-hover:bg-secondary-hover transition-colors duration-300"
+                    >
+                      <span class="flex items-center gap-3 justify-center">
+                        <span class="text-lg">🔬</span>
+                        <span>Accesează Synevo</span>
+                        <span class="text-sm opacity-75">↗</span>
+                      </span>
+                    </div>
+                    <p class="text-xs text-text-muted mt-3">
+                      Vei fi redirecționat către platforma Synevo
+                    </p>
+                  </div>
+                </div>
+              </MagicCard>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="mt-16 text-center">
+          <div
+            class="bg-surface/60 backdrop-blur-sm border border-border/30 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h3 class="text-2xl font-bold text-text mb-4">
+              Cum accesezi rezultatele?
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div class="text-center">
+                <div
+                  class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <span class="text-xl">1️⃣</span>
+                </div>
+                <h4 class="font-semibold text-text mb-2">Recoltare</h4>
+                <p class="text-sm text-text-muted">
+                  Efectuează analizele la unul dintre laboratoarele partenere
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <span class="text-xl">2️⃣</span>
+                </div>
+                <h4 class="font-semibold text-text mb-2">Cod de acces</h4>
+                <p class="text-sm text-text-muted">
+                  Primești codul de acces și instrucțiunile de logare
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <span class="text-xl">3️⃣</span>
+                </div>
+                <h4 class="font-semibold text-text mb-2">Rezultate</h4>
+                <p class="text-sm text-text-muted">
+                  Accesează și descarcă rezultatele online, 24/7
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mt-12 text-center">
+          <p class="text-text-muted mb-4">
+            Ai întrebări despre analizele medicale?
+          </p>
+          <AnimatedButton
+            href="/contact"
+            variant="outline"
+            size="md"
+            client:load
+          >
+            <span class="flex items-center gap-2">
+              <span>📞</span>
+              <span>Contactează-ne</span>
+            </span>
+          </AnimatedButton>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Custom animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Gradient background animation */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gradient-bg {
+    background: linear-gradient(-45deg, #0d9488, #06b6d4, #8b5cf6, #ec4899);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  /* Clickable card styles */
+  .group:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+  }
+
+  .group:active {
+    transform: translateY(-2px) scale(0.98);
+    transition: all 0.1s ease;
+  }
+
+  /* Enhanced hover effects for cards */
+  .group:hover .bg-primary {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+  }
+
+  .group:hover .bg-secondary {
+    background: linear-gradient(135deg, #06b6d4, #0284c7);
+  }
+</style>

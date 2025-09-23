@@ -18,11 +18,11 @@ import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
 import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
 import chirurgieGeneralaImg from "../../assets/images/servicii/chirurgie.png";
 import chirurgiePediatricaImg from "../../assets/images/servicii/CHIRURGIE-PEDIATRICA.png";
-import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
-import ortopedieImg from "../../assets/images/servicii/orto.png";
+import obstetricaGinecologieImg from "../../assets/images/servicii/ginecologie.png";
+import ortopedieTraumatologieImg from "../../assets/images/servicii/orto.png";
 import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
 import analizeLaboratorImg from "../../assets/images/servicii/medicina-muncii.jpg";
-import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import dermatovenerologieImg from "../../assets/images/servicii/dermatologie.png";
 import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
 import neurologieImg from "../../assets/images/servicii/medicina-muncii.jpg";
 import esteticaImg from "../../assets/images/servicii/chirurgie.png";
@@ -94,16 +94,16 @@ const chirurgiePediatricaOptimized = await getImage({
   height: 300,
 });
 
-const ginecologieOptimized = await getImage({
-  src: ginecologieImg,
+const obstetricaGinecologieOptimized = await getImage({
+  src: obstetricaGinecologieImg,
   format: "webp",
   quality: 85,
   width: 400,
   height: 300,
 });
 
-const ortopedieOptimized = await getImage({
-  src: ortopedieImg,
+const ortopedieTraumatologieOptimized = await getImage({
+  src: ortopedieTraumatologieImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -126,8 +126,8 @@ const analizeLaboratorOptimized = await getImage({
   height: 300,
 });
 
-const dermatologieOptimized = await getImage({
-  src: dermatologieImg,
+const dermatovenerologieOptimized = await getImage({
+  src: dermatovenerologieImg,
   format: "webp",
   quality: 85,
   width: 400,
@@ -270,15 +270,27 @@ const serviceImages = {
     width: 400,
     height: 300,
   },
-  ginecologie: { src: ginecologieOptimized.src, width: 400, height: 300 },
-  ortopedie: { src: ortopedieOptimized.src, width: 400, height: 300 },
+  "obstetrica-ginecologie": {
+    src: obstetricaGinecologieOptimized.src,
+    width: 400,
+    height: 300,
+  },
+  "ortopedie-traumatologie": {
+    src: ortopedieTraumatologieOptimized.src,
+    width: 400,
+    height: 300,
+  },
   nefrologie: { src: nefrologieOptimized.src, width: 400, height: 300 },
   "analize-laborator": {
     src: analizeLaboratorOptimized.src,
     width: 400,
     height: 300,
   },
-  dermatologie: { src: dermatologieOptimized.src, width: 400, height: 300 },
+  dermatovenerologie: {
+    src: dermatovenerologieOptimized.src,
+    width: 400,
+    height: 300,
+  },
   "medicina-muncii": {
     src: medicinaMunciiOptimized.src,
     width: 400,

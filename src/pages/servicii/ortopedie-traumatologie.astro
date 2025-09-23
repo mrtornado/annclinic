@@ -4,17 +4,18 @@ import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
 
-// Get the orthopedics service content
-const service = await getEntry("services", "ortopedie");
+// Get the orthopedics and traumatology service content
+const service = await getEntry("services", "ortopedie-traumatologie");
 
 if (!service) {
   return Astro.redirect("/404");
 }
 
-// SEO optimization for orthopedics - targeting "ortoped București" keywords
-const seoTitle = "Ortoped București - Consultații Ortopedie | ANN Clinic";
+// SEO optimization for orthopedics and traumatology - targeting "ortoped traumatolog București" keywords
+const seoTitle =
+  "Ortoped Traumatolog București - Consultații Ortopedie și Traumatologie | ANN Clinic";
 const seoDescription =
-  "Ortoped București cu experiență vastă. Consultații ortopedie, tratament fracturi, dureri articulare, probleme coloană vertebrală. Programează-te la ANN Clinic Bragadiru.";
+  "Ortoped traumatolog București cu experiență vastă. Consultații ortopedie și traumatologie, tratament fracturi, dureri articulare, probleme coloană vertebrală. Programează-te la ANN Clinic Bragadiru.";
 ---
 
 <ServiceLayout service={service} title={seoTitle} description={seoDescription}>

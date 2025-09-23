@@ -1,29 +1,29 @@
 ---
-name: "Dermatologie"
-description: "Servicii complete de dermatologie cu tratamente moderne pentru afecțiunile pielii și consultații specializate"
-longDescription: "Departamentul de dermatologie al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii. Echipa noastră de dermatologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime."
+name: "Dermatovenerologie"
+description: "Servicii complete de dermatovenerologie cu tratamente moderne pentru afecțiunile pielii"
+longDescription: "Departamentul de dermatovenerologie al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice. Echipa noastră de medici dermatovenerologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime."
 icon: "skin"
-seoTitle: "Dermatolog București - Consultații Dermatologie | ANN Clinic"
-seoDescription: "Dermatolog București cu experiență vastă. Consultații dermatologie, tratament acnee, dermatoscopie, investigații dermatologice complete. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Dermatovenerolog București - Consultații Dermatovenerologie | ANN Clinic"
+seoDescription: "Dermatovenerolog București cu experiență vastă. Consultații dermatovenerologie, tratament acnee, dermatoscopie, investigații dermatologice și venerice complete. Programează-te la ANN Clinic Bragadiru."
 keywords:
-  - "dermatolog București Bragadiru"
-  - "consultație dermatologie București Bragadiru"
+  - "dermatovenerolog București Bragadiru"
+  - "consultație dermatovenerologie București Bragadiru"
   - "tratament acnee București Bragadiru"
   - "dermatoscopie București Bragadiru"
-  - "dermatolog Bragadiru București"
-  - "investigații dermatologice București Bragadiru"
+  - "dermatovenerolog Bragadiru București"
+  - "investigații dermatologice și venerice București Bragadiru"
   - "tratamente piele București"
   - "afecțiuni piele București"
-  - "consultații dermatologie București"
-  - "dermatolog experimentat București Bragadiru"
+  - "consultații dermatovenerologie București"
+  - "dermatovenerolog experimentat București Bragadiru"
   - "tratament psoriazis București"
   - "tratament eczema București"
   - "cancer de piele București"
   - "alunițe suspecte București Bragadiru"
 popularSearchTerms:
-  - "dermatolog București"
+  - "dermatovenerolog București"
   - "tratament acnee"
-  - "consultație dermatologie"
+  - "consultație dermatovenerologie"
   - "dermatoscopie"
   - "afecțiuni piele"
   - "tratament psoriazis"
@@ -36,8 +36,8 @@ relatedServices:
 featured: true
 order: 7
 treatments:
-  - name: "Consultație dermatologie"
-    description: "Evaluare completă a afecțiunilor pielii cu dermatolog experimentat"
+  - name: "Consultație dermatovenerologie"
+    description: "Evaluare completă a afecțiunilor pielii și venerice cu dermatovenerolog experimentat"
     duration: 45
     price: 180
   - name: "Dermatoscopie"
@@ -66,13 +66,13 @@ treatments:
     price: 250
 ---
 
-# Dermatologie București - Consultații și Tratamente Specializate
+# Dermatovenerologie București - Consultații și Tratamente Specializate
 
-Departamentul de **dermatologie** al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii în București și Bragadiru. Echipa noastră de dermatologi experimentați utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime.
+Departamentul de **dermatovenerologie** al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice în București și Bragadiru. Echipa noastră de medici dermatovenerologi experimentați utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime.
 
-## Servicii de Dermatologie
+## Servicii de Dermatovenerologie
 
-### Consultații Dermatologice Complete
+### Consultații Dermatovenerologice Complete
 
 - **Evaluare dermatologică generală** - examinare completă a pielii
 - **Consultații de specialitate** pentru afecțiuni complexe
@@ -94,11 +94,11 @@ Departamentul de **dermatologie** al ANN Clinic oferă servicii medicale complet
 - **Tratament eczema** - managementul dermatitei atopice
 - **Tratament infecții cutanate** - bacteriene, fungice, virale
 
-## De Ce Să Alegi ANN Clinic pentru Dermatologie?
+## De Ce Să Alegi ANN Clinic pentru Dermatovenerologie?
 
 ### Echipă de Specialiști
 
-- **Dermatologi cu experiență vastă** în diagnosticul și tratamentul afecțiunilor pielii
+- **Dermatovenerologi cu experiență vastă** în diagnosticul și tratamentul afecțiunilor pielii și venerice
 - **Formare continuă** în cele mai noi tehnici și tratamente
 - **Abordare personalizată** pentru fiecare pacient
 
@@ -114,9 +114,9 @@ Departamentul de **dermatologie** al ANN Clinic oferă servicii medicale complet
 - **Programe de screening** pentru prevenția cancerului de piele
 - **Tratamente estetice** pentru îmbunătățirea aspectului pielii
 
-## Programare Dermatolog București
+## Programare Dermatovenerolog București
 
-Pentru a programa o consultație de dermatologie la ANN Clinic, puteți:
+Pentru a programa o consultație de dermatovenerologie la ANN Clinic, puteți:
 
 - **Suna la telefon** pentru programare rapidă
 - **Completa formularul online** de pe site
@@ -127,4 +127,4 @@ Pentru a programa o consultație de dermatologie la ANN Clinic, puteți:
 
 ---
 
-_Departamentul de dermatologie al ANN Clinic oferă servicii medicale de calitate superioară pentru toate afecțiunile pielii. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._
+_Departamentul de dermatovenerologie al ANN Clinic oferă servicii medicale de calitate superioară pentru toate afecțiunile pielii și venerice. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._
