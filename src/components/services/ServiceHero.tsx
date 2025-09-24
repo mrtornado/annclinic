@@ -3,22 +3,22 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import FloatingParticles from "../magic-ui/FloatingParticles";
 import type { ServiceContent } from "../../types/content";
 
-// Import service images
-import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.png";
-import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
-import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
-import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
-import ortoImg from "../../assets/images/servicii/orto.png";
-import orlImg from "../../assets/images/servicii/soon/ORL.png";
-import oftamologieImg from "../../assets/images/servicii/soon/oftamologie.jpg";
-import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
-import endocrinologieImg from "../../assets/images/servicii/soon/endocrinologie.png";
-import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.png";
-import psihiatrieImg from "../../assets/images/servicii/soon/psihiatrie.jpg";
-import chirurgieImg from "../../assets/images/servicii/chirurgie.png";
-import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
-import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
-import defaultImg from "../../assets/images/servicii/fam-scaled.jpg";
+// Import optimized WebP service images
+import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.webp";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.webp";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.webp";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.webp";
+import ortoImg from "../../assets/images/servicii/orto.webp";
+import orlImg from "../../assets/images/servicii/soon/ORL.webp";
+import oftamologieImg from "../../assets/images/servicii/soon/oftamologie.webp";
+import nefrologieImg from "../../assets/images/servicii/nefrologie.webp";
+import endocrinologieImg from "../../assets/images/servicii/soon/endocrinologie.webp";
+import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.webp";
+import psihiatrieImg from "../../assets/images/servicii/soon/psihiatrie.webp";
+import chirurgieImg from "../../assets/images/servicii/chirurgie.webp";
+import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.webp";
+import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.webp";
+import defaultImg from "../../assets/images/servicii/fam-scaled.webp";
 
 interface ServiceHeroProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
@@ -143,7 +143,7 @@ export default function ServiceHero({
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="block mb-2">{getServiceName()}</span>
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
-                  în București
+                  în București și Bragadiru
                 </span>
               </h1>
             </AnimatedText>

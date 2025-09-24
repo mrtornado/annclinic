@@ -53,7 +53,7 @@ treatments:
     price: 120
 ---
 
-# Analize Laborator CAS București - Investigații Medicale Complete
+# Analize Laborator CAS București și Bragradiru - Investigații Medicale Complete
 
 Laboratorul de analize medicale al ANN Medical Clinic, în **parteneriat cu Synevo**, oferă servicii complete de diagnostic de laborator în București și Bragadiru. Asigurăm investigații medicale precise și rapide pentru toate specialitățile, cu echipament de ultimă generație și personal calificat.
 

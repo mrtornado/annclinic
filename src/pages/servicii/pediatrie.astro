@@ -4,8 +4,8 @@ import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
 import { getImage } from "astro:assets";
-import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
-import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.jpg";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.webp";
+import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.webp";
 
 // Get the pediatrie service content
 const service = await getEntry("services", "pediatrie");
@@ -63,7 +63,8 @@ console.log(
 );
 
 // SEO optimization for pediatrie - targeting "pediatru București" keywords
-const seoTitle = "Pediatru București - Consultații Pediatrie | ANN Medical Clinic";
+const seoTitle =
+  "Pediatru București - Consultații Pediatrie | ANN Medical Clinic";
 const seoDescription =
   "Consultații pediatrie în București cu pediatri experimentați. Vaccinări copii, monitorizare dezvoltare, investigații pediatrice complete. Programează-te la ANN Medical Clinic Bragadiru.";
 ---
