@@ -1,10 +1,10 @@
 ---
 name: "Alergologie"
 description: "Servicii pentru identificarea și tratamentul alergiilor, cu teste moderne și soluții terapeutice eficiente"
-longDescription: "Departamentul de alergologie al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor în București. Echipa noastră de alergologi experimentați va utiliza teste moderne și tratamente personalizate pentru managementul afecțiunilor alergice."
+longDescription: "Departamentul de alergologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor în București. Echipa noastră de alergologi experimentați va utiliza teste moderne și tratamente personalizate pentru managementul afecțiunilor alergice."
 icon: "allergy"
-seoTitle: "Alergolog București - Consultații Alergologie | ANN Clinic"
-seoDescription: "Alergolog București cu experiență vastă. Consultații alergologie, teste alergice, tratament astm, rinită alergică. În curând la ANN Clinic Bragadiru."
+seoTitle: "Alergolog București - Consultații Alergologie | ANN Medical Clinic"
+seoDescription: "Alergolog București cu experiență vastă. Consultații alergologie, teste alergice, tratament astm, rinită alergică. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "alergolog București Bragadiru"
   - "consultație alergologie București"
@@ -48,9 +48,9 @@ treatments:
     price: 150
 ---
 
-# Alergologie București - În Curând la ANN Clinic
+# Alergologie București - În Curând la ANN Medical Clinic
 
-Departamentul de **alergologie** al ANN Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor în București și Bragadiru.
+Departamentul de **alergologie** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor în București și Bragadiru.
 
 ## Servicii Alergologice - În Dezvoltare
 
@@ -77,4 +77,4 @@ Departamentul de **alergologie** al ANN Clinic va oferi în curând servicii med
 - **Corticoterapia** - pentru forme severe
 - **Educație pacient** - evitarea alergenilor
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de alergologie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de alergologie la ANN Medical Clinic București - Bragadiru!

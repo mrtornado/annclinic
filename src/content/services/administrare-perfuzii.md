@@ -1,10 +1,10 @@
 ---
 name: "Administrare Perfuzii"
 description: "Servicii specializate de administrare perfuzii cu medicația pacientului, într-un mediu clinic sigur și confortabil"
-longDescription: "Departamentul de administrare perfuzii al ANN Clinic oferă servicii medicale specializate pentru administrarea tratamentelor intravenoase prescrise de medicul curant. Asistentele noastre cu experiență asigură administrarea corectă și monitorizarea pacienților într-un mediu clinic steril și confortabil."
+longDescription: "Departamentul de administrare perfuzii al ANN Medical Clinic oferă servicii medicale specializate pentru administrarea tratamentelor intravenoase prescrise de medicul curant. Asistentele noastre cu experiență asigură administrarea corectă și monitorizarea pacienților într-un mediu clinic steril și confortabil."
 icon: "syringe"
-seoTitle: "Administrare Perfuzii București - Tratamente Intravenoase | ANN Clinic"
-seoDescription: "Administrare perfuzii în București cu asistente specializate. Tratamente intravenoase cu medicația pacientului într-un mediu clinic sigur. ANN Clinic Bragadiru."
+seoTitle: "Administrare Perfuzii București - Tratamente Intravenoase | ANN Medical Clinic"
+seoDescription: "Administrare perfuzii în București cu asistente specializate. Tratamente intravenoase cu medicația pacientului într-un mediu clinic sigur. ANN Medical Clinic Bragadiru."
 keywords:
   - "administrare perfuzii București Bragadiru"
   - "perfuzii tratament București"
@@ -55,7 +55,7 @@ treatments:
 
 # Administrare Perfuzii București - Tratamente Intravenoase Specializate
 
-Departamentul de **administrare perfuzii** al ANN Clinic oferă servicii medicale specializate pentru administrarea tratamentelor intravenoase prescrise de medicul curant în București și Bragadiru. Echipa noastră de asistente medicale cu experiență asigură administrarea corectă și monitorizarea pacienților într-un mediu clinic steril și confortabil.
+Departamentul de **administrare perfuzii** al ANN Medical Clinic oferă servicii medicale specializate pentru administrarea tratamentelor intravenoase prescrise de medicul curant în București și Bragadiru. Echipa noastră de asistente medicale cu experiență asigură administrarea corectă și monitorizarea pacienților într-un mediu clinic steril și confortabil.
 
 ## Servicii de Administrare Perfuzii
 
@@ -75,7 +75,7 @@ Departamentul de **administrare perfuzii** al ANN Clinic oferă servicii medical
 - **Monitorizarea constantă** - pe toată durata administrării
 - **Observație post-perfuzie** - pentru prevenirea reacțiilor adverse
 
-## Avantajele Serviciului de Perfuzii la ANN Clinic
+## Avantajele Serviciului de Perfuzii la ANN Medical Clinic
 
 ### Mediu Clinic Specializat
 
@@ -121,4 +121,4 @@ Departamentul de **administrare perfuzii** al ANN Clinic oferă servicii medical
 - **Timp de observație** - după finalizarea perfuziei
 - **Frecvența tratamentelor** - conform indicației medicului curant
 
-Programează-te pentru administrarea tratamentului intravenos la ANN Clinic și beneficiază de servicii medicale de calitate într-un mediu sigur și confortabil în București.
+Programează-te pentru administrarea tratamentului intravenos la ANN Medical Clinic și beneficiază de servicii medicale de calitate într-un mediu sigur și confortabil în București.

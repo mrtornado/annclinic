@@ -80,7 +80,8 @@ export default function ArticlesHero({
             className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
             delay={0.3}
           >
-            Informații credibile și actualizate de la specialiștii ANN Clinic
+            Informații credibile și actualizate de la specialiștii ANN Medical
+            Clinic
           </AnimatedText>
 
           {/* Statistics */}

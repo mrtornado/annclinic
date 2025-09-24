@@ -1,10 +1,10 @@
 ---
 name: "Chirurgie Generală"
 description: "Consultații complete, diagnostic și intervenții mici chirurgie realizate de o echipă cu experiență"
-longDescription: "Departamentul de chirurgie generală al ANN Clinic oferă consultații specializate și intervenții chirurgicale minore în București. Echipa noastră de chirurgi experimentați asigură îngrijire medicală de calitate cu tehnologii moderne și abordare personalizată pentru fiecare pacient."
+longDescription: "Departamentul de chirurgie generală al ANN Medical Clinic oferă consultații specializate și intervenții chirurgicale minore în București. Echipa noastră de chirurgi experimentați asigură îngrijire medicală de calitate cu tehnologii moderne și abordare personalizată pentru fiecare pacient."
 icon: "surgical"
-seoTitle: "Chirurgie Generală București - Chirurg Experimentat | ANN Clinic"
-seoDescription: "Chirurgie generală București cu specialiști cu experiență. Consultații chirurgicale, intervenții minore, diagnostic precis. Programează la ANN Clinic Bragadiru."
+seoTitle: "Chirurgie Generală București - Chirurg Experimentat | ANN Medical Clinic"
+seoDescription: "Chirurgie generală București cu specialiști cu experiență. Consultații chirurgicale, intervenții minore, diagnostic precis. Programează la ANN Medical Clinic Bragadiru."
 keywords:
   - "chirurgie generală București Bragadiru"
   - "chirurg București Bragadiru"
@@ -54,7 +54,7 @@ treatments:
 
 # Chirurgie Generală București - Consultații și Intervenții Specializate
 
-Departamentul de **chirurgie generală** al ANN Clinic oferă servicii chirurgicale complete în București și Bragadiru. Echipa noastră de chirurgi cu experiență vastă asigură consultații specializate, evaluări preoperatorii și intervenții chirurgicale minore într-un mediu sigur și modern.
+Departamentul de **chirurgie generală** al ANN Medical Clinic oferă servicii chirurgicale complete în București și Bragadiru. Echipa noastră de chirurgi cu experiență vastă asigură consultații specializate, evaluări preoperatorii și intervenții chirurgicale minore într-un mediu sigur și modern.
 
 ## Servicii de Chirurgie Generală
 
@@ -85,7 +85,7 @@ Departamentul de **chirurgie generală** al ANN Clinic oferă servicii chirurgic
 - **Tratament hemoroizi** - proceduri minore și consiliere
 - **Evaluare fisuri anale** - diagnostic și plan de tratament
 
-## Avantajele Chirurgiei la ANN Clinic
+## Avantajele Chirurgiei la ANN Medical Clinic
 
 - **Chirurgi cu experiență vastă** în chirurgia generală și de urgență
 - **Sala de proceduri modernă** - echipament steril și tehnologie avansată
@@ -93,4 +93,4 @@ Departamentul de **chirurgie generală** al ANN Clinic oferă servicii chirurgic
 - **Recuperare rapidă** - majoritatea pacienților se întorc acasă în aceeași zi
 - **Suport postoperator** - consiliere și monitorizare atentă
 
-Programează o consultație de chirurgie generală la ANN Clinic pentru evaluare specializată și îngrijire chirurgicală de calitate în București.
+Programează o consultație de chirurgie generală la ANN Medical Clinic pentru evaluare specializată și îngrijire chirurgicală de calitate în București.

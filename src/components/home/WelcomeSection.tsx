@@ -21,7 +21,7 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-border/20">
                   <img
                     src={welcomeImage}
-                    alt="Cabinet medical modern ANN Clinic"
+                    alt="Cabinet medical modern ANN Medical Clinic"
                     className="w-full h-auto object-cover aspect-[4/3] hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />

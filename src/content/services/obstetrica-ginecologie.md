@@ -1,10 +1,10 @@
 ---
 name: "Obstetrică-Ginecologie"
 description: "Servicii complete de obstetrică-ginecologie cu consultații specializate și investigații moderne"
-longDescription: "Departamentul de obstetrică-ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret."
+longDescription: "Departamentul de obstetrică-ginecologie al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret."
 icon: "flower"
-seoTitle: "Obstetrician-Ginecolog București - Consultații Obstetrică-Ginecologie | ANN Clinic"
-seoDescription: "Consultații obstetrică-ginecologie în București cu medici obstetricieni-ginecologi experimentați. Screening, consultații, investigații ginecologice. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Obstetrician-Ginecolog București - Consultații Obstetrică-Ginecologie | ANN Medical Clinic"
+seoDescription: "Consultații obstetrică-ginecologie în București cu medici obstetricieni-ginecologi experimentați. Screening, consultații, investigații ginecologice. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "obstetrician ginecolog București Bragadiru"
   - "consultație obstetrică ginecologie București"
@@ -59,9 +59,9 @@ treatments:
     price: 100
 ---
 
-# Servicii de Obstetrică-Ginecologie la ANN Clinic
+# Servicii de Obstetrică-Ginecologie la ANN Medical Clinic
 
-Departamentul de obstetrică-ginecologie al ANN Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret.
+Departamentul de obstetrică-ginecologie al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea femeii. Echipa noastră de medici obstetricieni-ginecologi experimentați oferă consultații specializate, investigații moderne și tratamente personalizate într-un mediu confortabil și discret.
 
 ## Servicii Oferite
 

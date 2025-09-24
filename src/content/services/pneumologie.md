@@ -1,10 +1,10 @@
 ---
 name: "Pneumologie"
 description: "Diagnostic și tratament pentru boli respiratorii, cu tehnologii avansate și abordare personalizată"
-longDescription: "Departamentul de pneumologie al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor respiratorii în București. Echipa noastră de pneumologi experimentați va utiliza tehnologie medicală de ultimă generație pentru investigații pulmonare precise și tratamente eficiente."
+longDescription: "Departamentul de pneumologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor respiratorii în București. Echipa noastră de pneumologi experimentați va utiliza tehnologie medicală de ultimă generație pentru investigații pulmonare precise și tratamente eficiente."
 icon: "lungs"
-seoTitle: "Pneumolog București - Consultații Pneumologie | ANN Clinic"
-seoDescription: "Pneumolog București cu experiență vastă. Consultații pneumologie, spirometrie, boli respiratorii, astm, BPOC. În curând la ANN Clinic Bragadiru."
+seoTitle: "Pneumolog București - Consultații Pneumologie | ANN Medical Clinic"
+seoDescription: "Pneumolog București cu experiență vastă. Consultații pneumologie, spirometrie, boli respiratorii, astm, BPOC. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "pneumolog București Bragadiru"
   - "consultație pneumologie București"
@@ -48,9 +48,9 @@ treatments:
     price: 250
 ---
 
-# Pneumologie București - În Curând la ANN Clinic
+# Pneumologie București - În Curând la ANN Medical Clinic
 
-Departamentul de **pneumologie** al ANN Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor respiratorii în București și Bragadiru.
+Departamentul de **pneumologie** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor respiratorii în București și Bragadiru.
 
 ## Servicii Pneumologice - În Dezvoltare
 
@@ -76,4 +76,4 @@ Departamentul de **pneumologie** al ANN Clinic va oferi în curând servicii med
 - **Oximetrie de puls** pentru monitorizare continuă
 - **Nebulizatoare moderne** pentru tratamente inhalatorii
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de pneumologie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de pneumologie la ANN Medical Clinic București - Bragadiru!

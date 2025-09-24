@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ANN Clinic Fixed Color Palette - Based on the current design */
+/* ANN Medical Clinic Fixed Color Palette - Based on the current design */
 @theme {
   /* Primary Colors - Medical Teal (din designul actual) */
   --color-primary: #4db6ac;

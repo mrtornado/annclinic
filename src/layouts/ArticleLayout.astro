@@ -31,7 +31,8 @@ const getArticleImagePath = (slug: string) => {
 const articleImagePath = getArticleImagePath(article.slug);
 
 // SEO optimization
-const seoTitle = article.data.seoTitle || `${article.data.title} | ANN Clinic`;
+const seoTitle =
+  article.data.seoTitle || `${article.data.title} | ANN Medical Clinic`;
 const seoDescription = article.data.seoDescription || article.data.description;
 const canonicalUrl =
   article.data.canonicalUrl || `${Astro.site}articole/${article.slug}`;
@@ -54,7 +55,7 @@ const structuredData = {
   },
   publisher: {
     "@type": "Organization",
-    name: "ANN Clinic",
+    name: "ANN Medical Clinic",
     logo: {
       "@type": "ImageObject",
       url: `${Astro.site}images/ann-clinic-logo.png`,
@@ -574,7 +575,7 @@ const medicalStructuredData = {
               Ai nevoie de o consultație?
             </h3>
             <p class="text-lg lg:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Programează-te la ANN Clinic pentru o evaluare completă cu
+              Programează-te la ANN Medical Clinic pentru o evaluare completă cu
               specialiștii noștri. Oferim consultații de {
                 article.data.specialty.toLowerCase()
               } cu echipamente moderne.

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Colors - Medical Teal from ANN Clinic design
+        // Primary Colors - Medical Teal from ANN Medical Clinic design
         primary: "var(--color-primary)",
         "primary-hover": "var(--color-primary-hover)",
         "primary-light": "var(--color-primary-light)",

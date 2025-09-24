@@ -1,10 +1,10 @@
 ---
 name: "Endocrinologie"
 description: "Tratamente pentru afecțiuni hormonale, asigurând monitorizarea și echilibrarea funcțiilor endocrine"
-longDescription: "Departamentul de endocrinologie al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine în București. Echipa noastră de endocrinologi experimentați va utiliza investigații moderne pentru evaluarea funcțiilor hormonale și tratamente personalizate."
+longDescription: "Departamentul de endocrinologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine în București. Echipa noastră de endocrinologi experimentați va utiliza investigații moderne pentru evaluarea funcțiilor hormonale și tratamente personalizate."
 icon: "hormone"
-seoTitle: "Endocrinolog București - Consultații Endocrinologie | ANN Clinic"
-seoDescription: "Endocrinolog București cu experiență vastă. Consultații endocrinologie, diabet, tiroidă, hormoni, metabolism. În curând la ANN Clinic Bragadiru."
+seoTitle: "Endocrinolog București - Consultații Endocrinologie | ANN Medical Clinic"
+seoDescription: "Endocrinolog București cu experiență vastă. Consultații endocrinologie, diabet, tiroidă, hormoni, metabolism. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "endocrinolog București Bragadiru"
   - "consultație endocrinologie București"
@@ -48,9 +48,9 @@ treatments:
     price: 220
 ---
 
-# Endocrinologie București - În Curând la ANN Clinic
+# Endocrinologie București - În Curând la ANN Medical Clinic
 
-Departamentul de **endocrinologie** al ANN Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine în București și Bragadiru.
+Departamentul de **endocrinologie** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine în București și Bragadiru.
 
 ## Servicii Endocrinologice - În Dezvoltare
 
@@ -77,4 +77,4 @@ Departamentul de **endocrinologie** al ANN Clinic va oferi în curând servicii 
 - **Teste de stimulare/inhibare** - funcții hormonale
 - **Densitometria osoasă** - pentru osteoporoză
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de endocrinologie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de endocrinologie la ANN Medical Clinic București - Bragadiru!

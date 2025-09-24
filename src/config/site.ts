@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "ANN Clinic",
-  title: "ANN Clinic - Clinică Medicală București",
+  name: "ANN Medical Clinic",
+  title: "ANN Medical Clinic - Clinică Medicală București",
   description:
     "Clinică medicală modernă în Bragadiru, oferind servicii medicale complete în peste 14 specialități. Programează-te online pentru consultații de specialitate.",
   tagline: "Sănătate & Încredere",

@@ -1,10 +1,10 @@
 ---
 name: "Urologie"
 description: "Servicii complete de urologie pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital"
-longDescription: "Departamentul de urologie al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin. Echipa noastră de urologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente."
+longDescription: "Departamentul de urologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin. Echipa noastră de urologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente."
 icon: "medical"
-seoTitle: "Urolog București - Consultații Urologie | ANN Clinic"
-seoDescription: "Urolog București cu experiență vastă. Consultații urologie, prostată, calculi renali, infecții urinare. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Urolog București - Consultații Urologie | ANN Medical Clinic"
+seoDescription: "Urolog București cu experiență vastă. Consultații urologie, prostată, calculi renali, infecții urinare. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "urolog București Bragadiru"
   - "consultație urologie București Bragadiru"
@@ -63,7 +63,7 @@ treatments:
 
 # Urologie București - Consultații și Tratamente Urologice
 
-Departamentul de **urologie** al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin în București și Bragadiru. Echipa noastră de urologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente.
+Departamentul de **urologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin în București și Bragadiru. Echipa noastră de urologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente.
 
 ## Servicii de Urologie
 
@@ -88,7 +88,7 @@ Departamentul de **urologie** al ANN Clinic oferă servicii medicale specializat
 - **Tratament infecții urinare** - antibioterapie țintită
 - **Tratament incontinență urinară** - soluții personalizate
 
-## De Ce Să Alegi ANN Clinic pentru Urologie?
+## De Ce Să Alegi ANN Medical Clinic pentru Urologie?
 
 ### Echipă Specializată
 
@@ -110,15 +110,15 @@ Departamentul de **urologie** al ANN Clinic oferă servicii medicale specializat
 
 ## Programare Urolog București
 
-Pentru a programa o consultație de urologie la ANN Clinic:
+Pentru a programa o consultație de urologie la ANN Medical Clinic:
 
 - **Evaluare urologică completă** - pentru diagnostic precis
 - **Investigații specializate** - ecografie, uroflowmetrie
 - **Tratamente personalizate** - adaptate nevoilor individuale
 
-**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Locația**: ANN Medical Clinic, Bragadiru (lângă București)
 **Program**: Luni - Vineri, 8:00 - 20:00
 
 ---
 
-_Departamentul de urologie al ANN Clinic oferă servicii medicale de calitate superioară pentru afecțiunile aparatului urogenital. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._
+_Departamentul de urologie al ANN Medical Clinic oferă servicii medicale de calitate superioară pentru afecțiunile aparatului urogenital. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._

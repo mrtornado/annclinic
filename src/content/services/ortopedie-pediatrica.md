@@ -1,10 +1,10 @@
 ---
 name: "Ortopedie Pediatrică"
 description: "Diagnosticarea și tratamentul afecțiunilor osoase, musculare și articulare la copii, cu soluții adaptate vârstei"
-longDescription: "Departamentul de ortopedie pediatrică al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor la copii în București. Echipa noastră de ortopezi pediatri experimentați va asigura îngrijire specializată adaptată nevoilor copiilor."
+longDescription: "Departamentul de ortopedie pediatrică al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor la copii în București. Echipa noastră de ortopezi pediatri experimentați va asigura îngrijire specializată adaptată nevoilor copiilor."
 icon: "child-bones"
-seoTitle: "Ortopedie Pediatrică București - Ortoped Copii | ANN Clinic"
-seoDescription: "Ortopedie pediatrică București cu specialiști în tratarea copiilor. Scolioză, picioarele plate, deformări congenitale. În curând la ANN Clinic Bragadiru."
+seoTitle: "Ortopedie Pediatrică București - Ortoped Copii | ANN Medical Clinic"
+seoDescription: "Ortopedie pediatrică București cu specialiști în tratarea copiilor. Scolioză, picioarele plate, deformări congenitale. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "ortopedie pediatrică București Bragadiru"
   - "ortoped copii București"
@@ -47,9 +47,9 @@ treatments:
     price: 180
 ---
 
-# Ortopedie Pediatrică București - În Curând la ANN Clinic
+# Ortopedie Pediatrică București - În Curând la ANN Medical Clinic
 
-Departamentul de **ortopedie pediatrică** al ANN Clinic va oferi în curând servicii medicale specializate pentru aparatul locomotor la copii în București și Bragadiru.
+Departamentul de **ortopedie pediatrică** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru aparatul locomotor la copii în București și Bragadiru.
 
 ## Servicii Ortopedie Pediatrică - În Dezvoltare
 
@@ -75,4 +75,4 @@ Departamentul de **ortopedie pediatrică** al ANN Clinic va oferi în curând se
 - **Monitoring evolutiv** - urmărirea creșterii
 - **Consiliere părinți** - educație pentru îngrijire
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de ortopedie pediatrică la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de ortopedie pediatrică la ANN Medical Clinic București - Bragadiru!

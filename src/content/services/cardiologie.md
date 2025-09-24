@@ -1,10 +1,10 @@
 ---
 name: "Cardiologie"
 description: "Servicii complete de cardiologie cu investigații moderne și tratamente personalizate pentru afecțiunile cardiovasculare"
-longDescription: "Departamentul de cardiologie al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de cardiologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și tratamente personalizate."
+longDescription: "Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de cardiologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și tratamente personalizate."
 icon: "heart"
-seoTitle: "Cardiolog București - Consultații Cardiologie | ANN Clinic"
-seoDescription: "Cardiolog București cu experiență vastă. Consultații cardiologie, EKG, ecocardiografie, monitorizare Holter, investigații cardiologice complete. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Cardiolog București - Consultații Cardiologie | ANN Medical Clinic"
+seoDescription: "Cardiolog București cu experiență vastă. Consultații cardiologie, EKG, ecocardiografie, monitorizare Holter, investigații cardiologice complete. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "cardiolog București Bragadiru"
   - "consultație cardiologie București Bragadiru"
@@ -59,11 +59,38 @@ treatments:
     description: "Evaluare rapidă pentru simptome cardiace acute"
     duration: 30
     price: 300
+packages:
+  - name: "Pachet Cardiologic Complet"
+    description: "Evaluare cardiologică completă cu investigații moderne"
+    originalPrice: 530
+    packagePrice: 450
+    savings: 80
+    services: ["Consultație cardiologie", "EKG", "Ecocardiografie"]
+    highlight: true
+    popular: true
+  - name: "Screening Cardiac Basic"
+    description: "Evaluare de bază pentru sănătatea inimii"
+    originalPrice: 280
+    packagePrice: 250
+    savings: 30
+    services: ["Consultație cardiologie", "EKG"]
+  - name: "Monitorizare Cardiacă Avansată"
+    description: "Pentru pacienți cu risc cardiovascular crescut"
+    originalPrice: 850
+    packagePrice: 750
+    savings: 100
+    services:
+      [
+        "Consultație cardiologie",
+        "EKG",
+        "Ecocardiografie",
+        "Monitorizare Holter",
+      ]
 ---
 
 # Cardiolog București - Servicii Complete de Cardiologie
 
-Căutați un **cardiolog în București** cu experiență și echipament modern? Departamentul de cardiologie al ANN Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de **cardiologi experimentați din București** utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și rezultate optime.
+Căutați un **cardiolog în București** cu experiență și echipament modern? Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de **cardiologi experimentați din București** utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și rezultate optime.
 
 ## De Ce să Alegeți Cardiologii Noștri din București?
 

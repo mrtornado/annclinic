@@ -1,10 +1,10 @@
 ---
 name: "Tratamente Clinica"
 description: "Tratamente și investigații medicale rapide disponibile în clinică: teste rapide, EKG, spirometrie și injecții terapeutice"
-longDescription: "Departamentul de tratamente clinica al ANN Clinic oferă servicii medicale rapide și eficiente în București și Bragadiru. Asigurăm investigații de urgență, teste rapide pentru diagnosticul prompt și tratamente ambulatorii pentru diverse afecțiuni medicale."
+longDescription: "Departamentul de tratamente clinica al ANN Medical Clinic oferă servicii medicale rapide și eficiente în București și Bragadiru. Asigurăm investigații de urgență, teste rapide pentru diagnosticul prompt și tratamente ambulatorii pentru diverse afecțiuni medicale."
 icon: "clinic-treatments"
-seoTitle: "Tratamente Clinica București - Teste Rapide, EKG, Spirometrie | ANN Clinic"
-seoDescription: "Tratamente clinica București cu teste rapide COVID, gripă, streptococ. EKG, spirometrie, injecții. Rezultate imediate. ANN Clinic Bragadiru."
+seoTitle: "Tratamente Clinica București - Teste Rapide, EKG, Spirometrie | ANN Medical Clinic"
+seoDescription: "Tratamente clinica București cu teste rapide COVID, gripă, streptococ. EKG, spirometrie, injecții. Rezultate imediate. ANN Medical Clinic Bragadiru."
 keywords:
   - "tratamente clinica București Bragadiru"
   - "teste rapide București Bragadiru"
@@ -97,7 +97,7 @@ treatments:
 
 # Tratamente Clinica București - Servicii Medicale Rapide
 
-Departamentul de **tratamente clinica** al ANN Clinic oferă servicii medicale rapide și eficiente în București și Bragadiru. Asigurăm investigații de urgență, teste rapide pentru diagnostic prompt și tratamente ambulatorii pentru diverse afecțiuni medicale cu rezultate imediate.
+Departamentul de **tratamente clinica** al ANN Medical Clinic oferă servicii medicale rapide și eficiente în București și Bragadiru. Asigurăm investigații de urgență, teste rapide pentru diagnostic prompt și tratamente ambulatorii pentru diverse afecțiuni medicale cu rezultate imediate.
 
 ## Servicii de Tratamente Clinica
 
@@ -257,4 +257,4 @@ Departamentul de **tratamente clinica** al ANN Clinic oferă servicii medicale r
 - **Protocoale actualizate** - conform ghidurilor medicale internaționale
 - **Urmărire post-procedură** - pentru siguranța pacienților
 
-Alege tratamentele clinica de la ANN Clinic pentru servicii medicale rapide și de încredere în București și Bragadiru.
+Alege tratamentele clinica de la ANN Medical Clinic pentru servicii medicale rapide și de încredere în București și Bragadiru.

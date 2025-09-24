@@ -81,7 +81,7 @@ export default function LocationMap() {
                     referrerPolicy="no-referrer-when-downgrade"
                     onLoad={() => setMapLoaded(true)}
                     className="rounded-xl"
-                    title="Locația ANN Clinic"
+                    title="Locația ANN Medical Clinic"
                   />
                 </div>
 

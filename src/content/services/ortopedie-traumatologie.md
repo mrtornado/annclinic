@@ -1,10 +1,10 @@
 ---
 name: "Ortopedie și Traumatologie"
 description: "Servicii complete de ortopedie și traumatologie pentru diagnosticarea și tratamentul afecțiunilor"
-longDescription: "Departamentul de ortopedie și traumatologie al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor. Echipa noastră de medici ortopezi și traumatologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de ortopedie și traumatologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor. Echipa noastră de medici ortopezi și traumatologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate."
 icon: "bone"
-seoTitle: "Ortoped Traumatolog București - Consultații Ortopedie și Traumatologie | ANN Clinic"
-seoDescription: "Ortoped traumatolog București cu experiență vastă. Consultații ortopedie și traumatologie, tratament fracturi, artroză, dureri articulare, radiografii. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Ortoped Traumatolog București - Consultații Ortopedie și Traumatologie | ANN Medical Clinic"
+seoDescription: "Ortoped traumatolog București cu experiență vastă. Consultații ortopedie și traumatologie, tratament fracturi, artroză, dureri articulare, radiografii. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "ortoped traumatolog București Bragadiru"
   - "consultație ortopedie traumatologie București Bragadiru"
@@ -62,7 +62,7 @@ treatments:
 
 # Ortopedie și Traumatologie București - Consultații și Tratamente Specializate
 
-Departamentul de **ortopedie și traumatologie** al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor în București și Bragadiru. Echipa noastră de ortopezi și traumatologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
+Departamentul de **ortopedie și traumatologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor în București și Bragadiru. Echipa noastră de ortopezi și traumatologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
 
 ## Servicii de Ortopedie și Traumatologie
 
@@ -87,7 +87,7 @@ Departamentul de **ortopedie și traumatologie** al ANN Clinic oferă servicii m
 - **Tratament artroză** - management complet al afecțiunilor degenerative
 - **Fizioterapie și recuperare** - programe personalizate post-traumatice
 
-## De Ce Să Alegi ANN Clinic pentru Ortopedie și Traumatologie?
+## De Ce Să Alegi ANN Medical Clinic pentru Ortopedie și Traumatologie?
 
 ### Echipă Specializată
 
@@ -109,15 +109,15 @@ Departamentul de **ortopedie și traumatologie** al ANN Clinic oferă servicii m
 
 ## Programare Ortoped București
 
-Pentru a programa o consultație de ortopedie la ANN Clinic:
+Pentru a programa o consultație de ortopedie la ANN Medical Clinic:
 
 - **Evaluare ortopedică completă** - pentru diagnostic precis
 - **Investigații specializate** - radiografii, analize
 - **Tratamente personalizate** - adaptate nevoilor individuale
 
-**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Locația**: ANN Medical Clinic, Bragadiru (lângă București)
 **Program**: Luni - Vineri, 8:00 - 20:00
 
 ---
 
-_Departamentul de ortopedie și traumatologie al ANN Clinic oferă servicii medicale de calitate superioară pentru afecțiunile aparatului locomotor și traumatismele. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._
+_Departamentul de ortopedie și traumatologie al ANN Medical Clinic oferă servicii medicale de calitate superioară pentru afecțiunile aparatului locomotor și traumatismele. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._

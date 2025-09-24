@@ -15,8 +15,8 @@ seoKeywords:
     "palpitații",
     "cardiolog București",
   ]
-seoTitle: "Simptome Probleme Cardiace | Când să Mergi la Cardiolog | ANN Clinic"
-seoDescription: "Recunoaște simptomele problemelor cardiace și află când să consulți un cardiolog. Consultații cardiologice specializate la ANN Clinic București."
+seoTitle: "Simptome Probleme Cardiace | Când să Mergi la Cardiolog | ANN Medical Clinic"
+seoDescription: "Recunoaște simptomele problemelor cardiace și află când să consulți un cardiolog. Consultații cardiologice specializate la ANN Medical Clinic București."
 featured: true
 medicallyReviewed: true
 reviewedBy: "Dr. Ion Georgescu"
@@ -117,6 +117,6 @@ Pentru a menține o inimă sănătoasă:
 
 ## Concluzie
 
-Recunoașterea timpurie a simptomelor problemelor cardiace și consultarea unui cardiolog specialist poate salva vieți. La ANN Clinic, echipa noastră de cardiologi experimentați este pregătită să vă ofere evaluări complete și tratamente personalizate pentru a vă menține sănătatea cardiovasculară.
+Recunoașterea timpurie a simptomelor problemelor cardiace și consultarea unui cardiolog specialist poate salva vieți. La ANN Medical Clinic, echipa noastră de cardiologi experimentați este pregătită să vă ofere evaluări complete și tratamente personalizate pentru a vă menține sănătatea cardiovasculară.
 
-Pentru o consultație de cardiologie, programați-vă astăzi la ANN Clinic Bragadiru.
+Pentru o consultație de cardiologie, programați-vă astăzi la ANN Medical Clinic Bragadiru.

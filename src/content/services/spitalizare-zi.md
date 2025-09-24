@@ -1,10 +1,10 @@
 ---
 name: "Spitalizare de Zi"
 description: "Servicii medicale de specialitate cu spitalizare de zi, pentru proceduri care nu necesită internare completă"
-longDescription: "Centrul de spitalizare de zi al ANN Clinic oferă servicii medicale complete într-un cadru confortabil, pentru pacienții care necesită proceduri de specialitate fără internare completă. Asigurăm monitorizare medicală profesională și echipament modern pentru toate intervențiile."
+longDescription: "Centrul de spitalizare de zi al ANN Medical Clinic oferă servicii medicale complete într-un cadru confortabil, pentru pacienții care necesită proceduri de specialitate fără internare completă. Asigurăm monitorizare medicală profesională și echipament modern pentru toate intervențiile."
 icon: "day-surgery"
-seoTitle: "Spitalizare de Zi București - Proceduri Ambulatorii | ANN Clinic"
-seoDescription: "Spitalizare de zi București cu monitorizare medicală completă. Proceduri de specialitate ambulatorii în condiții de siguranță. ANN Clinic Bragadiru."
+seoTitle: "Spitalizare de Zi București - Proceduri Ambulatorii | ANN Medical Clinic"
+seoDescription: "Spitalizare de zi București cu monitorizare medicală completă. Proceduri de specialitate ambulatorii în condiții de siguranță. ANN Medical Clinic Bragadiru."
 keywords:
   - "spitalizare de zi București Bragadiru"
   - "proceduri ambulatorii București"
@@ -55,7 +55,7 @@ treatments:
 
 # Spitalizare de Zi București - Proceduri Medicale Ambulatorii
 
-Centrul de **spitalizare de zi** al ANN Clinic oferă servicii medicale de înaltă calitate pentru pacienții care necesită proceduri de specialitate fără internare completă în București și Bragadiru. Asigurăm toate condițiile de siguranță și confort pentru intervențiile ambulatorii.
+Centrul de **spitalizare de zi** al ANN Medical Clinic oferă servicii medicale de înaltă calitate pentru pacienții care necesită proceduri de specialitate fără internare completă în București și Bragadiru. Asigurăm toate condițiile de siguranță și confort pentru intervențiile ambulatorii.
 
 ## Servicii de Spitalizare de Zi
 
@@ -126,4 +126,4 @@ Centrul de **spitalizare de zi** al ANN Clinic oferă servicii medicale de înal
 - **Pterigion** - excizii cu grefă conjunctivală
 - **Chalazion** - îndepărtarea formatiunilor palpebrales
 
-Programează procedura ta de spitalizare de zi la ANN Clinic pentru servicii medicale sigure și confortabile în București.
+Programează procedura ta de spitalizare de zi la ANN Medical Clinic pentru servicii medicale sigure și confortabile în București.

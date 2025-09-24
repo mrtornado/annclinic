@@ -3,6 +3,7 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import type { ServiceContent } from "../../types/content";
 import { siteConfig } from "../../config/site";
 import { useState, useEffect } from "react";
+import ServicePackages from "./ServicePackages";
 
 interface ServiceDetailsProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
@@ -63,129 +64,14 @@ export default function ServiceDetails({
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <AnimatedText delay={0.2}>
-            <div className="inline-flex items-center gap-2 bg-surface-elevated/80 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/20">
-              <span className="text-lg">🏥</span>
-              <span>Servicii și Tratamente</span>
-            </div>
-          </AnimatedText>
-
-          <AnimatedText delay={0.4}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text mb-6">
-              <span className="block">Ce oferim în</span>
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
-                {service?.data?.name || service?.name || "Servicii Medicale"}
-              </span>
-            </h2>
-          </AnimatedText>
-
-          <AnimatedText delay={0.6}>
-            <p className="text-lg sm:text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
-              Servicii medicale complete cu echipamente moderne și specialiști
-              experimentați
-            </p>
-          </AnimatedText>
-        </div>
-
-        {/* Service Overview */}
-        <AnimatedText delay={0.8}>
-          <div className="bg-surface-elevated/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-xl border border-border/20 mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text mb-6">
-                  Despre serviciul nostru de{" "}
-                  {service?.data?.name || service?.name || "Servicii Medicale"}
-                </h3>
-                <p className="text-secondary text-lg leading-relaxed mb-8">
-                  {service?.data?.longDescription ||
-                    service?.longDescription ||
-                    service?.data?.description ||
-                    service?.description ||
-                    "Servicii medicale de calitate"}
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {(service?.data?.keywords || service?.keywords || [])
-                    .slice(0, 4)
-                    .map((keyword: string, index: number) => (
-                      <span
-                        key={index}
-                        className="bg-gradient-to-r from-primary/15 to-secondary/15 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20"
-                      >
-                        {keyword}
-                      </span>
-                    ))}
-                </div>
-              </div>
-              <div className="relative">
-                <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl overflow-hidden shadow-xl">
-                  {/* Folosim imaginile optimizate din serviceImageMap cu verificare de siguranță */}
-                  {console.log(
-                    "ServiceDetails - serviceImages:",
-                    serviceImages
-                  )}
-                  {console.log("ServiceDetails - serviceSlug:", serviceSlug)}
-                  {serviceImages &&
-                    serviceSlug &&
-                    console.log(
-                      "ServiceDetails - serviceImages[serviceSlug]:",
-                      serviceImages[serviceSlug]
-                    )}
-                  {serviceImages &&
-                  serviceSlug &&
-                  serviceImages[serviceSlug] ? (
-                    <img
-                      src={serviceImages[serviceSlug].src}
-                      alt={`${
-                        service?.data?.name ||
-                        service?.name ||
-                        "Serviciu medical"
-                      }`}
-                      width={800}
-                      height={600}
-                      loading="eager"
-                      className="w-full h-full object-cover object-center"
-                    />
-                  ) : serviceImages &&
-                    serviceImages.default &&
-                    serviceImages.default.src ? (
-                    (console.log(
-                      "ServiceDetails - folosim imaginea default:",
-                      serviceImages.default
-                    ),
-                    (
-                      <img
-                        src={serviceImages.default.src}
-                        alt={`${
-                          service?.data?.name ||
-                          service?.name ||
-                          "Serviciu medical"
-                        }`}
-                        width={800}
-                        height={600}
-                        loading="eager"
-                        className="w-full h-full object-cover object-center"
-                      />
-                    ))
-                  ) : (
-                    (console.log(
-                      "ServiceDetails - nu avem imagine disponibilă!"
-                    ),
-                    (
-                      <div className="w-full h-full flex items-center justify-center bg-surface-elevated">
-                        <p className="text-lg text-secondary">
-                          Imagine indisponibilă
-                        </p>
-                      </div>
-                    ))
-                  )}
-                </div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur opacity-30" />
-              </div>
-            </div>
-          </div>
-        </AnimatedText>
+        {/* Service Packages Section sau Ce Oferim Section */}
+        <ServicePackages
+          serviceSlug={serviceSlug}
+          serviceName={
+            service?.data?.name || service?.name || "Servicii Medicale"
+          }
+          service={service}
+        />
 
         {/* Treatments Grid */}
         {treatments.length > 0 && (

@@ -1,10 +1,10 @@
 ---
 name: "Pediatrie"
 description: "Servicii complete de pediatrie cu consultații specializate pentru copii și adolescenți de toate vârstele"
-longDescription: "Departamentul de pediatrie al ANN Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților. Echipa noastră de pediatri experimentați din București oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor."
+longDescription: "Departamentul de pediatrie al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților. Echipa noastră de pediatri experimentați din București oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor."
 icon: "baby"
-seoTitle: "Pediatru București - Consultații Pediatrie | ANN Clinic"
-seoDescription: "Pediatru București cu experiență vastă. Consultații pediatrie, vaccinări copii, investigații pediatrice, monitorizare dezvoltare. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Pediatru București - Consultații Pediatrie | ANN Medical Clinic"
+seoDescription: "Pediatru București cu experiență vastă. Consultații pediatrie, vaccinări copii, investigații pediatrice, monitorizare dezvoltare. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "pediatru București Bragadiru"
   - "consultație pediatrie București Bragadiru"
@@ -68,7 +68,7 @@ treatments:
 
 # Pediatrie București - Consultații Specializate pentru Copii
 
-Departamentul de **pediatrie** al ANN Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților în București și Bragadiru. Echipa noastră de pediatri experimentați oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor.
+Departamentul de **pediatrie** al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților în București și Bragadiru. Echipa noastră de pediatri experimentați oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor.
 
 ## Servicii de Pediatrie
 
@@ -93,7 +93,7 @@ Departamentul de **pediatrie** al ANN Clinic oferă servicii medicale complete p
 - **Teste specializate** - pentru diagnostic precis
 - **Monitorizare parametri** - greutate, înălțime, dezvoltare
 
-## De Ce Să Alegi ANN Clinic pentru Pediatrie?
+## De Ce Să Alegi ANN Medical Clinic pentru Pediatrie?
 
 ### Echipă Specializată
 
@@ -115,15 +115,15 @@ Departamentul de **pediatrie** al ANN Clinic oferă servicii medicale complete p
 
 ## Programare Pediatru București
 
-Pentru a programa o consultație de pediatrie la ANN Clinic:
+Pentru a programa o consultație de pediatrie la ANN Medical Clinic:
 
 - **Consultații regulate** - pentru monitorizarea dezvoltării
 - **Vaccinări la timp** - conform schemei naționale
 - **Evaluări specializate** - pentru copii cu nevoi speciale
 
-**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Locația**: ANN Medical Clinic, Bragadiru (lângă București)
 **Program**: Luni - Vineri, 8:00 - 20:00
 
 ---
 
-_Departamentul de pediatrie al ANN Clinic oferă îngrijire medicală de calitate superioară pentru copii și adolescenți. Echipa noastră de pediatri vă așteaptă pentru consultații personalizate într-un mediu prietenos în București și Bragadiru._
+_Departamentul de pediatrie al ANN Medical Clinic oferă îngrijire medicală de calitate superioară pentru copii și adolescenți. Echipa noastră de pediatri vă așteaptă pentru consultații personalizate într-un mediu prietenos în București și Bragadiru._

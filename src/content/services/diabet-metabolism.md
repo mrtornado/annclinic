@@ -1,10 +1,10 @@
 ---
 name: "Diabet, Boli de Nutriție și Metabolism"
 description: "Monitorizarea și gestionarea diabetului prin planuri de tratament personalizate și consiliere specializată pentru un stil de viață sănătos"
-longDescription: "Departamentul de diabet, boli de nutriție și metabolism al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul diabetului zaharat și tulburărilor metabolice în București. Echipa noastră de specialiști va utiliza abordări moderne pentru managementul diabetului și educația pacienților."
+longDescription: "Departamentul de diabet, boli de nutriție și metabolism al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul diabetului zaharat și tulburărilor metabolice în București. Echipa noastră de specialiști va utiliza abordări moderne pentru managementul diabetului și educația pacienților."
 icon: "glucose"
-seoTitle: "Diabet Metabolism București - Specialist Diabet | ANN Clinic"
-seoDescription: "Specialist diabet București cu experiență vastă. Monitorizare diabet, educație diabetici, planuri nutriționale. În curând la ANN Clinic Bragadiru."
+seoTitle: "Diabet Metabolism București - Specialist Diabet | ANN Medical Clinic"
+seoDescription: "Specialist diabet București cu experiență vastă. Monitorizare diabet, educație diabetici, planuri nutriționale. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "diabet zaharat București Bragadiru"
   - "specialist diabet București"
@@ -48,9 +48,9 @@ treatments:
     price: 180
 ---
 
-# Diabet, Boli de Nutriție și Metabolism - În Curând la ANN Clinic
+# Diabet, Boli de Nutriție și Metabolism - În Curând la ANN Medical Clinic
 
-Departamentul de **diabet, boli de nutriție și metabolism** al ANN Clinic va oferi în curând servicii medicale specializate pentru managementul diabetului zaharat în București și Bragadiru.
+Departamentul de **diabet, boli de nutriție și metabolism** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru managementul diabetului zaharat în București și Bragadiru.
 
 ## Servicii Diabet și Metabolism - În Dezvoltare
 
@@ -75,4 +75,4 @@ Departamentul de **diabet, boli de nutriție și metabolism** al ANN Clinic va o
 - **Funcția renală** - prevenirea nefropatiei diabetice
 - **Examinarea oftalmologică** - screening retinopatia diabetică
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de diabetologie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de diabetologie la ANN Medical Clinic București - Bragadiru!

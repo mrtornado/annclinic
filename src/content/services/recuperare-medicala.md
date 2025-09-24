@@ -1,10 +1,10 @@
 ---
 name: "Recuperare Medicală"
 description: "Recuperarea medicală după pacienți și la diferite medicale, aparate de specialiști cu experiență"
-longDescription: "Departamentul de recuperare medicală al ANN Clinic va oferi servicii complete de reabilitare și recuperare în București. Echipa noastră de specialiști în recuperare medicală va utiliza tehnici moderne și aparatură specializată pentru refacerea funcțiilor fizice și îmbunătățirea calității vieții."
+longDescription: "Departamentul de recuperare medicală al ANN Medical Clinic va oferi servicii complete de reabilitare și recuperare în București. Echipa noastră de specialiști în recuperare medicală va utiliza tehnici moderne și aparatură specializată pentru refacerea funcțiilor fizice și îmbunătățirea calității vieții."
 icon: "recovery"
-seoTitle: "Recuperare Medicală București - Kinetoterapie | ANN Clinic"
-seoDescription: "Recuperare medicală București cu specialiști experimentați. Kinetoterapie, fizioterapie, recuperare post-operatorie. În curând la ANN Clinic Bragadiru."
+seoTitle: "Recuperare Medicală București - Kinetoterapie | ANN Medical Clinic"
+seoDescription: "Recuperare medicală București cu specialiști experimentați. Kinetoterapie, fizioterapie, recuperare post-operatorie. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "recuperare medicală București Bragadiru"
   - "kinetoterapie București"
@@ -48,9 +48,9 @@ treatments:
     price: 120
 ---
 
-# Recuperare Medicală București - În Curând la ANN Clinic
+# Recuperare Medicală București - În Curând la ANN Medical Clinic
 
-Departamentul de **recuperare medicală** al ANN Clinic va oferi în curând servicii complete de reabilitare și recuperare în București și Bragadiru.
+Departamentul de **recuperare medicală** al ANN Medical Clinic va oferi în curând servicii complete de reabilitare și recuperare în București și Bragadiru.
 
 ## Servicii de Recuperare - În Dezvoltare
 
@@ -75,4 +75,4 @@ Departamentul de **recuperare medicală** al ANN Clinic va oferi în curând ser
 - **Ultrasunete** - pentru dureri și inflamații
 - **Termoterapie** - tratamente cu căldură/frig
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de recuperare medicală la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de recuperare medicală la ANN Medical Clinic București - Bragadiru!

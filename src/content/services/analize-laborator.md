@@ -3,8 +3,8 @@ name: "Analize Laborator CAS"
 description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
 longDescription: "Laborator de analize medicale al ANN Medical Clinic ofera o gama completa de investigatii de laborator, cu rezultate rapide si precise pentru diagnostic si monitorizare tratament."
 icon: "lab"
-seoTitle: "Analize Medicale București - Laborator Synevo | ANN Clinic"
-seoDescription: "Analize medicale București cu rezultate rapide și precise. Laborator Synevo, analize sânge, urină, hormonale. Recoltare la ANN Clinic Bragadiru."
+seoTitle: "Analize Medicale București - Laborator Synevo | ANN Medical Clinic"
+seoDescription: "Analize medicale București cu rezultate rapide și precise. Laborator Synevo, analize sânge, urină, hormonale. Recoltare la ANN Medical Clinic Bragadiru."
 keywords:
   - "analize medicale București Bragadiru"
   - "laborator analize București Bragadiru"
@@ -55,7 +55,7 @@ treatments:
 
 # Analize Laborator CAS București - Investigații Medicale Complete
 
-Laboratorul de analize medicale al ANN Clinic, în **parteneriat cu Synevo**, oferă servicii complete de diagnostic de laborator în București și Bragadiru. Asigurăm investigații medicale precise și rapide pentru toate specialitățile, cu echipament de ultimă generație și personal calificat.
+Laboratorul de analize medicale al ANN Medical Clinic, în **parteneriat cu Synevo**, oferă servicii complete de diagnostic de laborator în București și Bragadiru. Asigurăm investigații medicale precise și rapide pentru toate specialitățile, cu echipament de ultimă generație și personal calificat.
 
 ## Servicii de Laborator
 
@@ -110,7 +110,7 @@ Laboratorul de analize medicale al ANN Clinic, în **parteneriat cu Synevo**, of
 - **Monitorizare biologică** - pentru muncitori expuși
 - **Screening periodic** - conform legislației muncii
 
-## Avantajele Laboratorului ANN Clinic
+## Avantajele Laboratorului ANN Medical Clinic
 
 ### Parteneriat Synevo
 
@@ -133,4 +133,4 @@ Laboratorul de analize medicale al ANN Clinic, în **parteneriat cu Synevo**, of
 - **Procesare automată** - reducerea erorilor și creșterea preciziei
 - **Control calitate** - verificări multiple pentru rezultate corecte
 
-Programează recoltarea analizelor la ANN Clinic pentru investigații medicale complete și rezultate rapide în parteneriat cu Synevo București.
+Programează recoltarea analizelor la ANN Medical Clinic pentru investigații medicale complete și rezultate rapide în parteneriat cu Synevo București.

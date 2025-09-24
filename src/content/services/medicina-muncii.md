@@ -1,10 +1,10 @@
 ---
 name: "Medicina Muncii"
 description: "Servicii de evaluare medicală pentru angajați, conform legislației în vigoare, oferite de specialiști autorizați în medicina muncii"
-longDescription: "Departamentul de medicina muncii al ANN Clinic oferă servicii complete de evaluare medicală ocupațională în București. Echipa noastră de medici autorizați în medicina muncii asigură consultații, investigații și documentația necesară conform cerințelor legale pentru angajatori și angajați."
+longDescription: "Departamentul de medicina muncii al ANN Medical Clinic oferă servicii complete de evaluare medicală ocupațională în București. Echipa noastră de medici autorizați în medicina muncii asigură consultații, investigații și documentația necesară conform cerințelor legale pentru angajatori și angajați."
 icon: "work-safety"
-seoTitle: "Medicina Muncii București - Evaluări Medicale Angajați | ANN Clinic"
-seoDescription: "Medicina muncii București cu medici autorizați. Evaluări medicale angajați, controluri periodice, aptitudini profesionale. ANN Clinic Bragadiru."
+seoTitle: "Medicina Muncii București - Evaluări Medicale Angajați | ANN Medical Clinic"
+seoDescription: "Medicina muncii București cu medici autorizați. Evaluări medicale angajați, controluri periodice, aptitudini profesionale. ANN Medical Clinic Bragadiru."
 keywords:
   - "medicina muncii București Bragadiru"
   - "evaluare medicală angajați București"
@@ -54,7 +54,7 @@ treatments:
 
 # Medicina Muncii București - Evaluări Medicale pentru Angajați
 
-Departamentul de **medicina muncii** al ANN Clinic oferă servicii complete de evaluare medicală ocupațională în București și Bragadiru. Echipa noastră de medici autorizați în medicina muncii asigură conformitatea cu legislația în vigoare, oferind consultații specializate și documentația necesară pentru angajatori și angajați.
+Departamentul de **medicina muncii** al ANN Medical Clinic oferă servicii complete de evaluare medicală ocupațională în București și Bragadiru. Echipa noastră de medici autorizați în medicina muncii asigură conformitatea cu legislația în vigoare, oferind consultații specializate și documentația necesară pentru angajatori și angajați.
 
 ## Servicii de Medicina Muncii
 
@@ -119,7 +119,7 @@ Departamentul de **medicina muncii** al ANN Clinic oferă servicii complete de e
 - **La cerere** - pentru modificări ale stării de sănătate
 - **După accidente** - pentru evaluarea aptitudinii post-traumatică
 
-## Avantajele Serviciilor ANN Clinic
+## Avantajele Serviciilor ANN Medical Clinic
 
 ### Medici Autorizați
 
@@ -135,4 +135,4 @@ Departamentul de **medicina muncii** al ANN Clinic oferă servicii complete de e
 - **Servicii complete** - toate investigațiile în aceeași locație
 - **Rapoarte detaliate** - pentru angajatori și angajați
 
-Programează evaluările de medicina muncii la ANN Clinic pentru conformitatea cu legislația și siguranța angajaților tăi în București.
+Programează evaluările de medicina muncii la ANN Medical Clinic pentru conformitatea cu legislația și siguranța angajaților tăi în București.

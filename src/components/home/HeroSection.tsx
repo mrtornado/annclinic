@@ -69,10 +69,10 @@ export default function HeroSection({
             {/* Description */}
             <AnimatedText delay={0.6}>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-                Bun venit la <strong>ANN Clinic</strong> – locul unde grija și
-                profesionalismul se întâlnesc! Clinica noastră modernă îți oferă
-                acces la tehnologie de ultimă generație și o echipă de medici
-                dedicați, mereu alături de tine. Alege sănătatea ta cu
+                Bun venit la <strong>ANN Medical Clinic</strong> – locul unde
+                grija și profesionalismul se întâlnesc! Clinica noastră modernă
+                îți oferă acces la tehnologie de ultimă generație și o echipă de
+                medici dedicați, mereu alături de tine. Alege sănătatea ta cu
                 încredere, într-un mediu prietenos și profesionist!
               </p>
             </AnimatedText>

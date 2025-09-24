@@ -1,10 +1,10 @@
 ---
 name: "Reumatologie"
 description: "Tratamente pentru afecțiuni articulare și autoimune, cu soluții moderne pentru dureri reumatismale"
-longDescription: "Departamentul de reumatologie al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune în București. Echipa noastră de reumatologi experimentați va utiliza tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de reumatologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune în București. Echipa noastră de reumatologi experimentați va utiliza tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "joint"
-seoTitle: "Reumatolog București - Consultații Reumatologie | ANN Clinic"
-seoDescription: "Reumatolog București cu experiență vastă. Consultații reumatologie, artrite, spondilite, boli autoimune. În curând la ANN Clinic Bragadiru."
+seoTitle: "Reumatolog București - Consultații Reumatologie | ANN Medical Clinic"
+seoDescription: "Reumatolog București cu experiență vastă. Consultații reumatologie, artrite, spondilite, boli autoimune. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "reumatolog București Bragadiru"
   - "consultație reumatologie București"
@@ -48,9 +48,9 @@ treatments:
     price: 180
 ---
 
-# Reumatologie București - În Curând la ANN Clinic
+# Reumatologie București - În Curând la ANN Medical Clinic
 
-Departamentul de **reumatologie** al ANN Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune în București și Bragadiru.
+Departamentul de **reumatologie** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune în București și Bragadiru.
 
 ## Servicii Reumatologice - În Dezvoltare
 
@@ -72,4 +72,4 @@ Departamentul de **reumatologie** al ANN Clinic va oferi în curând servicii me
 
 ## În Curând Disponibil
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de reumatologie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de reumatologie la ANN Medical Clinic București - Bragadiru!

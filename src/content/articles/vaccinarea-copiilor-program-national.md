@@ -24,8 +24,8 @@ seoKeywords:
     "vaccinuri obligatorii",
     "imunizare copii",
   ]
-seoTitle: "Program Național Vaccinare Copii | Pediatru București | ANN Clinic"
-seoDescription: "Informații complete despre programul național de vaccinare în România. Consultații pediatrice și vaccinare la ANN Clinic București."
+seoTitle: "Program Național Vaccinare Copii | Pediatru București | ANN Medical Clinic"
+seoDescription: "Informații complete despre programul național de vaccinare în România. Consultații pediatrice și vaccinare la ANN Medical Clinic București."
 featured: true
 medicallyReviewed: true
 reviewedBy: "Dr. Maria Popescu"
@@ -318,6 +318,6 @@ Programul Național de Vaccinare este un sistem organizat de imunizare care ofer
 
 Programul Național de Vaccinare reprezintă una dintre cele mai importante realizări ale medicinei preventive moderne. Respectarea calendarului de vaccinare protejează nu doar copilul dumneavoastră, ci întreaga comunitate.
 
-La ANN Clinic, pediatrii noștri experimentați oferă consultații complete de vaccinare, respectând cele mai înalte standarde de siguranță și calitate. Echipa noastră vă va ghida prin întregul proces de vaccinare și va răspunde la toate întrebările dumneavoastră.
+La ANN Medical Clinic, pediatrii noștri experimentați oferă consultații complete de vaccinare, respectând cele mai înalte standarde de siguranță și calitate. Echipa noastră vă va ghida prin întregul proces de vaccinare și va răspunde la toate întrebările dumneavoastră.
 
-**Pentru consultații de pediatrie și vaccinare, programați-vă la ANN Clinic Bragadiru - unde sănătatea copilului dumneavoastră este prioritatea noastră.**
+**Pentru consultații de pediatrie și vaccinare, programați-vă la ANN Medical Clinic Bragadiru - unde sănătatea copilului dumneavoastră este prioritatea noastră.**

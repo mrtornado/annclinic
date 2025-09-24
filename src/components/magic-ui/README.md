@@ -1,6 +1,6 @@
 # Magic UI Components 🎨
 
-Această colecție de componente Magic UI oferă animații și efecte interactive moderne pentru site-ul ANN Clinic.
+Această colecție de componente Magic UI oferă animații și efecte interactive moderne pentru site-ul ANN Medical Clinic.
 
 ## Componente Disponibile
 

@@ -16,8 +16,8 @@ seoKeywords:
     "îngrijire piele adolescenți",
     "cosuri adolescenți",
   ]
-seoTitle: "Tratament Acnee Adolescenți București | Dermatolog Specialist | ANN Clinic"
-seoDescription: "Tratament specializat pentru acneea adolescenților la ANN Clinic București. Consultații cu dermatolog experimentat și tratamente personalizate."
+seoTitle: "Tratament Acnee Adolescenți București | Dermatolog Specialist | ANN Medical Clinic"
+seoDescription: "Tratament specializat pentru acneea adolescenților la ANN Medical Clinic București. Consultații cu dermatolog experimentat și tratamente personalizate."
 featured: true
 medicallyReviewed: true
 reviewedBy: "Dr. Maria Popescu"
@@ -208,6 +208,6 @@ Acneea este o afecțiune inflamatorie a foliculilor piloși și glandelor sebace
 
 Tratamentul acneei la adolescenți necesită o abordare personalizată și răbdare. Cu tratamentul adecvat și suportul familiei, majoritatea adolescenților pot obține o îmbunătățire semnificativă a acneei și pot preveni cicatricile permanente.
 
-La ANN Clinic, dermatologii noștri specializați în tratarea acneei adolescenților oferă consultații complete și planuri de tratament personalizate. Nu lăsați acneea să afecteze încrederea în sine a adolescentului - programați o consultație astăzi.
+La ANN Medical Clinic, dermatologii noștri specializați în tratarea acneei adolescenților oferă consultații complete și planuri de tratament personalizate. Nu lăsați acneea să afecteze încrederea în sine a adolescentului - programați o consultație astăzi.
 
-**Pentru o consultație de dermatologie specializată în tratamentul acneei, contactați ANN Clinic Bragadiru.**
+**Pentru o consultație de dermatologie specializată în tratamentul acneei, contactați ANN Medical Clinic Bragadiru.**

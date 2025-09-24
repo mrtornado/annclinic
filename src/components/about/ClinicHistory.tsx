@@ -6,7 +6,7 @@ export default function ClinicHistory() {
   const timeline = [
     {
       year: "2020",
-      title: "Înființarea ANN Clinic",
+      title: "Înființarea ANN Medical Clinic",
       description:
         "Am deschis porțile clinicii cu o viziune clară: să oferim servicii medicale de calitate într-un mediu modern și prietenos.",
       icon: "🏗️",

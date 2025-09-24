@@ -18,7 +18,7 @@ export default function AboutHero() {
           <div>
             <AnimatedText delay={0.2}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                <GradientText>Despre ANN Clinic</GradientText>
+                <GradientText>Despre ANN Medical Clinic</GradientText>
               </h1>
             </AnimatedText>
 
@@ -104,7 +104,9 @@ export default function AboutHero() {
             <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8 backdrop-blur-sm border border-border/30">
               <div className="text-center">
                 <div className="text-8xl mb-6">🏥</div>
-                <h3 className="text-2xl font-bold text mb-4">ANN Clinic</h3>
+                <h3 className="text-2xl font-bold text mb-4">
+                  ANN Medical Clinic
+                </h3>
                 <p className="text-secondary">Sănătate & Încredere din 2020</p>
               </div>
 

@@ -1,10 +1,10 @@
 ---
 name: "Estetică Facială"
 description: "Tratamente estetice faciale moderne pentru înfrumusețare și rejuvenare"
-longDescription: "Departamentul de estetică facială al ANN Clinic oferă tratamente moderne și sigure pentru înfrumusețarea și rejuvenarea feței. Echipa noastră de specialiști în medicină estetică din București utilizează tehnologii avansate și produse de calitate superioară pentru rezultate naturale și durabile."
+longDescription: "Departamentul de estetică facială al ANN Medical Clinic oferă tratamente moderne și sigure pentru înfrumusețarea și rejuvenarea feței. Echipa noastră de specialiști în medicină estetică din București utilizează tehnologii avansate și produse de calitate superioară pentru rezultate naturale și durabile."
 icon: "sparkles"
-seoTitle: "Estetică Facială București - Tratamente Estetice | ANN Clinic"
-seoDescription: "Tratamente estetice faciale București. Botox, acid hialuronic, mezoterapie, peeling chimic. Specialiști în medicină estetică. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Estetică Facială București - Tratamente Estetice | ANN Medical Clinic"
+seoDescription: "Tratamente estetice faciale București. Botox, acid hialuronic, mezoterapie, peeling chimic. Specialiști în medicină estetică. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "estetică facială București Bragadiru"
   - "tratamente estetice București Bragadiru"
@@ -62,7 +62,7 @@ treatments:
 
 # Estetică Facială București - Tratamente Moderne de Înfrumusețare
 
-Departamentul de **estetică facială** al ANN Clinic oferă tratamente moderne și sigure pentru înfrumusețarea și rejuvenarea feței în București și Bragadiru. Echipa noastră de specialiști în medicină estetică utilizează tehnologii avansate și produse de calitate superioară pentru rezultate naturale și durabile.
+Departamentul de **estetică facială** al ANN Medical Clinic oferă tratamente moderne și sigure pentru înfrumusețarea și rejuvenarea feței în București și Bragadiru. Echipa noastră de specialiști în medicină estetică utilizează tehnologii avansate și produse de calitate superioară pentru rezultate naturale și durabile.
 
 ## Tratamente Estetice Faciale
 
@@ -100,7 +100,7 @@ Departamentul de **estetică facială** al ANN Clinic oferă tratamente moderne 
 - **Tratamente pentru riduri** - soluții adaptate tipului de rid
 - **Volumizare facială** - restabilirea volumelor pierdute
 
-## De Ce Să Alegi ANN Clinic pentru Estetică Facială?
+## De Ce Să Alegi ANN Medical Clinic pentru Estetică Facială?
 
 ### Specialiști Experimentați
 
@@ -122,15 +122,15 @@ Departamentul de **estetică facială** al ANN Clinic oferă tratamente moderne 
 
 ## Programare Tratamente Estetice
 
-Pentru a programa o consultație de estetică facială la ANN Clinic:
+Pentru a programa o consultație de estetică facială la ANN Medical Clinic:
 
 - **Consultație gratuită** pentru evaluarea nevoilor
 - **Plan de tratament personalizat** - adaptat obiectivelor dumneavoastră
 - **Rezultate naturale** - fără aspect artificial
 
-**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Locația**: ANN Medical Clinic, Bragadiru (lângă București)
 **Program**: Luni - Vineri, 8:00 - 20:00
 
 ---
 
-_Departamentul de estetică facială al ANN Clinic vă oferă tratamente moderne și sigure pentru înfrumusețare și rejuvenare. Echipa noastră de specialiști vă așteaptă pentru consultații personalizate în București și Bragadiru._
+_Departamentul de estetică facială al ANN Medical Clinic vă oferă tratamente moderne și sigure pentru înfrumusețare și rejuvenare. Echipa noastră de specialiști vă așteaptă pentru consultații personalizate în București și Bragadiru._

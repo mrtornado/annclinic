@@ -1,10 +1,10 @@
 ---
 name: "Nefrologie"
 description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
-longDescription: "Departamentul de nefrologie al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale și urologice în București. Echipa noastră de nefrologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale și urologice în București. Echipa noastră de nefrologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "kidney"
-seoTitle: "Nefrologie București - Specialist Rinichi Experimentat | ANN Clinic"
-seoDescription: "Nefrologie București cu specialiști în afecțiuni renale. Consultații nefrologie, tratament insuficiență renală, boli rinichi. ANN Clinic Bragadiru."
+seoTitle: "Nefrologie București - Specialist Rinichi Experimentat | ANN Medical Clinic"
+seoDescription: "Nefrologie București cu specialiști în afecțiuni renale. Consultații nefrologie, tratament insuficiență renală, boli rinichi. ANN Medical Clinic Bragadiru."
 keywords:
   - "nefrologie București Bragadiru"
   - "nefrolog București Bragadiru"
@@ -54,7 +54,7 @@ treatments:
 
 # Nefrologie București - Tratament Specializat pentru Afecțiunile Renale
 
-Departamentul de **nefrologie** al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale în București și Bragadiru. Echipa noastră de nefrologi cu experiență vastă utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
+Departamentul de **nefrologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale în București și Bragadiru. Echipa noastră de nefrologi cu experiență vastă utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
 
 ## Servicii de Nefrologie
 
@@ -104,7 +104,7 @@ Departamentul de **nefrologie** al ANN Clinic oferă servicii medicale specializ
 - **Oboseală cronică** - slăbiciune și scăderea capacității de efort
 - **Dureri lombare** - persistente și asociate cu febră
 
-## Avantajele Tratamentului Nefrologic la ANN Clinic
+## Avantajele Tratamentului Nefrologic la ANN Medical Clinic
 
 - **Nefrologi cu experiență vastă** în managementul bolilor renale complexe
 - **Tehnologie de diagnostic avansată** - ecografie și analize specializate
@@ -112,4 +112,4 @@ Departamentul de **nefrologie** al ANN Clinic oferă servicii medicale specializ
 - **Programe de prevenție** - pentru pacienții cu risc crescut
 - **Monitorizare atentă** - urmărirea regulată a funcției renale
 
-Programează o consultație de nefrologie la ANN Clinic pentru evaluarea completă a sănătății renale și un plan de tratament personalizat în București.
+Programează o consultație de nefrologie la ANN Medical Clinic pentru evaluarea completă a sănătății renale și un plan de tratament personalizat în București.

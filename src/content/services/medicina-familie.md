@@ -1,10 +1,10 @@
 ---
 name: "Medicina de Familie"
 description: "Îngrijire medicală completă și continuă pentru întreaga familie, cu accent pe prevenție, diagnostic precoce și tratament personalizat"
-longDescription: "Departamentul de medicina de familie al ANN Clinic oferă servicii medicale primare complete pentru întreaga familie în București. Medicii noștri de familie asigură îngrijire continuă, preventivă și curativă, fiind primul contact cu sistemul medical și coordonând îngrijirea de specialitate când este necesar."
+longDescription: "Departamentul de medicina de familie al ANN Medical Clinic oferă servicii medicale primare complete pentru întreaga familie în București. Medicii noștri de familie asigură îngrijire continuă, preventivă și curativă, fiind primul contact cu sistemul medical și coordonând îngrijirea de specialitate când este necesar."
 icon: "family"
-seoTitle: "Medicina de Familie București - Medic de Familie | ANN Clinic"
-seoDescription: "Medicina de familie București cu medici experimentați. Îngrijire completă familia, consultații în limba engleză, prevenție și tratament. ANN Clinic Bragadiru."
+seoTitle: "Medicina de Familie București - Medic de Familie | ANN Medical Clinic"
+seoDescription: "Medicina de familie București cu medici experimentați. Îngrijire completă familia, consultații în limba engleză, prevenție și tratament. ANN Medical Clinic Bragadiru."
 keywords:
   - "medicina de familie București Bragadiru"
   - "medic de familie București Bragadiru"
@@ -54,7 +54,7 @@ treatments:
 
 # Medicina de Familie București - Îngrijire Completă pentru Întreaga Familie
 
-Departamentul de **medicina de familie** al ANN Clinic oferă servicii medicale primare complete pentru toate vârstele în București și Bragadiru. Echipa noastră de medici de familie experimentați asigură îngrijire continuă, de la prevenție la tratament, fiind partenerul de încredere pentru sănătatea întregii familii.
+Departamentul de **medicina de familie** al ANN Medical Clinic oferă servicii medicale primare complete pentru toate vârstele în București și Bragadiru. Echipa noastră de medici de familie experimentați asigură îngrijire continuă, de la prevenție la tratament, fiind partenerul de încredere pentru sănătatea întregii familii.
 
 ## Servicii de Medicina de Familie
 
@@ -125,7 +125,7 @@ Departamentul de **medicina de familie** al ANN Clinic oferă servicii medicale 
 - **Vaccinări călătorii** - pentru destinații exotice
 - **Vaccinări ocupaționale** - pentru anumite profesii
 
-## Avantajele Medicinei de Familie la ANN Clinic
+## Avantajele Medicinei de Familie la ANN Medical Clinic
 
 ### Continuitatea Îngrijirii
 
@@ -141,4 +141,4 @@ Departamentul de **medicina de familie** al ANN Clinic oferă servicii medicale 
 - **Educația sanitară** - informare și responsabilizarea pacienților
 - **Suport emoțional** - înțelegerea și empatie în relația medic-pacient
 
-Alege ANN Clinic ca partener pentru sănătatea familiei tale și bucură-te de îngrijire medicală de calitate, personalizată și continuă în București.
+Alege ANN Medical Clinic ca partener pentru sănătatea familiei tale și bucură-te de îngrijire medicală de calitate, personalizată și continuă în București.

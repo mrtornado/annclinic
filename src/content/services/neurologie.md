@@ -1,10 +1,10 @@
 ---
 name: "Neurologie"
 description: "Servicii complete de neurologie pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos"
-longDescription: "Departamentul de neurologie al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic. Echipa noastră de neurologi experimentați din București utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de neurologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic. Echipa noastră de neurologi experimentați din București utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "brain"
-seoTitle: "Neurolog București - Consultații Neurologie | ANN Clinic"
-seoDescription: "Neurolog București cu experiență vastă. Consultații neurologie, dureri de cap, migrene, epilepsie, AVC. Programează-te la ANN Clinic Bragadiru."
+seoTitle: "Neurolog București - Consultații Neurologie | ANN Medical Clinic"
+seoDescription: "Neurolog București cu experiență vastă. Consultații neurologie, dureri de cap, migrene, epilepsie, AVC. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "neurolog București Bragadiru"
   - "consultație neurologie București Bragadiru"
@@ -63,7 +63,7 @@ treatments:
 
 # Neurologie București - Consultații și Tratamente Neurologice
 
-Departamentul de **neurologie** al ANN Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic în București și Bragadiru. Echipa noastră de neurologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate.
+Departamentul de **neurologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic în București și Bragadiru. Echipa noastră de neurologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate.
 
 ## Servicii de Neurologie
 
@@ -88,7 +88,7 @@ Departamentul de **neurologie** al ANN Clinic oferă servicii medicale specializ
 - **Recuperare post-AVC** - programe de reabilitare neurologică
 - **Tratament Parkinson** - managementul bolilor neurodegenerative
 
-## De Ce Să Alegi ANN Clinic pentru Neurologie?
+## De Ce Să Alegi ANN Medical Clinic pentru Neurologie?
 
 ### Echipă Specializată
 
@@ -110,15 +110,15 @@ Departamentul de **neurologie** al ANN Clinic oferă servicii medicale specializ
 
 ## Programare Neurolog București
 
-Pentru a programa o consultație de neurologie la ANN Clinic:
+Pentru a programa o consultație de neurologie la ANN Medical Clinic:
 
 - **Evaluare neurologică** - pentru diagnostic precis
 - **Investigații specializate** - EEG, EMG, Doppler
 - **Tratamente personalizate** - adaptate nevoilor individuale
 
-**Locația**: ANN Clinic, Bragadiru (lângă București)
+**Locația**: ANN Medical Clinic, Bragadiru (lângă București)
 **Program**: Luni - Vineri, 8:00 - 20:00
 
 ---
 
-_Departamentul de neurologie al ANN Clinic oferă servicii medicale de calitate superioară pentru afecțiunile sistemului nervos. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._
+_Departamentul de neurologie al ANN Medical Clinic oferă servicii medicale de calitate superioară pentru afecțiunile sistemului nervos. Echipa noastră de specialiști vă așteaptă pentru consultații și tratamente personalizate în București și Bragadiru._

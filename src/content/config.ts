@@ -24,6 +24,20 @@ const servicesCollection = defineCollection({
         })
       )
       .optional(),
+    packages: z
+      .array(
+        z.object({
+          name: z.string(),
+          description: z.string(),
+          originalPrice: z.number(),
+          packagePrice: z.number(),
+          savings: z.number(),
+          services: z.array(z.string()),
+          highlight: z.boolean().optional(),
+          popular: z.boolean().optional(),
+        })
+      )
+      .optional(),
     featured: z.boolean().default(false),
     comingSoon: z.boolean().default(false),
     hidden: z.boolean().default(false),
@@ -105,7 +119,7 @@ const articlesCollection = defineCollection({
           .optional(),
         publisher: z
           .object({
-            name: z.string().default("ANN Clinic"),
+            name: z.string().default("ANN Medical Clinic"),
             type: z.string().default("Organization"),
           })
           .optional(),

@@ -1,10 +1,10 @@
 ---
 name: "Chirurgie Pediatrică"
 description: "Consultație și tratament la nou-născuți, copii și adolescenți într-un mediu adaptat nevoilor lor specifice"
-longDescription: "Departamentul de chirurgie pediatrică al ANN Clinic oferă servicii chirurgicale specializate pentru copii și adolescenți în București. Echipa noastră de chirurgi pediatri experimentați asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu intervenții minimm invazive și mică chirurgie."
+longDescription: "Departamentul de chirurgie pediatrică al ANN Medical Clinic oferă servicii chirurgicale specializate pentru copii și adolescenți în București. Echipa noastră de chirurgi pediatri experimentați asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu intervenții minimm invazive și mică chirurgie."
 icon: "child-medical"
-seoTitle: "Chirurgie Pediatrică București - Chirurg Copii Experimentat | ANN Clinic"
-seoDescription: "Chirurgie pediatrică București cu specialiști în tratarea copiilor. Intervenții minore copii, consultații chirurgicale pediatrice. ANN Clinic Bragadiru."
+seoTitle: "Chirurgie Pediatrică București - Chirurg Copii Experimentat | ANN Medical Clinic"
+seoDescription: "Chirurgie pediatrică București cu specialiști în tratarea copiilor. Intervenții minore copii, consultații chirurgicale pediatrice. ANN Medical Clinic Bragadiru."
 keywords:
   - "chirurgie pediatrică București Bragadiru"
   - "chirurg copii București Bragadiru"
@@ -54,7 +54,7 @@ treatments:
 
 # Chirurgie Pediatrică București - Îngrijire Chirurgicală Specializată pentru Copii
 
-Departamentul de **chirurgie pediatrică** al ANN Clinic oferă servicii chirurgicale specializate pentru nou-născuți, copii și adolescenți în București și Bragadiru. Echipa noastră de chirurgi pediatri cu experiență vastă asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu abordare caldă și empatic.
+Departamentul de **chirurgie pediatrică** al ANN Medical Clinic oferă servicii chirurgicale specializate pentru nou-născuți, copii și adolescenți în București și Bragadiru. Echipa noastră de chirurgi pediatri cu experiență vastă asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu abordare caldă și empatic.
 
 ## Servicii de Chirurgie Pediatrică
 
@@ -86,7 +86,7 @@ Departamentul de **chirurgie pediatrică** al ANN Clinic oferă servicii chirurg
 - **Recuperare rapidă** - reducerea timpului de spitalizare
 - **Cicatrici minime** - rezultate estetice superioare
 
-## Particularitățile Chirurgiei Pediatrice la ANN Clinic
+## Particularitățile Chirurgiei Pediatrice la ANN Medical Clinic
 
 - **Medici specializați în chirurgia copiilor** cu training specific pediatric
 - **Mediu prietenos pentru copii** - cabinet adaptat și decorat corespunzător
@@ -101,4 +101,4 @@ Departamentul de **chirurgie pediatrică** al ANN Clinic oferă servicii chirurg
 - **Anestezie pediatrică sigură** - protocoale adaptate copiilor
 - **Monitorizare intensivă** - siguranța copilului prioritatea noastră
 
-Programează o consultație de chirurgie pediatrică la ANN Clinic pentru evaluare specializată și îngrijire chirurgicală de calitate adaptată nevoilor copilului tău în București.
+Programează o consultație de chirurgie pediatrică la ANN Medical Clinic pentru evaluare specializată și îngrijire chirurgicală de calitate adaptată nevoilor copilului tău în București.

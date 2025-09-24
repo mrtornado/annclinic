@@ -1,10 +1,10 @@
 ---
 name: "Psihiatrie"
 description: "Servicii profesionale pentru sănătatea mentală, cu evaluare psihiatrică specializată și terapie integrată personalizată"
-longDescription: "Departamentul de psihiatrie al ANN Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor de sănătate mentală în București. Echipa noastră de psihiatri experimentați va asigura evaluări complexe și tratamente personalizate într-un mediu sigur și confidențial."
+longDescription: "Departamentul de psihiatrie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor de sănătate mentală în București. Echipa noastră de psihiatri experimentați va asigura evaluări complexe și tratamente personalizate într-un mediu sigur și confidențial."
 icon: "brain-care"
-seoTitle: "Psihiatru București - Consultații Psihiatrie | ANN Clinic"
-seoDescription: "Psihiatru București cu experiență vastă. Consultații psihiatrie, depresie, anxietate, tulburări mentale. În curând la ANN Clinic Bragadiru."
+seoTitle: "Psihiatru București - Consultații Psihiatrie | ANN Medical Clinic"
+seoDescription: "Psihiatru București cu experiență vastă. Consultații psihiatrie, depresie, anxietate, tulburări mentale. În curând la ANN Medical Clinic Bragadiru."
 keywords:
   - "psihiatru București Bragadiru"
   - "consultație psihiatrie București"
@@ -48,9 +48,9 @@ treatments:
     price: 350
 ---
 
-# Psihiatrie București - În Curând la ANN Clinic
+# Psihiatrie București - În Curând la ANN Medical Clinic
 
-Departamentul de **psihiatrie** al ANN Clinic va oferi în curând servicii medicale specializate pentru sănătatea mentală în București și Bragadiru.
+Departamentul de **psihiatrie** al ANN Medical Clinic va oferi în curând servicii medicale specializate pentru sănătatea mentală în București și Bragadiru.
 
 ## Servicii Psihiatrice - În Dezvoltare
 
@@ -77,4 +77,4 @@ Departamentul de **psihiatrie** al ANN Clinic va oferi în curând servicii medi
 - **Consiliere familie** - implicarea susținătorilor
 - **Planuri de siguranță** - prevenirea crizelor
 
-Urmărește-ne pentru actualizări despre lansarea serviciilor de psihiatrie la ANN Clinic București - Bragadiru!
+Urmărește-ne pentru actualizări despre lansarea serviciilor de psihiatrie la ANN Medical Clinic București - Bragadiru!
