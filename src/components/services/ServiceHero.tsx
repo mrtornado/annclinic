@@ -135,9 +135,9 @@ export default function ServiceHero({
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh]">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
+        <div className="flex items-center justify-center min-h-[60vh]">
+          {/* Centered Content */}
+          <div className="text-center max-w-4xl">
             {/* Service Title */}
             <AnimatedText delay={0.2}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -150,7 +150,7 @@ export default function ServiceHero({
 
             {/* Service Description */}
             <AnimatedText delay={0.4}>
-              <p className="text-xl text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+              <p className="text-xl text-white/90 mx-auto leading-relaxed mb-8">
                 {service?.data?.longDescription ||
                   service?.longDescription ||
                   getServiceDescription()}
@@ -159,7 +159,7 @@ export default function ServiceHero({
 
             {/* CTA Buttons */}
             <AnimatedText delay={0.6}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <AnimatedButton
                   href="/programare"
                   variant="primary"
@@ -183,36 +183,6 @@ export default function ServiceHero({
                     <span>Sună Acum</span>
                   </span>
                 </AnimatedButton>
-              </div>
-            </AnimatedText>
-          </div>
-
-          {/* Right Visual Element - Service Icon */}
-          <div className="relative flex justify-center lg:justify-end">
-            <AnimatedText delay={0.8}>
-              <div className="relative">
-                {/* Large Service Icon */}
-                <div
-                  className="w-32 h-32 lg:w-40 lg:h-40 rounded-3xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl"
-                  style={{ backgroundColor: `${gradientClass}20` }}
-                >
-                  <span className="text-6xl lg:text-7xl filter drop-shadow-lg">
-                    {iconEmoji}
-                  </span>
-                </div>
-
-                {/* Floating Accents */}
-                <div
-                  className="absolute -top-3 -right-3 w-6 h-6 rounded-full animate-ping"
-                  style={{ backgroundColor: gradientClass }}
-                />
-                <div
-                  className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full animate-pulse opacity-80"
-                  style={{
-                    backgroundColor: gradientClass,
-                    animationDelay: "1s",
-                  }}
-                />
               </div>
             </AnimatedText>
           </div>
