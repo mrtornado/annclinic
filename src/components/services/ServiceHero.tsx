@@ -3,6 +3,23 @@ import AnimatedButton from "../magic-ui/AnimatedButton";
 import FloatingParticles from "../magic-ui/FloatingParticles";
 import type { ServiceContent } from "../../types/content";
 
+// Import service images
+import cardiologieImg from "../../assets/images/servicii/soon/cardiologie.png";
+import dermatologieImg from "../../assets/images/servicii/dermatologie.png";
+import ginecologieImg from "../../assets/images/servicii/ginecologie.png";
+import pediatrieImg from "../../assets/images/servicii/pediatrrie.png";
+import ortoImg from "../../assets/images/servicii/orto.png";
+import orlImg from "../../assets/images/servicii/soon/ORL.png";
+import oftamologieImg from "../../assets/images/servicii/soon/oftamologie.jpg";
+import nefrologieImg from "../../assets/images/servicii/nefrologie.png";
+import endocrinologieImg from "../../assets/images/servicii/soon/endocrinologie.png";
+import urologieImg from "../../assets/images/servicii/soon/UROLOGIE.png";
+import psihiatrieImg from "../../assets/images/servicii/soon/psihiatrie.jpg";
+import chirurgieImg from "../../assets/images/servicii/chirurgie.png";
+import medicinaInternaImg from "../../assets/images/servicii/medicina-interna.jpg";
+import medicinaMunciiImg from "../../assets/images/servicii/medicina-muncii.jpg";
+import defaultImg from "../../assets/images/servicii/fam-scaled.jpg";
+
 interface ServiceHeroProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
   isLandingPage?: boolean;
@@ -48,6 +65,29 @@ const serviceColors: Record<string, string> = {
   default: "#1e40af", // Default - Primary blue
 };
 
+// Service images mapping
+const serviceImages: Record<string, any> = {
+  cardiologie: cardiologieImg,
+  dermatologie: dermatologieImg,
+  dermatovenerologie: dermatologieImg,
+  ginecologie: ginecologieImg,
+  "obstetrica-ginecologie": ginecologieImg,
+  pediatrie: pediatrieImg,
+  ortopedie: ortoImg,
+  "ortopedie-traumatologie": ortoImg,
+  orl: orlImg,
+  oftalmologie: oftamologieImg,
+  nefrologie: nefrologieImg,
+  neurologie: nefrologieImg, // Using nefrologie as placeholder
+  endocrinologie: endocrinologieImg,
+  urologie: urologieImg,
+  psihiatrie: psihiatrieImg,
+  "chirurgie-generala": chirurgieImg,
+  "medicina-interna": medicinaInternaImg,
+  "medicina-muncii": medicinaMunciiImg,
+  default: defaultImg,
+};
+
 export default function ServiceHero({
   service,
   isLandingPage = false,
@@ -69,99 +109,115 @@ export default function ServiceHero({
   const serviceSlug = service?.slug || service?.icon || "default";
   const gradientClass = serviceColors[serviceSlug] || serviceColors.default;
   const iconEmoji = serviceIcons[serviceSlug] || serviceIcons.default;
+  const serviceImage = serviceImages[serviceSlug] || serviceImages.default;
 
   return (
-    <section
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${gradientClass} pt-24 sm:pt-28`}
-    >
-      {/* Background Effects */}
+    <section className="relative py-16 lg:py-24 overflow-hidden">
+      {/* Full Background Image */}
       <div className="absolute inset-0">
-        <FloatingParticles count={40} />
-
-        {/* Service-specific background shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl hero-pulse" />
-        <div
-          className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl hero-glow"
-          style={{ animationDelay: "2s" }}
+        <img
+          src={serviceImage.src}
+          alt={getServiceName()}
+          className="w-full h-full object-cover"
         />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Service color overlay */}
         <div
-          className="absolute top-1/2 left-1/3 w-24 h-24 bg-accent/10 rounded-full blur-2xl hero-float"
-          style={{ animationDelay: "4s" }}
+          className="absolute inset-0 opacity-20 mix-blend-multiply"
+          style={{ backgroundColor: gradientClass }}
         />
+      </div>
 
-        {/* Medical cross pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 left-1/5 w-8 h-8 bg-primary transform rotate-45 rounded-sm" />
-          <div className="absolute top-3/4 right-1/4 w-6 h-6 bg-secondary transform rotate-45 rounded-sm" />
-          <div className="absolute top-1/2 left-2/3 w-4 h-4 bg-accent transform rotate-45 rounded-sm" />
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        <FloatingParticles count={20} />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh]">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            {/* Service Title */}
+            <AnimatedText delay={0.2}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="block mb-2">{getServiceName()}</span>
+                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
+                  în București
+                </span>
+              </h1>
+            </AnimatedText>
+
+            {/* Service Description */}
+            <AnimatedText delay={0.4}>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                {service?.data?.longDescription ||
+                  service?.longDescription ||
+                  getServiceDescription()}
+              </p>
+            </AnimatedText>
+
+            {/* CTA Buttons */}
+            <AnimatedText delay={0.6}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <AnimatedButton
+                  href="/programare"
+                  variant="primary"
+                  size="lg"
+                  className="hero-btn-primary shadow-2xl"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-2xl">📅</span>
+                    <span>Programează Consultație</span>
+                  </span>
+                </AnimatedButton>
+
+                <AnimatedButton
+                  href="tel:+40721234567"
+                  variant="outline"
+                  size="lg"
+                  className="hero-btn-outline border-white/30 text-white hover:bg-white hover:text-gray-900"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-2xl">📞</span>
+                    <span>Sună Acum</span>
+                  </span>
+                </AnimatedButton>
+              </div>
+            </AnimatedText>
+          </div>
+
+          {/* Right Visual Element - Service Icon */}
+          <div className="relative flex justify-center lg:justify-end">
+            <AnimatedText delay={0.8}>
+              <div className="relative">
+                {/* Large Service Icon */}
+                <div
+                  className="w-32 h-32 lg:w-40 lg:h-40 rounded-3xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl"
+                  style={{ backgroundColor: `${gradientClass}20` }}
+                >
+                  <span className="text-6xl lg:text-7xl filter drop-shadow-lg">
+                    {iconEmoji}
+                  </span>
+                </div>
+
+                {/* Floating Accents */}
+                <div
+                  className="absolute -top-3 -right-3 w-6 h-6 rounded-full animate-ping"
+                  style={{ backgroundColor: gradientClass }}
+                />
+                <div
+                  className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full animate-pulse opacity-80"
+                  style={{
+                    backgroundColor: gradientClass,
+                    animationDelay: "1s",
+                  }}
+                />
+              </div>
+            </AnimatedText>
+          </div>
         </div>
-
-        {/* Gradient overlay for better contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-surface/80 via-transparent to-surface/80" />
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Service Badge */}
-        <AnimatedText delay={0.2}>
-          <div className="inline-flex items-center gap-3 bg-surface-elevated/80 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-xl border border-primary/20 hover:bg-surface-elevated transition-all duration-300">
-            <span className="text-2xl">{iconEmoji}</span>
-            <span>Servicii Medicale de Specialitate</span>
-            <div className="w-2 h-2 bg-secondary rounded-full hero-pulse" />
-          </div>
-        </AnimatedText>
-
-        {/* Service Title */}
-        <AnimatedText delay={0.4}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text mb-8 leading-tight">
-            <span className="block mb-4">{getServiceName()}</span>
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
-              în București și Bragadiru
-            </span>
-          </h1>
-        </AnimatedText>
-
-        {/* Service Description */}
-        <AnimatedText delay={0.6}>
-          <p className="text-lg sm:text-xl lg:text-2xl text-secondary max-w-4xl mx-auto leading-relaxed mb-12">
-            {service?.data?.longDescription ||
-              service?.longDescription ||
-              getServiceDescription()}
-          </p>
-        </AnimatedText>
-
-        {/* CTA Buttons */}
-        <AnimatedText delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-16">
-            <AnimatedButton
-              href="/programare"
-              variant="primary"
-              size="lg"
-              className="hero-btn-primary shadow-2xl"
-            >
-              <span className="flex items-center gap-3">
-                <span className="text-2xl">📅</span>
-                <span>Programează Consultație</span>
-              </span>
-            </AnimatedButton>
-
-            <AnimatedButton
-              href="/contact"
-              variant="outline"
-              size="lg"
-              className="hero-btn-outline"
-            >
-              <span className="flex items-center gap-3">
-                <span className="text-2xl">📞</span>
-                <span>Contactează-ne</span>
-              </span>
-            </AnimatedButton>
-          </div>
-        </AnimatedText>
-
-        {/* Service Highlights removed */}
-      </div>
-
-      {/* Scroll Indicator removed */}
     </section>
   );
 }

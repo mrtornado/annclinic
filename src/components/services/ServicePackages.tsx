@@ -215,90 +215,242 @@ export default function ServicePackages({
   const packages = contentPackages || servicePackages[serviceSlug];
   const hasPackages = packages && packages.length > 0;
 
-  // Componenta pentru secțiunea "Ce oferim" - folosită întotdeauna pentru SEO
-  const CeOferimSection = () => (
-    <section className="relative py-16 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
+  // Componenta pentru secțiunea "Ce oferim" - modernă cu conținut diferit
+  const CeOferimSection = () => {
+    const treatments = service?.data?.treatments || service?.treatments || [];
+    const keywords = service?.data?.keywords || service?.keywords || [];
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedText delay={0.2}>
-          <div className="bg-surface-elevated/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-xl border border-border/20">
-            <div className="text-center">
-              {/* Header Badge */}
-              <div className="inline-flex items-center gap-2 bg-surface-elevated/80 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/20">
-                <span className="text-lg">🏥</span>
-                <span>Servicii Medicale</span>
+    return (
+      <section className="relative py-20 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-32 left-20 w-64 h-64 bg-primary/3 rounded-full blur-3xl animate-pulse" />
+          <div
+            className="absolute bottom-32 right-20 w-80 h-80 bg-secondary/3 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "3s" }}
+          />
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/2 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1.5s" }}
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <AnimatedText delay={0.2}>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-md text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg border border-primary/30">
+                <span className="text-lg">⭐</span>
+                <span>Servicii de Specialitate</span>
               </div>
+            </AnimatedText>
 
-              {/* Title */}
+            <AnimatedText delay={0.4}>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text mb-6">
-                <span className="block">Ce oferim în</span>
+                <span className="block mb-2">Expertiză Medicală în</span>
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hero-gradient-flow">
                   {serviceName}
                 </span>
               </h2>
+            </AnimatedText>
 
-              {/* Description */}
-              <p className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
-                {service?.data?.longDescription ||
-                  service?.longDescription ||
-                  service?.data?.description ||
-                  service?.description ||
-                  "Servicii medicale de calitate cu echipament modern și specialiști experimentați pentru îngrijirea ta optimă"}
+            <AnimatedText delay={0.6}>
+              <p className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
+                Echipa noastră de specialiști oferă servicii medicale complete
+                cu tehnologie de ultimă generație și abordare personalizată
+                pentru fiecare pacient
               </p>
+            </AnimatedText>
+          </div>
 
-              {/* Keywords Grid - Stacked pentru SEO */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
-                {(service?.data?.keywords || service?.keywords || [])
-                  .slice(0, 8)
-                  .map((keyword: string, index: number) => (
-                    <div
-                      key={index}
-                      className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm text-primary px-4 py-3 rounded-2xl text-sm font-medium border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
-                    >
-                      <span className="block text-center">{keyword}</span>
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Left Side - Treatments/Services */}
+            <AnimatedText delay={0.8}>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white text-sm">
+                    🔬
+                  </span>
+                  Servicii Principale
+                </h3>
+
+                {treatments.length > 0 ? (
+                  <div className="space-y-4">
+                    {treatments
+                      .slice(0, 6)
+                      .map((treatment: any, index: number) => (
+                        <div
+                          key={index}
+                          className="group flex items-start gap-4 p-4 bg-surface-elevated/50 backdrop-blur-sm rounded-2xl border border-border/20 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+                        >
+                          <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-3 group-hover:scale-125 transition-transform duration-300" />
+                          <div className="flex-1">
+                            <h4 className="font-semibold text text-sm mb-1">
+                              {treatment.name}
+                            </h4>
+                            <p className="text-secondary text-sm leading-relaxed">
+                              {treatment.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4 p-4 bg-surface-elevated/50 backdrop-blur-sm rounded-2xl border border-border/20">
+                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-3" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold text text-sm mb-1">
+                          Consultații de Specialitate
+                        </h4>
+                        <p className="text-secondary text-sm">
+                          Evaluări complete cu specialiști experimentați
+                        </p>
+                      </div>
                     </div>
-                  ))}
+                    <div className="flex items-start gap-4 p-4 bg-surface-elevated/50 backdrop-blur-sm rounded-2xl border border-border/20">
+                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-3" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold text text-sm mb-1">
+                          Investigații Moderne
+                        </h4>
+                        <p className="text-secondary text-sm">
+                          Echipament de ultimă generație pentru diagnostic
+                          precis
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 p-4 bg-surface-elevated/50 backdrop-blur-sm rounded-2xl border border-border/20">
+                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-3" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold text text-sm mb-1">
+                          Tratamente Personalizate
+                        </h4>
+                        <p className="text-secondary text-sm">
+                          Planuri de tratament adaptate nevoilor individuale
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
+            </AnimatedText>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton
-                  href="/programare"
-                  variant="primary"
-                  size="lg"
-                  className="hero-btn-primary shadow-2xl"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="text-2xl">📅</span>
-                    <span>Programează Consultație</span>
+            {/* Right Side - Keywords & Benefits */}
+            <AnimatedText delay={1.0}>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center text-white text-sm">
+                    🎯
                   </span>
-                </AnimatedButton>
-                <AnimatedButton
-                  href="tel:+40721234567"
-                  variant="outline"
-                  size="lg"
-                  className="hero-btn-outline"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="text-2xl">📞</span>
-                    <span>Sună pentru Detalii</span>
-                  </span>
-                </AnimatedButton>
+                  Specializări & Expertise
+                </h3>
+
+                {/* Keywords as modern cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {keywords
+                    .slice(0, 8)
+                    .map((keyword: string, index: number) => (
+                      <div
+                        key={index}
+                        className="group relative bg-gradient-to-r from-surface-elevated/80 to-surface-elevated/60 backdrop-blur-sm text-primary px-4 py-3 rounded-2xl text-sm font-medium border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-lg overflow-hidden"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <span className="relative z-10 block text-center">
+                          {keyword}
+                        </span>
+                      </div>
+                    ))}
+                </div>
+
+                {/* Benefits */}
+                <div className="mt-8 p-6 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-2xl border border-primary/20">
+                  <h4 className="text-lg font-bold text mb-4 flex items-center gap-2">
+                    <span className="text-primary">✨</span>
+                    De ce să ne alegi?
+                  </h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+                        ✓
+                      </span>
+                      <span className="text-secondary text-sm">
+                        Specialiști cu experiență vastă
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+                        ✓
+                      </span>
+                      <span className="text-secondary text-sm">
+                        Echipament medical de ultimă generație
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+                        ✓
+                      </span>
+                      <span className="text-secondary text-sm">
+                        Abordare personalizată pentru fiecare pacient
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+                        ✓
+                      </span>
+                      <span className="text-secondary text-sm">
+                        Programări rapide și flexibile
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedText>
+          </div>
+
+          {/* CTA Section */}
+          <AnimatedText delay={1.2}>
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-8 lg:p-12 border border-primary/20 backdrop-blur-sm">
+                <h3 className="text-2xl lg:text-3xl font-bold text mb-4">
+                  Programează-te pentru o consultație
+                </h3>
+                <p className="text-secondary text-lg mb-8 max-w-2xl mx-auto">
+                  Beneficiază de servicii medicale de înaltă calitate într-un
+                  mediu modern și confortabil
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <AnimatedButton
+                    href="/programare"
+                    variant="primary"
+                    size="lg"
+                    className="hero-btn-primary shadow-2xl"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="text-2xl">📅</span>
+                      <span>Programare Online</span>
+                    </span>
+                  </AnimatedButton>
+                  <AnimatedButton
+                    href="tel:+40721234567"
+                    variant="outline"
+                    size="lg"
+                    className="hero-btn-outline"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="text-2xl">📞</span>
+                      <span>Sună Acum</span>
+                    </span>
+                  </AnimatedButton>
+                </div>
               </div>
             </div>
-          </div>
-        </AnimatedText>
-      </div>
-    </section>
-  );
+          </AnimatedText>
+        </div>
+      </section>
+    );
+  };
 
   return (
     <>
