@@ -203,8 +203,10 @@ export default function ContactInfo() {
                   <span>
                     Urmăritorii noștri primesc acces la oferte speciale și
                     evenimente medicale gratuite.
-                    <p>Se aplică termeni și condiții.</p>
                   </span>
+                </p>
+                <p className="text-secondary/70 text-sm mt-2">
+                  Se aplică termeni și condiții.
                 </p>
               </div>
             </div>
