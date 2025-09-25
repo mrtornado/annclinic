@@ -43,25 +43,7 @@ export default defineConfig({
   },
 
   image: {
-    // Astro 5 folosește Sharp service by default
-    // Nu mai este nevoie să specificăm explicit serviciul
     responsiveStyles: true,
-    // Configurarea pentru imagini locale și remote
-    domains: ["annclinic.ro", "ann.vizo.live", "vizo.live"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "annclinic.ro",
-      },
-      {
-        protocol: "https", 
-        hostname: "ann.vizo.live",
-      },
-      {
-        protocol: "https", 
-        hostname: "vizo.live",
-      }
-    ]
   },
 
   vite: {

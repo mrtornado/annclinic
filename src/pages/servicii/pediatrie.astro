@@ -3,7 +3,7 @@ import { getEntry } from "astro:content";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import pediatrieImg from "../../assets/images/servicii/pediatrrie.webp";
 import medicinaFamilieImg from "../../assets/images/servicii/fam-scaled.webp";
 
@@ -14,53 +14,19 @@ if (!service) {
   return Astro.redirect("/404");
 }
 
-// Optimizăm imaginile pentru servicii direct în pagina Astro
-const optimizedServiceImages: Record<string, any> = {};
-const serviceSlug = "pediatrie";
-
-// Adăugăm loguri pentru debug
-console.log("pediatrie.astro - serviceSlug:", serviceSlug);
-
-// Optimizăm imaginea default
-const optimizedDefaultImg = await getImage({
-  src: medicinaFamilieImg,
-  width: 400,
-  height: 300,
-  format: "webp",
-  quality: 80,
-});
-
-console.log("pediatrie.astro - optimizedDefaultImg:", optimizedDefaultImg);
-
-// Adaugăm imaginea default în optimizedServiceImages
-optimizedServiceImages.default = optimizedDefaultImg;
-console.log(
-  "pediatrie.astro - optimizedServiceImages.default:",
-  optimizedServiceImages.default
-);
-
-// Optimizăm imaginea pentru serviciul curent
-const optimizedImg = await getImage({
-  src: pediatrieImg,
-  width: 400,
-  height: 300,
-  format: "webp",
-  quality: 80,
-});
-
-console.log(
-  "pediatrie.astro - optimizedImg pentru",
-  serviceSlug,
-  ":",
-  optimizedImg
-);
-optimizedServiceImages[serviceSlug] = optimizedImg;
-console.log(
-  "pediatrie.astro - optimizedServiceImages[",
-  serviceSlug,
-  "]:",
-  optimizedServiceImages[serviceSlug]
-);
+// Create service images mapping directly from imported assets
+const serviceImages: Record<string, any> = {
+  default: {
+    src: medicinaFamilieImg.src,
+    width: 400,
+    height: 300,
+  },
+  pediatrie: {
+    src: pediatrieImg.src,
+    width: 400,
+    height: 300,
+  },
+};
 
 // SEO optimization for pediatrie - targeting "pediatru București" keywords
 const seoTitle =
@@ -74,9 +40,5 @@ const seoDescription =
   <ServiceHero service={service} client:load />
 
   <!-- Service Details Section with optimized images -->
-  <ServiceDetails
-    service={service}
-    serviceImages={optimizedServiceImages}
-    client:load
-  />
+  <ServiceDetails service={service} serviceImages={serviceImages} client:load />
 </ServiceLayout>

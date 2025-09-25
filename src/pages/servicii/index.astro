@@ -7,7 +7,7 @@ import ComingSoonSection from "../../components/home/ComingSoonSection.tsx";
 import ServicesSearch from "../../components/services/ServicesSearch.tsx";
 import AnimatedText from "../../components/magic-ui/AnimatedText.tsx";
 import FloatingParticles from "../../components/magic-ui/FloatingParticles.tsx";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import { siteConfig } from "../../config/site";
 import bgImage from "../../assets/images/bg-image.jpg";
 import welcomeImage from "../../assets/images/welcome.webp";
@@ -48,286 +48,93 @@ const sortedServices = services
   .filter((service) => service.data.hidden !== true)
   .sort((a, b) => {
     if (a.data.order !== b.data.order) {
-      return a.data.order - b.data.order;
+      return (a.data.order || 999) - (b.data.order || 999);
     }
-    return a.data.name.localeCompare(b.data.name);
+    return a.data.name.localeCompare(b.data.name, "ro");
   });
 
-// Optimize service images - disponibile acum
-const medicinaFamilieOptimized = await getImage({
-  src: medicinaFamilieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const pediatrieOptimized = await getImage({
-  src: pediatrieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const medicinaInternaOptimized = await getImage({
-  src: medicinaInternaImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const chirurgieGeneralaOptimized = await getImage({
-  src: chirurgieGeneralaImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const chirurgiePediatricaOptimized = await getImage({
-  src: chirurgiePediatricaImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const obstetricaGinecologieOptimized = await getImage({
-  src: obstetricaGinecologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const ortopedieTraumatologieOptimized = await getImage({
-  src: ortopedieTraumatologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const nefrologieOptimized = await getImage({
-  src: nefrologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const analizeLaboratorOptimized = await getImage({
-  src: analizeLaboratorImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const dermatovenerologieOptimized = await getImage({
-  src: dermatovenerologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const medicinaMunciiOptimized = await getImage({
-  src: medicinaMunciiImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const esteticaOptimized = await getImage({
-  src: esteticaImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const neurologieOptimized = await getImage({
-  src: neurologieImg,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-// Optimize coming soon service images
-const reumatologieOptimized = await getImage({
-  src: reumatologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const pneumologieOptimized = await getImage({
-  src: pneumologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const endocrinologieOptimized = await getImage({
-  src: endocrinologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const psihiatrieOptimized = await getImage({
-  src: psihiatrieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const recuperareMedicalaOptimized = await getImage({
-  src: recuperareMedicalaImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const alergologieOptimized = await getImage({
-  src: alergologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const ortopediePediatricaOptimized = await getImage({
-  src: ortopediePediatricaImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const cardiologieOptimized = await getImage({
-  src: cardiologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const orlOptimized = await getImage({
-  src: orlImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const oftalmologieOptimized = await getImage({
-  src: oftalmologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
-const urologieOptimized = await getImage({
-  src: urologieImgSoon,
-  format: "webp",
-  quality: 85,
-  width: 400,
-  height: 300,
-});
-
+// Create service images mapping directly from imported assets
 const serviceImages = {
   // Servicii disponibile acum
   "medicina-familie": {
-    src: medicinaFamilieOptimized.src,
+    src: medicinaFamilieImg.src,
     width: 400,
     height: 300,
   },
-  pediatrie: { src: pediatrieOptimized.src, width: 400, height: 300 },
+  pediatrie: { src: pediatrieImg.src, width: 400, height: 300 },
   "medicina-interna": {
-    src: medicinaInternaOptimized.src,
+    src: medicinaInternaImg.src,
     width: 400,
     height: 300,
   },
   "chirurgie-generala": {
-    src: chirurgieGeneralaOptimized.src,
+    src: chirurgieGeneralaImg.src,
     width: 400,
     height: 300,
   },
   "chirurgie-pediatrica": {
-    src: chirurgiePediatricaOptimized.src,
+    src: chirurgiePediatricaImg.src,
     width: 400,
     height: 300,
   },
   "obstetrica-ginecologie": {
-    src: obstetricaGinecologieOptimized.src,
+    src: obstetricaGinecologieImg.src,
     width: 400,
     height: 300,
   },
   "ortopedie-traumatologie": {
-    src: ortopedieTraumatologieOptimized.src,
+    src: ortopedieTraumatologieImg.src,
     width: 400,
     height: 300,
   },
-  nefrologie: { src: nefrologieOptimized.src, width: 400, height: 300 },
+  nefrologie: { src: nefrologieImg.src, width: 400, height: 300 },
   "analize-laborator": {
-    src: analizeLaboratorOptimized.src,
+    src: analizeLaboratorImg.src,
     width: 400,
     height: 300,
   },
   dermatovenerologie: {
-    src: dermatovenerologieOptimized.src,
+    src: dermatovenerologieImg.src,
     width: 400,
     height: 300,
   },
   "medicina-muncii": {
-    src: medicinaMunciiOptimized.src,
+    src: medicinaMunciiImg.src,
     width: 400,
     height: 300,
   },
-  "estetica-faciala": { src: esteticaOptimized.src, width: 400, height: 300 },
-  neurologie: { src: neurologieOptimized.src, width: 400, height: 300 },
+  "estetica-faciala": { src: esteticaImg.src, width: 400, height: 300 },
+  neurologie: { src: neurologieImg.src, width: 400, height: 300 },
 
   // Coming soon services
-  reumatologie: { src: reumatologieOptimized.src, width: 400, height: 300 },
-  pneumologie: { src: pneumologieOptimized.src, width: 400, height: 300 },
-  endocrinologie: { src: endocrinologieOptimized.src, width: 400, height: 300 },
-  psihiatrie: { src: psihiatrieOptimized.src, width: 400, height: 300 },
+  reumatologie: { src: reumatologieImgSoon.src, width: 400, height: 300 },
+  pneumologie: { src: pneumologieImgSoon.src, width: 400, height: 300 },
+  endocrinologie: { src: endocrinologieImgSoon.src, width: 400, height: 300 },
+  psihiatrie: { src: psihiatrieImgSoon.src, width: 400, height: 300 },
   "recuperare-medicala": {
-    src: recuperareMedicalaOptimized.src,
+    src: recuperareMedicalaImgSoon.src,
     width: 400,
     height: 300,
   },
-  alergologie: { src: alergologieOptimized.src, width: 400, height: 300 },
+  alergologie: { src: alergologieImgSoon.src, width: 400, height: 300 },
   "ortopedie-pediatrica": {
-    src: ortopediePediatricaOptimized.src,
+    src: ortopediePediatricaImgSoon.src,
     width: 400,
     height: 300,
   },
   "diabet-metabolism": {
-    src: endocrinologieOptimized.src,
+    src: endocrinologieImgSoon.src,
     width: 400,
     height: 300,
   },
 
   // Servicii care sunt în coming soon dar au și pagină dedicată
-  cardiologie: { src: cardiologieOptimized.src, width: 400, height: 300 },
-  orl: { src: orlOptimized.src, width: 400, height: 300 },
-  oftalmologie: { src: oftalmologieOptimized.src, width: 400, height: 300 },
-  urologie: { src: urologieOptimized.src, width: 400, height: 300 },
+  cardiologie: { src: cardiologieImgSoon.src, width: 400, height: 300 },
+  orl: { src: orlImgSoon.src, width: 400, height: 300 },
+  oftalmologie: { src: oftalmologieImgSoon.src, width: 400, height: 300 },
+  urologie: { src: urologieImgSoon.src, width: 400, height: 300 },
 
-  default: { src: medicinaFamilieOptimized.src, width: 400, height: 300 },
+  default: { src: medicinaFamilieImg.src, width: 400, height: 300 },
 };
 
 // SEO optimization for services page - targeting medical services in București
@@ -348,54 +155,88 @@ const keywords = [
   "pediatru București",
   "neurolog București",
   "oftalmolog București",
-  "urolog București",
   "ORL București",
+  "urolog București",
+  "ortopedie București",
+  "chirurgie București",
+  "dermatovenerologie București",
+  "nefrologie București",
+  "medicina muncii București",
+  "analize laborator București",
+  "ANN Medical Clinic",
   "clinică Bragadiru",
-  "consultații medicale Bragadiru",
+  "servicii medicale Ilfov",
 ];
 
-// Structured data for medical services
+// Structured data for services page
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  name: "ANN Medical Clinic - Servicii Medicale București",
+  "@type": "MedicalOrganization",
+  name: siteConfig.name,
+  url: `${siteConfig.url}/servicii`,
+  logo: `${siteConfig.url}/images/logo.png`,
   description: seoDescription,
-  url: `${Astro.site}servicii`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: `${siteConfig.address.street} ${siteConfig.address.number}`,
-    addressLocality: siteConfig.address.city,
-    addressRegion: siteConfig.address.county,
-    postalCode: siteConfig.address.postalCode,
+    streetAddress: "Strada Republicii, Nr. 15",
+    addressLocality: "Bragadiru",
+    addressRegion: "Ilfov",
+    postalCode: "077025",
     addressCountry: "RO",
   },
-  telephone: siteConfig.contact.shortPhone,
-  email: siteConfig.contact.email,
-  openingHours: [
-    `Mo-Fr ${siteConfig.schedule.weekdays}`,
-    `Sa ${siteConfig.schedule.saturday}`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.contact.phone,
+    contactType: "customer service",
+    areaServed: ["București", "Ilfov", "România"],
+    availableLanguage: "Romanian",
+  },
+  medicalSpecialty: [
+    "Cardiologie",
+    "Dermatologie",
+    "Ginecologie",
+    "Pediatrie",
+    "Neurologie",
+    "Oftalmologie",
+    "ORL",
+    "Urologie",
+    "Ortopedie",
+    "Chirurgie",
+    "Medicina Familiei",
+    "Medicina Internă",
+    "Nefrologie",
+    "Medicina Muncii",
   ],
-  medicalSpecialty: services.map((service) => service.data.name),
-  availableService: services.map((service) => ({
-    "@type": "MedicalTherapy",
-    name: service.data.name,
-    description: service.data.description,
-  })),
-  areaServed: [
-    {
-      "@type": "City",
-      name: "București",
-    },
-    {
-      "@type": "City",
-      name: "Bragadiru",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Ilfov",
-    },
-  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicii Medicale",
+    itemListElement: sortedServices.map((service, index) => ({
+      "@type": "Offer",
+      position: index + 1,
+      name: service.data.name,
+      description: service.data.description,
+      url: `${siteConfig.url}/servicii/${service.slug}`,
+      category: "Servicii Medicale",
+    })),
+  },
 };
+
+// Get available services (not coming soon)
+const availableServices = sortedServices.filter(
+  (service) => !service.data.comingSoon
+);
+
+// Get coming soon services
+const comingSoonServices = sortedServices.filter(
+  (service) => service.data.comingSoon
+);
+
+// Get featured services for highlighting
+const featuredServices = availableServices.filter(
+  (service) => service.data.featured
+);
+
+// Categories and specialties are handled by the components themselves
 ---
 
 <BaseLayout
@@ -403,16 +244,141 @@ const structuredData = {
   description={seoDescription}
   keywords={keywords}
   structuredData={structuredData}
+  canonicalUrl={`${siteConfig.url}/servicii`}
 >
-  <main class="min-h-screen">
-    <!-- All Services Listing - Detailed Grid -->
-    <AllServicesListing
-      services={sortedServices}
-      serviceImages={serviceImages}
-      client:load
-    />
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-surface to-secondary/5"
+  >
+    <!-- Floating Particles Background -->
+    <FloatingParticles client:load />
 
-    <!-- Search Services - Bottom -->
-    <ServicesSearch services={sortedServices} variant="bottom" client:load />
-  </main>
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(13,148,136,0.3),transparent_50%)]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.3),transparent_50%)]"
+      >
+      </div>
+    </div>
+
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+    >
+      <!-- Hero Content -->
+      <div class="max-w-4xl mx-auto">
+        <AnimatedText
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6"
+          client:load
+        >
+          Servicii Medicale Complete
+        </AnimatedText>
+
+        <div class="text-lg sm:text-xl text-text-muted mb-8 leading-relaxed">
+          <p>
+            Descoperă gama completă de servicii medicale oferite de ANN Medical
+            Clinic. Medici specializați, echipamente moderne și îngrijire
+            personalizată pentru sănătatea ta.
+          </p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">
+              {availableServices.length}+
+            </div>
+            <div class="text-sm text-text-muted">Servicii Disponibile</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-secondary mb-2">14+</div>
+            <div class="text-sm text-text-muted">Specialități</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-accent mb-2">15+</div>
+            <div class="text-sm text-text-muted">Ani Experiență</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary-hover mb-2">24/7</div>
+            <div class="text-sm text-text-muted">Urgențe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Search -->
+  <section class="py-12 bg-surface-secondary/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ServicesSearch services={sortedServices} client:load />
+    </div>
+  </section>
+
+  <!-- Available Services Section -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+          Servicii Disponibile Acum
+        </h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          Programează-te astăzi pentru consultații și investigații medicale de
+          înaltă calitate
+        </p>
+      </div>
+
+      <ServicesSection
+        services={availableServices}
+        serviceImages={serviceImages}
+        backgroundImage={welcomeImage.src}
+        client:load
+      />
+    </div>
+  </section>
+
+  <!-- Coming Soon Services -->
+  <section class="py-16 bg-surface-secondary/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+          Servicii în Curs de Dezvoltare
+        </h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          Extinderea continuă a gamei de servicii pentru a răspunde tuturor
+          nevoilor tale medicale
+        </p>
+      </div>
+
+      <ComingSoonSection
+        services={comingSoonServices}
+        serviceImages={serviceImages}
+        backgroundImage={welcomeImage.src}
+        client:load
+      />
+    </div>
+  </section>
+
+  <!-- All Services Listing -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-text mb-4">
+          Toate Serviciile
+        </h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          Explorează întreaga gamă de servicii medicale și găsește exact ce
+          cauți
+        </p>
+      </div>
+
+      <AllServicesListing
+        services={sortedServices}
+        serviceImages={serviceImages}
+        client:load
+      />
+    </div>
+  </section>
 </BaseLayout>

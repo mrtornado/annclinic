@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 import ServiceHero from "../../components/services/ServiceHero.tsx";
 import ServiceDetails from "../../components/services/ServiceDetails.tsx";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 
 // Importăm direct imaginile necesare
 import chirurgieImg from "../../assets/images/servicii/chirurgie.webp";
@@ -59,85 +59,32 @@ if (!service) {
 }
 const serviceName = service.data.name;
 
-// Optimizăm imaginile pentru servicii direct în pagina Astro
-const optimizedServiceImages: Record<string, any> = {};
+// Create service images mapping directly from imported assets
+const serviceImages: Record<string, any> = {};
 
-// Adăugăm loguri pentru debug
-console.log("[...slug].astro - serviceSlug:", serviceSlug);
-console.log(
-  "[...slug].astro - serviceImageMap keys:",
-  Object.keys(serviceImageMap)
-);
-
-// Întotdeauna optimizăm imaginea default pentru a evita erorile
-const defaultImg = serviceImageMap.default;
-console.log("[...slug].astro - defaultImg:", defaultImg);
-
-const optimizedDefaultImg = await getImage({
-  src: defaultImg,
+// Add default image
+serviceImages.default = {
+  src: serviceImageMap.default.src,
   width: 400,
   height: 300,
-  format: "webp",
-  quality: 80,
-});
+};
 
-console.log("[...slug].astro - optimizedDefaultImg:", optimizedDefaultImg);
-
-// Adaugăm imaginea default în optimizedServiceImages
-optimizedServiceImages.default = optimizedDefaultImg;
-console.log(
-  "[...slug].astro - optimizedServiceImages.default:",
-  optimizedServiceImages.default
-);
-
-// Optimizăm imaginea pentru serviciul curent dacă există în serviceImageMap
+// Add specific service image if it exists
 if (serviceSlug in serviceImageMap) {
-  const serviceImg = serviceImageMap[serviceSlug];
-  console.log(
-    "[...slug].astro - serviceImg pentru",
-    serviceSlug,
-    ":",
-    serviceImg
-  );
-
-  const optimizedImg = await getImage({
-    src: serviceImg,
+  serviceImages[serviceSlug] = {
+    src: serviceImageMap[serviceSlug].src,
     width: 400,
     height: 300,
-    format: "webp",
-    quality: 80,
-  });
-
-  console.log(
-    "[...slug].astro - optimizedImg pentru",
-    serviceSlug,
-    ":",
-    optimizedImg
-  );
-  optimizedServiceImages[serviceSlug] = optimizedImg;
-  console.log(
-    "[...slug].astro - optimizedServiceImages[",
-    serviceSlug,
-    "]:",
-    optimizedServiceImages[serviceSlug]
-  );
+  };
 }
 ---
 
 <ServiceLayout service={service}>
   <!-- Service Hero Section -->
-  <ServiceHero
-    service={service}
-    serviceImages={optimizedServiceImages}
-    client:load
-  />
+  <ServiceHero service={service} serviceImages={serviceImages} client:load />
 
   <!-- Service Details Section with optimized images -->
-  <ServiceDetails
-    service={service}
-    serviceImages={optimizedServiceImages}
-    client:load
-  />
+  <ServiceDetails service={service} serviceImages={serviceImages} client:load />
 </ServiceLayout>
 
 <!-- Removed optimization script since we're using direct imports -->
