@@ -44,7 +44,15 @@ export default defineConfig({
 
   image: {
     responsiveStyles: true,
-    // Înapoi la Sharp pentru optimizare
+    // Configurare explicită pentru Sharp cu Node adapter
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+      config: {
+        limitInputPixels: false,
+        // Configurări pentru Node.js SSR
+        failOnError: false,
+      },
+    },
   },
 
   vite: {

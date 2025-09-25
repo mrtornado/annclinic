@@ -1,6 +1,7 @@
 ---
 import AnimatedButton from "../magic-ui/AnimatedButton.tsx";
 import { siteConfig } from "../../config/site";
+import { Image } from "astro:assets";
 import logo from "../../assets/images/logo.png";
 
 const telHref = `tel:${siteConfig.contact.shortPhone}`;
@@ -15,11 +16,13 @@ const telHref = `tel:${siteConfig.contact.shortPhone}`;
       <!-- Logo Section -->
       <div class="flex items-center header-logo-section">
         <a href="/" class="flex items-center group">
-          <img
-            src={logo.src}
+          <Image
+            src={logo}
             alt={`${siteConfig.name} - ${siteConfig.tagline}`}
             width={320}
             height={64}
+            format="webp"
+            quality={90}
             class="h-12 w-auto sm:h-16 max-w-none object-contain transition-all duration-300 group-hover:scale-105"
             loading="eager"
             decoding="sync"
