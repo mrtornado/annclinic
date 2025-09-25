@@ -54,7 +54,7 @@ const service = services.find((s) => s.slug === serviceSlug);
 if (!service) {
   return new Response(null, {
     status: 404,
-    statusText: "Serviciul nu a fost găsit"
+    statusText: "Serviciul nu a fost găsit",
   });
 }
 const serviceName = service.data.name;
@@ -102,8 +102,8 @@ if (serviceSlug in serviceImageMap) {
 
   const optimizedImg = await getImage({
     src: serviceImg,
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 300,
     format: "webp",
     quality: 80,
   });
@@ -126,7 +126,11 @@ if (serviceSlug in serviceImageMap) {
 
 <ServiceLayout service={service}>
   <!-- Service Hero Section -->
-  <ServiceHero service={service} client:load />
+  <ServiceHero
+    service={service}
+    serviceImages={optimizedServiceImages}
+    client:load
+  />
 
   <!-- Service Details Section with optimized images -->
   <ServiceDetails

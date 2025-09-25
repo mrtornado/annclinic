@@ -1,9 +1,5 @@
 // @ts-check
-import {
-  defineConfig,
-  fontProviders,
-  passthroughImageService,
-} from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -47,8 +43,10 @@ export default defineConfig({
   },
 
   image: {
-    service: passthroughImageService(),
+    // Use default Sharp service for image optimization with custom settings
+    // service: passthroughImageService(),
     responsiveStyles: true,
+    // Configure default dimensions for auto-generated images
   },
 
   vite: {

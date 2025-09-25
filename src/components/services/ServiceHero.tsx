@@ -24,6 +24,10 @@ interface ServiceHeroProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
   isLandingPage?: boolean;
   showFreeConsultation?: boolean;
+  serviceImages?: Record<
+    string,
+    { src: string; width: number; height: number }
+  >;
 }
 
 const serviceIcons: Record<string, string> = {
@@ -65,8 +69,8 @@ const serviceColors: Record<string, string> = {
   default: "#1e40af", // Default - Primary blue
 };
 
-// Service images mapping
-const serviceImages: Record<string, any> = {
+// Service images mapping (local fallback)
+const localServiceImages: Record<string, any> = {
   cardiologie: cardiologieImg,
   dermatologie: dermatologieImg,
   dermatovenerologie: dermatologieImg,
@@ -92,6 +96,7 @@ export default function ServiceHero({
   service,
   isLandingPage = false,
   showFreeConsultation = false,
+  serviceImages,
 }: ServiceHeroProps) {
   // Handle both ServiceContent and direct objects from landing pages
   const getServiceName = () => {
@@ -109,14 +114,25 @@ export default function ServiceHero({
   const serviceSlug = service?.slug || service?.icon || "default";
   const gradientClass = serviceColors[serviceSlug] || serviceColors.default;
   const iconEmoji = serviceIcons[serviceSlug] || serviceIcons.default;
-  const serviceImage = serviceImages[serviceSlug] || serviceImages.default;
+
+  // Use optimized images from props if available, otherwise fallback to local mapping
+  const getServiceImage = () => {
+    // First try optimized images from props
+    if (serviceImages?.[serviceSlug]) return serviceImages[serviceSlug];
+    if (serviceImages?.default) return serviceImages.default;
+
+    // Fallback to local mapping
+    return localServiceImages[serviceSlug] || localServiceImages.default;
+  };
+
+  const serviceImage = getServiceImage();
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Full Background Image */}
       <div className="absolute inset-0">
         <img
-          src={serviceImage.src}
+          src={serviceImage?.src}
           alt={getServiceName()}
           className="w-full h-full object-cover"
         />
