@@ -24,8 +24,8 @@ console.log("pediatrie.astro - serviceSlug:", serviceSlug);
 // Optimizăm imaginea default
 const optimizedDefaultImg = await getImage({
   src: medicinaFamilieImg,
-  width: 800,
-  height: 600,
+  width: 400,
+  height: 300,
   format: "webp",
   quality: 80,
 });
@@ -42,8 +42,8 @@ console.log(
 // Optimizăm imaginea pentru serviciul curent
 const optimizedImg = await getImage({
   src: pediatrieImg,
-  width: 800,
-  height: 600,
+  width: 400,
+  height: 300,
   format: "webp",
   quality: 80,
 });

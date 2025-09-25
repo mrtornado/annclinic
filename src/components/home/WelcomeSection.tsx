@@ -17,17 +17,21 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
                 {/* Background decoration */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
 
-                {/* Main image */}
+                {/* Main image with layout shift prevention */}
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-border/20">
-                  <img
-                    src={welcomeImage}
-                    alt="Cabinet medical modern ANN Medical Clinic"
-                    className="w-full h-auto object-cover aspect-[4/3] hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
+                  <div className="aspect-ratio-container welcome-image">
+                    <img
+                      src={welcomeImage}
+                      alt="Cabinet medical modern ANN Medical Clinic"
+                      className="hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                      width="600"
+                      height="450"
+                    />
 
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
+                  </div>
                 </div>
 
                 {/* Floating elements */}

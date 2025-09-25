@@ -440,26 +440,31 @@ export default function AllServicesListing({
           {visibleServices.map((service, index) => (
             <AnimatedText key={service.slug} delay={0.2 + index * 0.1}>
               <article className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 overflow-hidden h-full flex flex-col border border-gray-100">
-                {/* Service Image */}
-                <div className="relative h-40 overflow-hidden">
-                  <img
-                    src={
-                      serviceImages[service.slug]?.src ||
-                      serviceImages.default?.src
-                    }
-                    alt={service.data.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    width={
-                      serviceImages[service.slug]?.width ||
-                      serviceImages.default?.width
-                    }
-                    height={
-                      serviceImages[service.slug]?.height ||
-                      serviceImages.default?.height
-                    }
-                  />
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                {/* Service Image with Layout Shift Prevention */}
+                <div className="relative overflow-hidden">
+                  <div className="aspect-ratio-container service-card-image">
+                    <img
+                      src={
+                        serviceImages[service.slug]?.src ||
+                        serviceImages.default?.src
+                      }
+                      alt={service.data.name}
+                      className="group-hover:scale-110 transition-transform duration-500"
+                      width={
+                        serviceImages[service.slug]?.width ||
+                        serviceImages.default?.width ||
+                        400
+                      }
+                      height={
+                        serviceImages[service.slug]?.height ||
+                        serviceImages.default?.height ||
+                        300
+                      }
+                      loading="lazy"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  </div>
 
                   {/* Status Badge */}
                   {service.data.comingSoon ? (

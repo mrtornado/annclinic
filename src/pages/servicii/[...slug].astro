@@ -42,16 +42,21 @@ const serviceImageMap: Record<string, any> = {
   default: medicinaFamilieImg,
 };
 
-export async function getStaticPaths() {
-  const services = await getCollection("services");
-  return services.map((service) => ({
-    params: { slug: service.slug },
-    props: { service },
-  }));
-}
+// Server-side rendering pentru dynamic routes
+const { slug } = Astro.params;
+const serviceSlug = Array.isArray(slug) ? slug.join("/") : slug || "";
 
-const { service } = Astro.props;
-const serviceSlug = service.slug;
+// Găsim serviciul pe baza slug-ului
+const services = await getCollection("services");
+const service = services.find((s) => s.slug === serviceSlug);
+
+// 404 dacă serviciul nu există
+if (!service) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Serviciul nu a fost găsit"
+  });
+}
 const serviceName = service.data.name;
 
 // Optimizăm imaginile pentru servicii direct în pagina Astro
@@ -70,8 +75,8 @@ console.log("[...slug].astro - defaultImg:", defaultImg);
 
 const optimizedDefaultImg = await getImage({
   src: defaultImg,
-  width: 800,
-  height: 600,
+  width: 400,
+  height: 300,
   format: "webp",
   quality: 80,
 });

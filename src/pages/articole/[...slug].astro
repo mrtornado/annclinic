@@ -2,19 +2,21 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
-export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
-  }));
-}
+// Server-side rendering pentru dynamic routes
+const { slug } = Astro.params;
+const articleSlug = Array.isArray(slug) ? slug.join("/") : slug || "";
 
-interface Props {
-  article: CollectionEntry<"articles">;
-}
+// Găsim articolul pe baza slug-ului
+const articles = await getCollection("articles");
+const article = articles.find((a) => a.slug === articleSlug);
 
-const { article } = Astro.props;
+// 404 dacă articolul nu există
+if (!article) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Articolul nu a fost găsit"
+  });
+}
 
 // Get related articles based on specialty and tags
 const allArticles = await getCollection("articles");

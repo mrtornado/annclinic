@@ -141,19 +141,23 @@ export default function ServicesSection({
                   }
                   className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-[28rem] cursor-pointer"
                 >
-                  {/* Image Section - Standard image */}
-                  <div className="relative h-44 overflow-hidden flex-shrink-0">
-                    <img
-                      src={
-                        (service?.slug && serviceImages[service.slug]?.src) ||
-                        serviceImages.default?.src
-                      }
-                      alt={service?.data.name || "Serviciu medical"}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                    {/* Subtle overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  {/* Image Section - Standard image with Layout Shift Prevention */}
+                  <div className="relative overflow-hidden flex-shrink-0">
+                    <div className="aspect-ratio-container service-card-image">
+                      <img
+                        src={
+                          (service?.slug && serviceImages[service.slug]?.src) ||
+                          serviceImages.default?.src
+                        }
+                        alt={service?.data.name || "Serviciu medical"}
+                        className="group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        width={400}
+                        height={225}
+                      />
+                      {/* Subtle overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    </div>
                   </div>
 
                   {/* Content Section - Clean and compact */}
