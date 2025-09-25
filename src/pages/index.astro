@@ -7,7 +7,7 @@ import ComingSoonSection from "../components/home/ComingSoonSection.tsx";
 import ArticlesSection from "../components/home/ArticlesSection.tsx";
 import { getCollection } from "astro:content";
 import { siteConfig } from "../config/site";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import bgImage from "../assets/images/bg-image.jpg";
 import welcomeImage from "../assets/images/welcome.webp";
 
@@ -19,38 +19,7 @@ import synevoLogo from "../assets/images/synevo.png";
 const services = await getCollection("services");
 const articles = await getCollection("articles");
 
-// Optimize images for actual display sizes
-const optimizedBgImage = await getImage({
-  src: bgImage,
-  width: 1920,
-  height: 1080,
-  format: "webp",
-  quality: 85,
-});
-
-const optimizedWelcomeImage = await getImage({
-  src: welcomeImage,
-  width: 600,
-  height: 450,
-  format: "webp",
-  quality: 90,
-});
-
-const optimizedAnnLogo = await getImage({
-  src: annLogo,
-  width: 167, // Actual display size from PageSpeed
-  height: 96,
-  format: "webp",
-  quality: 90,
-});
-
-const optimizedSynevoLogo = await getImage({
-  src: synevoLogo,
-  width: 140, // Actual display size from PageSpeed
-  height: 64,
-  format: "webp",
-  quality: 90,
-});
+// For output: server, we use direct .src - no getImage() processing
 
 // Import service images for homepage - correctly mapped
 import medicinaFamilieImg from "../assets/images/servicii/fam-scaled.webp";
@@ -86,65 +55,140 @@ import orlImgSoon from "../assets/images/servicii/soon/ORL.webp";
 import oftalmologieImgSoon from "../assets/images/servicii/soon/oftamologie.webp";
 import urologieImgSoon from "../assets/images/servicii/soon/UROLOGIE.webp";
 
-// Optimize service images to actual display size (384x216)
-const optimizedServiceImages = await Promise.all([
-  getImage({ src: medicinaFamilieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: pediatrieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: medicinaInternaImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: chirurgieGeneralaImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: chirurgiePediatricaImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: obstetricaGinecologieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: ortopedieTraumatologieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: nefrologieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: analizeLaboratorImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: dermatovenerologieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: medicinaMunciiImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: esteticaImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: neurologieImg, width: 384, height: 216, format: "webp", quality: 85 }),
-  // Coming soon services
-  getImage({ src: reumatologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: pneumologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: endocrinologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: psihiatrieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: recuperareMedicalaImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: alergologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: ortopediePediatricaImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: cardiologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: orlImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: oftalmologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-  getImage({ src: urologieImgSoon, width: 384, height: 216, format: "webp", quality: 85 }),
-]);
-
-// Create service images mapping with optimized images
+// Create service images mapping directly from imported assets (for output: server)
 const homeServiceImages = {
-  "medicina-familie": { src: optimizedServiceImages[0].src, width: 384, height: 216 },
-  pediatrie: { src: optimizedServiceImages[1].src, width: 384, height: 216 },
-  "medicina-interna": { src: optimizedServiceImages[2].src, width: 384, height: 216 },
-  "chirurgie-generala": { src: optimizedServiceImages[3].src, width: 384, height: 216 },
-  "chirurgie-pediatrica": { src: optimizedServiceImages[4].src, width: 384, height: 216 },
-  "obstetrica-ginecologie": { src: optimizedServiceImages[5].src, width: 384, height: 216 },
-  "ortopedie-traumatologie": { src: optimizedServiceImages[6].src, width: 384, height: 216 },
-  nefrologie: { src: optimizedServiceImages[7].src, width: 384, height: 216 },
-  "analize-laborator": { src: optimizedServiceImages[8].src, width: 384, height: 216 },
-  dermatovenerologie: { src: optimizedServiceImages[9].src, width: 384, height: 216 },
-  "medicina-muncii": { src: optimizedServiceImages[10].src, width: 384, height: 216 },
-  "estetica-faciala": { src: optimizedServiceImages[11].src, width: 384, height: 216 },
-  neurologie: { src: optimizedServiceImages[12].src, width: 384, height: 216 },
+  "medicina-familie": {
+    src: medicinaFamilieImg.src,
+    width: 400,
+    height: 300,
+  },
+  pediatrie: {
+    src: pediatrieImg.src,
+    width: 400,
+    height: 300,
+  },
+  "medicina-interna": {
+    src: medicinaInternaImg.src,
+    width: 400,
+    height: 300,
+  },
+  "chirurgie-generala": {
+    src: chirurgieGeneralaImg.src,
+    width: 400,
+    height: 300,
+  },
+  "chirurgie-pediatrica": {
+    src: chirurgiePediatricaImg.src,
+    width: 400,
+    height: 300,
+  },
+  "obstetrica-ginecologie": {
+    src: obstetricaGinecologieImg.src,
+    width: 400,
+    height: 300,
+  },
+  "ortopedie-traumatologie": {
+    src: ortopedieTraumatologieImg.src,
+    width: 400,
+    height: 300,
+  },
+  nefrologie: {
+    src: nefrologieImg.src,
+    width: 400,
+    height: 300,
+  },
+  "analize-laborator": {
+    src: analizeLaboratorImg.src,
+    width: 400,
+    height: 300,
+  },
+  dermatovenerologie: {
+    src: dermatovenerologieImg.src,
+    width: 400,
+    height: 300,
+  },
+  "medicina-muncii": {
+    src: medicinaMunciiImg.src,
+    width: 400,
+    height: 300,
+  },
+  "estetica-faciala": {
+    src: esteticaImg.src,
+    width: 400,
+    height: 300,
+  },
+  neurologie: {
+    src: neurologieImg.src,
+    width: 400,
+    height: 300,
+  },
   // Coming soon services
-  reumatologie: { src: optimizedServiceImages[13].src, width: 384, height: 216 },
-  pneumologie: { src: optimizedServiceImages[14].src, width: 384, height: 216 },
-  endocrinologie: { src: optimizedServiceImages[15].src, width: 384, height: 216 },
-  psihiatrie: { src: optimizedServiceImages[16].src, width: 384, height: 216 },
-  "recuperare-medicala": { src: optimizedServiceImages[17].src, width: 384, height: 216 },
-  alergologie: { src: optimizedServiceImages[18].src, width: 384, height: 216 },
-  "ortopedie-pediatrica": { src: optimizedServiceImages[19].src, width: 384, height: 216 },
-  "diabet-metabolism": { src: optimizedServiceImages[15].src, width: 384, height: 216 }, // Using endocrinologie
+  reumatologie: {
+    src: reumatologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  pneumologie: {
+    src: pneumologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  endocrinologie: {
+    src: endocrinologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  psihiatrie: {
+    src: psihiatrieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  "recuperare-medicala": {
+    src: recuperareMedicalaImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  alergologie: {
+    src: alergologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  "ortopedie-pediatrica": {
+    src: ortopediePediatricaImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  "diabet-metabolism": {
+    src: endocrinologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
   // Coming soon services that already exist but moved to coming soon
-  cardiologie: { src: optimizedServiceImages[20].src, width: 384, height: 216 },
-  orl: { src: optimizedServiceImages[21].src, width: 384, height: 216 },
-  oftalmologie: { src: optimizedServiceImages[22].src, width: 384, height: 216 },
-  urologie: { src: optimizedServiceImages[23].src, width: 384, height: 216 },
-  default: { src: optimizedServiceImages[0].src, width: 384, height: 216 },
+  cardiologie: {
+    src: cardiologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  orl: {
+    src: orlImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  oftalmologie: {
+    src: oftalmologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  urologie: {
+    src: urologieImgSoon.src,
+    width: 400,
+    height: 300,
+  },
+  default: {
+    src: medicinaFamilieImg.src,
+    width: 400,
+    height: 300,
+  },
 };
 ---
 
@@ -161,20 +205,20 @@ const homeServiceImages = {
 >
   <!-- Hero Section - React Component -->
   <HeroSection
-    backgroundImage={optimizedBgImage.src}
-    annLogo={optimizedAnnLogo.src}
-    synevoLogo={optimizedSynevoLogo.src}
+    backgroundImage={bgImage.src}
+    annLogo={annLogo.src}
+    synevoLogo={synevoLogo.src}
     client:load
   />
 
   <!-- Welcome Section - React Component -->
-  <WelcomeSection welcomeImage={optimizedWelcomeImage.src} client:load />
+  <WelcomeSection welcomeImage={welcomeImage.src} client:load />
 
   <!-- Services Section - React Component -->
   <ServicesSection
     services={services}
     serviceImages={homeServiceImages}
-    backgroundImage={optimizedWelcomeImage.src}
+    backgroundImage={welcomeImage.src}
     client:load
   />
 
@@ -182,7 +226,7 @@ const homeServiceImages = {
   <ComingSoonSection
     services={services}
     serviceImages={homeServiceImages}
-    backgroundImage={optimizedWelcomeImage.src}
+    backgroundImage={welcomeImage.src}
     client:load
   />
 

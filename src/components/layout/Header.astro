@@ -1,19 +1,9 @@
 ---
 import AnimatedButton from "../magic-ui/AnimatedButton.tsx";
 import { siteConfig } from "../../config/site";
-import { getImage } from "astro:assets";
 import logo from "../../assets/images/logo.png";
 
 const telHref = `tel:${siteConfig.contact.shortPhone}`;
-
-// Optimize logo for header display
-const optimizedLogo = await getImage({
-  src: logo,
-  width: 320,
-  height: 64,
-  format: "webp",
-  quality: 90,
-});
 ---
 
 <header
@@ -26,7 +16,7 @@ const optimizedLogo = await getImage({
       <div class="flex items-center header-logo-section">
         <a href="/" class="flex items-center group">
           <img
-            src={optimizedLogo.src}
+            src={logo.src}
             alt={`${siteConfig.name} - ${siteConfig.tagline}`}
             width={320}
             height={64}
