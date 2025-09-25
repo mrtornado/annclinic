@@ -6,12 +6,12 @@ import logo from "../../assets/images/logo.png";
 
 const telHref = `tel:${siteConfig.contact.shortPhone}`;
 
-// Optimize logo using getImage() like in other pages
+// Optimize logo using getImage() - size for actual display (240x48) and compress
 const optimizedLogo = await getImage({
   src: logo,
-  width: 320,
-  height: 64,
-  quality: 100, // Keep at 100% quality, let Astro decide format
+  width: 240, // Actual display size from PageSpeed
+  height: 48, // Actual display size from PageSpeed
+  quality: 75, // Reduced quality for better compression
 });
 ---
 
@@ -27,8 +27,8 @@ const optimizedLogo = await getImage({
           <img
             src={optimizedLogo.src}
             alt={`${siteConfig.name} - ${siteConfig.tagline}`}
-            width={320}
-            height={64}
+            width={240}
+            height={48}
             class="h-12 w-auto sm:h-16 max-w-none object-contain transition-all duration-300 group-hover:scale-105"
             loading="eager"
             decoding="sync"

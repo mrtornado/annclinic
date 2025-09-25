@@ -457,7 +457,7 @@ const featuredServices = availableServices.filter(
     class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-surface to-secondary/5"
   >
     <!-- Floating Particles Background -->
-    <FloatingParticles client:load />
+    <FloatingParticles client:idle />
 
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
@@ -478,7 +478,7 @@ const featuredServices = availableServices.filter(
       <div class="max-w-4xl mx-auto">
         <AnimatedText
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6"
-          client:load
+          client:idle
         >
           Servicii Medicale Complete
         </AnimatedText>
@@ -519,7 +519,7 @@ const featuredServices = availableServices.filter(
   <!-- Services Search -->
   <section class="py-12 bg-surface-secondary/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <ServicesSearch services={sortedServices} client:load />
+      <ServicesSearch services={sortedServices} client:idle />
     </div>
   </section>
 
@@ -540,7 +540,7 @@ const featuredServices = availableServices.filter(
         services={availableServices}
         serviceImages={serviceImages}
         backgroundImage={optimizedWelcomeImage.src}
-        client:load
+        client:visible
       />
     </div>
   </section>
@@ -562,7 +562,7 @@ const featuredServices = availableServices.filter(
         services={comingSoonServices}
         serviceImages={serviceImages}
         backgroundImage={optimizedWelcomeImage.src}
-        client:load
+        client:visible
       />
     </div>
   </section>
@@ -583,7 +583,7 @@ const featuredServices = availableServices.filter(
       <AllServicesListing
         services={sortedServices}
         serviceImages={serviceImages}
-        client:load
+        client:visible
       />
     </div>
   </section>

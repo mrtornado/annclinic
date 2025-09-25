@@ -84,7 +84,11 @@ if (serviceSlug in serviceImageMap) {
   <ServiceHero service={service} serviceImages={serviceImages} client:load />
 
   <!-- Service Details Section with optimized images -->
-  <ServiceDetails service={service} serviceImages={serviceImages} client:load />
+  <ServiceDetails
+    service={service}
+    serviceImages={serviceImages}
+    client:visible
+  />
 </ServiceLayout>
 
 <!-- Removed optimization script since we're using direct imports -->

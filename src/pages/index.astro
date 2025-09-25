@@ -40,14 +40,14 @@ const optimizedAnnLogo = await getImage({
   src: annLogo,
   width: 167, // Actual display size from PageSpeed
   height: 96,
-  quality: 100, // Let Astro decide the best format
+  quality: 75, // Reduced quality for better compression
 });
 
 const optimizedSynevoLogo = await getImage({
   src: synevoLogo,
   width: 140, // Actual display size from PageSpeed
   height: 64,
-  quality: 100, // Let Astro decide the best format
+  quality: 75, // Reduced quality for better compression
 });
 
 // Import service images for homepage - correctly mapped
@@ -365,7 +365,7 @@ const homeServiceImages = {
     "ginecolog București",
   ]}
 >
-  <!-- Hero Section - React Component -->
+  <!-- Hero Section - React Component (visible immediately) -->
   <HeroSection
     backgroundImage={optimizedBgImage.src}
     annLogo={optimizedAnnLogo.src}
@@ -373,25 +373,25 @@ const homeServiceImages = {
     client:load
   />
 
-  <!-- Welcome Section - React Component -->
-  <WelcomeSection welcomeImage={optimizedWelcomeImage.src} client:load />
+  <!-- Welcome Section - React Component (load when visible) -->
+  <WelcomeSection welcomeImage={optimizedWelcomeImage.src} client:visible />
 
-  <!-- Services Section - React Component -->
+  <!-- Services Section - React Component (load when visible) -->
   <ServicesSection
     services={services}
     serviceImages={homeServiceImages}
     backgroundImage={optimizedWelcomeImage.src}
-    client:load
+    client:visible
   />
 
-  <!-- Coming Soon Section - React Component -->
+  <!-- Coming Soon Section - React Component (load when visible) -->
   <ComingSoonSection
     services={services}
     serviceImages={homeServiceImages}
     backgroundImage={optimizedWelcomeImage.src}
-    client:load
+    client:visible
   />
 
-  <!-- Articles Section - React Component -->
-  <ArticlesSection articles={articles} client:load />
+  <!-- Articles Section - React Component (load when visible) -->
+  <ArticlesSection articles={articles} client:visible />
 </BaseLayout>
