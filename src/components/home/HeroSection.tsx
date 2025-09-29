@@ -153,9 +153,9 @@ export default function HeroSection({
                 <span className="text-2xl">👨‍⚕️</span>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg mb-1">
+                <div className="text-white font-bold text-lg mb-1">
                   Medici Experți
-                </h3>
+                </div>
                 <p className="text-white/80 text-sm">
                   Profesioniști dedicați sănătății tale.
                 </p>
@@ -168,9 +168,9 @@ export default function HeroSection({
                 <span className="text-2xl">⏰</span>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg mb-1">
+                <div className="text-white font-bold text-lg mb-1">
                   Fără Așteptare
-                </h3>
+                </div>
                 <p className="text-white/80 text-sm">
                   Servicii rapide și eficiente.
                 </p>
@@ -183,9 +183,9 @@ export default function HeroSection({
                 <span className="text-2xl">📅</span>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg mb-1">
+                <div className="text-white font-bold text-lg mb-1">
                   Programare Online
-                </h3>
+                </div>
                 <p className="text-white/80 text-sm">
                   Simplu și rapid, direct de acasă.
                 </p>

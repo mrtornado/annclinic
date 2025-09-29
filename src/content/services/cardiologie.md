@@ -32,7 +32,7 @@ relatedServices:
   - "ecocardiografie"
   - "proba-efort"
 featured: true
-comingSoon: true
+comingSoon: false
 order: 17
 treatments:
   - name: "Consultație cardiologie"
