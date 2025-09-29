@@ -34,7 +34,7 @@ relatedServices:
   - "tratament-psoriazis"
   - "investigații-dermatologice"
 featured: true
-order: 7
+order: 8
 treatments:
   - name: "Consultație dermatovenerologie"
     description: "Evaluare completă a afecțiunilor pielii și venerice cu dermatovenerolog experimentat"

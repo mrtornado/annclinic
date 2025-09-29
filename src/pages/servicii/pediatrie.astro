@@ -37,7 +37,7 @@ const seoDescription =
 
 <ServiceLayout service={service} title={seoTitle} description={seoDescription}>
   <!-- Service Hero Section -->
-  <ServiceHero service={service} client:load />
+  <ServiceHero service={service} showCASBanner={true} client:load />
 
   <!-- Service Details Section with optimized images -->
   <ServiceDetails service={service} serviceImages={serviceImages} client:load />

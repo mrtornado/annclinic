@@ -2,6 +2,7 @@
 import SEO from "../components/shared/SEO.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import FamilyDoctorBanner from "../components/shared/FamilyDoctorBanner.tsx";
 import { Font } from "astro:assets";
 import "../styles/global.css";
 
@@ -23,6 +24,7 @@ export interface Props {
   nofollow?: boolean;
   showHeader?: boolean;
   showFooter?: boolean;
+  showFamilyDoctorBanner?: boolean;
 }
 
 const {
@@ -36,6 +38,7 @@ const {
   nofollow,
   showHeader = true,
   showFooter = true,
+  showFamilyDoctorBanner = true,
 } = Astro.props;
 ---
 
@@ -116,6 +119,7 @@ const {
   <body class="bg-surface text min-h-screen">
     <div id="app" class="min-h-screen flex flex-col">
       {showHeader && <Header />}
+      {showFamilyDoctorBanner && <FamilyDoctorBanner client:load />}
       <main class="flex-1">
         <slot />
       </main>

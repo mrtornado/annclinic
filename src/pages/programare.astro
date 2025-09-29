@@ -152,6 +152,79 @@ const openGraph = {
       </p>
     </div>
 
+    <!-- Family Doctor Registration CTA -->
+    <div class="max-w-4xl mx-auto px-4 mb-12">
+      <div
+        class="relative bg-gradient-to-br from-teal-600 via-teal-700 to-slate-800 text-white rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl"
+      >
+        <!-- Background effects -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-white/10 via-teal-300/5 to-white/5 rounded-3xl"
+        >
+        </div>
+
+        <!-- Animated particles -->
+        <div class="absolute inset-0">
+          <div
+            class="absolute top-4 left-6 w-2 h-2 bg-cyan-300/40 rounded-full animate-pulse"
+          >
+          </div>
+          <div
+            class="absolute top-8 right-8 w-1 h-1 bg-teal-300/50 rounded-full animate-ping"
+            style="animation-delay: 1s;"
+          >
+          </div>
+          <div
+            class="absolute bottom-6 left-1/4 w-1.5 h-1.5 bg-cyan-400/30 rounded-full animate-bounce"
+            style="animation-delay: 2s;"
+          >
+          </div>
+        </div>
+
+        <div
+          class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+          <!-- Left side - Message -->
+          <div class="flex-1 text-center sm:text-left">
+            <div
+              class="flex items-center justify-center sm:justify-start gap-3 mb-3"
+            >
+              <div
+                class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+              >
+                <span class="text-2xl">👨‍⚕️</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl text-white">
+                  Vrei să te înscrii la Medicul de Familie?
+                </h3>
+              </div>
+            </div>
+            <p class="text-teal-100 leading-relaxed">
+              Sună acum și beneficiezi de consultații gratuite decontate de CAS
+              la ANN Medical Center!
+            </p>
+          </div>
+
+          <!-- Right side - CTA -->
+          <div class="flex-shrink-0">
+            <a
+              href="tel:{siteConfig.contact.shortPhone}"
+              class="inline-flex items-center gap-3 bg-white text-teal-700 font-bold px-6 py-4 rounded-2xl hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105"
+            >
+              <span class="text-2xl">📞</span>
+              <div class="text-left">
+                <div class="text-sm text-teal-600">Sună Acum</div>
+                <div class="font-bold text-lg">
+                  {siteConfig.contact.shortPhone}
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- External Booking System Iframe -->
     <div class="w-full mt-20">
       <iframe

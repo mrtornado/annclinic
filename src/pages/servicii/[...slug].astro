@@ -59,6 +59,10 @@ if (!service) {
 }
 const serviceName = service.data.name;
 
+// Services that have CAS decontate consultations
+const casServices = ["pediatrie", "chirurgie-generala", "nefrologie"];
+const showCASBanner = casServices.includes(serviceSlug);
+
 // Create service images mapping directly from imported assets
 const serviceImages: Record<string, any> = {};
 
@@ -81,7 +85,12 @@ if (serviceSlug in serviceImageMap) {
 
 <ServiceLayout service={service}>
   <!-- Service Hero Section -->
-  <ServiceHero service={service} serviceImages={serviceImages} client:load />
+  <ServiceHero
+    service={service}
+    serviceImages={serviceImages}
+    showCASBanner={showCASBanner}
+    client:load
+  />
 
   <!-- Service Details Section with optimized images -->
   <ServiceDetails

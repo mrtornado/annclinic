@@ -33,7 +33,7 @@ relatedServices:
   - "proba-efort"
 featured: true
 comingSoon: false
-order: 17
+order: 5
 treatments:
   - name: "Consultație cardiologie"
     description: "Evaluare completă a sistemului cardiovascular cu cardiolog experimentat"

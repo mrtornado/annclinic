@@ -33,7 +33,7 @@ relatedServices:
   - "recuperare-rapida"
 featured: true
 comingSoon: true
-order: 31
+order: 30
 treatments:
   - name: "Proceduri chirurgicale minore"
     description: "Intervenții chirurgicale ambulatorii cu anestezie locală"

@@ -32,7 +32,7 @@ relatedServices:
   - "audiometrie"
   - "spirometrie"
 featured: true
-order: 11
+order: 12
 treatments:
   - name: "Evaluare medicală inițială"
     description: "Examinare medicală pentru angajare sau schimbare post"

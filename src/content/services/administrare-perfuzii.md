@@ -33,7 +33,7 @@ relatedServices:
   - "consultatie-medicina-interna"
 featured: true
 hidden: true
-order: 12
+order: 13
 treatments:
   - name: "Administrare perfuzie standard"
     description: "Administrarea tratamentului intravenos prescris de medicul curant"

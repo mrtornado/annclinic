@@ -32,7 +32,7 @@ relatedServices:
   - "infiltrații-articulare"
   - "tratament-artroză"
 featured: true
-order: 9
+order: 10
 treatments:
   - name: "Consultație ortopedie și traumatologie"
     description: "Evaluare completă a aparatului locomotor cu ortoped traumatolog experimentat"

@@ -32,7 +32,7 @@ relatedServices:
   - "anestezie-pediatrica"
   - "monitorizare-postoperatorie"
 featured: true
-order: 10
+order: 11
 treatments:
   - name: "Consultație chirurgie pediatrică"
     description: "Evaluare chirurgicală specializată pentru copii și adolescenți"

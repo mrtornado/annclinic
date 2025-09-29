@@ -24,6 +24,7 @@ interface ServiceHeroProps {
   service?: ServiceContent | any; // Allow both ServiceContent and direct objects from landing pages
   isLandingPage?: boolean;
   showFreeConsultation?: boolean;
+  showCASBanner?: boolean;
   serviceImages?: Record<
     string,
     { src: string; width: number; height: number }
@@ -96,6 +97,7 @@ export default function ServiceHero({
   service,
   isLandingPage = false,
   showFreeConsultation = false,
+  showCASBanner = false,
   serviceImages,
 }: ServiceHeroProps) {
   // Handle both ServiceContent and direct objects from landing pages
@@ -163,6 +165,25 @@ export default function ServiceHero({
                 </span>
               </h1>
             </AnimatedText>
+
+            {/* CAS Banner */}
+            {showCASBanner && (
+              <AnimatedText delay={0.3}>
+                <div className="relative bg-gradient-to-r from-emerald-500/95 via-green-500/95 to-teal-500/95 backdrop-blur-sm text-white px-6 sm:px-8 py-4 sm:py-5 rounded-3xl text-center mb-8 shadow-2xl border border-emerald-400/40 hover:shadow-emerald-500/25 hover:scale-[1.02] transition-all duration-500 max-w-lg mx-auto overflow-hidden">
+                  {/* Subtle background pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5" />
+
+                  <div className="relative z-10">
+                    <div className="font-bold text-lg sm:text-xl mb-2 tracking-wide">
+                      Consultații și Servicii GRATUITE
+                    </div>
+                    <div className="text-emerald-100 text-sm sm:text-base leading-relaxed">
+                      (se decontează de CAS cu bilet de trimitere)
+                    </div>
+                  </div>
+                </div>
+              </AnimatedText>
+            )}
 
             {/* Service Description */}
             <AnimatedText delay={0.4}>
