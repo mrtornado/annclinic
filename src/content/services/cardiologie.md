@@ -60,32 +60,14 @@ treatments:
     duration: 30
     price: 300
 packages:
-  - name: "Pachet Cardiologic Complet"
-    description: "Evaluare cardiologică completă cu investigații moderne"
-    originalPrice: 530
-    packagePrice: 450
-    savings: 80
-    services: ["Consultație cardiologie", "EKG", "Ecocardiografie"]
+  - name: "Consult Cardiologie + EKG"
+    description: "Evaluare cardiologică completă cu electrocardiogramă"
+    originalPrice: 450
+    packagePrice: 300
+    savings: 150
+    services: ["Consultație cardiologie", "Electrocardiogramă (EKG)"]
     highlight: true
     popular: true
-  - name: "Screening Cardiac Basic"
-    description: "Evaluare de bază pentru sănătatea inimii"
-    originalPrice: 280
-    packagePrice: 250
-    savings: 30
-    services: ["Consultație cardiologie", "EKG"]
-  - name: "Monitorizare Cardiacă Avansată"
-    description: "Pentru pacienți cu risc cardiovascular crescut"
-    originalPrice: 850
-    packagePrice: 750
-    savings: 100
-    services:
-      [
-        "Consultație cardiologie",
-        "EKG",
-        "Ecocardiografie",
-        "Monitorizare Holter",
-      ]
 ---
 
 # Cardiolog București - Servicii Complete de Cardiologie

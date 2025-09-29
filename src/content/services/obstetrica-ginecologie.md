@@ -57,6 +57,15 @@ treatments:
     description: "Test de screening pentru cancerul de col uterin"
     duration: 20
     price: 100
+packages:
+  - name: "Consult Ginecologie + Ecografie Transvaginală"
+    description: "Evaluare ginecologică completă cu ecografie transvaginală"
+    originalPrice: 500
+    packagePrice: 250
+    savings: 250
+    services: ["Consultație obstetrică-ginecologie", "Ecografie transvaginală"]
+    highlight: true
+    popular: true
 ---
 
 # Servicii de Obstetrică-Ginecologie la ANN Medical Clinic

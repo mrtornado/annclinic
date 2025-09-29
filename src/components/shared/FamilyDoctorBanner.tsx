@@ -71,7 +71,7 @@ export default function FamilyDoctorBanner() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-bold text-sm leading-tight mb-1">
-                  Vrei Medic de Familie?
+                  Cauți Medic de Familie?
                 </h3>
                 <p className="text-teal-100 text-xs leading-tight">
                   Înscrie-te GRATUIT!

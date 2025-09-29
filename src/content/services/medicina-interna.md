@@ -1,7 +1,7 @@
 ---
 name: "Medicina Internă"
 description: "Evaluări complete, diagnostic și tratament pentru o gamă variată de boli interne"
-longDescription: "Departamentul de medicina internă al ANN Medical Clinic oferă evaluări medicale complete pentru pacienții adulți cu boli complexe sau multiple. Echipa noastră de medici internișți din București provide consultații specializate, diagnostic diferențial și managementul afecțiunilor cronice."
+longDescription: "Departamentul de medicina internă al ANN Medical Clinic oferă evaluări medicale complete pentru pacienții adulți cu boli complexe sau multiple. Echipa noastră de medici internișți din București oferă consultații specializate, diagnostic diferențial și managementul afecțiunilor cronice."
 icon: "stethoscope"
 seoTitle: "Medicina Internă București - Internist Experimentat | ANN Medical Clinic"
 seoDescription: "Medicina internă București cu specialiști experimentați. Evaluări complete, diagnostic și tratament boli interne. Programează consultație la ANN Medical Clinic Bragadiru."
@@ -50,6 +50,15 @@ treatments:
     description: "Evaluare și ajustare tratament hipertensiune arterială"
     duration: 30
     price: 180
+packages:
+  - name: "Consult Medicina Internă + Ecografie Abdominală"
+    description: "Evaluare completă medicina internă cu ecografie abdominală totală"
+    originalPrice: 500
+    packagePrice: 250
+    savings: 250
+    services: ["Consultație medicina internă", "Ecografie abdominală totală"]
+    highlight: true
+    popular: true
 ---
 
 # Medicina Internă București - Evaluări Complete și Tratament Specializat

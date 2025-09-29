@@ -19,67 +19,9 @@ interface ServicePackagesProps {
   service?: any; // Service data from content
 }
 
-// Pachete speciale pentru fiecare serviciu
-const servicePackages: { [key: string]: Package[] } = {
-  "medicina-interna": [
-    {
-      name: "Consult Medicina Internă + Ecografie Abdominală",
-      description:
-        "Evaluare completă medicina internă cu ecografie abdominală totală",
-      originalPrice: 500,
-      packagePrice: 250,
-      savings: 50,
-      services: ["Consultație medicina internă", "Ecografie abdominală totală"],
-      highlight: true,
-      popular: true,
-    },
-  ],
-  "obstetrica-ginecologie": [
-    {
-      name: "Consult Ginecologie + Ecografie Transvaginală",
-      description: "Evaluare ginecologică completă cu ecografie transvaginală",
-      originalPrice: 500,
-      packagePrice: 250,
-      savings: 50,
-      services: [
-        "Consultație obstetrică-ginecologie",
-        "Ecografie transvaginală",
-      ],
-      highlight: true,
-      popular: true,
-    },
-  ],
-  cardiologie: [
-    {
-      name: "Consult Cardiologie + EKG",
-      description: "Evaluare cardiologică completă cu electrocardiogramă",
-      originalPrice: 450,
-      packagePrice: 300,
-      savings: 50,
-      services: ["Consultație cardiologie", "Electrocardiogramă (EKG)"],
-      highlight: true,
-      popular: true,
-    },
-  ],
-  pediatrie: [
-    {
-      name: "Teste Rapide Pediatrice",
-      description:
-        "Teste rapide pentru diagnosticul copiilor - gratuit în funcție de caz",
-      originalPrice: 0,
-      packagePrice: 0,
-      savings: 0,
-      services: [
-        "Test Rapid Covid",
-        "Test Gripa A/B",
-        "Test VSR (Virus Sincițial Respirator)",
-        "Test Streptococ Hemolitic Grup A",
-      ],
-      highlight: true,
-      popular: true,
-    },
-  ],
-};
+// Pachete speciale pentru serviciile care nu au pachete în content
+// Acum toate pachetele sunt definite în fișierele .md din src/content/services/
+const servicePackages: { [key: string]: Package[] } = {};
 
 // Pachete default pentru serviciile care nu au pachete specifice
 const defaultPackages: Package[] = [
@@ -107,7 +49,7 @@ export default function ServicePackages({
   serviceName,
   service,
 }: ServicePackagesProps) {
-  // Folosim pachete din content dacă sunt disponibile, altfel folosim cele hardcodate
+  // Folosim pachetele din content (fișierele .md din src/content/services/)
   const contentPackages = service?.data?.packages || service?.packages;
   const packages = contentPackages || servicePackages[serviceSlug];
   const hasPackages = packages && packages.length > 0;
@@ -441,10 +383,13 @@ export default function ServicePackages({
                             </>
                           )}
                         </div>
-                        {pkg.savings > 0 && (
+                        {pkg.originalPrice > pkg.packagePrice && (
                           <div className="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                             <span>💰</span>
-                            <span>Economisești {pkg.savings} Lei</span>
+                            <span>
+                              Economisești{" "}
+                              {pkg.originalPrice - pkg.packagePrice} Lei
+                            </span>
                           </div>
                         )}
                         {pkg.packagePrice === 0 && (

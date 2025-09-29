@@ -1,7 +1,7 @@
 ---
 name: "Nefrologie"
 description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
-longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale și urologice în București. Echipa noastră de nefrologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale în București. Echipa noastră de nefrologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "kidney"
 seoTitle: "Nefrologie București - Specialist Rinichi Experimentat | ANN Medical Clinic"
 seoDescription: "Nefrologie București cu specialiști în afecțiuni renale. Consultații nefrologie, tratament insuficiență renală, boli rinichi. ANN Medical Clinic Bragadiru."
