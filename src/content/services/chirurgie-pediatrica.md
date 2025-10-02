@@ -1,7 +1,7 @@
 ---
 name: "Chirurgie Pediatrică"
 description: "Consultație și tratament la nou-născuți, copii și adolescenți într-un mediu adaptat nevoilor lor specifice"
-longDescription: "Departamentul de chirurgie pediatrică al ANN Medical Clinic oferă servicii chirurgicale specializate pentru copii și adolescenți în București. Echipa noastră de chirurgi pediatri experimentați asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu intervenții minimm invazive și mică chirurgie."
+longDescription: "Departamentul de chirurgie pediatrică al ANN Medical Clinic oferă servicii chirurgicale specializate pentru copii și adolescenți din București și Bragadiru. Echipa noastră de chirurgi pediatri asigură îngrijire medicală adaptată particularităților vârstei copilăriei, cu intervenții minim invazive și mică chirurgie."
 icon: "child-medical"
 seoTitle: "Chirurgie Pediatrică București - Chirurg Copii Experimentat | ANN Medical Clinic"
 seoDescription: "Chirurgie pediatrică București cu specialiști în tratarea copiilor. Intervenții minore copii, consultații chirurgicale pediatrice. ANN Medical Clinic Bragadiru."

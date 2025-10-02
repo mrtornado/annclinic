@@ -117,6 +117,6 @@ Pentru a menține o inimă sănătoasă:
 
 ## Concluzie
 
-Recunoașterea timpurie a simptomelor problemelor cardiace și consultarea unui cardiolog specialist poate salva vieți. La ANN Medical Clinic, echipa noastră de cardiologi experimentați este pregătită să vă ofere evaluări complete și tratamente personalizate pentru a vă menține sănătatea cardiovasculară.
+Recunoașterea timpurie a simptomelor problemelor cardiace și consultarea unui cardiolog specialist poate salva vieți. La ANN Medical Clinic, echipa noastră de cardiologi este pregătită să vă ofere evaluări complete și tratamente personalizate pentru a vă menține sănătatea cardiovasculară.
 
 Pentru o consultație de cardiologie, programați-vă astăzi la ANN Medical Clinic Bragadiru.

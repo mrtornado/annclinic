@@ -1,7 +1,7 @@
 ---
 name: "Cardiologie"
 description: "Servicii complete de cardiologie cu investigații moderne și tratamente personalizate pentru afecțiunile cardiovasculare"
-longDescription: "Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de cardiologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și tratamente personalizate."
+longDescription: "Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare pentru pacienți din București și Bragadiru. Echipa noastră de cardiologi utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și tratamente personalizate."
 icon: "heart"
 seoTitle: "Cardiolog București - Consultații Cardiologie | ANN Medical Clinic"
 seoDescription: "Cardiolog București cu experiență vastă. Consultații cardiologie, EKG, ecocardiografie, monitorizare Holter, investigații cardiologice complete. Programează-te la ANN Medical Clinic Bragadiru."
@@ -72,15 +72,15 @@ packages:
 
 # Cardiolog București - Servicii Complete de Cardiologie
 
-Căutați un **cardiolog în București** cu experiență și echipament modern? Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare. Echipa noastră de **cardiologi experimentați din București** utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și rezultate optime.
+Căutați un **cardiolog în București** cu experiență și echipament modern? Departamentul de cardiologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor cardiovasculare în București și Bragadiru. Echipa noastră de cardiologi utilizează tehnologie medicală de ultimă generație pentru investigații cardiologice precise și rezultate optime.
 
-## De Ce să Alegeți Cardiologii Noștri din București?
+## De Ce să Alegeți Cardiologii Noștri?
 
 - **Experiență vastă** - cardiologi cu peste 10 ani de experiență
 - **Echipament modern** - tehnologie medicală de ultimă generație
 - **Investigații complete** - EKG, ecocardiografie, Holter în aceeași locație
 - **Consultații rapide** - programări în maximum 48 de ore
-- **Locație convenabilă** - ușor accesibil din București
+- **Locație convenabilă** - Bragadiru, ușor accesibil din București
 
 ## Servicii de Cardiologie Oferite
 
@@ -94,7 +94,7 @@ Consultațiile noastre de cardiologie includ:
 - **Monitorizarea evoluției** afecțiunilor cardiace
 - **Consultații de urgență** pentru simptome acute
 
-### Investigații Cardiologice Complete în București
+### Investigații Cardiologice Complete
 
 #### EKG (Electrocardiogramă) - Investigație Esențială
 

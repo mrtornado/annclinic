@@ -1,7 +1,7 @@
 ---
 name: "Nefrologie"
-description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
-longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale în București. Echipa noastră de nefrologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști"
+longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale pentru pacienți din București și Bragadiru. Echipa noastră de nefrologi utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "kidney"
 seoTitle: "Nefrologie București - Specialist Rinichi Experimentat | ANN Medical Clinic"
 seoDescription: "Nefrologie București cu specialiști în afecțiuni renale. Consultații nefrologie, tratament insuficiență renală, boli rinichi. ANN Medical Clinic Bragadiru."
@@ -35,7 +35,7 @@ featured: true
 order: 3
 treatments:
   - name: "Consultație nefrologie"
-    description: "Evaluare completă a funcției renale și afecțiunilor asociate"
+    description: "Evaluarea completă a funcției renale și afecțiunilor asociate"
     duration: 45
     price: 240
   - name: "Monitorizare insuficiență renală"
@@ -43,13 +43,33 @@ treatments:
     duration: 30
     price: 200
   - name: "Evaluare hipertensiune renală"
-    description: "Diagnostic și tratament hipertensiunii de cauză renală"
+    description: "Diagnosticul și tratamentul hipertensiunii de cauză renală"
     duration: 45
     price: 220
   - name: "Consiliere calculoza renală"
     description: "Evaluare și prevenirea calculilor renali"
     duration: 30
     price: 180
+  - name: "EKG (Electrocardiogramă)"
+    description: "Monitorizare cardiacă pentru pacienți cu afecțiuni renale"
+    duration: 15
+    price: 80
+  - name: "Tensiune arterială continuă (Holter TA)"
+    description: "Monitorizare 24h a tensiunii arteriale"
+    duration: 30
+    price: 250
+  - name: "Monitorizare hemodinamică prin bioimpedanță toracică"
+    description: "Evaluare non-invazivă a funcției cardiace și volumului lichidian"
+    duration: 30
+    price: 200
+  - name: "Administrare tratament prin injectare părți moi"
+    description: "Injectare intramusculară, intradermică și subcutanată"
+    duration: 15
+    price: 50
+  - name: "Administrare tratament prin puncție intravenoasă"
+    description: "Administrare medicație intravenoasă"
+    duration: 15
+    price: 60
 ---
 
 # Nefrologie București - Tratament Specializat pentru Afecțiunile Renale
@@ -80,6 +100,9 @@ Departamentul de **nefrologie** al ANN Medical Clinic oferă servicii medicale s
 - **Examen urină completă** - sediment urinar și proteinurie
 - **Markeri inflamatori** - pentru diagnosticul glomerulonefritelor
 - **Ecografie renală** - evaluarea structurii și dimensiunilor
+- **EKG (Electrocardiogramă)** - monitorizare cardiacă pentru pacienți cu afecțiuni renale
+- **Holter tensiune arterială** - monitorizare continuă 24h a TA
+- **Monitorizare hemodinamică** - bioimpedanță toracică pentru evaluarea volumului lichidian
 
 ### Servicii Preventive
 
@@ -87,6 +110,13 @@ Departamentul de **nefrologie** al ANN Medical Clinic oferă servicii medicale s
 - **Evaluare pre-diabetică** - prevenirea nefropatiei diabetice
 - **Consiliere lifestyle** - dietă și hidratare corespunzătoare
 - **Monitorizare medicația nefrotoxică** - ajustarea dozelor
+
+### Proceduri și Administrare Tratament
+
+- **Administrare tratament intramuscular** - injectare părți moi
+- **Administrare tratament intradermic** - pentru teste și medicație specifică
+- **Administrare tratament subcutanat** - injectare subcutanată
+- **Puncție intravenoasă** - administrare medicație intravenoasă
 
 ## Factori de Risc pentru Bolile Renale
 

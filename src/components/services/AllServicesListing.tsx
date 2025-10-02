@@ -284,7 +284,7 @@ export default function AllServicesListing({
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Echipa noastră de{" "}
               <span className="font-semibold text-primary bg-primary/10 px-3 py-1 rounded-xl">
-                {services.length} specialiști experimentați
+                {services.length} specialiști
               </span>{" "}
               oferă îngrijire medicală de înaltă calitate într-o gamă completă
               de specialități. Tehnologie avansată și abordare personalizată

@@ -1,7 +1,7 @@
 ---
 name: "Urologie"
 description: "Servicii complete de urologie pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital"
-longDescription: "Departamentul de urologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin. Echipa noastră de urologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente."
+longDescription: "Departamentul de urologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin pentru pacienți din București și Bragadiru. Echipa noastră de urologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente."
 icon: "medical"
 seoTitle: "Urolog București - Consultații Urologie | ANN Medical Clinic"
 seoDescription: "Urolog București cu experiență vastă. Consultații urologie, prostată, calculi renali, infecții urinare. Programează-te la ANN Medical Clinic Bragadiru."
@@ -63,7 +63,7 @@ treatments:
 
 # Urologie București - Consultații și Tratamente Urologice
 
-Departamentul de **urologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin în București și Bragadiru. Echipa noastră de urologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente.
+Departamentul de **urologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului urogenital masculin și feminin în București și Bragadiru. Echipa noastră de urologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente.
 
 ## Servicii de Urologie
 

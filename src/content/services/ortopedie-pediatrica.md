@@ -1,7 +1,7 @@
 ---
 name: "Ortopedie Pediatrică"
 description: "Diagnosticarea și tratamentul afecțiunilor osoase, musculare și articulare la copii, cu soluții adaptate vârstei"
-longDescription: "Departamentul de ortopedie pediatrică al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor la copii în București. Echipa noastră de ortopezi pediatri experimentați va asigura îngrijire specializată adaptată nevoilor copiilor."
+longDescription: "Departamentul de ortopedie pediatrică al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor la copii din București și Bragadiru. Echipa noastră de ortopezi pediatri va asigura îngrijire specializată adaptată nevoilor copiilor."
 icon: "child-bones"
 seoTitle: "Ortopedie Pediatrică București - Ortoped Copii | ANN Medical Clinic"
 seoDescription: "Ortopedie pediatrică București cu specialiști în tratarea copiilor. Scolioză, picioarele plate, deformări congenitale. În curând la ANN Medical Clinic Bragadiru."

@@ -1,7 +1,7 @@
 ---
 name: "Oftalmologie"
 description: "Servicii complete de oftalmologie pentru diagnosticarea și tratamentul afecțiunilor oculare"
-longDescription: "Departamentul de oftalmologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor oculare. Echipa noastră de oftalmologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente pentru sănătatea ochilor."
+longDescription: "Departamentul de oftalmologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor oculare pentru pacienți din București și Bragadiru. Echipa noastră de oftalmologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente pentru sănătatea ochilor."
 icon: "eye"
 seoTitle: "Oftalmolog București - Consultații Oftalmologie | ANN Medical Clinic"
 seoDescription: "Oftalmolog București cu experiență vastă. Consultații oftalmologie, control vedere, cataractă, glaucom, retină. Programează-te la ANN Medical Clinic Bragadiru."
@@ -63,7 +63,7 @@ treatments:
 
 # Oftalmologie București - Consultații și Tratamente Oculare
 
-Departamentul de **oftalmologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor oculare în București și Bragadiru. Echipa noastră de oftalmologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente pentru sănătatea ochilor.
+Departamentul de **oftalmologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor oculare în București și Bragadiru. Echipa noastră de oftalmologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente eficiente pentru sănătatea ochilor.
 
 ## Servicii de Oftalmologie
 

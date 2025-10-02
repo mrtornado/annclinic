@@ -99,7 +99,7 @@ Centrul de **spitalizare de zi** al ANN Medical Clinic oferă servicii medicale 
 ### Protocoale de Siguranță
 
 - **Evaluare pre-procedură** - screening medical complet
-- **Anestezie sigurarăa** - medici anestezisti experimentați
+- **Anestezie sigură** - medici anestezisti
 - **Monitorizare vitală** - echipament de supraveghere continuă
 - **Echipa de urgență** - pregătită pentru orice situație
 

@@ -1,7 +1,7 @@
 ---
 name: "Ortopedie și Traumatologie"
 description: "Servicii complete de ortopedie și traumatologie pentru diagnosticarea și tratamentul afecțiunilor"
-longDescription: "Departamentul de ortopedie și traumatologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor. Echipa noastră de medici ortopezi și traumatologi experimentați din București utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de ortopedie și traumatologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor pentru pacienți din București și Bragadiru. Echipa noastră de medici ortopezi și traumatologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate."
 icon: "bone"
 seoTitle: "Ortoped Traumatolog București - Consultații Ortopedie și Traumatologie | ANN Medical Clinic"
 seoDescription: "Ortoped traumatolog București cu experiență vastă. Consultații ortopedie și traumatologie, tratament fracturi, artroză, dureri articulare, radiografii. Programează-te la ANN Medical Clinic Bragadiru."
@@ -38,10 +38,6 @@ treatments:
     description: "Evaluare completă a aparatului locomotor cu ortoped traumatolog experimentat"
     duration: 45
     price: 200
-  - name: "Radiografie oase și articulații"
-    description: "Investigații radiologice pentru diagnostic precis"
-    duration: 20
-    price: 120
   - name: "Infiltrații articulare"
     description: "Tratament prin injecții pentru dureri și inflamații articulare"
     duration: 30
@@ -50,10 +46,6 @@ treatments:
     description: "Îngrijirea medicală specializată pentru traumatisme și fracturi"
     duration: 60
     price: 400
-  - name: "Consultație probleme coloană vertebrală"
-    description: "Evaluare specializată pentru dureri de spate și probleme spinale"
-    duration: 45
-    price: 220
   - name: "Tratament artroză"
     description: "Management complet al artrozei și afecțiunilor degenerative"
     duration: 45
@@ -62,7 +54,7 @@ treatments:
 
 # Ortopedie și Traumatologie București - Consultații și Tratamente Specializate
 
-Departamentul de **ortopedie și traumatologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor în București și Bragadiru. Echipa noastră de ortopezi și traumatologi experimentați utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
+Departamentul de **ortopedie și traumatologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor aparatului locomotor și traumatismelor în București și Bragadiru. Echipa noastră de ortopezi și traumatologi utilizează tehnologie medicală modernă pentru investigații precise și tratamente personalizate.
 
 ## Servicii de Ortopedie și Traumatologie
 

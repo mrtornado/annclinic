@@ -1,7 +1,7 @@
 ---
 name: "Alergologie"
 description: "Servicii pentru identificarea și tratamentul alergiilor, cu teste moderne și soluții terapeutice eficiente"
-longDescription: "Departamentul de alergologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor în București. Echipa noastră de alergologi experimentați va utiliza teste moderne și tratamente personalizate pentru managementul afecțiunilor alergice."
+longDescription: "Departamentul de alergologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul alergiilor pentru pacienți din București și Bragadiru. Echipa noastră de alergologi va utiliza teste moderne și tratamente personalizate pentru managementul afecțiunilor alergice."
 icon: "allergy"
 seoTitle: "Alergolog București - Consultații Alergologie | ANN Medical Clinic"
 seoDescription: "Alergolog București cu experiență vastă. Consultații alergologie, teste alergice, tratament astm, rinită alergică. În curând la ANN Medical Clinic Bragadiru."

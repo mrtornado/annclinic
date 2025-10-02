@@ -318,6 +318,6 @@ Programul Național de Vaccinare este un sistem organizat de imunizare care ofer
 
 Programul Național de Vaccinare reprezintă una dintre cele mai importante realizări ale medicinei preventive moderne. Respectarea calendarului de vaccinare protejează nu doar copilul dumneavoastră, ci întreaga comunitate.
 
-La ANN Medical Clinic, pediatrii noștri experimentați oferă consultații complete de vaccinare, respectând cele mai înalte standarde de siguranță și calitate. Echipa noastră vă va ghida prin întregul proces de vaccinare și va răspunde la toate întrebările dumneavoastră.
+La ANN Medical Clinic, pediatrii noștri oferă consultații complete de vaccinare, respectând cele mai înalte standarde de siguranță și calitate. Echipa noastră vă va ghida prin întregul proces de vaccinare și va răspunde la toate întrebările dumneavoastră.
 
 **Pentru consultații de pediatrie și vaccinare, programați-vă la ANN Medical Clinic Bragadiru - unde sănătatea copilului dumneavoastră este prioritatea noastră.**

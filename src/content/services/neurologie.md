@@ -1,7 +1,7 @@
 ---
 name: "Neurologie"
 description: "Servicii complete de neurologie pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos"
-longDescription: "Departamentul de neurologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic. Echipa noastră de neurologi experimentați din București utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de neurologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic pentru pacienți din București și Bragadiru. Echipa noastră de neurologi utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "brain"
 seoTitle: "Neurolog București - Consultații Neurologie | ANN Medical Clinic"
 seoDescription: "Neurolog București cu experiență vastă. Consultații neurologie, dureri de cap, migrene, epilepsie, AVC. Programează-te la ANN Medical Clinic Bragadiru."
@@ -63,7 +63,7 @@ treatments:
 
 # Neurologie București - Consultații și Tratamente Neurologice
 
-Departamentul de **neurologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic în București și Bragadiru. Echipa noastră de neurologi experimentați utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate.
+Departamentul de **neurologie** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor sistemului nervos central și periferic în București și Bragadiru. Echipa noastră de neurologi utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate.
 
 ## Servicii de Neurologie
 

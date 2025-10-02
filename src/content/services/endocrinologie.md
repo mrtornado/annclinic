@@ -1,7 +1,7 @@
 ---
 name: "Endocrinologie"
 description: "Tratamente pentru afecțiuni hormonale, asigurând monitorizarea și echilibrarea funcțiilor endocrine"
-longDescription: "Departamentul de endocrinologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine în București. Echipa noastră de endocrinologi experimentați va utiliza investigații moderne pentru evaluarea funcțiilor hormonale și tratamente personalizate."
+longDescription: "Departamentul de endocrinologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor endocrine pentru pacienți din București și Bragadiru. Echipa noastră de endocrinologi va utiliza investigații moderne pentru evaluarea funcțiilor hormonale și tratamente personalizate."
 icon: "hormone"
 seoTitle: "Endocrinolog București - Consultații Endocrinologie | ANN Medical Clinic"
 seoDescription: "Endocrinolog București cu experiență vastă. Consultații endocrinologie, diabet, tiroidă, hormoni, metabolism. În curând la ANN Medical Clinic Bragadiru."

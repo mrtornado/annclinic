@@ -1,6 +1,6 @@
 ---
 name: "Analize Laborator CAS"
-description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști experimentați"
+description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști"
 longDescription: "Laborator de analize medicale al ANN Medical Clinic ofera o gama completa de investigatii de laborator, cu rezultate rapide si precise pentru diagnostic si monitorizare tratament."
 icon: "lab"
 seoTitle: "Analize Medicale București - Laborator Synevo | ANN Medical Clinic"

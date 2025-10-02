@@ -1,7 +1,7 @@
 ---
 name: "Reumatologie"
 description: "Tratamente pentru afecțiuni articulare și autoimune, cu soluții moderne pentru dureri reumatismale"
-longDescription: "Departamentul de reumatologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune în București. Echipa noastră de reumatologi experimentați va utiliza tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
+longDescription: "Departamentul de reumatologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor reumatismale și autoimune pentru pacienți din București și Bragadiru. Echipa noastră de reumatologi va utiliza tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "joint"
 seoTitle: "Reumatolog București - Consultații Reumatologie | ANN Medical Clinic"
 seoDescription: "Reumatolog București cu experiență vastă. Consultații reumatologie, artrite, spondilite, boli autoimune. În curând la ANN Medical Clinic Bragadiru."

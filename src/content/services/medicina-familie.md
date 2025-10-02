@@ -1,10 +1,10 @@
 ---
 name: "Medicina de Familie"
 description: "Îngrijire medicală completă și continuă pentru întreaga familie, cu accent pe prevenție, diagnostic precoce și tratament personalizat"
-longDescription: "Departamentul de medicina de familie al ANN Medical Clinic oferă servicii medicale primare complete pentru întreaga familie în București. Medicii noștri de familie asigură îngrijire continuă, preventivă și curativă, fiind primul contact cu sistemul medical și coordonând îngrijirea de specialitate când este necesar."
+longDescription: "Departamentul de medicina de familie al ANN Medical Clinic oferă servicii medicale primare complete pentru întreaga familie în București / Bragadiru. Medicii noștri de familie asigură îngrijire continuă, preventivă și curativă, fiind primul contact cu sistemul medical și coordonând îngrijirea de specialitate când este necesar."
 icon: "family"
 seoTitle: "Medicina de Familie București - Medic de Familie | ANN Medical Clinic"
-seoDescription: "Medicina de familie București cu medici experimentați. Îngrijire completă familia, consultații în limba engleză, prevenție și tratament. ANN Medical Clinic Bragadiru."
+seoDescription: "Medicina de familie București cu medici. Îngrijire completă familia, prevenție și tratament. ANN Medical Clinic Bragadiru."
 keywords:
   - "medicina de familie București Bragadiru"
   - "medic de familie București Bragadiru"
@@ -12,7 +12,6 @@ keywords:
   - "medic familie Bragadiru București"
   - "îngrijire medicală completă familie București"
   - "medicina primară București Bragadiru"
-  - "consultații în limba engleză București"
   - "check-up medical familie București"
   - "vacccinări copii adulți București"
   - "medicina preventivă București Bragadiru"
@@ -25,11 +24,9 @@ popularSearchTerms:
   - "check-up medical"
   - "vaccinări"
   - "medicina preventivă"
-  - "consultații limba engleză"
 relatedServices:
   - "vaccinari"
   - "check-up-medical"
-  - "consultatie-engleza"
   - "medicina-preventiva"
 featured: true
 order: 1
@@ -42,10 +39,6 @@ treatments:
     description: "Evaluare preventivă completă pentru întreaga familie"
     duration: 45
     price: 200
-  - name: "Consultații în limba engleză"
-    description: "Servicii medicale pentru vorbitorii de limba engleză"
-    duration: 30
-    price: 180
   - name: "Vaccinări copii și adulți"
     description: "Program complet de vaccinări conform recomandărilor"
     duration: 20
@@ -54,7 +47,7 @@ treatments:
 
 # Medicina de Familie București - Îngrijire Completă pentru Întreaga Familie
 
-Departamentul de **medicina de familie** al ANN Medical Clinic oferă servicii medicale primare complete pentru toate vârstele în București și Bragadiru. Echipa noastră de medici de familie experimentați asigură îngrijire continuă, de la prevenție la tratament, fiind partenerul de încredere pentru sănătatea întregii familii.
+Departamentul de **medicina de familie** al ANN Medical Clinic oferă servicii medicale primare complete pentru toate vârstele în București și Bragadiru. Echipa noastră de medici de familie asigură îngrijire continuă, de la prevenție la tratament, fiind partenerul de încredere pentru sănătatea întregii familii.
 
 ## Servicii de Medicina de Familie
 
@@ -104,7 +97,6 @@ Departamentul de **medicina de familie** al ANN Medical Clinic oferă servicii m
 
 ### Servicii Specializate
 
-- **Consultații în limba engleză** - pentru vorbitorii nativi și expatriați
 - **Medicina ocupațională** - evaluări pentru angajare și controale
 - **Consiliere psihologică** - suport pentru stres și anxietate
 - **Planificare familială** - contraceptie și consiliere reproductivă

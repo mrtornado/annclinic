@@ -144,7 +144,7 @@ export default function ServicePackages({
                           Consultații de Specialitate
                         </h4>
                         <p className="text-secondary text-sm">
-                          Evaluări complete cu specialiști experimentați
+                          Evaluări complete cu specialiști
                         </p>
                       </div>
                     </div>
@@ -183,7 +183,7 @@ export default function ServicePackages({
                   <span className="w-8 h-8 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center text-white text-sm">
                     🎯
                   </span>
-                  Specializări & Expertise
+                  Specializări
                 </h3>
 
                 {/* Keywords as modern cards */}

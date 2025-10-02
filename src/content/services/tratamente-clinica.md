@@ -131,7 +131,7 @@ Departamentul de **tratamente clinica** al ANN Medical Clinic oferă servicii me
 - **Evaluare cardiacă completă** - ritm, conductibilitate, ischemie
 - **Diagnostic aritmii** - detectarea tulburărilor de ritm
 - **Screening cardiologic** - pentru medicina muncii și sport
-- **Interpretare medicală** - de către cardiologi experimentați
+- **Interpretare medicală** - de către cardiologi
 
 #### Spirometrie
 

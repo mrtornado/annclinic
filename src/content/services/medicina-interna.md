@@ -1,10 +1,10 @@
 ---
 name: "Medicina Internă"
 description: "Evaluări complete, diagnostic și tratament pentru o gamă variată de boli interne"
-longDescription: "Departamentul de medicina internă al ANN Medical Clinic oferă evaluări medicale complete pentru pacienții adulți cu boli complexe sau multiple. Echipa noastră de medici internișți din București oferă consultații specializate, diagnostic diferențial și managementul afecțiunilor cronice."
+longDescription: "Departamentul de medicina internă al ANN Medical Clinic oferă evaluări medicale complete pentru pacienții adulți cu boli complexe sau multiple din București și Bragadiru. Echipa noastră de medici internișți oferă consultații specializate, diagnostic diferențial și managementul afecțiunilor cronice."
 icon: "stethoscope"
 seoTitle: "Medicina Internă București - Internist Experimentat | ANN Medical Clinic"
-seoDescription: "Medicina internă București cu specialiști experimentați. Evaluări complete, diagnostic și tratament boli interne. Programează consultație la ANN Medical Clinic Bragadiru."
+seoDescription: "Medicina internă București cu specialiști. Evaluări complete, diagnostic și tratament boli interne. Programează consultație la ANN Medical Clinic Bragadiru."
 keywords:
   - "medicina internă București Bragadiru"
   - "internist București Bragadiru"
@@ -12,7 +12,6 @@ keywords:
   - "medic internist Bragadiru București"
   - "evaluare medicală completă București"
   - "boli interne tratament București"
-  - "diabetologie București Bragadiru"
   - "hipertensiune arterială București"
   - "consultații internist București Bragadiru"
   - "medicina internă Ilfov București"
@@ -23,7 +22,6 @@ popularSearchTerms:
   - "internist"
   - "evaluare medicală"
   - "boli interne"
-  - "diabetologie"
   - "hipertensiune"
   - "consultație internist"
 relatedServices:
@@ -42,10 +40,6 @@ treatments:
     description: "Evaluare preventivă completă a stării de sănătate"
     duration: 60
     price: 280
-  - name: "Consultație diabetologie"
-    description: "Specialistă în managementul diabetului zaharat"
-    duration: 45
-    price: 220
   - name: "Monitorizare hipertensiune"
     description: "Evaluare și ajustare tratament hipertensiune arterială"
     duration: 30
@@ -63,7 +57,7 @@ packages:
 
 # Medicina Internă București - Evaluări Complete și Tratament Specializat
 
-Departamentul de **medicina internă** al ANN Medical Clinic oferă servicii medicale complete pentru adulții cu afecțiuni complexe sau multiple în București și Bragadiru. Echipa noastră de medici internișți experimentați asigură diagnostic precis și tratament personalizat pentru o gamă largă de boli interne.
+Departamentul de **medicina internă** al ANN Medical Clinic oferă servicii medicale complete pentru adulții cu afecțiuni complexe sau multiple în București și Bragadiru. Echipa noastră de medici internișți asigură diagnostic precis și tratament personalizat pentru o gamă largă de boli interne.
 
 ## Servicii de Medicina Internă
 

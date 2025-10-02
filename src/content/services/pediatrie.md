@@ -1,7 +1,7 @@
 ---
 name: "Pediatrie"
 description: "Servicii complete de pediatrie cu consultații specializate pentru copii și adolescenți de toate vârstele"
-longDescription: "Departamentul de pediatrie al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților. Echipa noastră de pediatri din București oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor."
+longDescription: "Departamentul de pediatrie al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților din București și Bragadiru. Echipa noastră de pediatri oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor."
 icon: "baby"
 seoTitle: "Pediatru București - Consultații Pediatrie | ANN Medical Clinic"
 seoDescription: "Pediatru București cu experiență vastă. Consultații pediatrie, vaccinări copii, investigații pediatrice, monitorizare dezvoltare. Programează-te la ANN Medical Clinic Bragadiru."
@@ -83,7 +83,7 @@ packages:
 
 # Pediatrie București - Consultații Specializate pentru Copii
 
-Departamentul de **pediatrie** al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților în București și Bragadiru. Echipa noastră de pediatri experimentați oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor.
+Departamentul de **pediatrie** al ANN Medical Clinic oferă servicii medicale complete pentru sănătatea copiilor și adolescenților în București și Bragadiru. Echipa noastră de pediatri oferă consultații specializate, vaccinări, investigații moderne și tratamente personalizate într-un mediu prietenos și adaptat copiilor.
 
 ## Servicii de Pediatrie
 

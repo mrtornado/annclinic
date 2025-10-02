@@ -1,7 +1,7 @@
 ---
 name: "Dermatovenerologie"
 description: "Servicii complete de dermatovenerologie cu tratamente moderne pentru afecțiunile pielii"
-longDescription: "Departamentul de dermatovenerologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice. Echipa noastră de medici dermatovenerologi experimentați din București utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime."
+longDescription: "Departamentul de dermatovenerologie al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice pentru pacienți din București și Bragadiru. Echipa noastră de medici dermatovenerologi utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime."
 icon: "skin"
 seoTitle: "Dermatovenerolog București - Consultații Dermatovenerologie | ANN Medical Clinic"
 seoDescription: "Dermatovenerolog București cu experiență vastă. Consultații dermatovenerologie, tratament acnee, dermatoscopie, investigații dermatologice și venerice complete. Programează-te la ANN Medical Clinic Bragadiru."
@@ -68,7 +68,7 @@ treatments:
 
 # Dermatovenerologie București - Consultații și Tratamente Specializate
 
-Departamentul de **dermatovenerologie** al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice în București și Bragadiru. Echipa noastră de medici dermatovenerologi experimentați utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime.
+Departamentul de **dermatovenerologie** al ANN Medical Clinic oferă servicii medicale complete pentru diagnosticarea și tratamentul afecțiunilor pielii și venerice în București și Bragadiru. Echipa noastră de medici dermatovenerologi utilizează tehnologie medicală de ultimă generație pentru tratamente personalizate și rezultate optime.
 
 ## Servicii de Dermatovenerologie
 

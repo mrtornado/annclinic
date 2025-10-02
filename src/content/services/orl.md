@@ -1,7 +1,7 @@
 ---
 name: "ORL (Otorinolaringologie)"
 description: "Servicii complete ORL pentru diagnosticarea și tratamentul afecțiunilor urechii, nasului și gâtului"
-longDescription: "Departamentul ORL al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor otorinolaringologice. Echipa noastră de medici ORL experimentați din București utilizează echipament medical modern pentru investigații precise și tratamente eficiente."
+longDescription: "Departamentul ORL al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor otorinolaringologice pentru pacienți din București și Bragadiru. Echipa noastră de medici ORL utilizează echipament medical modern pentru investigații precise și tratamente eficiente."
 icon: "ear"
 seoTitle: "Medic ORL București - Consultații Otorinolaringologie | ANN Medical Clinic"
 seoDescription: "Medic ORL București cu experiență vastă. Consultații ORL, tratament sinuzită, otită, probleme gât, audiometrie. Programează-te la ANN Medical Clinic Bragadiru."
@@ -63,7 +63,7 @@ treatments:
 
 # ORL București - Consultații Otorinolaringologie
 
-Departamentul **ORL** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor otorinolaringologice în București și Bragadiru. Echipa noastră de medici ORL experimentați utilizează echipament medical modern pentru investigații precise și tratamente eficiente.
+Departamentul **ORL** al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor otorinolaringologice în București și Bragadiru. Echipa noastră de medici ORL utilizează echipament medical modern pentru investigații precise și tratamente eficiente.
 
 ## Servicii ORL
 

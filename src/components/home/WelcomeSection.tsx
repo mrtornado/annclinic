@@ -89,8 +89,7 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
                   {
                     icon: "👨‍⚕️",
                     title: "Medici Profesioniști",
-                    description:
-                      "Echipă de medici experimentați și dedicați sănătății tale",
+                    description: "Echipă de medici dedicați sănătății tale",
                   },
                   {
                     icon: "🔬",
