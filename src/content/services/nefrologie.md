@@ -46,7 +46,7 @@ treatments:
     description: "Diagnosticul și tratamentul hipertensiunii de cauză renală"
     duration: 45
     price: 220
-  - name: "Evaluare metabolica pentru litiaza renală (pietre la rinichi)"
+  - name: "Evaluarea metabolica pentru litiaza renală (pietre la rinichi)"
     description: "Evaluare și prevenirea calculilor renali"
     duration: 30
     price: 180
@@ -58,18 +58,10 @@ treatments:
     description: "Monitorizare 24h a tensiunii arteriale"
     duration: 30
     price: 250
-  - name: "Monitorizare hemodinamică prin bioimpedanță toracică"
-    description: "Evaluare non-invazivă a funcției cardiace și volumului lichidian"
+  - name: "Monitorizare hemodinamică prin bioimpedanță"
+    description: "Evaluarea stării de hidratare prin BCM (Body Composition Monitor – Bioimpedanță)"
     duration: 30
     price: 200
-  - name: "Administrare tratament prin injectare părți moi"
-    description: "Injectare intramusculară, intradermică și subcutanată"
-    duration: 15
-    price: 50
-  - name: "Administrare tratament prin puncție intravenoasă"
-    description: "Administrare medicație intravenoasă"
-    duration: 15
-    price: 60
   - name: "Evaluarea stării de hidratare prin BCM (Body Composition Monitor)"
     description: "Evaluare non-invazivă prin bioimpedanță pentru determinarea stării de hidratare"
     duration: 30
