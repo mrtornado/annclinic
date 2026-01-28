@@ -58,10 +58,6 @@ treatments:
     description: "Monitorizare 24h a tensiunii arteriale"
     duration: 30
     price: 250
-  - name: "Monitorizare hemodinamică prin bioimpedanță"
-    description: "Evaluarea stării de hidratare prin BCM (Body Composition Monitor – Bioimpedanță)"
-    duration: 30
-    price: 200
   - name: "Evaluarea stării de hidratare prin BCM (Body Composition Monitor)"
     description: "Evaluare non-invazivă prin bioimpedanță pentru determinarea stării de hidratare"
     duration: 30
