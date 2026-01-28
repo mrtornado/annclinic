@@ -1,6 +1,6 @@
 ---
 name: "Nefrologie"
-description: "Diagnostic și tratament pentru afecțiuni urologice, cu intervenții moderne realizate de specialiști"
+description: "Diagnostic și tratament pentru afecțiuni nefrologice, cu intervenții moderne realizate de specialiști"
 longDescription: "Departamentul de nefrologie al ANN Medical Clinic oferă servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor renale pentru pacienți din București și Bragadiru. Echipa noastră de nefrologi utilizează tehnologie medicală avansată pentru investigații precise și tratamente personalizate."
 icon: "kidney"
 seoTitle: "Nefrologie București - Specialist Rinichi Experimentat | ANN Medical Clinic"
@@ -46,7 +46,7 @@ treatments:
     description: "Diagnosticul și tratamentul hipertensiunii de cauză renală"
     duration: 45
     price: 220
-  - name: "Consiliere calculoza renală"
+  - name: "Evaluare metabolica pentru litiaza renală (pietre la rinichi)"
     description: "Evaluare și prevenirea calculilor renali"
     duration: 30
     price: 180
@@ -70,6 +70,38 @@ treatments:
     description: "Administrare medicație intravenoasă"
     duration: 15
     price: 60
+  - name: "Evaluarea stării de hidratare prin BCM (Body Composition Monitor)"
+    description: "Evaluare non-invazivă prin bioimpedanță pentru determinarea stării de hidratare"
+    duration: 30
+    price: 180
+  - name: "Administrare tratament subcutanat și intravenos pentru complicațiile bolii cronice de rinichi"
+    description: "Tratament specializat pentru pacienți cu boală cronică renală"
+    duration: 30
+    price: 200
+  - name: "Pregătire în vederea inițierii terapiei de substituție a funcției renale prin dializă"
+    description: "Evaluare și pregătire pacient pentru dializă"
+    duration: 60
+    price: 300
+  - name: "Evaluare abord vascular pentru hemodializă"
+    description: "Evaluare fistulă arteriovenoasă și cateter venos central"
+    duration: 45
+    price: 250
+  - name: "Monitorizare post-transplant renal"
+    description: "Urmărire pacienți transplantați renal"
+    duration: 45
+    price: 280
+  - name: "A doua opinie medicală (second opinion)"
+    description: "Consultație pentru evaluare secundară și recomandări suplimentare"
+    duration: 60
+    price: 350
+  - name: "Referat medical de stare prezentă"
+    description: "Întocmire document medical detaliat privind starea pacientului"
+    duration: 20
+    price: 100
+  - name: "Ecografia aparatului reno-vezical"
+    description: "Ecografie renală și vezicală pentru evaluare structurală"
+    duration: 30
+    price: 150
 ---
 
 # Nefrologie București - Tratament Specializat pentru Afecțiunile Renale

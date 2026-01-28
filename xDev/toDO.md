@@ -20,9 +20,10 @@
 
 # - neforologie same
 
-- office@annclinic.ro
-- contact@annclinic.ro
-- programari@annclinic.ro
+- office
+- contact
+- programari
 - recoltari
 - madalina
 - mihail
+- comet
