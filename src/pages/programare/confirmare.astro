@@ -1,0 +1,343 @@
+---
+import BookingLayout from "../../layouts/BookingLayout.astro";
+import { siteConfig } from "../../config/site";
+
+const title = "Programare Confirmată - ANN Medical Clinic";
+const description =
+  "Mulțumim pentru programarea la ANN Medical Clinic. Verifică emailul pentru detalii și codul de confirmare.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Confirmare Programare - ANN Medical Clinic",
+  description: description,
+  url: `${Astro.site}programare/confirmare`,
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Acasă",
+        item: Astro.site,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Programare Online",
+        item: `${Astro.site}programare`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Confirmare",
+        item: `${Astro.site}programare/confirmare`,
+      },
+    ],
+  },
+};
+
+const openGraph = {
+  title: "Programare Confirmată - ANN Medical Clinic",
+  description:
+    "Mulțumim pentru programarea la ANN Medical Clinic. Verifică emailul pentru detalii.",
+  image: "/images/ann-clinic-og.jpg",
+  imageAlt: "ANN Medical Clinic - Programare Confirmată",
+  type: "website",
+  url: `${Astro.site}programare/confirmare`,
+};
+---
+
+<BookingLayout
+  title={title}
+  description={description}
+  canonicalUrl={`${Astro.site}programare/confirmare`}
+  structuredData={structuredData}
+  openGraph={openGraph}
+>
+  <div class="min-h-screen bg-gradient-to-br from-teal-50 via-white to-blue-50 pt-32 pb-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- Success Icon with Animation -->
+      <div class="text-center mb-8">
+        <div
+          class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full shadow-2xl mb-6 animate-bounce"
+          style="animation-duration: 1s; animation-iteration-count: 2;"
+        >
+          <svg
+            class="w-12 h-12 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+          <span class="block text-gray-900">Programare Confirmată!</span>
+          <span
+            class="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 mt-2"
+          >
+            Mulțumim pentru încredere
+          </span>
+        </h1>
+
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Programarea ta a fost confirmată cu succes! Te așteptăm la clinică la data și ora stabilite.
+        </p>
+      </div>
+
+      <!-- Next Steps Card -->
+      <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-10 mb-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-12 h-12 bg-teal-100 rounded-2xl flex items-center justify-center"
+          >
+            <span class="text-2xl">📋</span>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900">Ce urmează?</h2>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Step 1 -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              1
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Notează detaliile programării
+              </h3>
+              <p class="text-gray-600">
+                Asigură-te că ai reținut <strong>data, ora și specialistul</strong> la care te-ai programat. Poți face o captură de ecran sau să salvezi detaliile.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              2
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Pregătește documentele
+              </h3>
+              <p class="text-gray-600">
+                Vino cu <strong>cartea de identitate</strong> și, dacă ai,{" "}
+                <strong>analize medicale anterioare</strong> sau{" "}
+                <strong>bilet de trimitere</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              3
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Prezintă-te la clinică
+              </h3>
+              <p class="text-gray-600">
+                Vino cu <strong>10-15 minute înainte</strong> de programare pentru
+                completarea fișei medicale și verificarea documentelor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact & Location Info -->
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+        <!-- Contact Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center"
+            >
+              <span class="text-2xl">📞</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900">Contact Rapid</h3>
+          </div>
+          <div class="space-y-3">
+            <a
+              href={`tel:${siteConfig.contact.shortPhone}`}
+              class="flex items-center gap-3 text-gray-700 hover:text-teal-600 transition-colors"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+              <span class="font-semibold">{siteConfig.contact.shortPhone}</span
+              >
+            </a>
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              class="flex items-center gap-3 text-gray-700 hover:text-teal-600 transition-colors"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <span>{siteConfig.contact.email}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center"
+            >
+              <span class="text-2xl">📍</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900">Locația Clinicii</h3>
+          </div>
+          <div class="space-y-2">
+            <p class="text-gray-700">
+              {siteConfig.address.street}
+              {siteConfig.address.number}
+            </p>
+            <p class="text-gray-700">
+              {siteConfig.address.city}, {siteConfig.address.county}
+            </p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${siteConfig.address.coordinates.lat},${siteConfig.address.coordinates.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold mt-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                ></path>
+              </svg>
+              Deschide în Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Notice -->
+      <div
+        class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 rounded-xl p-6 mb-8"
+      >
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-amber-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg text-amber-900 mb-2">
+              ⚠️ Informații importante
+            </h3>
+            <ul class="space-y-1 text-amber-800">
+              <li>
+                • Dacă nu poți veni la programare, te rugăm să <strong>anulezi cu minimum 24h înainte</strong>
+              </li>
+              <li>
+                • Pentru întârzieri mai mari de 15 minute, programarea poate fi reprogramată
+              </li>
+              <li>
+                • Pentru întrebări, modificări sau anulări, sună-ne la <strong>{siteConfig.contact.shortPhone}</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold px-8 py-4 rounded-2xl hover:from-teal-700 hover:to-teal-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+          </svg>
+          Înapoi la Pagina Principală
+        </a>
+
+        <a
+          href="/servicii"
+          class="inline-flex items-center justify-center gap-2 bg-white text-teal-600 font-bold px-8 py-4 rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-teal-600"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            ></path>
+          </svg>
+          Vezi Toate Serviciile
+        </a>
+      </div>
+    </div>
+  </div>
+</BookingLayout>
