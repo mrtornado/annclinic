@@ -2,6 +2,45 @@
 import BookingLayout from "../../layouts/BookingLayout.astro";
 import { siteConfig } from "../../config/site";
 
+// Extract booking details from URL parameters
+const url = new URL(Astro.request.url);
+const dateParam = url.searchParams.get("date"); // Format: 19-02-2026+09%3A30+-+10%3A00
+
+// Parse the date parameter
+let bookingDate = "";
+let bookingTime = "";
+let formattedDate = "";
+
+if (dateParam) {
+  // Decode URL encoding: replace + with space, decode %3A to :
+  const decoded = decodeURIComponent(dateParam.replace(/\+/g, " "));
+  // Format: "19-02-2026 09:30 - 10:00"
+  const parts = decoded.split(" ");
+  
+  if (parts.length >= 4) {
+    const datePart = parts[0]; // "19-02-2026"
+    const timeStart = parts[1]; // "09:30"
+    const timeEnd = parts[3]; // "10:00"
+    
+    // Format date as "Miercuri, 19 Februarie 2026"
+    const [day, month, year] = datePart.split("-");
+    const dateObj = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+    
+    const weekdays = ["Duminică", "Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"];
+    const months = [
+      "Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie",
+      "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"
+    ];
+    
+    const weekday = weekdays[dateObj.getDay()];
+    const monthName = months[dateObj.getMonth()];
+    
+    formattedDate = `${weekday}, ${day} ${monthName} ${year}`;
+    bookingDate = datePart;
+    bookingTime = `${timeStart} - ${timeEnd}`;
+  }
+}
+
 const title = "Programare Confirmată - ANN Medical Clinic";
 const description =
   "Mulțumim pentru programarea la ANN Medical Clinic. Verifică emailul pentru detalii și codul de confirmare.";
@@ -91,6 +130,53 @@ const openGraph = {
         </p>
       </div>
 
+      <!-- Booking Details Card -->
+      {bookingDate && bookingTime && (
+        <div class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl shadow-2xl p-8 sm:p-10 mb-8 text-white">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+            >
+              <span class="text-3xl">📅</span>
+            </div>
+            <h2 class="text-2xl font-bold">Detaliile Programării Tale</h2>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Date -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-teal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-sm text-teal-100 font-semibold">Data</span>
+              </div>
+              <p class="text-2xl font-bold">{formattedDate}</p>
+            </div>
+
+            <!-- Time -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-teal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-sm text-teal-100 font-semibold">Ora</span>
+              </div>
+              <p class="text-2xl font-bold">{bookingTime}</p>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-white/10 backdrop-blur-sm rounded-xl p-4 flex items-start gap-3">
+            <svg class="w-6 h-6 text-teal-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-teal-50 text-sm leading-relaxed">
+              <strong>Sfat:</strong> Fă o captură de ecran sau salvează această pagină pentru a păstra detaliile programării tale.
+            </p>
+          </div>
+        </div>
+      )}
+
       <!-- Next Steps Card -->
       <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-10 mb-8">
         <div class="flex items-center gap-3 mb-6">
@@ -112,10 +198,14 @@ const openGraph = {
             </div>
             <div class="flex-1">
               <h3 class="font-bold text-lg text-gray-900 mb-1">
-                Notează detaliile programării
+                Adaugă în calendar
               </h3>
               <p class="text-gray-600">
-                Asigură-te că ai reținut <strong>data, ora și specialistul</strong> la care te-ai programat. Poți face o captură de ecran sau să salvezi detaliile.
+                {bookingDate && bookingTime ? (
+                  <span>Salvează programarea ta: <strong>{formattedDate}</strong> la ora <strong>{bookingTime}</strong> în calendarul telefonului.</span>
+                ) : (
+                  <span>Adaugă data și ora programării în calendarul tău pentru a nu uita.</span>
+                )}
               </p>
             </div>
           </div>
