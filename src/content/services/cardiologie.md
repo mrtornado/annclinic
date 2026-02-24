@@ -55,15 +55,6 @@ treatments:
     description: "Evaluare rapidă pentru simptome cardiace acute"
     duration: 30
     price: 300
-packages:
-  - name: "Consult Cardiologie + EKG"
-    description: "Evaluare cardiologică completă cu electrocardiogramă"
-    originalPrice: 450
-    packagePrice: 300
-    savings: 150
-    services: ["Consultație cardiologie", "Electrocardiogramă (EKG)"]
-    highlight: true
-    popular: true
 ---
 
 # Cardiolog București - Servicii Complete de Cardiologie
