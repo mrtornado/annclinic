@@ -51,10 +51,6 @@ treatments:
     description: "Monitorizarea continuă a ritmului cardiac pe 24 de ore"
     duration: 1440
     price: 300
-  - name: "Proba de efort"
-    description: "Evaluarea răspunsului cardiac la exercițiu fizic controlat"
-    duration: 60
-    price: 350
   - name: "Consultație de urgență cardiologică"
     description: "Evaluare rapidă pentru simptome cardiace acute"
     duration: 30
