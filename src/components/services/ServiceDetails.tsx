@@ -50,7 +50,7 @@ export default function ServiceDetails({
 
   const treatments = getTreatments();
   const relatedServices = getRelatedServices();
-  const telHref = `tel:${siteConfig.contact.shortPhone.replace(/\s+/g, "")}`;
+  const telHref = `tel:${siteConfig.contact.telShortPhone}`;
 
   return (
     <section className="relative py-20 sm:py-32 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden">

@@ -1,6 +1,7 @@
 import AnimatedButton from "../magic-ui/AnimatedButton";
 import AnimatedText from "../magic-ui/AnimatedText";
 import FloatingParticles from "../magic-ui/FloatingParticles";
+import { siteConfig } from "../../config/site";
 
 interface HeroSectionProps {
   backgroundImage: string;
@@ -51,7 +52,7 @@ export default function HeroSection({
             {/* Phone Number */}
             <AnimatedText delay={0.2}>
               <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#03606C] mb-8">
-                021 9063
+                {siteConfig.contact.shortPhone}
               </div>
             </AnimatedText>
 

@@ -4,7 +4,7 @@ import { siteConfig } from "../../config/site";
 import { getImage } from "astro:assets";
 import logo from "../../assets/images/logo.png";
 
-const telHref = `tel:${siteConfig.contact.shortPhone}`;
+const telHref = `tel:${siteConfig.contact.telShortPhone}`;
 
 // Optimize logo using getImage() - size for actual display (240x48) and compress
 const optimizedLogo = await getImage({

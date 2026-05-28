@@ -877,7 +877,7 @@ export default function BookingInterface({
                     <AnimatedButton
                       variant="primary"
                       size="md"
-                      href={`tel:${siteConfig.contact.shortPhone}`}
+                      href={`tel:${siteConfig.contact.telShortPhone}`}
                       className="w-full bg-red-500 hover:bg-red-600"
                     >
                       📞 Sună Acum

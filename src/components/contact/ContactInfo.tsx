@@ -11,7 +11,7 @@ export default function ContactInfo() {
       primary: siteConfig.contact.shortPhone,
       secondary: "Luni - Vineri: 08:00 - 20:00",
       mobiles: [siteConfig.contact.phone, siteConfig.contact.secondaryPhone],
-      action: `tel:${siteConfig.contact.shortPhone}`,
+      action: `tel:${siteConfig.contact.telShortPhone}`,
       description:
         "Ne poți contacta telefonic pentru programări sau informații despre serviciile noastre medicale.",
     },
@@ -315,7 +315,7 @@ export default function ContactInfo() {
                         </p>
                         <p className="text-secondary text-sm leading-relaxed">
                           Pentru urgențe medicale, sunați la{" "}
-                          <strong className="text-red-600">021 9063</strong> sau
+                          <strong className="text-red-600">{siteConfig.contact.shortPhone}</strong> sau
                           contactați serviciul de ambulanță.
                         </p>
                       </div>

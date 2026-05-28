@@ -1,6 +1,7 @@
 import AnimatedText from "../magic-ui/AnimatedText";
 import MagicCard from "../magic-ui/MagicCard";
 import AnimatedButton from "../magic-ui/AnimatedButton";
+import { siteConfig } from "../../config/site";
 
 interface Package {
   name: string;
@@ -272,7 +273,7 @@ export default function ServicePackages({
                     </span>
                   </AnimatedButton>
                   <AnimatedButton
-                    href="tel:+40721234567"
+                    href={`tel:${siteConfig.contact.telShortPhone}`}
                     variant="outline"
                     size="lg"
                     className="hero-btn-outline"
@@ -468,7 +469,7 @@ export default function ServicePackages({
                       </span>
                     </AnimatedButton>
                     <AnimatedButton
-                      href="tel:+40721234567"
+                      href={`tel:${siteConfig.contact.telShortPhone}`}
                       variant="primary"
                       size="lg"
                       className="hero-btn-primary"

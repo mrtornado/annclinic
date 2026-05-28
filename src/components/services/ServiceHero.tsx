@@ -1,6 +1,7 @@
 import AnimatedText from "../magic-ui/AnimatedText";
 import AnimatedButton from "../magic-ui/AnimatedButton";
 import FloatingParticles from "../magic-ui/FloatingParticles";
+import { siteConfig } from "../../config/site";
 import type { ServiceContent } from "../../types/content";
 
 // Import optimized WebP service images
@@ -210,7 +211,7 @@ export default function ServiceHero({
                 </AnimatedButton>
 
                 <AnimatedButton
-                  href="tel:+40721234567"
+                  href={`tel:${siteConfig.contact.telShortPhone}`}
                   variant="outline"
                   size="lg"
                   className="hero-btn-outline border-white/30 text-white hover:bg-white hover:text-gray-900"

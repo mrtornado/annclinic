@@ -1,3 +1,5 @@
+const shortPhone = "021 9063";
+
 export const siteConfig = {
   name: "ANN Medical Clinic",
   title: "ANN Medical Clinic - Clinică Medicală București",
@@ -6,7 +8,8 @@ export const siteConfig = {
   tagline: "Sănătate & Încredere",
   url: "https://annclinic.ro",
   contact: {
-    shortPhone: "021 9063",
+    shortPhone,
+    telShortPhone: shortPhone.replace(/\s+/g, ""),
     phone: "+40 775 11 9063",
     secondaryPhone: "+40 775 22 9063",
     phoneDisplay: "+40 775 11 9063",

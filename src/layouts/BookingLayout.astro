@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { siteConfig } from "../config/site";
 
 export interface Props {
   title?: string;
@@ -37,7 +38,7 @@ const {
     name: "ANN Medical Clinic",
     description: "Clinică medicală cu servicii complete în București",
     url: Astro.site,
-    telephone: "+40 21 123 4567",
+    telephone: siteConfig.contact.shortPhone,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Strada Exemplu 123",
