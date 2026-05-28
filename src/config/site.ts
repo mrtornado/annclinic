@@ -26,7 +26,7 @@ export const siteConfig = {
   },
   schedule: {
     weekdays: "08:00 - 20:00",
-    saturday: "În curând",
+    saturday: "Închis",
     sunday: "Închis",
   },
   social: {

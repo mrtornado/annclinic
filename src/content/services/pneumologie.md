@@ -4,7 +4,7 @@ description: "Diagnostic și tratament pentru boli respiratorii, cu tehnologii a
 longDescription: "Departamentul de pneumologie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor respiratorii pentru pacienți din București și Bragadiru. Echipa noastră de pneumologi va utiliza tehnologie medicală de ultimă generație pentru investigații pulmonare precise și tratamente eficiente."
 icon: "lungs"
 seoTitle: "Pneumolog București - Consultații Pneumologie | ANN Medical Clinic"
-seoDescription: "Pneumolog București cu experiență vastă. Consultații pneumologie, spirometrie, boli respiratorii, astm, BPOC. În curând la ANN Medical Clinic Bragadiru."
+seoDescription: "Pneumolog București cu experiență vastă. Consultații pneumologie, spirometrie, boli respiratorii, astm, BPOC. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "pneumolog București Bragadiru"
   - "consultație pneumologie București"
@@ -30,8 +30,8 @@ relatedServices:
   - "radiografie-pulmonara"
   - "gazometrie-arteriala"
   - "consultatie-pneumologie"
-featured: false
-comingSoon: true
+featured: true
+comingSoon: false
 order: 13
 treatments:
   - name: "Consultație pneumologie"

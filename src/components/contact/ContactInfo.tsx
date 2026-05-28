@@ -303,7 +303,7 @@ export default function ContactInfo() {
                 </div>
 
                 {/* Emergency info */}
-                <div className="mt-auto">
+                <div className="mt-auto space-y-4">
                   <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-4 border border-red-500/20">
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm shadow-sm flex-shrink-0 mt-0.5">
@@ -320,6 +320,25 @@ export default function ContactInfo() {
                         </p>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="flex justify-center pt-1">
+                    <a
+                      href="https://www.soimiisanatatii.ro/profile-283441-ann-medical-clinic"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                    >
+                      <img
+                        src="https://www.soimiisanatatii.ro/images/medals/283441/laureat300_gold_2_ro.png"
+                        width={300}
+                        height={75}
+                        className="w-[260px] sm:w-[300px] h-auto max-w-full border-0 object-contain"
+                        alt="ANN Medical Clinic - Bragadiru"
+                        title="ANN Medical Clinic - Bragadiru"
+                        loading="lazy"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>

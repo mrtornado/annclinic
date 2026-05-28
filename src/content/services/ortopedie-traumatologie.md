@@ -32,6 +32,7 @@ relatedServices:
   - "infiltrații-articulare"
   - "tratament-artroză"
 featured: true
+comingSoon: false
 order: 10
 treatments:
   - name: "Consultație ortopedie și traumatologie"

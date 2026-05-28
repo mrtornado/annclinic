@@ -4,7 +4,7 @@ description: "Servicii profesionale pentru sănătatea mentală, cu evaluare psi
 longDescription: "Departamentul de psihiatrie al ANN Medical Clinic va oferi servicii medicale specializate pentru diagnosticarea și tratamentul afecțiunilor de sănătate mentală pentru pacienți din București și Bragadiru. Echipa noastră de psihiatri va asigura evaluări complexe și tratamente personalizate într-un mediu sigur și confidențial."
 icon: "brain-care"
 seoTitle: "Psihiatru București - Consultații Psihiatrie | ANN Medical Clinic"
-seoDescription: "Psihiatru București cu experiență vastă. Consultații psihiatrie, depresie, anxietate, tulburări mentale. În curând la ANN Medical Clinic Bragadiru."
+seoDescription: "Psihiatru București cu experiență vastă. Consultații psihiatrie, depresie, anxietate, tulburări mentale. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "psihiatru București Bragadiru"
   - "consultație psihiatrie București"
@@ -30,8 +30,8 @@ relatedServices:
   - "psihoterapie"
   - "tratament-medicamentos"
   - "consultatie-psihiatrie"
-featured: false
-comingSoon: true
+featured: true
+comingSoon: false
 order: 18
 treatments:
   - name: "Consultație psihiatrie"

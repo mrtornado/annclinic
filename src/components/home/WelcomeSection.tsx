@@ -9,9 +9,31 @@ export default function WelcomeSection({ welcomeImage }: WelcomeSectionProps) {
   return (
     <section className="pt-0 sm:pt-0 pb-16 sm:pb-24 bg-gradient-to-br from-surface via-surface-secondary to-surface overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Side - Image */}
-          <div className="order-2 lg:order-1 relative">
+          <div className="order-2 lg:order-1 relative space-y-5 lg:mt-2 w-full">
+            {/* Soimii Sanatatii Medal */}
+            <AnimatedText delay={0.1}>
+              <div className="flex justify-center w-full px-2">
+                <a
+                  href="https://www.soimiisanatatii.ro/profile-283441-ann-medical-clinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                >
+                  <img
+                    src="https://www.soimiisanatatii.ro/images/medals/283441/laureat300_gold_2_ro.png"
+                    width={300}
+                    height={75}
+                    className="w-[260px] sm:w-[300px] h-auto max-w-full border-0 object-contain mx-auto"
+                    alt="ANN Medical Clinic - Bragadiru"
+                    title="ANN Medical Clinic - Bragadiru"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </AnimatedText>
+
             <AnimatedText delay={0.2}>
               <div className="relative group">
                 {/* Background decoration */}

@@ -4,7 +4,7 @@ description: "Recuperarea medicală după pacienți și la diferite medicale, ap
 longDescription: "Departamentul de recuperare medicală al ANN Medical Clinic va oferi servicii complete de reabilitare și recuperare pentru pacienți din București și Bragadiru. Echipa noastră de specialiști în recuperare medicală va utiliza tehnici moderne și aparatură specializată pentru refacerea funcțiilor fizice și îmbunătățirea calității vieții."
 icon: "recovery"
 seoTitle: "Recuperare Medicală București - Kinetoterapie | ANN Medical Clinic"
-seoDescription: "Recuperare medicală București cu specialiști. Kinetoterapie, fizioterapie, recuperare post-operatorie. În curând la ANN Medical Clinic Bragadiru."
+seoDescription: "Recuperare medicală București cu specialiști. Kinetoterapie, fizioterapie, recuperare post-operatorie. Programează-te la ANN Medical Clinic Bragadiru."
 keywords:
   - "recuperare medicală București Bragadiru"
   - "kinetoterapie București"
@@ -30,8 +30,8 @@ relatedServices:
   - "masaj-terapeutic"
   - "electroterapie"
   - "consultatie-recuperare"
-featured: false
-comingSoon: true
+featured: true
+comingSoon: false
 order: 29
 treatments:
   - name: "Consultație recuperare medicală"
