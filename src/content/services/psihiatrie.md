@@ -46,6 +46,14 @@ treatments:
     description: "Consultație de urgență pentru crize"
     duration: 45
     price: 350
+  - name: "Eliberare aviz psihiatric - Anexa 2 pentru cadre didactice"
+    description: "Evaluare psihiatrică și eliberare aviz Anexa 2 pentru cadre didactice"
+    duration: 60
+    price: 320
+  - name: "Monitorizare tratament în schizofrenie"
+    description: "Administrare lunară tratament depot și ajustarea schemei terapeutice în funcție de nevoile pacientului"
+    duration: 45
+    price: 280
 ---
 
 # Psihiatrie București - În Curând la ANN Medical Clinic
@@ -59,6 +67,8 @@ Departamentul de **psihiatrie** al ANN Medical Clinic va oferi în curând servi
 - **Evaluare psihiatrică completă** - diagnostic și plan de tratament
 - **Consultații de urgență** - pentru crize psihiatrice
 - **Monitoring tratament** - urmărirea medicației și evoluției
+- **Eliberare aviz psihiatric - Anexa 2 pentru cadre didactice** - evaluare și eliberare aviz pentru cadre didactice
+- **Monitorizare tratament în schizofrenie** - administrare lunară tratament depot și ajustarea schemei terapeutice în funcție de nevoile pacientului
 - **Evaluare capacitate** - pentru diverse scopuri legale
 
 ### Afecțiuni Psihiatrice Tratate
