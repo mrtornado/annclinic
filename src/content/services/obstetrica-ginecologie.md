@@ -57,7 +57,6 @@ treatments:
     description: "Test de screening pentru cancerul de col uterin"
     duration: 20
     price: 100
-packages:
 ---
 
 # Servicii de Obstetrică-Ginecologie la ANN Medical Clinic
