@@ -58,14 +58,6 @@ treatments:
     duration: 20
     price: 100
 packages:
-  - name: "Consult Ginecologie + Ecografie Transvaginală"
-    description: "Evaluare ginecologică completă cu ecografie transvaginală"
-    originalPrice: 500
-    packagePrice: 250
-    savings: 250
-    services: ["Consultație obstetrică-ginecologie", "Ecografie transvaginală"]
-    highlight: true
-    popular: true
 ---
 
 # Servicii de Obstetrică-Ginecologie la ANN Medical Clinic
@@ -88,7 +80,6 @@ Departamentul de obstetrică-ginecologie al ANN Medical Clinic oferă servicii m
 - **Screening ginecologic** - examinări preventive pentru depistarea precoce
 - **Ecografie ginecologică** - investigație prin ultrasunete a organelor genitale
 - **Testare HPV** - testare pentru virusul papiloma uman
-- **Colposcopie** - examinare detaliată a colului uterin
 - **Citologie cervicală (Babeș-Papanicolau)** - testare pentru cancerul de col uterin
 
 ## Afecțiuni Tratate
